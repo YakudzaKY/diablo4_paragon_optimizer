@@ -1,3 +1,5 @@
+<img width="1984" height="1250" alt="Снимок экрана 2026-05-27 183913" src="https://github.com/user-attachments/assets/502e9121-525c-46fc-a12f-fc2c9ec7891d" />
+
 # Paragon Optimizer Data Pipeline
 
 Первый этап оптимизатора: локальный сбор и нормализация справочников парагона Diablo IV.
