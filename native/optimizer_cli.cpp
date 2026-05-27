@@ -48,7 +48,10 @@ constexpr int MAX_GLYPH_CANDIDATES_PER_SOCKET = 8;
 constexpr double UNMET_PREFERRED_GLYPH_WEIGHT_FACTOR = 0.25;
 constexpr int DEFAULT_MAX_ROUTES = 3000;
 constexpr int DEFAULT_CANDIDATE_TARGETS = 320;
-constexpr double RARE_REQUIREMENT_SCALE_PER_BOARD = 0.65;
+constexpr double RARE_REQUIREMENT_REGULAR_STEP = 75.0;
+constexpr double RARE_REQUIREMENT_SECONDARY_STEP = 70.0;
+constexpr double RARE_REQUIREMENT_PRIMARY_STEP = 455.0;
+constexpr double RARE_REQUIREMENT_PRIMARY_MINIMUM = 600.0;
 constexpr double RARE_BONUS_ROUTE_HINT_FACTOR = 0.6;
 constexpr int LOCAL_IMPROVEMENT_MAX_PASSES = 8;
 constexpr int LOCAL_IMPROVEMENT_REMOVE_CANDIDATES = 36;
@@ -137,7 +140,9 @@ struct GraphNode {
     std::string type;
     int cost = 1;
     std::map<std::string, double> stats;
+    std::map<std::string, double> base_requirements;
     std::map<std::string, double> requirements;
+    std::map<std::string, double> requirement_steps;
     std::map<std::string, double> bonus_stats;
     int requirement_board_depth = 0;
     json name = json::object();
@@ -398,21 +403,46 @@ double weight_for(const std::map<std::string, double>& values, const std::string
     return it == values.end() ? fallback : it->second;
 }
 
-double rare_requirement_scale_for_board_depth(int board_depth) {
-    if (board_depth <= 0) {
-        return 1.0;
+bool is_primary_rare_requirement(double required) {
+    return required >= RARE_REQUIREMENT_PRIMARY_MINIMUM;
+}
+
+// Rare-node requirements are stored as base values and scale additively by board index.
+// Most single-stat requirements use +75, secondary pair requirements use +70, and large
+// primary-stat requirements use +455.
+double rare_requirement_step(const std::map<std::string, double>& requirements, double required) {
+    if (is_primary_rare_requirement(required)) {
+        return RARE_REQUIREMENT_PRIMARY_STEP;
     }
-    return 1.0 + RARE_REQUIREMENT_SCALE_PER_BOARD * board_depth;
+
+    bool has_primary_requirement = false;
+    bool has_185_requirement = false;
+    for (const auto& [_, other_required] : requirements) {
+        has_primary_requirement = has_primary_requirement || is_primary_rare_requirement(other_required);
+        has_185_requirement = has_185_requirement || static_cast<int>(std::round(other_required)) == 185;
+    }
+
+    int rounded_required = static_cast<int>(std::round(required));
+    if (rounded_required == 185 || (rounded_required == 190 && (has_primary_requirement || has_185_requirement))) {
+        return RARE_REQUIREMENT_SECONDARY_STEP;
+    }
+    return RARE_REQUIREMENT_REGULAR_STEP;
+}
+
+std::map<std::string, double> requirement_steps_for(const std::map<std::string, double>& requirements) {
+    std::map<std::string, double> result;
+    for (const auto& [stat, required] : requirements) {
+        result[stat] = rare_requirement_step(requirements, required);
+    }
+    return result;
 }
 
 std::map<std::string, double> scale_requirements(const std::map<std::string, double>& requirements, int board_depth) {
     std::map<std::string, double> result;
-    if (requirements.empty()) {
-        return result;
-    }
-    double scale = rare_requirement_scale_for_board_depth(board_depth);
     for (const auto& [stat, required] : requirements) {
-        result[stat] = std::round(required * scale);
+        double step = rare_requirement_step(requirements, required);
+        int effective_depth = std::max(0, board_depth);
+        result[stat] = std::round(required + step * effective_depth);
     }
     return result;
 }
@@ -913,7 +943,9 @@ Graph build_combined_graph(
                 node.cost = incoming_gates.count(node.id) ? 0 : std::max(node.cost, 1);
             }
             node.stats = source.stats;
+            node.base_requirements = source.requirements;
             node.requirements = scale_requirements(source.requirements, board_depth);
+            node.requirement_steps = requirement_steps_for(source.requirements);
             node.bonus_stats = source.bonus_stats;
             node.requirement_board_depth = board_depth;
             node.name = source.name;
@@ -2134,7 +2166,9 @@ ScoredRoute score_route(
         item["name"] = node.name;
         item["met"] = met;
         item["board_depth"] = node.requirement_board_depth;
-        item["requirement_scale"] = round4(rare_requirement_scale_for_board_depth(node.requirement_board_depth));
+        item["requirement_formula"] = "base + step * board_depth";
+        item["base_requirements"] = map_to_json_object(node.base_requirements);
+        item["requirement_steps"] = map_to_json_object(node.requirement_steps);
         item["requirements"] = map_to_json_object(node.requirements);
         item["bonus_stats"] = map_to_json_object(node.bonus_stats);
         item["bonus_score"] = met ? round4(weighted_stats_score(node.bonus_stats, weights)) : 0.0;
