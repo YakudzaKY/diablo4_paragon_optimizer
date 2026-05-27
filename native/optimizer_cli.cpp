@@ -274,6 +274,17 @@ struct LocalSwap {
     double score_after = 0.0;
 };
 
+struct SwapCandidate {
+    int remove_index = -1;
+    int add_index = -1;
+};
+
+struct BestSwapCandidate {
+    int remove_index = -1;
+    int add_index = -1;
+    double score = 0.0;
+};
+
 struct Options {
     std::string command;
     fs::path profile_path;
@@ -2462,6 +2473,85 @@ bool has_selected_neighbor_after_remove(
     return false;
 }
 
+std::vector<double> score_swap_candidates_parallel(
+    const Graph& graph,
+    const std::vector<Glyph>& glyphs,
+    const WeightModel& weights,
+    const std::map<std::string, double>& starting_stats,
+    const ScoringContext& context,
+    const std::vector<unsigned char>& selected,
+    const std::vector<SwapCandidate>& candidates,
+    int points_limit,
+    int worker_count
+) {
+    std::vector<double> scores(candidates.size(), -std::numeric_limits<double>::infinity());
+    if (candidates.empty()) {
+        return scores;
+    }
+    int active_workers = std::max(1, std::min(worker_count, static_cast<int>(candidates.size())));
+    if (active_workers == 1) {
+        for (size_t index = 0; index < candidates.size(); ++index) {
+            std::vector<unsigned char> trial = selected;
+            trial[candidates[index].remove_index] = 0;
+            trial[candidates[index].add_index] = 1;
+            scores[index] = route_score_value(graph, glyphs, weights, starting_stats, context, trial, points_limit);
+        }
+        return scores;
+    }
+
+    std::atomic<size_t> next_index(0);
+    std::exception_ptr error = nullptr;
+    std::mutex error_mutex;
+    std::vector<std::thread> threads;
+    threads.reserve(active_workers);
+    for (int worker = 0; worker < active_workers; ++worker) {
+        threads.emplace_back([&]() {
+            try {
+                while (true) {
+                    size_t index = next_index.fetch_add(1);
+                    if (index >= candidates.size()) {
+                        break;
+                    }
+                    std::vector<unsigned char> trial = selected;
+                    trial[candidates[index].remove_index] = 0;
+                    trial[candidates[index].add_index] = 1;
+                    scores[index] = route_score_value(graph, glyphs, weights, starting_stats, context, trial, points_limit);
+                }
+            } catch (...) {
+                std::lock_guard<std::mutex> lock(error_mutex);
+                if (!error) {
+                    error = std::current_exception();
+                }
+            }
+        });
+    }
+    for (std::thread& thread : threads) {
+        thread.join();
+    }
+    if (error) {
+        std::rethrow_exception(error);
+    }
+    return scores;
+}
+
+BestSwapCandidate best_scored_swap(
+    const std::vector<SwapCandidate>& candidates,
+    const std::vector<double>& scores,
+    double current_score
+) {
+    BestSwapCandidate best;
+    best.score = current_score;
+    for (size_t index = 0; index < candidates.size(); ++index) {
+        double candidate_score = scores[index];
+        if (candidate_score > best.score + 1e-9) {
+            best.remove_index = candidates[index].remove_index;
+            best.add_index = candidates[index].add_index;
+            best.score = candidate_score;
+        }
+    }
+    return best;
+}
+
 std::vector<int> removable_route_nodes(const Graph& graph, const std::vector<unsigned char>& selected, const WeightModel& weights) {
     std::vector<int> candidates;
     for (int index = 0; index < static_cast<int>(selected.size()); ++index) {
@@ -2708,7 +2798,8 @@ void improve_route_glyph_relocations(
     int points_limit,
     int& current_points,
     double& current_score,
-    std::vector<LocalSwap>& swap_log
+    std::vector<LocalSwap>& swap_log,
+    int worker_count
 ) {
     for (int pass = 0; pass < GLYPH_RELOCATION_MAX_PASSES; ++pass) {
         std::vector<GlyphEvaluation> assigned = assign_glyphs(graph, glyphs, weights, context, route.selected);
@@ -2738,9 +2829,7 @@ void improve_route_glyph_relocations(
             break;
         }
 
-        int best_remove = -1;
-        int best_add = -1;
-        double best_score = current_score;
+        std::vector<SwapCandidate> swap_candidates;
         for (int remove_index : remove_candidates) {
             int remove_cost = graph.nodes[remove_index].cost;
             for (int add_index : add_candidates) {
@@ -2751,25 +2840,32 @@ void improve_route_glyph_relocations(
                 if (!has_selected_neighbor_after_remove(graph, route.selected, add_index, remove_index)) {
                     continue;
                 }
-                std::vector<unsigned char> trial = route.selected;
-                trial[remove_index] = 0;
-                trial[add_index] = 1;
-                double trial_score = route_score_value(graph, glyphs, weights, starting_stats, context, trial, points_limit);
-                if (trial_score > best_score + 1e-9) {
-                    best_score = trial_score;
-                    best_remove = remove_index;
-                    best_add = add_index;
-                }
+                swap_candidates.push_back({remove_index, add_index});
             }
         }
-        if (best_remove < 0 || best_add < 0) {
+        if (swap_candidates.empty()) {
             break;
         }
-        swap_log.push_back({best_remove, best_add, current_score, best_score});
-        route.selected[best_remove] = 0;
-        route.selected[best_add] = 1;
-        current_points = current_points - graph.nodes[best_remove].cost + graph.nodes[best_add].cost;
-        current_score = best_score;
+        std::vector<double> swap_scores = score_swap_candidates_parallel(
+            graph,
+            glyphs,
+            weights,
+            starting_stats,
+            context,
+            route.selected,
+            swap_candidates,
+            points_limit,
+            worker_count
+        );
+        BestSwapCandidate best = best_scored_swap(swap_candidates, swap_scores, current_score);
+        if (best.remove_index < 0 || best.add_index < 0) {
+            break;
+        }
+        swap_log.push_back({best.remove_index, best.add_index, current_score, best.score});
+        route.selected[best.remove_index] = 0;
+        route.selected[best.add_index] = 1;
+        current_points = current_points - graph.nodes[best.remove_index].cost + graph.nodes[best.add_index].cost;
+        current_score = best.score;
     }
 }
 
@@ -2782,7 +2878,8 @@ RouteOutput improve_route_locally(
     const std::unordered_map<int, double>& route_bonuses,
     const RouteOutput& initial_route,
     int points_limit,
-    std::vector<LocalSwap>& swap_log
+    std::vector<LocalSwap>& swap_log,
+    int worker_count
 ) {
     RouteOutput route = initial_route;
     swap_log.clear();
@@ -2803,9 +2900,7 @@ RouteOutput improve_route_locally(
             break;
         }
 
-        int best_remove = -1;
-        int best_add = -1;
-        double best_score = current_score;
+        std::vector<SwapCandidate> swap_candidates;
         for (int remove_index : remove_candidates) {
             int remove_cost = graph.nodes[remove_index].cost;
             if (current_points - remove_cost > points_limit) {
@@ -2825,26 +2920,33 @@ RouteOutput improve_route_locally(
                 if (quick_delta <= 1e-9) {
                     continue;
                 }
-                std::vector<unsigned char> trial = route.selected;
-                trial[remove_index] = 0;
-                trial[add_index] = 1;
-                double trial_score = route_score_value(graph, glyphs, weights, starting_stats, context, trial, points_limit);
-                if (trial_score > best_score + 1e-9) {
-                    best_score = trial_score;
-                    best_remove = remove_index;
-                    best_add = add_index;
-                }
+                swap_candidates.push_back({remove_index, add_index});
             }
         }
 
-        if (best_remove < 0 || best_add < 0) {
+        if (swap_candidates.empty()) {
             break;
         }
-        swap_log.push_back({best_remove, best_add, current_score, best_score});
-        route.selected[best_remove] = 0;
-        route.selected[best_add] = 1;
-        current_points = current_points - graph.nodes[best_remove].cost + graph.nodes[best_add].cost;
-        current_score = best_score;
+        std::vector<double> swap_scores = score_swap_candidates_parallel(
+            graph,
+            glyphs,
+            weights,
+            starting_stats,
+            context,
+            route.selected,
+            swap_candidates,
+            points_limit,
+            worker_count
+        );
+        BestSwapCandidate best = best_scored_swap(swap_candidates, swap_scores, current_score);
+        if (best.remove_index < 0 || best.add_index < 0) {
+            break;
+        }
+        swap_log.push_back({best.remove_index, best.add_index, current_score, best.score});
+        route.selected[best.remove_index] = 0;
+        route.selected[best.add_index] = 1;
+        current_points = current_points - graph.nodes[best.remove_index].cost + graph.nodes[best.add_index].cost;
+        current_score = best.score;
     }
 
     improve_route_glyph_relocations(
@@ -2858,7 +2960,8 @@ RouteOutput improve_route_locally(
         points_limit,
         current_points,
         current_score,
-        swap_log
+        swap_log,
+        worker_count
     );
 
     if (!swap_log.empty()) {
@@ -3830,7 +3933,8 @@ json optimize(const Options& options) {
             best_route_bonuses,
             best.route,
             options.points,
-            swap_log
+            swap_log,
+            worker_count
         );
         if (!swap_log.empty()) {
             ScoredRoute improved = score_route(
