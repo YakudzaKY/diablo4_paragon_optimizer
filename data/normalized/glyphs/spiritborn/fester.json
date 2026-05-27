@@ -1,0 +1,99 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nFester\nRadius Size: 3 \nFor every 5 Dexterity purchased within range, you deal +1.0% increased Damage with Centipede skills.\nAdditional Bonus: \nYour Centipede Skills deal 15% [x] increased damage to Crowd Controlled enemies.\nRequired (purchased in range): +40 Dexterity\nLegendary Bonus: \nIncrease Poison damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nГной\nРадиус: 3 \nЗа каждые 5 ед. ловкости, открытых в радиусе действия, урон от умений сороконожки увеличивается на 1.0% .\nДополнительный бонус: \nВаши умения сороконожки наносят на 15% [x] больше урона противникам, на которых действуют эффекты контроля.\nТребуется открыть в радиусе действия: +40 к ловкости\nЛегендарный бонус: \n+ 0.5% [x] к урону от яда. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:50:24Z",
+  "class": "spiritborn",
+  "class_mask": 32,
+  "id": "fester",
+  "max_level": 100,
+  "name": {
+    "en": "Fester",
+    "ru": "Гной"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 32,
+    "icon": 1235893039,
+    "maxLevel": 100,
+    "name": "Fester",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      809827735,
+      28625647,
+      3567369300,
+      4053473037
+    ],
+    "sno": 2072563,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 12,
+        "attributeName": "Dexterity",
+        "classMask": 42
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 809827735,
+      "name": "Dexterity",
+      "raw": {
+        "id": 809827735,
+        "name": "Dexterity"
+      }
+    },
+    {
+      "id": 28625647,
+      "name": "Centipede",
+      "raw": {
+        "id": 28625647,
+        "name": "Centipede"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 4053473037,
+      "name": "Poison",
+      "raw": {
+        "id": 4053473037,
+        "name": "Poison"
+      }
+    }
+  ],
+  "source_glyph_id": 2072563,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/fester-2072563",
+  "threshold_attributes": [
+    {
+      "attribute": 12,
+      "attribute_name": "Dexterity",
+      "class_mask": 42,
+      "stat_key": "dexterity"
+    }
+  ]
+}

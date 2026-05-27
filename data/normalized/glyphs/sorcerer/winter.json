@@ -1,0 +1,117 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nWinter\nRadius Size: 3 \nGrants +25.0% bonus to all Rare nodes within range.\nAdditional Bonus: \nWhenever you Chill or Freeze an enemy, you deal 3.6% [x] increased Cold damage for 10 seconds, up to 18% [x] .\nRequired (purchased in range): +25 Dexterity\nLegendary Bonus: \nIncrease damage to Crowd Controlled targets by 2.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nЗима\nРадиус: 3 \nУсиливает все редкие узлы в радиусе действия на +25.0% .\nДополнительный бонус: \nКогда вы замораживаете противника или применяете к нему эффект окоченения , он получает от вас на 3.6% [x] больше урона от холода в течение 10 сек. Максимальная прибавка к урону – 18% [x] .\nТребуется открыть в радиусе действия: +25 к ловкости\nЛегендарный бонус: \n+ 2.8% [x] к урону целям под действием эффектов контроля. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:10:45Z",
+  "class": "sorcerer",
+  "class_mask": 1,
+  "id": "winter",
+  "max_level": 100,
+  "name": {
+    "en": "Winter",
+    "ru": "Зима"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 1,
+    "icon": 1236117199,
+    "maxLevel": 100,
+    "name": "Winter",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      809827735,
+      340908880,
+      2543162295,
+      3567369300,
+      2789173029,
+      1901128789
+    ],
+    "sno": 1023200,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 12,
+        "attributeName": "Dexterity",
+        "classMask": 119
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 809827735,
+      "name": "Dexterity",
+      "raw": {
+        "id": 809827735,
+        "name": "Dexterity"
+      }
+    },
+    {
+      "id": 340908880,
+      "name": "Chill",
+      "raw": {
+        "id": 340908880,
+        "name": "Chill"
+      }
+    },
+    {
+      "id": 2543162295,
+      "name": "Cold",
+      "raw": {
+        "id": 2543162295,
+        "name": "Cold"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 2789173029,
+      "name": "Frozen",
+      "raw": {
+        "id": 2789173029,
+        "name": "Frozen"
+      }
+    },
+    {
+      "id": 1901128789,
+      "name": "Crowd Control",
+      "raw": {
+        "id": 1901128789,
+        "name": "Crowd Control"
+      }
+    }
+  ],
+  "source_glyph_id": 1023200,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/winter-1023200",
+  "threshold_attributes": [
+    {
+      "attribute": 12,
+      "attribute_name": "Dexterity",
+      "class_mask": 119,
+      "stat_key": "dexterity"
+    }
+  ]
+}

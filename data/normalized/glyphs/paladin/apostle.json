@@ -1,0 +1,99 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nApostle\nRadius Size: 3 \nFor every 5 Strength purchased within range, your Disciple skills deal 1.0% [+] increased damage.\nAdditional Bonus: \nDisciple skills deal an additional 15% [x] damage to Vulnerable enemies.\nRequired (purchased in range): +40 Strength\nLegendary Bonus: \nIncrease damage to Vulnerable targets by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nАпостол\nРадиус: 3 \nЗа каждые 5 ед. силы, открытых в радиусе действия, урон умений категории \"Послушник\" увеличивается на 1.0% [+] .\nДополнительный бонус: \nУмения категории \"Послушник\" наносят на 15% [x] больше урона уязвимым противникам.\nТребуется открыть в радиусе действия: +40 к силе\nЛегендарный бонус: \n+ 0.5% [x] к урону уязвимым целям. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:56:38Z",
+  "class": "paladin",
+  "class_mask": 64,
+  "id": "apostle",
+  "max_level": 100,
+  "name": {
+    "en": "Apostle",
+    "ru": "Апостол"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 64,
+    "icon": 2519748583,
+    "maxLevel": 100,
+    "name": "Apostle",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      510015620,
+      3567369300,
+      4294579595,
+      2434110708
+    ],
+    "sno": 2478580,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 9,
+        "attributeName": "Strength",
+        "classMask": 68
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 510015620,
+      "name": "Strength",
+      "raw": {
+        "id": 510015620,
+        "name": "Strength"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 4294579595,
+      "name": "Disciple",
+      "raw": {
+        "id": 4294579595,
+        "name": "Disciple"
+      }
+    },
+    {
+      "id": 2434110708,
+      "name": "Vulnerable",
+      "raw": {
+        "id": 2434110708,
+        "name": "Vulnerable"
+      }
+    }
+  ],
+  "source_glyph_id": 2478580,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/apostle-2478580",
+  "threshold_attributes": [
+    {
+      "attribute": 9,
+      "attribute_name": "Strength",
+      "class_mask": 68,
+      "stat_key": "strength"
+    }
+  ]
+}

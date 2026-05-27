@@ -1,0 +1,99 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nJagged Plume\nRadius Size: 3 \nFor every 5 Dexterity purchased within range, you gain +1.0% Storm Feather potency.\nAdditional Bonus: \nSpawning a Storm Feather grants you 3% [x] increased damage and 5% increased Movement Speed for 5 seconds, stacking up to 5 times.\nRequired (purchased in range): +40 Dexterity\nLegendary Bonus: \nIncrease Lightning damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nЗазубренный гребень\nРадиус: 3 \nЗа каждые 5 ед. ловкости, открытых в радиусе действия, мощь перьев бури увеличивается на +1.0% .\nДополнительный бонус: \nКогда вы создаете перо бури , наносимый урон увеличивается на 3% [x] , а скорость передвижения – на 5% на 5 сек. Эффект суммируется до 5 раз.\nТребуется открыть в радиусе действия: +40 к ловкости\nЛегендарный бонус: \n+ 0.5% [x] к урону от молнии. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:50:24Z",
+  "class": "spiritborn",
+  "class_mask": 32,
+  "id": "jagged_plume",
+  "max_level": 100,
+  "name": {
+    "en": "Jagged Plume",
+    "ru": "Зазубренный гребень"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 32,
+    "icon": 1235893039,
+    "maxLevel": 100,
+    "name": "Jagged Plume",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      809827735,
+      2507415870,
+      1302406649,
+      3567369300
+    ],
+    "sno": 2066786,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 12,
+        "attributeName": "Dexterity",
+        "classMask": 42
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 809827735,
+      "name": "Dexterity",
+      "raw": {
+        "id": 809827735,
+        "name": "Dexterity"
+      }
+    },
+    {
+      "id": 2507415870,
+      "name": "Storm Feathers",
+      "raw": {
+        "id": 2507415870,
+        "name": "Storm Feathers"
+      }
+    },
+    {
+      "id": 1302406649,
+      "name": "Lightning",
+      "raw": {
+        "id": 1302406649,
+        "name": "Lightning"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    }
+  ],
+  "source_glyph_id": 2066786,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/jagged-plume-2066786",
+  "threshold_attributes": [
+    {
+      "attribute": 12,
+      "attribute_name": "Dexterity",
+      "class_mask": 42,
+      "stat_key": "dexterity"
+    }
+  ]
+}

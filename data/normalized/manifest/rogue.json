@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-05-27T10:36:02Z",
+  "class": "rogue",
+  "counts": {
+    "available_stats": 20,
+    "boards": 10,
+    "glyphs": 26
+  },
+  "detail_coverage": {
+    "glyphs": {
+      "errors": 0,
+      "expected": 52,
+      "missing": 0,
+      "ok": 52,
+      "reused": 0
+    },
+    "nodes": {
+      "errors": 0,
+      "expected": 224,
+      "missing": 0,
+      "ok": 224,
+      "reused": 100
+    }
+  },
+  "detail_errors": [],
+  "detail_errors_count": 0,
+  "files": {
+    "boards_dir": "paragon_optimizer\\data\\normalized\\boards\\rogue",
+    "class": "paragon_optimizer\\data\\normalized\\classes\\rogue.json",
+    "glyphs_dir": "paragon_optimizer\\data\\normalized\\glyphs\\rogue"
+  },
+  "patch_version": "3.0.2",
+  "reuse_events": [],
+  "reuse_events_count": 0,
+  "schema_version": 1,
+  "source_urls": {
+    "glyphs": {
+      "en": "https://www.wowhead.com/diablo-4/paragon-glyphs#filtered:Rogue",
+      "ru": "https://www.wowhead.com/diablo-4/ru/paragon-glyphs#filtered:Разбойник"
+    },
+    "nodes": {
+      "en": "https://www.wowhead.com/diablo-4/paragon-nodes#filtered:Rogue",
+      "ru": "https://www.wowhead.com/diablo-4/ru/paragon-nodes"
+    },
+    "paragon_calc": "https://www.wowhead.com/diablo-4/paragon-calc/rogue",
+    "paragon_data": "https://nether.wowhead.com/diablo-4/data/paragon-calc?dv=17&db=1778694731"
+  },
+  "warnings": []
+}

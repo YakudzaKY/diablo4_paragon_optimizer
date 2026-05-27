@@ -1,0 +1,7896 @@
+{
+  "checked_at": "2026-05-27T10:42:26Z",
+  "class": "necromancer",
+  "edge_source": "inferred_grid_adjacency",
+  "edges": [
+    [
+      "flesh_eater_0_10",
+      "flesh_eater_1_10"
+    ],
+    [
+      "flesh_eater_1_9",
+      "flesh_eater_2_9"
+    ],
+    [
+      "flesh_eater_1_9",
+      "flesh_eater_1_10"
+    ],
+    [
+      "flesh_eater_1_10",
+      "flesh_eater_1_11"
+    ],
+    [
+      "flesh_eater_1_11",
+      "flesh_eater_2_11"
+    ],
+    [
+      "flesh_eater_2_8",
+      "flesh_eater_3_8"
+    ],
+    [
+      "flesh_eater_2_8",
+      "flesh_eater_2_9"
+    ],
+    [
+      "flesh_eater_2_9",
+      "flesh_eater_3_9"
+    ],
+    [
+      "flesh_eater_2_11",
+      "flesh_eater_3_11"
+    ],
+    [
+      "flesh_eater_2_11",
+      "flesh_eater_2_12"
+    ],
+    [
+      "flesh_eater_2_12",
+      "flesh_eater_3_12"
+    ],
+    [
+      "flesh_eater_3_8",
+      "flesh_eater_4_8"
+    ],
+    [
+      "flesh_eater_3_8",
+      "flesh_eater_3_9"
+    ],
+    [
+      "flesh_eater_3_9",
+      "flesh_eater_4_9"
+    ],
+    [
+      "flesh_eater_3_11",
+      "flesh_eater_4_11"
+    ],
+    [
+      "flesh_eater_3_11",
+      "flesh_eater_3_12"
+    ],
+    [
+      "flesh_eater_3_12",
+      "flesh_eater_4_12"
+    ],
+    [
+      "flesh_eater_4_6",
+      "flesh_eater_5_6"
+    ],
+    [
+      "flesh_eater_4_6",
+      "flesh_eater_4_7"
+    ],
+    [
+      "flesh_eater_4_7",
+      "flesh_eater_5_7"
+    ],
+    [
+      "flesh_eater_4_7",
+      "flesh_eater_4_8"
+    ],
+    [
+      "flesh_eater_4_8",
+      "flesh_eater_4_9"
+    ],
+    [
+      "flesh_eater_4_11",
+      "flesh_eater_4_12"
+    ],
+    [
+      "flesh_eater_4_12",
+      "flesh_eater_4_13"
+    ],
+    [
+      "flesh_eater_4_13",
+      "flesh_eater_5_13"
+    ],
+    [
+      "flesh_eater_4_13",
+      "flesh_eater_4_14"
+    ],
+    [
+      "flesh_eater_4_14",
+      "flesh_eater_5_14"
+    ],
+    [
+      "flesh_eater_5_6",
+      "flesh_eater_6_6"
+    ],
+    [
+      "flesh_eater_5_6",
+      "flesh_eater_5_7"
+    ],
+    [
+      "flesh_eater_5_7",
+      "flesh_eater_6_7"
+    ],
+    [
+      "flesh_eater_5_13",
+      "flesh_eater_6_13"
+    ],
+    [
+      "flesh_eater_5_13",
+      "flesh_eater_5_14"
+    ],
+    [
+      "flesh_eater_5_14",
+      "flesh_eater_6_14"
+    ],
+    [
+      "flesh_eater_6_6",
+      "flesh_eater_7_6"
+    ],
+    [
+      "flesh_eater_6_6",
+      "flesh_eater_6_7"
+    ],
+    [
+      "flesh_eater_6_7",
+      "flesh_eater_7_7"
+    ],
+    [
+      "flesh_eater_6_7",
+      "flesh_eater_6_8"
+    ],
+    [
+      "flesh_eater_6_8",
+      "flesh_eater_7_8"
+    ],
+    [
+      "flesh_eater_6_10",
+      "flesh_eater_7_10"
+    ],
+    [
+      "flesh_eater_6_12",
+      "flesh_eater_7_12"
+    ],
+    [
+      "flesh_eater_6_12",
+      "flesh_eater_6_13"
+    ],
+    [
+      "flesh_eater_6_13",
+      "flesh_eater_7_13"
+    ],
+    [
+      "flesh_eater_6_13",
+      "flesh_eater_6_14"
+    ],
+    [
+      "flesh_eater_6_14",
+      "flesh_eater_7_14"
+    ],
+    [
+      "flesh_eater_7_6",
+      "flesh_eater_8_6"
+    ],
+    [
+      "flesh_eater_7_6",
+      "flesh_eater_7_7"
+    ],
+    [
+      "flesh_eater_7_7",
+      "flesh_eater_8_7"
+    ],
+    [
+      "flesh_eater_7_7",
+      "flesh_eater_7_8"
+    ],
+    [
+      "flesh_eater_7_8",
+      "flesh_eater_7_9"
+    ],
+    [
+      "flesh_eater_7_9",
+      "flesh_eater_7_10"
+    ],
+    [
+      "flesh_eater_7_10",
+      "flesh_eater_8_10"
+    ],
+    [
+      "flesh_eater_7_10",
+      "flesh_eater_7_11"
+    ],
+    [
+      "flesh_eater_7_11",
+      "flesh_eater_7_12"
+    ],
+    [
+      "flesh_eater_7_12",
+      "flesh_eater_7_13"
+    ],
+    [
+      "flesh_eater_7_13",
+      "flesh_eater_8_13"
+    ],
+    [
+      "flesh_eater_7_13",
+      "flesh_eater_7_14"
+    ],
+    [
+      "flesh_eater_7_14",
+      "flesh_eater_8_14"
+    ],
+    [
+      "flesh_eater_8_6",
+      "flesh_eater_9_6"
+    ],
+    [
+      "flesh_eater_8_6",
+      "flesh_eater_8_7"
+    ],
+    [
+      "flesh_eater_8_13",
+      "flesh_eater_8_14"
+    ],
+    [
+      "flesh_eater_8_14",
+      "flesh_eater_9_14"
+    ],
+    [
+      "flesh_eater_9_6",
+      "flesh_eater_10_6"
+    ],
+    [
+      "flesh_eater_9_8",
+      "flesh_eater_10_8"
+    ],
+    [
+      "flesh_eater_9_8",
+      "flesh_eater_9_9"
+    ],
+    [
+      "flesh_eater_9_9",
+      "flesh_eater_10_9"
+    ],
+    [
+      "flesh_eater_9_11",
+      "flesh_eater_10_11"
+    ],
+    [
+      "flesh_eater_9_11",
+      "flesh_eater_9_12"
+    ],
+    [
+      "flesh_eater_9_12",
+      "flesh_eater_10_12"
+    ],
+    [
+      "flesh_eater_9_14",
+      "flesh_eater_10_14"
+    ],
+    [
+      "flesh_eater_10_0",
+      "flesh_eater_10_1"
+    ],
+    [
+      "flesh_eater_10_1",
+      "flesh_eater_11_1"
+    ],
+    [
+      "flesh_eater_10_1",
+      "flesh_eater_10_2"
+    ],
+    [
+      "flesh_eater_10_2",
+      "flesh_eater_10_3"
+    ],
+    [
+      "flesh_eater_10_3",
+      "flesh_eater_10_4"
+    ],
+    [
+      "flesh_eater_10_4",
+      "flesh_eater_11_4"
+    ],
+    [
+      "flesh_eater_10_4",
+      "flesh_eater_10_5"
+    ],
+    [
+      "flesh_eater_10_5",
+      "flesh_eater_10_6"
+    ],
+    [
+      "flesh_eater_10_6",
+      "flesh_eater_11_6"
+    ],
+    [
+      "flesh_eater_10_6",
+      "flesh_eater_10_7"
+    ],
+    [
+      "flesh_eater_10_7",
+      "flesh_eater_11_7"
+    ],
+    [
+      "flesh_eater_10_7",
+      "flesh_eater_10_8"
+    ],
+    [
+      "flesh_eater_10_8",
+      "flesh_eater_11_8"
+    ],
+    [
+      "flesh_eater_10_8",
+      "flesh_eater_10_9"
+    ],
+    [
+      "flesh_eater_10_9",
+      "flesh_eater_11_9"
+    ],
+    [
+      "flesh_eater_10_11",
+      "flesh_eater_11_11"
+    ],
+    [
+      "flesh_eater_10_11",
+      "flesh_eater_10_12"
+    ],
+    [
+      "flesh_eater_10_12",
+      "flesh_eater_11_12"
+    ],
+    [
+      "flesh_eater_10_12",
+      "flesh_eater_10_13"
+    ],
+    [
+      "flesh_eater_10_13",
+      "flesh_eater_11_13"
+    ],
+    [
+      "flesh_eater_10_13",
+      "flesh_eater_10_14"
+    ],
+    [
+      "flesh_eater_10_14",
+      "flesh_eater_11_14"
+    ],
+    [
+      "flesh_eater_10_14",
+      "flesh_eater_10_15"
+    ],
+    [
+      "flesh_eater_10_15",
+      "flesh_eater_10_16"
+    ],
+    [
+      "flesh_eater_10_16",
+      "flesh_eater_11_16"
+    ],
+    [
+      "flesh_eater_10_16",
+      "flesh_eater_10_17"
+    ],
+    [
+      "flesh_eater_10_17",
+      "flesh_eater_10_18"
+    ],
+    [
+      "flesh_eater_10_18",
+      "flesh_eater_10_19"
+    ],
+    [
+      "flesh_eater_10_19",
+      "flesh_eater_11_19"
+    ],
+    [
+      "flesh_eater_10_19",
+      "flesh_eater_10_20"
+    ],
+    [
+      "flesh_eater_11_1",
+      "flesh_eater_12_1"
+    ],
+    [
+      "flesh_eater_11_4",
+      "flesh_eater_12_4"
+    ],
+    [
+      "flesh_eater_11_6",
+      "flesh_eater_12_6"
+    ],
+    [
+      "flesh_eater_11_6",
+      "flesh_eater_11_7"
+    ],
+    [
+      "flesh_eater_11_7",
+      "flesh_eater_12_7"
+    ],
+    [
+      "flesh_eater_11_7",
+      "flesh_eater_11_8"
+    ],
+    [
+      "flesh_eater_11_8",
+      "flesh_eater_12_8"
+    ],
+    [
+      "flesh_eater_11_8",
+      "flesh_eater_11_9"
+    ],
+    [
+      "flesh_eater_11_9",
+      "flesh_eater_12_9"
+    ],
+    [
+      "flesh_eater_11_9",
+      "flesh_eater_11_10"
+    ],
+    [
+      "flesh_eater_11_10",
+      "flesh_eater_12_10"
+    ],
+    [
+      "flesh_eater_11_10",
+      "flesh_eater_11_11"
+    ],
+    [
+      "flesh_eater_11_11",
+      "flesh_eater_12_11"
+    ],
+    [
+      "flesh_eater_11_11",
+      "flesh_eater_11_12"
+    ],
+    [
+      "flesh_eater_11_12",
+      "flesh_eater_12_12"
+    ],
+    [
+      "flesh_eater_11_12",
+      "flesh_eater_11_13"
+    ],
+    [
+      "flesh_eater_11_13",
+      "flesh_eater_12_13"
+    ],
+    [
+      "flesh_eater_11_13",
+      "flesh_eater_11_14"
+    ],
+    [
+      "flesh_eater_11_14",
+      "flesh_eater_12_14"
+    ],
+    [
+      "flesh_eater_11_16",
+      "flesh_eater_12_16"
+    ],
+    [
+      "flesh_eater_11_19",
+      "flesh_eater_12_19"
+    ],
+    [
+      "flesh_eater_12_1",
+      "flesh_eater_13_1"
+    ],
+    [
+      "flesh_eater_12_1",
+      "flesh_eater_12_2"
+    ],
+    [
+      "flesh_eater_12_2",
+      "flesh_eater_13_2"
+    ],
+    [
+      "flesh_eater_12_4",
+      "flesh_eater_13_4"
+    ],
+    [
+      "flesh_eater_12_6",
+      "flesh_eater_13_6"
+    ],
+    [
+      "flesh_eater_12_6",
+      "flesh_eater_12_7"
+    ],
+    [
+      "flesh_eater_12_7",
+      "flesh_eater_13_7"
+    ],
+    [
+      "flesh_eater_12_7",
+      "flesh_eater_12_8"
+    ],
+    [
+      "flesh_eater_12_8",
+      "flesh_eater_12_9"
+    ],
+    [
+      "flesh_eater_12_9",
+      "flesh_eater_13_9"
+    ],
+    [
+      "flesh_eater_12_9",
+      "flesh_eater_12_10"
+    ],
+    [
+      "flesh_eater_12_10",
+      "flesh_eater_13_10"
+    ],
+    [
+      "flesh_eater_12_10",
+      "flesh_eater_12_11"
+    ],
+    [
+      "flesh_eater_12_11",
+      "flesh_eater_13_11"
+    ],
+    [
+      "flesh_eater_12_11",
+      "flesh_eater_12_12"
+    ],
+    [
+      "flesh_eater_12_12",
+      "flesh_eater_12_13"
+    ],
+    [
+      "flesh_eater_12_13",
+      "flesh_eater_13_13"
+    ],
+    [
+      "flesh_eater_12_13",
+      "flesh_eater_12_14"
+    ],
+    [
+      "flesh_eater_12_14",
+      "flesh_eater_13_14"
+    ],
+    [
+      "flesh_eater_12_16",
+      "flesh_eater_13_16"
+    ],
+    [
+      "flesh_eater_12_18",
+      "flesh_eater_13_18"
+    ],
+    [
+      "flesh_eater_12_18",
+      "flesh_eater_12_19"
+    ],
+    [
+      "flesh_eater_12_19",
+      "flesh_eater_13_19"
+    ],
+    [
+      "flesh_eater_13_1",
+      "flesh_eater_14_1"
+    ],
+    [
+      "flesh_eater_13_1",
+      "flesh_eater_13_2"
+    ],
+    [
+      "flesh_eater_13_2",
+      "flesh_eater_14_2"
+    ],
+    [
+      "flesh_eater_13_4",
+      "flesh_eater_14_4"
+    ],
+    [
+      "flesh_eater_13_4",
+      "flesh_eater_13_5"
+    ],
+    [
+      "flesh_eater_13_5",
+      "flesh_eater_14_5"
+    ],
+    [
+      "flesh_eater_13_5",
+      "flesh_eater_13_6"
+    ],
+    [
+      "flesh_eater_13_6",
+      "flesh_eater_14_6"
+    ],
+    [
+      "flesh_eater_13_6",
+      "flesh_eater_13_7"
+    ],
+    [
+      "flesh_eater_13_7",
+      "flesh_eater_14_7"
+    ],
+    [
+      "flesh_eater_13_9",
+      "flesh_eater_14_9"
+    ],
+    [
+      "flesh_eater_13_9",
+      "flesh_eater_13_10"
+    ],
+    [
+      "flesh_eater_13_10",
+      "flesh_eater_14_10"
+    ],
+    [
+      "flesh_eater_13_10",
+      "flesh_eater_13_11"
+    ],
+    [
+      "flesh_eater_13_11",
+      "flesh_eater_14_11"
+    ],
+    [
+      "flesh_eater_13_13",
+      "flesh_eater_14_13"
+    ],
+    [
+      "flesh_eater_13_13",
+      "flesh_eater_13_14"
+    ],
+    [
+      "flesh_eater_13_14",
+      "flesh_eater_14_14"
+    ],
+    [
+      "flesh_eater_13_14",
+      "flesh_eater_13_15"
+    ],
+    [
+      "flesh_eater_13_15",
+      "flesh_eater_14_15"
+    ],
+    [
+      "flesh_eater_13_15",
+      "flesh_eater_13_16"
+    ],
+    [
+      "flesh_eater_13_16",
+      "flesh_eater_14_16"
+    ],
+    [
+      "flesh_eater_13_18",
+      "flesh_eater_14_18"
+    ],
+    [
+      "flesh_eater_13_18",
+      "flesh_eater_13_19"
+    ],
+    [
+      "flesh_eater_13_19",
+      "flesh_eater_14_19"
+    ],
+    [
+      "flesh_eater_14_1",
+      "flesh_eater_14_2"
+    ],
+    [
+      "flesh_eater_14_2",
+      "flesh_eater_15_2"
+    ],
+    [
+      "flesh_eater_14_2",
+      "flesh_eater_14_3"
+    ],
+    [
+      "flesh_eater_14_3",
+      "flesh_eater_15_3"
+    ],
+    [
+      "flesh_eater_14_3",
+      "flesh_eater_14_4"
+    ],
+    [
+      "flesh_eater_14_4",
+      "flesh_eater_15_4"
+    ],
+    [
+      "flesh_eater_14_4",
+      "flesh_eater_14_5"
+    ],
+    [
+      "flesh_eater_14_5",
+      "flesh_eater_14_6"
+    ],
+    [
+      "flesh_eater_14_6",
+      "flesh_eater_14_7"
+    ],
+    [
+      "flesh_eater_14_7",
+      "flesh_eater_14_8"
+    ],
+    [
+      "flesh_eater_14_8",
+      "flesh_eater_15_8"
+    ],
+    [
+      "flesh_eater_14_8",
+      "flesh_eater_14_9"
+    ],
+    [
+      "flesh_eater_14_9",
+      "flesh_eater_15_9"
+    ],
+    [
+      "flesh_eater_14_9",
+      "flesh_eater_14_10"
+    ],
+    [
+      "flesh_eater_14_10",
+      "flesh_eater_15_10"
+    ],
+    [
+      "flesh_eater_14_10",
+      "flesh_eater_14_11"
+    ],
+    [
+      "flesh_eater_14_11",
+      "flesh_eater_15_11"
+    ],
+    [
+      "flesh_eater_14_11",
+      "flesh_eater_14_12"
+    ],
+    [
+      "flesh_eater_14_12",
+      "flesh_eater_15_12"
+    ],
+    [
+      "flesh_eater_14_12",
+      "flesh_eater_14_13"
+    ],
+    [
+      "flesh_eater_14_13",
+      "flesh_eater_14_14"
+    ],
+    [
+      "flesh_eater_14_14",
+      "flesh_eater_14_15"
+    ],
+    [
+      "flesh_eater_14_15",
+      "flesh_eater_14_16"
+    ],
+    [
+      "flesh_eater_14_16",
+      "flesh_eater_15_16"
+    ],
+    [
+      "flesh_eater_14_16",
+      "flesh_eater_14_17"
+    ],
+    [
+      "flesh_eater_14_17",
+      "flesh_eater_15_17"
+    ],
+    [
+      "flesh_eater_14_17",
+      "flesh_eater_14_18"
+    ],
+    [
+      "flesh_eater_14_18",
+      "flesh_eater_15_18"
+    ],
+    [
+      "flesh_eater_14_18",
+      "flesh_eater_14_19"
+    ],
+    [
+      "flesh_eater_15_2",
+      "flesh_eater_15_3"
+    ],
+    [
+      "flesh_eater_15_3",
+      "flesh_eater_15_4"
+    ],
+    [
+      "flesh_eater_15_8",
+      "flesh_eater_15_9"
+    ],
+    [
+      "flesh_eater_15_9",
+      "flesh_eater_16_9"
+    ],
+    [
+      "flesh_eater_15_9",
+      "flesh_eater_15_10"
+    ],
+    [
+      "flesh_eater_15_10",
+      "flesh_eater_16_10"
+    ],
+    [
+      "flesh_eater_15_10",
+      "flesh_eater_15_11"
+    ],
+    [
+      "flesh_eater_15_11",
+      "flesh_eater_16_11"
+    ],
+    [
+      "flesh_eater_15_11",
+      "flesh_eater_15_12"
+    ],
+    [
+      "flesh_eater_15_16",
+      "flesh_eater_15_17"
+    ],
+    [
+      "flesh_eater_15_17",
+      "flesh_eater_15_18"
+    ],
+    [
+      "flesh_eater_16_9",
+      "flesh_eater_17_9"
+    ],
+    [
+      "flesh_eater_16_9",
+      "flesh_eater_16_10"
+    ],
+    [
+      "flesh_eater_16_10",
+      "flesh_eater_17_10"
+    ],
+    [
+      "flesh_eater_16_10",
+      "flesh_eater_16_11"
+    ],
+    [
+      "flesh_eater_16_11",
+      "flesh_eater_17_11"
+    ],
+    [
+      "flesh_eater_17_9",
+      "flesh_eater_18_9"
+    ],
+    [
+      "flesh_eater_17_9",
+      "flesh_eater_17_10"
+    ],
+    [
+      "flesh_eater_17_10",
+      "flesh_eater_17_11"
+    ],
+    [
+      "flesh_eater_17_11",
+      "flesh_eater_18_11"
+    ],
+    [
+      "flesh_eater_18_9",
+      "flesh_eater_19_9"
+    ],
+    [
+      "flesh_eater_18_11",
+      "flesh_eater_19_11"
+    ],
+    [
+      "flesh_eater_19_9",
+      "flesh_eater_19_10"
+    ],
+    [
+      "flesh_eater_19_10",
+      "flesh_eater_20_10"
+    ],
+    [
+      "flesh_eater_19_10",
+      "flesh_eater_19_11"
+    ]
+  ],
+  "gates": [
+    {
+      "id": "flesh_eater_10_0",
+      "side": "top",
+      "x": 10,
+      "y": 0
+    },
+    {
+      "id": "flesh_eater_0_10",
+      "side": "left",
+      "x": 0,
+      "y": 10
+    },
+    {
+      "id": "flesh_eater_20_10",
+      "side": "right",
+      "x": 20,
+      "y": 10
+    },
+    {
+      "id": "flesh_eater_10_20",
+      "side": "bottom",
+      "x": 10,
+      "y": 20
+    }
+  ],
+  "glyph_sockets": [
+    "flesh_eater_12_10"
+  ],
+  "height": 21,
+  "id": "flesh_eater",
+  "legendary_nodes": [
+    "flesh_eater_6_10"
+  ],
+  "name": {
+    "en": "Flesh-eater",
+    "ru": "Пожирание плоти"
+  },
+  "node_type_counts": {
+    "board_gate": 4,
+    "glyph_socket": 1,
+    "legendary": 1,
+    "magic": 30,
+    "normal": 114,
+    "rare": 6
+  },
+  "nodes": [
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_10_0",
+      "is_starting_node": false,
+      "name": {
+        "en": "Board Gate",
+        "ru": "Ворота доски"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 3778111510,
+        "list_tags": "Strength, Intelligence, Willpower, Dexterity",
+        "popularity": 23,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength intelligence willpower dexterity board attachment gate +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          },
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          },
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          },
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 994337,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/board-attachment-gate-994337",
+      "stats": {
+        "dexterity": 5.0,
+        "intelligence": 5.0,
+        "strength": 5.0,
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "board_gate",
+      "x": 10,
+      "y": 0
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_10_1",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 1
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_11_1",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 1
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_12_1",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 1
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_13_1",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 1
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_14_1",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 1
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_10_2",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 2
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_12_2",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 2
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_13_2",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 2
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_14_2",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic ResistancePoison",
+        "ru": "Generic Magic ResistancePoison"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1720318871,
+        "list_tags": "Resistance, Poison",
+        "popularity": 10,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "resistance poison magic node +1.5% to all elements barbarian, druid, necromancer, rogue, spiritborn",
+        "skill_tags": [
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          },
+          {
+            "id": 4053473037,
+            "name": "Poison",
+            "raw": {
+              "id": 4053473037,
+              "name": "Poison"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 671265,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancepoison-671265",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "magic",
+      "x": 14,
+      "y": 2
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_15_2",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic ResistanceMaxPoison",
+        "ru": "Generic Magic ResistanceMaxPoison"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1720318871,
+        "list_tags": "Resistance, Poison",
+        "popularity": 6,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "resistance poison magic node +1.5% to all elements barbarian, druid, necromancer, rogue, spiritborn",
+        "skill_tags": [
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          },
+          {
+            "id": 4053473037,
+            "name": "Poison",
+            "raw": {
+              "id": 4053473037,
+              "name": "Poison"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 2126150,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxpoison-2126150",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "magic",
+      "x": 15,
+      "y": 2
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_10_3",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 3
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_14_3",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic ResistancePoison",
+        "ru": "Generic Magic ResistancePoison"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1720318871,
+        "list_tags": "Resistance, Poison",
+        "popularity": 10,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "resistance poison magic node +1.5% to all elements barbarian, druid, necromancer, rogue, spiritborn",
+        "skill_tags": [
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          },
+          {
+            "id": 4053473037,
+            "name": "Poison",
+            "raw": {
+              "id": 4053473037,
+              "name": "Poison"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 671265,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancepoison-671265",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "magic",
+      "x": 14,
+      "y": 3
+    },
+    {
+      "bonus_stats": {
+        "resistance_all": 3.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
+      "cost": 1,
+      "id": "flesh_eater_15_3",
+      "is_starting_node": false,
+      "name": {
+        "en": "Blood Clotting",
+        "ru": "Свертывание крови"
+      },
+      "raw": {
+        "attributes": [
+          "+3.0% Resistance to All Elements",
+          "+2.0% Total Armor"
+        ],
+        "glyph_attributes": [],
+        "icon": 1720318871,
+        "list_tags": "Resistance, Armor, Poison",
+        "popularity": 7,
+        "quality": 3,
+        "rarity": 3,
+        "search_text": "resistance armor poison rare node blood clotting +3.0% to all elements +2.0% total bonus: another if requirements met: 210 willpower barbarian, necromancer",
+        "skill_tags": [
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          },
+          {
+            "id": 2317714646,
+            "name": "Armor",
+            "raw": {
+              "id": 2317714646,
+              "name": "Armor"
+            }
+          },
+          {
+            "id": 4053473037,
+            "name": "Poison",
+            "raw": {
+              "id": 4053473037,
+              "name": "Poison"
+            }
+          }
+        ]
+      },
+      "requirements": {
+        "willpower": 210.0
+      },
+      "source_node_id": 675469,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/blood-clotting-675469",
+      "stats": {
+        "armor": 2.0,
+        "resistance_all": 3.0
+      },
+      "stats_source": "class_board_attributes",
+      "type": "rare",
+      "x": 15,
+      "y": 3
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_10_4",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 4
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_11_4",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 4
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_12_4",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 4
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_13_4",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 4
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_14_4",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic ResistancePoison",
+        "ru": "Generic Magic ResistancePoison"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1720318871,
+        "list_tags": "Resistance, Poison",
+        "popularity": 10,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "resistance poison magic node +1.5% to all elements barbarian, druid, necromancer, rogue, spiritborn",
+        "skill_tags": [
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          },
+          {
+            "id": 4053473037,
+            "name": "Poison",
+            "raw": {
+              "id": 4053473037,
+              "name": "Poison"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 671265,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancepoison-671265",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "magic",
+      "x": 14,
+      "y": 4
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_15_4",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic ResistanceMaxPoison",
+        "ru": "Generic Magic ResistanceMaxPoison"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1720318871,
+        "list_tags": "Resistance, Poison",
+        "popularity": 6,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "resistance poison magic node +1.5% to all elements barbarian, druid, necromancer, rogue, spiritborn",
+        "skill_tags": [
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          },
+          {
+            "id": 4053473037,
+            "name": "Poison",
+            "raw": {
+              "id": 4053473037,
+              "name": "Poison"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 2126150,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxpoison-2126150",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "magic",
+      "x": 15,
+      "y": 4
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_10_5",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 5
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_13_5",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 5
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_14_5",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 5
+    },
+    {
+      "bonus_stats": {
+        "damage": 12.5
+      },
+      "bonus_stats_source": "tooltip_bonus",
+      "cost": 1,
+      "id": "flesh_eater_4_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Stifle",
+        "ru": "Удушение"
+      },
+      "raw": {
+        "attributes": [
+          "+12.5% Damage to Injured Enemies",
+          "+2.5% <span style=\"color: #E3E0D9\">Corpse</span> Attack Speed"
+        ],
+        "glyph_attributes": [],
+        "icon": 4073752204,
+        "list_tags": "Injured, Critical Strikes, Damage",
+        "popularity": 71,
+        "quality": 3,
+        "rarity": 3,
+        "search_text": "injured critical strikes damage rare node stifle +12.5% to enemies +2.5% corpse attack speed bonus: another if requirements met: 190 dexterity necromancer",
+        "skill_tags": [
+          {
+            "id": 1277787765,
+            "name": "Injured",
+            "raw": {
+              "id": 1277787765,
+              "name": "Injured"
+            }
+          },
+          {
+            "id": 2892145024,
+            "name": "Critical Strikes",
+            "raw": {
+              "id": 2892145024,
+              "name": "Critical Strikes"
+            }
+          },
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {
+        "dexterity": 190.0
+      },
+      "source_node_id": 679882,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/stifle-679882",
+      "stats": {
+        "attack_speed": 2.5,
+        "damage": 12.5
+      },
+      "stats_source": "class_board_attributes",
+      "type": "rare",
+      "x": 4,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_5_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Necro Magic AttackSpeedCorpse",
+        "ru": "Necro Magic AttackSpeedCorpse"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 3673379542,
+        "list_tags": "Attack Speed",
+        "popularity": 5,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "attack speed magic node +1.3% corpse necromancer",
+        "skill_tags": [
+          {
+            "id": 4254627262,
+            "name": "Attack Speed",
+            "raw": {
+              "id": 4254627262,
+              "name": "Attack Speed"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 2128010,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necro-magic-attackspeedcorpse-2128010",
+      "stats": {
+        "attack_speed": 1.3
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 5,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_6_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic DamageToLow",
+        "ru": "Generic Magic DamageToLow"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 4073752204,
+        "list_tags": "Injured, Damage",
+        "popularity": 11,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "injured damage magic node +6.3% to enemies necromancer, warlock",
+        "skill_tags": [
+          {
+            "id": 1277787765,
+            "name": "Injured",
+            "raw": {
+              "id": 1277787765,
+              "name": "Injured"
+            }
+          },
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678856,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagetolow-678856",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "magic",
+      "x": 6,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_7_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_8_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_9_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_10_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_11_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_12_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_13_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_14_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_4_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic DamageToLow",
+        "ru": "Generic Magic DamageToLow"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 4073752204,
+        "list_tags": "Injured, Damage",
+        "popularity": 11,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "injured damage magic node +6.3% to enemies necromancer, warlock",
+        "skill_tags": [
+          {
+            "id": 1277787765,
+            "name": "Injured",
+            "raw": {
+              "id": 1277787765,
+              "name": "Injured"
+            }
+          },
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678856,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagetolow-678856",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "magic",
+      "x": 4,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_5_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Necro Magic AttackSpeedCorpse",
+        "ru": "Necro Magic AttackSpeedCorpse"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 3673379542,
+        "list_tags": "Attack Speed",
+        "popularity": 5,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "attack speed magic node +1.3% corpse necromancer",
+        "skill_tags": [
+          {
+            "id": 4254627262,
+            "name": "Attack Speed",
+            "raw": {
+              "id": 4254627262,
+              "name": "Attack Speed"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 2128010,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necro-magic-attackspeedcorpse-2128010",
+      "stats": {
+        "attack_speed": 1.3
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 5,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_6_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 6,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_7_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_8_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_10_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Dex",
+        "ru": "Generic Magic Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 6,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "dexterity magic node +7 barbarian, druid, necromancer, sorcerer",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678628,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-dex-678628",
+      "stats": {
+        "dexterity": 7.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 10,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_11_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic DamageToElite",
+        "ru": "Generic Magic DamageToElite"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 4073752204,
+        "list_tags": "Elite Monsters, Damage",
+        "popularity": 10,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "elite monsters damage magic node +7.5% to elites all classes",
+        "skill_tags": [
+          {
+            "id": 2322238504,
+            "name": "Elite Monsters",
+            "raw": {
+              "id": 2322238504,
+              "name": "Elite Monsters"
+            }
+          },
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678842,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagetoelite-678842",
+      "stats": {
+        "damage_to_elites": 7.5
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 11,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_12_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_13_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_14_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_2_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 2,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_3_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 3,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_4_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic DamageToLow",
+        "ru": "Generic Magic DamageToLow"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 4073752204,
+        "list_tags": "Injured, Damage",
+        "popularity": 11,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "injured damage magic node +6.3% to enemies necromancer, warlock",
+        "skill_tags": [
+          {
+            "id": 1277787765,
+            "name": "Injured",
+            "raw": {
+              "id": 1277787765,
+              "name": "Injured"
+            }
+          },
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678856,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagetolow-678856",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "magic",
+      "x": 4,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_6_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 6,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_7_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_9_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 8
+    },
+    {
+      "bonus_stats": {
+        "damage_to_elites": 15.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
+      "cost": 1,
+      "id": "flesh_eater_10_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Targeted",
+        "ru": "Прицел"
+      },
+      "raw": {
+        "attributes": [
+          "+15.0% Damage to Elites",
+          "+10 Intelligence"
+        ],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 4073752204,
+        "list_tags": "Elite Monsters, Damage, Intelligence",
+        "popularity": 8,
+        "quality": 3,
+        "rarity": 3,
+        "search_text": "elite monsters damage intelligence rare node targeted +15.0% to elites +10 bonus: another if requirements met: 230 dexterity necromancer",
+        "skill_tags": [
+          {
+            "id": 2322238504,
+            "name": "Elite Monsters",
+            "raw": {
+              "id": 2322238504,
+              "name": "Elite Monsters"
+            }
+          },
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          },
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {
+        "dexterity": 230.0
+      },
+      "source_node_id": 1198732,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/targeted-1198732",
+      "stats": {
+        "damage_to_elites": 15.0,
+        "intelligence": 10.0
+      },
+      "stats_source": "class_board_attributes",
+      "type": "rare",
+      "x": 10,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_11_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic DamageToElite",
+        "ru": "Generic Magic DamageToElite"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 4073752204,
+        "list_tags": "Elite Monsters, Damage",
+        "popularity": 10,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "elite monsters damage magic node +7.5% to elites all classes",
+        "skill_tags": [
+          {
+            "id": 2322238504,
+            "name": "Elite Monsters",
+            "raw": {
+              "id": 2322238504,
+              "name": "Elite Monsters"
+            }
+          },
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678842,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagetoelite-678842",
+      "stats": {
+        "damage_to_elites": 7.5
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 11,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_12_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_14_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_15_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 15,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_1_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 1,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_2_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 2,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_3_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 3,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_4_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 4,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_7_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_9_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Dex",
+        "ru": "Generic Magic Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 6,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "dexterity magic node +7 barbarian, druid, necromancer, sorcerer",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678628,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-dex-678628",
+      "stats": {
+        "dexterity": 7.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 9,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_10_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic DamageToElite",
+        "ru": "Generic Magic DamageToElite"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 4073752204,
+        "list_tags": "Elite Monsters, Damage",
+        "popularity": 10,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "elite monsters damage magic node +7.5% to elites all classes",
+        "skill_tags": [
+          {
+            "id": 2322238504,
+            "name": "Elite Monsters",
+            "raw": {
+              "id": 2322238504,
+              "name": "Elite Monsters"
+            }
+          },
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678842,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagetoelite-678842",
+      "stats": {
+        "damage_to_elites": 7.5
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 10,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_11_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_12_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_13_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_14_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_15_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 15,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_16_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 16,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_17_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 17,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_18_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 18,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_19_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 19,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_0_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Board Gate",
+        "ru": "Ворота доски"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 3778111510,
+        "list_tags": "Strength, Intelligence, Willpower, Dexterity",
+        "popularity": 23,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength intelligence willpower dexterity board attachment gate +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          },
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          },
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          },
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 994337,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/board-attachment-gate-994337",
+      "stats": {
+        "dexterity": 5.0,
+        "intelligence": 5.0,
+        "strength": 5.0,
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "board_gate",
+      "x": 0,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_1_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 1,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_6_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Flesh-eater",
+        "ru": "Пожирание плоти"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1789555327,
+        "list_tags": "Damage, Corpse",
+        "popularity": 33,
+        "quality": 5,
+        "rarity": 4,
+        "search_text": "damage corpse legendary node flesh-eater consuming a grants 60%[x] increased for 8 seconds. necromancer",
+        "skill_tags": [
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          },
+          {
+            "id": 25029371,
+            "name": "Corpse",
+            "raw": {
+              "id": 25029371,
+              "name": "Corpse"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 681468,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/flesh-eater-681468",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "legendary",
+      "x": 6,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_7_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_8_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_11_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_12_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Glyph Socket",
+        "ru": "Ячейка символа"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": null,
+        "list_tags": "",
+        "popularity": 40,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "glyph socket all classes",
+        "skill_tags": []
+      },
+      "requirements": {},
+      "source_node_id": 681756,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/glyph-socket-681756",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "glyph_socket",
+      "x": 12,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_13_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_14_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_15_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 15,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_16_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 16,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_17_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 17,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_19_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 19,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_20_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Board Gate",
+        "ru": "Ворота доски"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 3778111510,
+        "list_tags": "Strength, Intelligence, Willpower, Dexterity",
+        "popularity": 23,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength intelligence willpower dexterity board attachment gate +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          },
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          },
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          },
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 994337,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/board-attachment-gate-994337",
+      "stats": {
+        "dexterity": 5.0,
+        "intelligence": 5.0,
+        "strength": 5.0,
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "board_gate",
+      "x": 20,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_1_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 1,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_2_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 2,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_3_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 3,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_4_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 4,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_7_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_9_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Will",
+        "ru": "Generic Magic Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 10,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "willpower magic node +7 barbarian, necromancer, paladin, sorcerer",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678629,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-will-678629",
+      "stats": {
+        "willpower": 7.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 9,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_10_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Damage",
+        "ru": "Generic Magic Damage"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 4073752204,
+        "list_tags": "Damage",
+        "popularity": 14,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "damage magic node +5% barbarian, druid, necromancer, paladin, rogue, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678754,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damage-678754",
+      "stats": {
+        "damage": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 10,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_11_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_12_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_13_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_14_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_15_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 15,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_16_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 16,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_17_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 17,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_18_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 18,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_19_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 19,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_2_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 2,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_3_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 3,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_4_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HPPercent",
+        "ru": "Generic Magic HPPercent"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Life",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "life magic node 2.0% maximum all classes",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 679184,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hppercent-679184",
+      "stats": {
+        "max_life": 2.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 4,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_6_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 6,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_7_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_9_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 12
+    },
+    {
+      "bonus_stats": {
+        "damage": 10.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
+      "cost": 1,
+      "id": "flesh_eater_10_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Rend",
+        "ru": "Раздирание"
+      },
+      "raw": {
+        "attributes": [
+          "+10% Damage",
+          "+10 Intelligence"
+        ],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 4073752204,
+        "list_tags": "Damage, Intelligence",
+        "popularity": 7,
+        "quality": 3,
+        "rarity": 3,
+        "search_text": "damage intelligence rare node rend +10% +10 bonus: another if requirements met: 190 willpower necromancer",
+        "skill_tags": [
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          },
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {
+        "willpower": 190.0
+      },
+      "source_node_id": 2113626,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/rend-2113626",
+      "stats": {
+        "damage": 10.0,
+        "intelligence": 10.0
+      },
+      "stats_source": "class_board_attributes",
+      "type": "rare",
+      "x": 10,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_11_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Damage",
+        "ru": "Generic Magic Damage"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 4073752204,
+        "list_tags": "Damage",
+        "popularity": 14,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "damage magic node +5% barbarian, druid, necromancer, paladin, rogue, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678754,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damage-678754",
+      "stats": {
+        "damage": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 11,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_12_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_14_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_15_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 15,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_4_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HPPercent",
+        "ru": "Generic Magic HPPercent"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Life",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "life magic node 2.0% maximum all classes",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 679184,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hppercent-679184",
+      "stats": {
+        "max_life": 2.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 4,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_5_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HPRegen",
+        "ru": "Generic Magic HPRegen"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 2303449541,
+        "list_tags": "Healing",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "healing magic node +105 life per 5 seconds barbarian, druid, necromancer, paladin, rogue, sorcerer",
+        "skill_tags": [
+          {
+            "id": 2772682893,
+            "name": "Healing",
+            "raw": {
+              "id": 2772682893,
+              "name": "Healing"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 679136,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hpregen-679136",
+      "stats": {
+        "life_per_5_seconds": 105.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 5,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_6_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 6,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_7_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_8_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_10_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Will",
+        "ru": "Generic Magic Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 10,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "willpower magic node +7 barbarian, necromancer, paladin, sorcerer",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678629,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-will-678629",
+      "stats": {
+        "willpower": 7.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 10,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_11_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Damage",
+        "ru": "Generic Magic Damage"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 4073752204,
+        "list_tags": "Damage",
+        "popularity": 14,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "damage magic node +5% barbarian, druid, necromancer, paladin, rogue, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678754,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damage-678754",
+      "stats": {
+        "damage": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 11,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_12_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_13_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_14_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 13
+    },
+    {
+      "bonus_stats": {
+        "max_life": 4.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
+      "cost": 1,
+      "id": "flesh_eater_4_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Recuperate",
+        "ru": "Заживление ран"
+      },
+      "raw": {
+        "attributes": [
+          "4.0% Maximum Life",
+          "+215 Life per 5 Seconds"
+        ],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Healing, Life",
+        "popularity": 14,
+        "quality": 3,
+        "rarity": 3,
+        "search_text": "healing life rare node recuperate 4.0% maximum +215 per 5 seconds bonus: another if requirements met: 230 willpower (barbarian, necromancer, sorcerer) strength (rogue) intelligence (druid, rogue) barbarian, druid, rogue, sorcerer",
+        "skill_tags": [
+          {
+            "id": 2772682893,
+            "name": "Healing",
+            "raw": {
+              "id": 2772682893,
+              "name": "Healing"
+            }
+          },
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          }
+        ]
+      },
+      "requirements": {
+        "willpower": 230.0
+      },
+      "source_node_id": 680014,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/recuperate-680014",
+      "stats": {
+        "life_per_5_seconds": 215.0,
+        "max_life": 4.0
+      },
+      "stats_source": "class_board_attributes",
+      "type": "rare",
+      "x": 4,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_5_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HPRegen",
+        "ru": "Generic Magic HPRegen"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 2303449541,
+        "list_tags": "Healing",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "healing magic node +105 life per 5 seconds barbarian, druid, necromancer, paladin, rogue, sorcerer",
+        "skill_tags": [
+          {
+            "id": 2772682893,
+            "name": "Healing",
+            "raw": {
+              "id": 2772682893,
+              "name": "Healing"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 679136,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hpregen-679136",
+      "stats": {
+        "life_per_5_seconds": 105.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 5,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_6_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HPPercent",
+        "ru": "Generic Magic HPPercent"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Life",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "life magic node 2.0% maximum all classes",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 679184,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hppercent-679184",
+      "stats": {
+        "max_life": 2.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 6,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_7_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_8_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_9_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_10_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_11_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_12_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_13_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_14_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_10_15",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 15
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_13_15",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 15
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_14_15",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 15
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_10_16",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 16
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_11_16",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 16
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_12_16",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 16
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_13_16",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 16
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_14_16",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic ResistanceAll",
+        "ru": "Generic Magic ResistanceAll"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1720318871,
+        "list_tags": "Resistance",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "resistance magic node +1.5% to all elements classes",
+        "skill_tags": [
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678750,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistanceall-678750",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 14,
+      "y": 16
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_15_16",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HPPercent",
+        "ru": "Generic Magic HPPercent"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Life",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "life magic node 2.0% maximum all classes",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 679184,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hppercent-679184",
+      "stats": {
+        "max_life": 2.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 15,
+      "y": 16
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_10_17",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 17
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_14_17",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic ResistanceAll",
+        "ru": "Generic Magic ResistanceAll"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1720318871,
+        "list_tags": "Resistance",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "resistance magic node +1.5% to all elements classes",
+        "skill_tags": [
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678750,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistanceall-678750",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 14,
+      "y": 17
+    },
+    {
+      "bonus_stats": {
+        "resistance_all": 3.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
+      "cost": 1,
+      "id": "flesh_eater_15_17",
+      "is_starting_node": false,
+      "name": {
+        "en": "Erudite",
+        "ru": "Эрудит"
+      },
+      "raw": {
+        "attributes": [
+          "+3.0% Resistance to All Elements",
+          "4.0% Maximum Life"
+        ],
+        "glyph_attributes": [],
+        "icon": 1720318871,
+        "list_tags": "Life, Resistance, Intelligence",
+        "popularity": 10,
+        "quality": 3,
+        "rarity": 3,
+        "search_text": "life resistance intelligence rare node erudite +3.0% to all elements 4.0% maximum bonus: another if requirements met: 210 willpower necromancer",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          },
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          },
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {
+        "willpower": 210.0
+      },
+      "source_node_id": 845989,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/erudite-845989",
+      "stats": {
+        "max_life": 4.0,
+        "resistance_all": 3.0
+      },
+      "stats_source": "class_board_attributes",
+      "type": "rare",
+      "x": 15,
+      "y": 17
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_10_18",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 18
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_12_18",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 18
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_13_18",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 18
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_14_18",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic ResistanceAll",
+        "ru": "Generic Magic ResistanceAll"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1720318871,
+        "list_tags": "Resistance",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "resistance magic node +1.5% to all elements classes",
+        "skill_tags": [
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678750,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistanceall-678750",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 14,
+      "y": 18
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_15_18",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HPPercent",
+        "ru": "Generic Magic HPPercent"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Life",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "life magic node 2.0% maximum all classes",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 679184,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hppercent-679184",
+      "stats": {
+        "max_life": 2.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 15,
+      "y": 18
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_10_19",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 19
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_11_19",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 19
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_12_19",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 19
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_13_19",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 19
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_14_19",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 19
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "flesh_eater_10_20",
+      "is_starting_node": false,
+      "name": {
+        "en": "Board Gate",
+        "ru": "Ворота доски"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 3778111510,
+        "list_tags": "Strength, Intelligence, Willpower, Dexterity",
+        "popularity": 23,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength intelligence willpower dexterity board attachment gate +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          },
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          },
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          },
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 994337,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/board-attachment-gate-994337",
+      "stats": {
+        "dexterity": 5.0,
+        "intelligence": 5.0,
+        "strength": 5.0,
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "board_gate",
+      "x": 10,
+      "y": 20
+    }
+  ],
+  "patch_version": "3.0.2",
+  "schema_version": 1,
+  "source_board_id": 934571,
+  "source_url": "https://nether.wowhead.com/diablo-4/data/paragon-calc?dv=17&db=1778694731",
+  "start_node": null,
+  "width": 21
+}

@@ -1,0 +1,99 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nOccultist\nRadius Size: 3 \nFor every 5 Intelligence purchased within range, you deal +1.0% increased damage with Occult Skills.\nAdditional Bonus: \nOverpowered hits against an enemy increase the damage you deal to them by 12% [x] for 10 seconds.\nRequired (purchased in range): +25 Intelligence\nLegendary Bonus: \nIncrease Occult skill damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nОккультист\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, урон умений категории \"Оккультизм\" увеличивается на +1.0% .\nДополнительный бонус: \nПораженные \"Подавлением\" противники в течение 10 сек. получают от вас на 12% [x] больше урона.\nТребуется открыть в радиусе действия: +25 к интеллекту\nЛегендарный бонус: \n+ 0.5% [x] к урону от умений категории \"Оккультизм\" . \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T11:02:00Z",
+  "class": "warlock",
+  "class_mask": 128,
+  "id": "occultist",
+  "max_level": 100,
+  "name": {
+    "en": "Occultist",
+    "ru": "Оккультист"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 128,
+    "icon": 2456702841,
+    "maxLevel": 100,
+    "name": "Occultist",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      1834748264,
+      3467551624,
+      3567369300,
+      2440772653
+    ],
+    "sno": 2530611,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 10,
+        "attributeName": "Intelligence",
+        "classMask": 234
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 1834748264,
+      "name": "Intelligence",
+      "raw": {
+        "id": 1834748264,
+        "name": "Intelligence"
+      }
+    },
+    {
+      "id": 3467551624,
+      "name": "Occult",
+      "raw": {
+        "id": 3467551624,
+        "name": "Occult"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 2440772653,
+      "name": "Overpower",
+      "raw": {
+        "id": 2440772653,
+        "name": "Overpower"
+      }
+    }
+  ],
+  "source_glyph_id": 2530611,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/occultist-2530611",
+  "threshold_attributes": [
+    {
+      "attribute": 10,
+      "attribute_name": "Intelligence",
+      "class_mask": 234,
+      "stat_key": "intelligence"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "checked_at": "2026-05-27T11:09:42Z",
+  "classes": [
+    "sorcerer",
+    "druid",
+    "barbarian",
+    "rogue",
+    "necromancer",
+    "spiritborn",
+    "paladin",
+    "warlock"
+  ],
+  "detail_cache": "data\\raw\\_detail_cache.json",
+  "results": [
+    {
+      "class": "sorcerer",
+      "detail_errors": 0,
+      "glyphs": 23,
+      "nodes": 98,
+      "raw_path": "data\\raw\\sorcerer\\wowhead_raw.json",
+      "warnings": []
+    },
+    {
+      "class": "druid",
+      "detail_errors": 0,
+      "glyphs": 23,
+      "nodes": 113,
+      "raw_path": "data\\raw\\druid\\wowhead_raw.json",
+      "warnings": []
+    },
+    {
+      "class": "barbarian",
+      "detail_errors": 0,
+      "glyphs": 23,
+      "nodes": 109,
+      "raw_path": "data\\raw\\barbarian\\wowhead_raw.json",
+      "warnings": []
+    },
+    {
+      "class": "rogue",
+      "detail_errors": 0,
+      "glyphs": 26,
+      "nodes": 112,
+      "raw_path": "data\\raw\\rogue\\wowhead_raw.json",
+      "warnings": []
+    },
+    {
+      "class": "necromancer",
+      "detail_errors": 0,
+      "glyphs": 23,
+      "nodes": 109,
+      "raw_path": "data\\raw\\necromancer\\wowhead_raw.json",
+      "warnings": []
+    },
+    {
+      "class": "spiritborn",
+      "detail_errors": 0,
+      "glyphs": 22,
+      "nodes": 95,
+      "raw_path": "data\\raw\\spiritborn\\wowhead_raw.json",
+      "warnings": []
+    },
+    {
+      "class": "paladin",
+      "detail_errors": 0,
+      "glyphs": 21,
+      "nodes": 88,
+      "raw_path": "data\\raw\\paladin\\wowhead_raw.json",
+      "warnings": []
+    },
+    {
+      "class": "warlock",
+      "detail_errors": 0,
+      "glyphs": 21,
+      "nodes": 101,
+      "raw_path": "data\\raw\\warlock\\wowhead_raw.json",
+      "warnings": []
+    }
+  ],
+  "reuse_events": [],
+  "schema_version": 1,
+  "warnings": []
+}

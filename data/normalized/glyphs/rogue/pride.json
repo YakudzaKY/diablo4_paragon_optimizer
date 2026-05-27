@@ -1,0 +1,117 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nPride\nRadius Size: 3 \nGrants +25.0% bonus to all Rare nodes within range.\nAdditional Bonus: \nYou deal 27% [x] increased Physical damage to both Healthy and Injured enemies.\nRequired (purchased in range): +25 Strength\nLegendary Bonus: \nIncrease damage to Elites by 2.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nГордыня\nРадиус: 3 \nУсиливает все редкие узлы в радиусе действия на +25.0% .\nДополнительный бонус: \nВы наносите на 27% [x] больше физического урона целям с высоким и низким уровнем здоровья.\nТребуется открыть в радиусе действия: +25 к силе\nЛегендарный бонус: \n+ 2.8% [x] к урону особым противникам. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:36:02Z",
+  "class": "rogue",
+  "class_mask": 8,
+  "id": "pride",
+  "max_level": 100,
+  "name": {
+    "en": "Pride",
+    "ru": "Гордыня"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 8,
+    "icon": 2519972743,
+    "maxLevel": 100,
+    "name": "Pride",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      510015620,
+      3918074131,
+      1277787765,
+      3476325106,
+      3567369300,
+      2322238504
+    ],
+    "sno": 1029494,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 9,
+        "attributeName": "Strength",
+        "classMask": 168
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 510015620,
+      "name": "Strength",
+      "raw": {
+        "id": 510015620,
+        "name": "Strength"
+      }
+    },
+    {
+      "id": 3918074131,
+      "name": "Healthy",
+      "raw": {
+        "id": 3918074131,
+        "name": "Healthy"
+      }
+    },
+    {
+      "id": 1277787765,
+      "name": "Injured",
+      "raw": {
+        "id": 1277787765,
+        "name": "Injured"
+      }
+    },
+    {
+      "id": 3476325106,
+      "name": "Physical",
+      "raw": {
+        "id": 3476325106,
+        "name": "Physical"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 2322238504,
+      "name": "Elite Monsters",
+      "raw": {
+        "id": 2322238504,
+        "name": "Elite Monsters"
+      }
+    }
+  ],
+  "source_glyph_id": 1029494,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/pride-1029494",
+  "threshold_attributes": [
+    {
+      "attribute": 9,
+      "attribute_name": "Strength",
+      "class_mask": 168,
+      "stat_key": "strength"
+    }
+  ]
+}

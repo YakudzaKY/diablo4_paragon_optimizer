@@ -1,0 +1,90 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nMortal Draw\nRadius Size: 3 \nFor every 5 Dexterity purchased within range, Skills that swap to a different weapon deal +1.3% increased damage.\nAdditional Bonus: \nSwapping weapons has a 18% chance to cause the Skill's damage to Critically Strike.\nRequired (purchased in range): +25 Dexterity\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nСмертельное натяжение\nРадиус: 3 \nЗа каждые 5 ед. ловкости, открытых в радиусе действия, урон от умений, меняющих оружие, увеличивается на +1.3% .\nДополнительный бонус: \nПосле смены оружия ваше умение с вероятностью 18% наносит критический урон.\nТребуется открыть в радиусе действия: +25 к ловкости\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:28:54Z",
+  "class": "barbarian",
+  "class_mask": 4,
+  "id": "mortal_draw",
+  "max_level": 100,
+  "name": {
+    "en": "Mortal Draw",
+    "ru": "Смертельное натяжение"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 4,
+    "icon": 1236117199,
+    "maxLevel": 100,
+    "name": "Mortal Draw",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      809827735,
+      3567369300,
+      2892145024
+    ],
+    "sno": 1027094,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 12,
+        "attributeName": "Dexterity",
+        "classMask": 119
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 809827735,
+      "name": "Dexterity",
+      "raw": {
+        "id": 809827735,
+        "name": "Dexterity"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 2892145024,
+      "name": "Critical Strikes",
+      "raw": {
+        "id": 2892145024,
+        "name": "Critical Strikes"
+      }
+    }
+  ],
+  "source_glyph_id": 1027094,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/mortal-draw-1027094",
+  "threshold_attributes": [
+    {
+      "attribute": 12,
+      "attribute_name": "Dexterity",
+      "class_mask": 119,
+      "stat_key": "dexterity"
+    }
+  ]
+}

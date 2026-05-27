@@ -1,0 +1,99 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nVolley\nRadius Size: 3 \nFor every 5 Dexterity purchased within range, your Arrow Storms deal 6.6% [+] increased damage.\nAdditional Bonus: \nYou gain 20% Dodge Chance for 3 seconds after creating an Arrow Storm .\nRequired (purchased in range): +40 Dexterity\nLegendary Bonus: \nIncrease Arrow Storms damage by 2.4% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nШквал\nРадиус: 3 \nЗа каждые 5 ед. ловкости, открытых в радиусе действия, ваши бури стрел наносят на 6.6% [+] больше урона.\nДополнительный бонус: \nВ течение 3 сек. после призыва бури стрел ваша вероятность уклонения повышается на 20% .\nТребуется открыть в радиусе действия: +40 к ловкости\nЛегендарный бонус: \n+ 2.4% [x] к урону бурь стрел. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:36:02Z",
+  "class": "rogue",
+  "class_mask": 8,
+  "id": "volley",
+  "max_level": 100,
+  "name": {
+    "en": "Volley",
+    "ru": "Шквал"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 8,
+    "icon": 1235893039,
+    "maxLevel": 100,
+    "name": "Volley",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      809827735,
+      3567369300,
+      2321154520,
+      3710940086
+    ],
+    "sno": 2620495,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 12,
+        "attributeName": "Dexterity",
+        "classMask": 42
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 809827735,
+      "name": "Dexterity",
+      "raw": {
+        "id": 809827735,
+        "name": "Dexterity"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 2321154520,
+      "name": "Dodge",
+      "raw": {
+        "id": 2321154520,
+        "name": "Dodge"
+      }
+    },
+    {
+      "id": 3710940086,
+      "name": "Arrow Storm",
+      "raw": {
+        "id": 3710940086,
+        "name": "Arrow Storm"
+      }
+    }
+  ],
+  "source_glyph_id": 2620495,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/volley-2620495",
+  "threshold_attributes": [
+    {
+      "attribute": 12,
+      "attribute_name": "Dexterity",
+      "class_mask": 42,
+      "stat_key": "dexterity"
+    }
+  ]
+}

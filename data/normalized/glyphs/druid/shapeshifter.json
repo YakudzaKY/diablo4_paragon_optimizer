@@ -1,0 +1,99 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nShapeshifter\nRadius Size: 3 \nGrants +25.0% bonus to all Rare nodes within range.\nAdditional Bonus: \nShapeshifting increases Critical Strike Chance and Critical Strike Damage by 5% for 4 seconds.\nRequired (purchased in range): +25 Dexterity\nLegendary Bonus: \nIncrease Critical Strike Damage by 2.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nОборотень\nРадиус: 3 \nУсиливает все редкие узлы в радиусе действия на +25.0% .\nДополнительный бонус: \nПри смене облика вероятность критического удара и критический урон повышаются на 5% на 4 сек.\nТребуется открыть в радиусе действия: +25 к ловкости\nЛегендарный бонус: \n+ 2.8% [x] к критическому урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:20:54Z",
+  "class": "druid",
+  "class_mask": 2,
+  "id": "shapeshifter",
+  "max_level": 100,
+  "name": {
+    "en": "Shapeshifter",
+    "ru": "Оборотень"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 2,
+    "icon": 1236117199,
+    "maxLevel": 100,
+    "name": "Shapeshifter",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      809827735,
+      2892145024,
+      1713745003,
+      3567369300
+    ],
+    "sno": 1028238,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 12,
+        "attributeName": "Dexterity",
+        "classMask": 119
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 809827735,
+      "name": "Dexterity",
+      "raw": {
+        "id": 809827735,
+        "name": "Dexterity"
+      }
+    },
+    {
+      "id": 2892145024,
+      "name": "Critical Strikes",
+      "raw": {
+        "id": 2892145024,
+        "name": "Critical Strikes"
+      }
+    },
+    {
+      "id": 1713745003,
+      "name": "Shapeshifting",
+      "raw": {
+        "id": 1713745003,
+        "name": "Shapeshifting"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    }
+  ],
+  "source_glyph_id": 1028238,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/shapeshifter-1028238",
+  "threshold_attributes": [
+    {
+      "attribute": 12,
+      "attribute_name": "Dexterity",
+      "class_mask": 119,
+      "stat_key": "dexterity"
+    }
+  ]
+}

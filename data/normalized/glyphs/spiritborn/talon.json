@@ -1,0 +1,108 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nTalon\nRadius Size: 3 \nFor every 5 Dexterity purchased within range, you deal +1.0% increased Damage with Eagle Skills.\nAdditional Bonus: \nYour Eagle skills deal 15% [x] increased Critical Strike damage.\nRequired (purchased in range): +40 Dexterity\nLegendary Bonus: \nIncrease Lightning damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nКоготь\nРадиус: 3 \nЗа каждые 5 ед. ловкости, открытых в радиусе действия, урон от умений орла увеличивается на 1.0% .\nДополнительный бонус: \nУмения орла наносят на 15% [x] больше критического урона.\nТребуется открыть в радиусе действия: +40 к ловкости\nЛегендарный бонус: \n+ 0.5% [x] к урону от молнии. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:50:24Z",
+  "class": "spiritborn",
+  "class_mask": 32,
+  "id": "talon",
+  "max_level": 100,
+  "name": {
+    "en": "Talon",
+    "ru": "Коготь"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 32,
+    "icon": 1235893039,
+    "maxLevel": 100,
+    "name": "Talon",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      809827735,
+      2892145024,
+      3567369300,
+      2603877807,
+      1302406649
+    ],
+    "sno": 2067375,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 12,
+        "attributeName": "Dexterity",
+        "classMask": 42
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 809827735,
+      "name": "Dexterity",
+      "raw": {
+        "id": 809827735,
+        "name": "Dexterity"
+      }
+    },
+    {
+      "id": 2892145024,
+      "name": "Critical Strikes",
+      "raw": {
+        "id": 2892145024,
+        "name": "Critical Strikes"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 2603877807,
+      "name": "Eagle",
+      "raw": {
+        "id": 2603877807,
+        "name": "Eagle"
+      }
+    },
+    {
+      "id": 1302406649,
+      "name": "Lightning",
+      "raw": {
+        "id": 1302406649,
+        "name": "Lightning"
+      }
+    }
+  ],
+  "source_glyph_id": 2067375,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/talon-2067375",
+  "threshold_attributes": [
+    {
+      "attribute": 12,
+      "attribute_name": "Dexterity",
+      "class_mask": 42,
+      "stat_key": "dexterity"
+    }
+  ]
+}

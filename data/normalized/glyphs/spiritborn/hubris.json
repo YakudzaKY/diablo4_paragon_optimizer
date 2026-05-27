@@ -1,0 +1,99 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nHubris\nRadius Size: 3 \nGrants +30.0% bonus to all Magic nodes within range.\nAdditional Bonus: \nYou gain up to 6,450 Thorns based on your Dodge bonus.\nRequired (purchased in range): +25 Strength\nLegendary Bonus: \nIncrease damage to Vulnerable targets by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nГордыня\nРадиус: 3 \nУсиливает все магические узлы в радиусе действия на +30.0% .\nДополнительный бонус: \nВы получаете до 6.450 к показателю эффекта шипов пропорционально вашему бонусу к вероятности уклонения.\nТребуется открыть в радиусе действия: +25 к силе\nЛегендарный бонус: \n+ 0.5% [x] к урону уязвимым целям. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:50:24Z",
+  "class": "spiritborn",
+  "class_mask": 32,
+  "id": "hubris",
+  "max_level": 100,
+  "name": {
+    "en": "Hubris",
+    "ru": "Гордыня"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 32,
+    "icon": 2519972743,
+    "maxLevel": 100,
+    "name": "Hubris",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      510015620,
+      4201927667,
+      3567369300,
+      2434110708
+    ],
+    "sno": 2070631,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 9,
+        "attributeName": "Strength",
+        "classMask": 168
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 510015620,
+      "name": "Strength",
+      "raw": {
+        "id": 510015620,
+        "name": "Strength"
+      }
+    },
+    {
+      "id": 4201927667,
+      "name": "Thorns",
+      "raw": {
+        "id": 4201927667,
+        "name": "Thorns"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 2434110708,
+      "name": "Vulnerable",
+      "raw": {
+        "id": 2434110708,
+        "name": "Vulnerable"
+      }
+    }
+  ],
+  "source_glyph_id": 2070631,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/hubris-2070631",
+  "threshold_attributes": [
+    {
+      "attribute": 9,
+      "attribute_name": "Strength",
+      "class_mask": 168,
+      "stat_key": "strength"
+    }
+  ]
+}

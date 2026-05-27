@@ -1,0 +1,99 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nWildfire\nRadius Size: 3 \nFor every 5 Dexterity purchased within range, you deal +1.0% increased Fire Damage.\nAdditional Bonus: \nLucky Hit: Damaging enemies with direct Fire damage has up to a 30% chance to reduce one of your active Cooldowns by 0.5 seconds.\nRequired (purchased in range): +40 Dexterity\nLegendary Bonus: \nIncrease Fire damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nДикий огонь\nРадиус: 3 \nЗа каждые 5 ед. ловкости, открытых в радиусе действия, урон от огня увеличивается на 1.0% .\nДополнительный бонус: \nУдачный удар: когда вы наносите прямой урон от огня, время восстановления одного из активных умений с вероятностью до 30% сокращается на 0.5 сек.\nТребуется открыть в радиусе действия: +40 к ловкости\nЛегендарный бонус: \n+ 0.5% [x] к урону от огня . \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:50:24Z",
+  "class": "spiritborn",
+  "class_mask": 32,
+  "id": "wildfire",
+  "max_level": 100,
+  "name": {
+    "en": "Wildfire",
+    "ru": "Дикий огонь"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 32,
+    "icon": 1235893039,
+    "maxLevel": 100,
+    "name": "Wildfire",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      809827735,
+      2543263771,
+      3567369300,
+      3537867514
+    ],
+    "sno": 2067631,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 12,
+        "attributeName": "Dexterity",
+        "classMask": 42
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 809827735,
+      "name": "Dexterity",
+      "raw": {
+        "id": 809827735,
+        "name": "Dexterity"
+      }
+    },
+    {
+      "id": 2543263771,
+      "name": "Fire",
+      "raw": {
+        "id": 2543263771,
+        "name": "Fire"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 3537867514,
+      "name": "Cooldown",
+      "raw": {
+        "id": 3537867514,
+        "name": "Cooldown"
+      }
+    }
+  ],
+  "source_glyph_id": 2067631,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/wildfire-2067631",
+  "threshold_attributes": [
+    {
+      "attribute": 12,
+      "attribute_name": "Dexterity",
+      "class_mask": 42,
+      "stat_key": "dexterity"
+    }
+  ]
+}

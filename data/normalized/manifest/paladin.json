@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-05-27T10:56:38Z",
+  "class": "paladin",
+  "counts": {
+    "available_stats": 25,
+    "boards": 10,
+    "glyphs": 21
+  },
+  "detail_coverage": {
+    "glyphs": {
+      "errors": 0,
+      "expected": 42,
+      "missing": 0,
+      "ok": 42,
+      "reused": 12
+    },
+    "nodes": {
+      "errors": 0,
+      "expected": 176,
+      "missing": 0,
+      "ok": 176,
+      "reused": 76
+    }
+  },
+  "detail_errors": [],
+  "detail_errors_count": 0,
+  "files": {
+    "boards_dir": "paragon_optimizer\\data\\normalized\\boards\\paladin",
+    "class": "paragon_optimizer\\data\\normalized\\classes\\paladin.json",
+    "glyphs_dir": "paragon_optimizer\\data\\normalized\\glyphs\\paladin"
+  },
+  "patch_version": "3.0.2",
+  "reuse_events": [],
+  "reuse_events_count": 0,
+  "schema_version": 1,
+  "source_urls": {
+    "glyphs": {
+      "en": "https://www.wowhead.com/diablo-4/paragon-glyphs#filtered:Paladin",
+      "ru": "https://www.wowhead.com/diablo-4/ru/paragon-glyphs#filtered:Паладин"
+    },
+    "nodes": {
+      "en": "https://www.wowhead.com/diablo-4/paragon-nodes#filtered:Paladin",
+      "ru": "https://www.wowhead.com/diablo-4/ru/paragon-nodes"
+    },
+    "paragon_calc": "https://www.wowhead.com/diablo-4/paragon-calc/paladin",
+    "paragon_data": "https://nether.wowhead.com/diablo-4/data/paragon-calc?dv=17&db=1778694731"
+  },
+  "warnings": []
+}

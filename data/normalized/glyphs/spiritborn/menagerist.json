@@ -1,0 +1,126 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nMenagerist\nRadius Size: 3 \nGrants +25.0% bonus to all Magic nodes within range.\nAdditional Bonus: \nDealing damage with your Gorilla , Jaguar , Eagle , or Centipede Skills increases all damage you deal by 4% [x] for 10 seconds, stacking once per Spirit.\nRequired (purchased in range): +40 Dexterity\nLegendary Bonus: \nIncrease Incarnate Skill damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nДрессировщик\nРадиус: 3 \nУсиливает все магические узлы в радиусе действия на +25.0% .\nДополнительный бонус: \nПрямой урон от умений гориллы , ягуара , орла или сороконожки увеличивает весь наносимый вами урон на 4% [x] на 10 сек. Каждый дух дает по одному эффекту.\nТребуется открыть в радиусе действия: +40 к ловкости\nЛегендарный бонус: \n+ 0.5% [x] к урону от умений категории \"Воплощение\" . \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:50:24Z",
+  "class": "spiritborn",
+  "class_mask": 32,
+  "id": "menagerist",
+  "max_level": 100,
+  "name": {
+    "en": "Menagerist",
+    "ru": "Дрессировщик"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 32,
+    "icon": 1235893039,
+    "maxLevel": 100,
+    "name": "Menagerist",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      809827735,
+      987307551,
+      600118123,
+      28625647,
+      2603877807,
+      3567369300,
+      256351827
+    ],
+    "sno": 2064639,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 12,
+        "attributeName": "Dexterity",
+        "classMask": 42
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 809827735,
+      "name": "Dexterity",
+      "raw": {
+        "id": 809827735,
+        "name": "Dexterity"
+      }
+    },
+    {
+      "id": 987307551,
+      "name": "Jaguar",
+      "raw": {
+        "id": 987307551,
+        "name": "Jaguar"
+      }
+    },
+    {
+      "id": 600118123,
+      "name": "Gorilla",
+      "raw": {
+        "id": 600118123,
+        "name": "Gorilla"
+      }
+    },
+    {
+      "id": 28625647,
+      "name": "Centipede",
+      "raw": {
+        "id": 28625647,
+        "name": "Centipede"
+      }
+    },
+    {
+      "id": 2603877807,
+      "name": "Eagle",
+      "raw": {
+        "id": 2603877807,
+        "name": "Eagle"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 256351827,
+      "name": "Incarnate",
+      "raw": {
+        "id": 256351827,
+        "name": "Incarnate"
+      }
+    }
+  ],
+  "source_glyph_id": 2064639,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/menagerist-2064639",
+  "threshold_attributes": [
+    {
+      "attribute": 12,
+      "attribute_name": "Dexterity",
+      "class_mask": 42,
+      "stat_key": "dexterity"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-05-27T10:42:26Z",
+  "class": "necromancer",
+  "counts": {
+    "available_stats": 19,
+    "boards": 10,
+    "glyphs": 23
+  },
+  "detail_coverage": {
+    "glyphs": {
+      "errors": 0,
+      "expected": 46,
+      "missing": 0,
+      "ok": 46,
+      "reused": 10
+    },
+    "nodes": {
+      "errors": 0,
+      "expected": 218,
+      "missing": 0,
+      "ok": 218,
+      "reused": 78
+    }
+  },
+  "detail_errors": [],
+  "detail_errors_count": 0,
+  "files": {
+    "boards_dir": "paragon_optimizer\\data\\normalized\\boards\\necromancer",
+    "class": "paragon_optimizer\\data\\normalized\\classes\\necromancer.json",
+    "glyphs_dir": "paragon_optimizer\\data\\normalized\\glyphs\\necromancer"
+  },
+  "patch_version": "3.0.2",
+  "reuse_events": [],
+  "reuse_events_count": 0,
+  "schema_version": 1,
+  "source_urls": {
+    "glyphs": {
+      "en": "https://www.wowhead.com/diablo-4/paragon-glyphs#filtered:Necromancer",
+      "ru": "https://www.wowhead.com/diablo-4/ru/paragon-glyphs#filtered:Некромант"
+    },
+    "nodes": {
+      "en": "https://www.wowhead.com/diablo-4/paragon-nodes#filtered:Necromancer",
+      "ru": "https://www.wowhead.com/diablo-4/ru/paragon-nodes"
+    },
+    "paragon_calc": "https://www.wowhead.com/diablo-4/paragon-calc/necromancer",
+    "paragon_data": "https://nether.wowhead.com/diablo-4/data/paragon-calc?dv=17&db=1778694731"
+  },
+  "warnings": []
+}

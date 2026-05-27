@@ -1,0 +1,90 @@
+{
+  "checked_at": "2026-05-27T10:10:45Z",
+  "classes": {
+    "barbarian": {
+      "class_mask": 4,
+      "discovery_source": "fallback",
+      "id": 2,
+      "name": {
+        "en": "Barbarian",
+        "ru": "Варвар"
+      },
+      "slug": "barbarian"
+    },
+    "druid": {
+      "class_mask": 2,
+      "discovery_source": "fallback",
+      "id": 1,
+      "name": {
+        "en": "Druid",
+        "ru": "Друид"
+      },
+      "slug": "druid"
+    },
+    "necromancer": {
+      "class_mask": 16,
+      "discovery_source": "fallback",
+      "id": 4,
+      "name": {
+        "en": "Necromancer",
+        "ru": "Некромант"
+      },
+      "slug": "necromancer"
+    },
+    "paladin": {
+      "class_mask": 64,
+      "discovery_source": "fallback",
+      "id": 6,
+      "name": {
+        "en": "Paladin",
+        "ru": "Паладин"
+      },
+      "slug": "paladin"
+    },
+    "rogue": {
+      "class_mask": 8,
+      "discovery_source": "fallback",
+      "id": 3,
+      "name": {
+        "en": "Rogue",
+        "ru": "Разбойник"
+      },
+      "slug": "rogue"
+    },
+    "sorcerer": {
+      "class_mask": 1,
+      "discovery_source": "fallback",
+      "id": 0,
+      "name": {
+        "en": "Sorcerer",
+        "ru": "Чародей"
+      },
+      "slug": "sorcerer"
+    },
+    "spiritborn": {
+      "class_mask": 32,
+      "discovery_source": "fallback",
+      "id": 5,
+      "name": {
+        "en": "Spiritborn",
+        "ru": "Духорожденный"
+      },
+      "slug": "spiritborn"
+    },
+    "warlock": {
+      "class_mask": 128,
+      "discovery_source": "fallback",
+      "id": 7,
+      "name": {
+        "en": "Warlock",
+        "ru": "Чернокнижник"
+      },
+      "slug": "warlock"
+    }
+  },
+  "paragon_data_url": "https://nether.wowhead.com/diablo-4/data/paragon-calc?dv=17&db=1778694731",
+  "reuse_events": [],
+  "schema_version": 1,
+  "source": "wowhead",
+  "warnings": []
+}

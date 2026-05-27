@@ -1,0 +1,108 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nFang and Claw\nRadius Size: 3 \nGrants +30.0% bonus to all Magic nodes within range.\nAdditional Bonus: \nWhile in Werewolf or Werebear form, Close enemies take 12% [x] increased damage from you.\nRequired (purchased in range): +40 Willpower\nLegendary Bonus: \nIncrease damage while Shapeshifted by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nКлыки и когти\nРадиус: 3 \nУсиливает все магические узлы в радиусе действия на +30.0% .\nДополнительный бонус: \nПока вы находитесь в облике волка или медведя, находящиеся рядом противники получают от вас на 12% [x] больше урона.\nТребуется открыть в радиусе действия: +40 к силе воли\nЛегендарный бонус: \n+ 0.5% [x] к урону после смены облика. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:20:54Z",
+  "class": "druid",
+  "class_mask": 2,
+  "id": "fang_and_claw",
+  "max_level": 100,
+  "name": {
+    "en": "Fang and Claw",
+    "ru": "Клыки и когти"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 2,
+    "icon": 3933737818,
+    "maxLevel": 100,
+    "name": "Fang and Claw",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      3639228442,
+      3828355704,
+      3829121622,
+      3567369300,
+      1713745003
+    ],
+    "sno": 1028226,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 11,
+        "attributeName": "Willpower",
+        "classMask": 130
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 3639228442,
+      "name": "Willpower",
+      "raw": {
+        "id": 3639228442,
+        "name": "Willpower"
+      }
+    },
+    {
+      "id": 3828355704,
+      "name": "Werebear",
+      "raw": {
+        "id": 3828355704,
+        "name": "Werebear"
+      }
+    },
+    {
+      "id": 3829121622,
+      "name": "Werewolf",
+      "raw": {
+        "id": 3829121622,
+        "name": "Werewolf"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 1713745003,
+      "name": "Shapeshifting",
+      "raw": {
+        "id": 1713745003,
+        "name": "Shapeshifting"
+      }
+    }
+  ],
+  "source_glyph_id": 1028226,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/fang-and-claw-1028226",
+  "threshold_attributes": [
+    {
+      "attribute": 11,
+      "attribute_name": "Willpower",
+      "class_mask": 130,
+      "stat_key": "willpower"
+    }
+  ]
+}

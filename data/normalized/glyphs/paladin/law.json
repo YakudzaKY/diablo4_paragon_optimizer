@@ -1,0 +1,90 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nLaw\nRadius Size: 3 \nFor every 5 Strength purchased within range, your Judgement deals 1.0% [+] increased damage.\nAdditional Bonus: \nJudging an enemy causes them to take 15% [x] damage from you for 5 seconds.\nRequired (purchased in range): +40 Strength\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nЗакон\nРадиус: 3 \nЗа каждые 5 ед. силы, открытых в радиусе действия, урон \"Правосудия\" увеличивается на 1.0% [+] .\nДополнительный бонус: \nОсужденный враг получает на 15% [x] больше урона от вас в течение 5 сек.\nТребуется открыть в радиусе действия: +40 к силе\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:56:38Z",
+  "class": "paladin",
+  "class_mask": 64,
+  "id": "law",
+  "max_level": 100,
+  "name": {
+    "en": "Law",
+    "ru": "Закон"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 64,
+    "icon": 2519748583,
+    "maxLevel": 100,
+    "name": "Law",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      510015620,
+      3567369300,
+      4150248679
+    ],
+    "sno": 2478228,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 9,
+        "attributeName": "Strength",
+        "classMask": 68
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 510015620,
+      "name": "Strength",
+      "raw": {
+        "id": 510015620,
+        "name": "Strength"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 4150248679,
+      "name": "Judgement",
+      "raw": {
+        "id": 4150248679,
+        "name": "Judgement"
+      }
+    }
+  ],
+  "source_glyph_id": 2478228,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/law-2478228",
+  "threshold_attributes": [
+    {
+      "attribute": 9,
+      "attribute_name": "Strength",
+      "class_mask": 68,
+      "stat_key": "strength"
+    }
+  ]
+}

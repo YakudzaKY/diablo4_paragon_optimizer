@@ -1,0 +1,99 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nOutmatch\nRadius Size: 3 \nGrants +25.0% bonus to all Rare nodes within range.\nAdditional Bonus: \nYou deal 20% [x] increased Physical damage to Non-Elites and Bosses.\nRequired (purchased in range): +40 Strength\nLegendary Bonus: \nIncrease damage while Healthy by 0.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nПревосходство\nРадиус: 3 \nУсиливает все редкие узлы в радиусе действия на +25.0% .\nДополнительный бонус: \nВы наносите на 20% [x] больше физического урона обычным противникам и боссам.\nТребуется открыть в радиусе действия: +40 к силе\nЛегендарный бонус: \n+ 0.8% [x] к урону при высоком уровне здоровья. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:56:38Z",
+  "class": "paladin",
+  "class_mask": 64,
+  "id": "outmatch",
+  "max_level": 100,
+  "name": {
+    "en": "Outmatch",
+    "ru": "Превосходство"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 64,
+    "icon": 2519748583,
+    "maxLevel": 100,
+    "name": "Outmatch",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      510015620,
+      3476325106,
+      3567369300,
+      3918074131
+    ],
+    "sno": 2506253,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 9,
+        "attributeName": "Strength",
+        "classMask": 68
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 510015620,
+      "name": "Strength",
+      "raw": {
+        "id": 510015620,
+        "name": "Strength"
+      }
+    },
+    {
+      "id": 3476325106,
+      "name": "Physical",
+      "raw": {
+        "id": 3476325106,
+        "name": "Physical"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 3918074131,
+      "name": "Healthy",
+      "raw": {
+        "id": 3918074131,
+        "name": "Healthy"
+      }
+    }
+  ],
+  "source_glyph_id": 2506253,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/outmatch-2506253",
+  "threshold_attributes": [
+    {
+      "attribute": 9,
+      "attribute_name": "Strength",
+      "class_mask": 68,
+      "stat_key": "strength"
+    }
+  ]
+}

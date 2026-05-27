@@ -1,0 +1,99 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nGuzzler\nRadius Size: 3 \nFor every 5 Intelligence purchased within range, you deal +1.3% increased damage while Healthy .\nAdditional Bonus: \nYou gain 5% [x] increased damage and 5% [+] increased Potion Healing for each missing Healing Potion, up to 20% [x] each.\nRequired (purchased in range): +25 Intelligence\nLegendary Bonus: \nIncrease damage while Healthy by 0.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nОбжора\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, наносимый урон при высоком уровне здоровья увеличивается на +1.3% .\nДополнительный бонус: \nВы наносите на 5% [x] больше урона, и зелья восполняют на 5% [+] больше здоровья за каждое потраченное зелье здоровья вплоть до 20% [x] .\nТребуется открыть в радиусе действия: +25 к интеллекту\nЛегендарный бонус: \n+ 0.8% [x] к урону при высоком уровне здоровья. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:50:24Z",
+  "class": "spiritborn",
+  "class_mask": 162,
+  "id": "guzzler",
+  "max_level": 100,
+  "name": {
+    "en": "Guzzler",
+    "ru": "Обжора"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 162,
+    "icon": 2456702841,
+    "maxLevel": 100,
+    "name": "Guzzler",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      1834748264,
+      3918074131,
+      3567369300,
+      2772682893
+    ],
+    "sno": 1023194,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 10,
+        "attributeName": "Intelligence",
+        "classMask": 234
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 1834748264,
+      "name": "Intelligence",
+      "raw": {
+        "id": 1834748264,
+        "name": "Intelligence"
+      }
+    },
+    {
+      "id": 3918074131,
+      "name": "Healthy",
+      "raw": {
+        "id": 3918074131,
+        "name": "Healthy"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 2772682893,
+      "name": "Healing",
+      "raw": {
+        "id": 2772682893,
+        "name": "Healing"
+      }
+    }
+  ],
+  "source_glyph_id": 1023194,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/guzzler-1023194",
+  "threshold_attributes": [
+    {
+      "attribute": 10,
+      "attribute_name": "Intelligence",
+      "class_mask": 234,
+      "stat_key": "intelligence"
+    }
+  ]
+}

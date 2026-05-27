@@ -1,0 +1,81 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nRumble\nRadius Size: 3 \nFor every 5 Strength purchased within range, your Earthquakes deal 6.6% [+] increased damage.\nAdditional Bonus: \nYou deal 3% [x] increased damage to Bosses and Crowd Controlled enemies for each active Earthquake , up to 15% [x] .\nRequired (purchased in range): +40 Strength\nLegendary Bonus: \nIncrease Earthquake damage by 2.4% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nРокот\nРадиус: 3 \nЗа каждые 5 ед. силы, открытых в радиусе действия, урон землетрясений увеличивается на 6.6% [+] .\nДополнительный бонус: \nВы наносите на 3% [x] больше урона боссам и противникам, находящимся под действием эффектов контроля, за каждое активное землетрясение . Максимальный бонус – 15% [x] .\nТребуется открыть в радиусе действия: +40 к силе\nЛегендарный бонус: \n+ 2.4% [x] к урону от землетрясения. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:28:54Z",
+  "class": "barbarian",
+  "class_mask": 4,
+  "id": "rumble",
+  "max_level": 100,
+  "name": {
+    "en": "Rumble",
+    "ru": "Рокот"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 4,
+    "icon": 2519748583,
+    "maxLevel": 100,
+    "name": "Rumble",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      510015620,
+      3567369300
+    ],
+    "sno": 1622788,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 9,
+        "attributeName": "Strength",
+        "classMask": 68
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 510015620,
+      "name": "Strength",
+      "raw": {
+        "id": 510015620,
+        "name": "Strength"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    }
+  ],
+  "source_glyph_id": 1622788,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/rumble-1622788",
+  "threshold_attributes": [
+    {
+      "attribute": 9,
+      "attribute_name": "Strength",
+      "class_mask": 68,
+      "stat_key": "strength"
+    }
+  ]
+}

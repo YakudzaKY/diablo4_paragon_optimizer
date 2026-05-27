@@ -1,0 +1,21 @@
+# OS and editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+~$*
+
+# Python cache
+__pycache__/
+*.py[cod]
+out/
+build/
+bin/
+node_modules/
+__pycache__/
+*.pyc

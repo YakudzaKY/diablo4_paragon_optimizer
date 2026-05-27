@@ -1,0 +1,90 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nGrenadier\nRadius Size: 3 \nFor every 5 Dexterity purchased within range, Grenade Skills deal +1.3% increased damage.\nAdditional Bonus: \nNon- Ultimate Grenade Skills have 25% [x] increased radius.\nRequired (purchased in range): +40 Dexterity\nLegendary Bonus: \nIncrease Grenade Skill damage by 5.2% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nГренадер\nРадиус: 3 \nЗа каждые 5 ед. ловкости, открытых в радиусе действия, ваши гранаты наносят на +1.3% больше урона.\nДополнительный бонус: \nОбласть поражения умений категории \"Гранаты\" , не являющихся мощными , увеличивается на 25% [x] .\nТребуется открыть в радиусе действия: +40 к ловкости\nЛегендарный бонус: \n+ 5.2% [x] к урону гранат . \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:36:02Z",
+  "class": "rogue",
+  "class_mask": 8,
+  "id": "grenadier",
+  "max_level": 100,
+  "name": {
+    "en": "Grenadier",
+    "ru": "Гренадер"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 8,
+    "icon": 1235893039,
+    "maxLevel": 100,
+    "name": "Grenadier",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      809827735,
+      1607383508,
+      3567369300
+    ],
+    "sno": 1029480,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 12,
+        "attributeName": "Dexterity",
+        "classMask": 42
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 809827735,
+      "name": "Dexterity",
+      "raw": {
+        "id": 809827735,
+        "name": "Dexterity"
+      }
+    },
+    {
+      "id": 1607383508,
+      "name": "Grenade",
+      "raw": {
+        "id": 1607383508,
+        "name": "Grenade"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    }
+  ],
+  "source_glyph_id": 1029480,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/grenadier-1029480",
+  "threshold_attributes": [
+    {
+      "attribute": 12,
+      "attribute_name": "Dexterity",
+      "class_mask": 42,
+      "stat_key": "dexterity"
+    }
+  ]
+}

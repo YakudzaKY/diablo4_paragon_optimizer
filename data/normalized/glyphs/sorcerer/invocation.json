@@ -1,0 +1,108 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nInvocation\nRadius Size: 3 \nFor every 5 Dexterity purchased within range, your Conjuration Skills gain 4.0% [+] Critical Strike Damage.\nAdditional Bonus: \nEnemies damaged by your Conjuration Skills deal 1% reduced damage to you for 6 seconds, stacking up to 15% .\nRequired (purchased in range): +25 Dexterity\nLegendary Bonus: \nIncrease Conjuration Skill damage by 2.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nВоззвание\nРадиус: 3 \nЗа каждые 5 ед. ловкости, открытых в радиусе действия, критический урон умений категории \"Колдовство\" увеличивается на 4.0% [+] .\nДополнительный бонус: \nПротивники, пораженные вашими умениями категории \"Колдовство\" , наносят вам на 1% меньше урона в течение 6 сек. Эффект суммируется до 15% .\nТребуется открыть в радиусе действия: +25 к ловкости\nЛегендарный бонус: \n+ 2.8% [x] к урону от умений категории \"Колдовство\" . \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:10:45Z",
+  "class": "sorcerer",
+  "class_mask": 1,
+  "id": "invocation",
+  "max_level": 100,
+  "name": {
+    "en": "Invocation",
+    "ru": "Воззвание"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 1,
+    "icon": 1236117199,
+    "maxLevel": 100,
+    "name": "Invocation",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      809827735,
+      3567369300,
+      2892145024,
+      1930421581,
+      4011612737
+    ],
+    "sno": 1623747,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 12,
+        "attributeName": "Dexterity",
+        "classMask": 119
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 809827735,
+      "name": "Dexterity",
+      "raw": {
+        "id": 809827735,
+        "name": "Dexterity"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 2892145024,
+      "name": "Critical Strikes",
+      "raw": {
+        "id": 2892145024,
+        "name": "Critical Strikes"
+      }
+    },
+    {
+      "id": 1930421581,
+      "name": "Conjuration",
+      "raw": {
+        "id": 1930421581,
+        "name": "Conjuration"
+      }
+    },
+    {
+      "id": 4011612737,
+      "name": "Damage Reduction",
+      "raw": {
+        "id": 4011612737,
+        "name": "Damage Reduction"
+      }
+    }
+  ],
+  "source_glyph_id": 1623747,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/invocation-1623747",
+  "threshold_attributes": [
+    {
+      "attribute": 12,
+      "attribute_name": "Dexterity",
+      "class_mask": 119,
+      "stat_key": "dexterity"
+    }
+  ]
+}

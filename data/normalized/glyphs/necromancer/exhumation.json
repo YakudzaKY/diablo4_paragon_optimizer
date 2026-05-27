@@ -1,0 +1,117 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nExhumation\nRadius Size: 3 \nFor every 5 Intelligence purchased within range, your Corpse Skills deal 1.7% [+] increased damage.\nAdditional Bonus: \nConsuming a Corpse Fortifies you for 1% of your Maximum Life (8.6) and grants 6% Damage Reduction for 8 seconds.\nRequired (purchased in range): +40 Intelligence\nLegendary Bonus: \nIncrease damage while Healthy by 0.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nЭксгумация\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, урон умений категории \"Трупы\" увеличивается на 1.7% [+] .\nДополнительный бонус: \nПоглощая труп, вы получаете укрепление в объеме 1% максимального запаса здоровья (8.6) , а получаемый вами урон уменьшается на 6% на 8 сек.\nТребуется открыть в радиусе действия: +40 к интеллекту\nЛегендарный бонус: \n+ 0.8% [x] к урону при высоком уровне здоровья. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:42:26Z",
+  "class": "necromancer",
+  "class_mask": 16,
+  "id": "exhumation",
+  "max_level": 100,
+  "name": {
+    "en": "Exhumation",
+    "ru": "Эксгумация"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 16,
+    "icon": 2456478681,
+    "maxLevel": 100,
+    "name": "Exhumation",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      1834748264,
+      3567369300,
+      25029371,
+      1746928231,
+      4011612737,
+      3918074131
+    ],
+    "sno": 1629205,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 10,
+        "attributeName": "Intelligence",
+        "classMask": 19
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 1834748264,
+      "name": "Intelligence",
+      "raw": {
+        "id": 1834748264,
+        "name": "Intelligence"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 25029371,
+      "name": "Corpse",
+      "raw": {
+        "id": 25029371,
+        "name": "Corpse"
+      }
+    },
+    {
+      "id": 1746928231,
+      "name": "Fortify",
+      "raw": {
+        "id": 1746928231,
+        "name": "Fortify"
+      }
+    },
+    {
+      "id": 4011612737,
+      "name": "Damage Reduction",
+      "raw": {
+        "id": 4011612737,
+        "name": "Damage Reduction"
+      }
+    },
+    {
+      "id": 3918074131,
+      "name": "Healthy",
+      "raw": {
+        "id": 3918074131,
+        "name": "Healthy"
+      }
+    }
+  ],
+  "source_glyph_id": 1629205,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/exhumation-1629205",
+  "threshold_attributes": [
+    {
+      "attribute": 10,
+      "attribute_name": "Intelligence",
+      "class_mask": 19,
+      "stat_key": "intelligence"
+    }
+  ]
+}

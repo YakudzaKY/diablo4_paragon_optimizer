@@ -1,0 +1,99 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nResplendence\nRadius Size: 3 \nGrants +30.0% bonus to all Magic nodes within range.\nAdditional Bonus: \nAfter casting an Aura Skill, the active cooldown of every Non-Aura skill is reduced by 2 seconds.\nRequired (purchased in range): +40 Strength\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nВеликолепие\nРадиус: 3 \nУсиливает все магические узлы в радиусе действия на +30.0% .\nДополнительный бонус: \nКогда вы применяете умение категории \"Аура\" , время восстановления умений остальных категорий сокращается на 2 сек.\nТребуется открыть в радиусе действия: +40 к силе\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:56:38Z",
+  "class": "paladin",
+  "class_mask": 64,
+  "id": "resplendence",
+  "max_level": 100,
+  "name": {
+    "en": "Resplendence",
+    "ru": "Великолепие"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 64,
+    "icon": 2519748583,
+    "maxLevel": 100,
+    "name": "Resplendence",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      510015620,
+      2834358986,
+      3537867514,
+      3567369300
+    ],
+    "sno": 2478548,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 9,
+        "attributeName": "Strength",
+        "classMask": 68
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 510015620,
+      "name": "Strength",
+      "raw": {
+        "id": 510015620,
+        "name": "Strength"
+      }
+    },
+    {
+      "id": 2834358986,
+      "name": "Aura",
+      "raw": {
+        "id": 2834358986,
+        "name": "Aura"
+      }
+    },
+    {
+      "id": 3537867514,
+      "name": "Cooldown",
+      "raw": {
+        "id": 3537867514,
+        "name": "Cooldown"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    }
+  ],
+  "source_glyph_id": 2478548,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/resplendence-2478548",
+  "threshold_attributes": [
+    {
+      "attribute": 9,
+      "attribute_name": "Strength",
+      "class_mask": 68,
+      "stat_key": "strength"
+    }
+  ]
+}

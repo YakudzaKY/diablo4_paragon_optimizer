@@ -1,0 +1,90 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nTactician\nRadius Size: 3 \nGrants +25.0% bonus to all Rare nodes within range.\nAdditional Bonus: \nYou deal 15% [x] increased damage for 4 seconds after casting a Defensive Skill. This duration is increased by 4 seconds for each Defensive Skill not on your Action Bar.\nRequired (purchased in range): +25 Dexterity\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nТактик\nРадиус: 3 \nУсиливает все редкие узлы в радиусе действия на +25.0% .\nДополнительный бонус: \nПрименив умение категории \"Защита\" , вы наносите на 15% [x] больше урона в течение 4 сек. Эффект продлевается на 4 сек. за каждое умение категории \"Защита\" , не размещенное на панели команд.\nТребуется открыть в радиусе действия: +25 к ловкости\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:10:45Z",
+  "class": "sorcerer",
+  "class_mask": 1,
+  "id": "tactician",
+  "max_level": 100,
+  "name": {
+    "en": "Tactician",
+    "ru": "Тактик"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 1,
+    "icon": 1236117199,
+    "maxLevel": 100,
+    "name": "Tactician",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      809827735,
+      3539559610,
+      3567369300
+    ],
+    "sno": 1023193,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 12,
+        "attributeName": "Dexterity",
+        "classMask": 119
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 809827735,
+      "name": "Dexterity",
+      "raw": {
+        "id": 809827735,
+        "name": "Dexterity"
+      }
+    },
+    {
+      "id": 3539559610,
+      "name": "Defensive",
+      "raw": {
+        "id": 3539559610,
+        "name": "Defensive"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    }
+  ],
+  "source_glyph_id": 1023193,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/tactician-1023193",
+  "threshold_attributes": [
+    {
+      "attribute": 12,
+      "attribute_name": "Dexterity",
+      "class_mask": 119,
+      "stat_key": "dexterity"
+    }
+  ]
+}

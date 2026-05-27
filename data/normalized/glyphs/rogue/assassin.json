@@ -1,0 +1,108 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nAssassin\nRadius Size: 3 \nFor every 5 Strength purchased within range, you gain +1.3% increased damage to Elites.\nAdditional Bonus: \nYou deal 25% [x] increased damage to Elites with Cutthroat and Marksman Skills.\nRequired (purchased in range): +25 Strength\nLegendary Bonus: \nIncrease damage to Elites by 2.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nАссасин\nРадиус: 3 \nЗа каждые 5 ед. силы, открытых в радиусе действия, вы наносите особым противникам на +1.3% больше урона.\nДополнительный бонус: \nВаши умения головореза и стрелка наносят на 25% [x] больше урона особым противникам.\nТребуется открыть в радиусе действия: +25 к силе\nЛегендарный бонус: \n+ 2.8% [x] к урону особым противникам. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:36:02Z",
+  "class": "rogue",
+  "class_mask": 8,
+  "id": "assassin",
+  "max_level": 100,
+  "name": {
+    "en": "Assassin",
+    "ru": "Ассасин"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 8,
+    "icon": 2519972743,
+    "maxLevel": 100,
+    "name": "Assassin",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      510015620,
+      2322238504,
+      3837375608,
+      308759772,
+      3567369300
+    ],
+    "sno": 2623581,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 9,
+        "attributeName": "Strength",
+        "classMask": 168
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 510015620,
+      "name": "Strength",
+      "raw": {
+        "id": 510015620,
+        "name": "Strength"
+      }
+    },
+    {
+      "id": 2322238504,
+      "name": "Elite Monsters",
+      "raw": {
+        "id": 2322238504,
+        "name": "Elite Monsters"
+      }
+    },
+    {
+      "id": 3837375608,
+      "name": "Marksman",
+      "raw": {
+        "id": 3837375608,
+        "name": "Marksman"
+      }
+    },
+    {
+      "id": 308759772,
+      "name": "Cutthroat",
+      "raw": {
+        "id": 308759772,
+        "name": "Cutthroat"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    }
+  ],
+  "source_glyph_id": 2623581,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/assassin-2623581",
+  "threshold_attributes": [
+    {
+      "attribute": 9,
+      "attribute_name": "Strength",
+      "class_mask": 168,
+      "stat_key": "strength"
+    }
+  ]
+}

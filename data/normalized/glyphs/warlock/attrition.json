@@ -1,0 +1,90 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nAttrition\nRadius Size: 3 \nGrants +25.0% bonus to all Rare nodes within range.\nAdditional Bonus: \nHits from Archfiend Skills increase the damage enemies take by 4% [x] for 20 seconds, stacking up to 20% [x] .\nRequired (purchased in range): +25 Intelligence\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nИзнурение\nРадиус: 3 \nУсиливает все редкие узлы в радиусе действия на +25.0% .\nДополнительный бонус: \nУдары умениями категории \"Архидемон\" увеличивают получаемый противниками урон на 4% [x] на 20 сек. Максимальный бонус – 20% [x] .\nТребуется открыть в радиусе действия: +25 к интеллекту\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T11:02:00Z",
+  "class": "warlock",
+  "class_mask": 128,
+  "id": "attrition",
+  "max_level": 100,
+  "name": {
+    "en": "Attrition",
+    "ru": "Изнурение"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 128,
+    "icon": 2456702841,
+    "maxLevel": 100,
+    "name": "Attrition",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      1834748264,
+      3567369300,
+      2488685285
+    ],
+    "sno": 2533411,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 10,
+        "attributeName": "Intelligence",
+        "classMask": 234
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 1834748264,
+      "name": "Intelligence",
+      "raw": {
+        "id": 1834748264,
+        "name": "Intelligence"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 2488685285,
+      "name": "Archfiend",
+      "raw": {
+        "id": 2488685285,
+        "name": "Archfiend"
+      }
+    }
+  ],
+  "source_glyph_id": 2533411,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/attrition-2533411",
+  "threshold_attributes": [
+    {
+      "attribute": 10,
+      "attribute_name": "Intelligence",
+      "class_mask": 234,
+      "stat_key": "intelligence"
+    }
+  ]
+}

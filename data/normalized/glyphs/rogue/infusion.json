@@ -1,0 +1,108 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nInfusion\nRadius Size: 3 \nFor every 5 Intelligence purchased within range, Skills that are Imbued deal +1.5% increased damage.\nAdditional Bonus: \nCasting an Imbuement Skill reduces the active Cooldown of another random Imbuement Skill by 2.0 seconds.\nRequired (purchased in range): +25 Intelligence\nLegendary Bonus: \nIncrease Non-Physical damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nНасыщение\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, урон от умений с эффектом насыщения увеличивается на +1.5% .\nДополнительный бонус: \nКогда вы применяете умение категории \"Насыщение\" , время восстановления другого случайного умения этой категории сокращается на 2.0 сек.\nТребуется открыть в радиусе действия: +25 к интеллекту\nЛегендарный бонус: \n+ 0.5% [x] к нефизическому урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:36:02Z",
+  "class": "rogue",
+  "class_mask": 8,
+  "id": "infusion",
+  "max_level": 100,
+  "name": {
+    "en": "Infusion",
+    "ru": "Насыщение"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 8,
+    "icon": 2456702841,
+    "maxLevel": 100,
+    "name": "Infusion",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      1834748264,
+      3763283912,
+      3567369300,
+      3537867514,
+      1838231677
+    ],
+    "sno": 1029485,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 10,
+        "attributeName": "Intelligence",
+        "classMask": 234
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 1834748264,
+      "name": "Intelligence",
+      "raw": {
+        "id": 1834748264,
+        "name": "Intelligence"
+      }
+    },
+    {
+      "id": 3763283912,
+      "name": "Imbuement",
+      "raw": {
+        "id": 3763283912,
+        "name": "Imbuement"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 3537867514,
+      "name": "Cooldown",
+      "raw": {
+        "id": 3537867514,
+        "name": "Cooldown"
+      }
+    },
+    {
+      "id": 1838231677,
+      "name": "Non-Physical",
+      "raw": {
+        "id": 1838231677,
+        "name": "Non-Physical"
+      }
+    }
+  ],
+  "source_glyph_id": 1029485,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/infusion-1029485",
+  "threshold_attributes": [
+    {
+      "attribute": 10,
+      "attribute_name": "Intelligence",
+      "class_mask": 234,
+      "stat_key": "intelligence"
+    }
+  ]
+}

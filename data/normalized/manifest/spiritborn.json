@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-05-27T10:50:24Z",
+  "class": "spiritborn",
+  "counts": {
+    "available_stats": 21,
+    "boards": 9,
+    "glyphs": 22
+  },
+  "detail_coverage": {
+    "glyphs": {
+      "errors": 0,
+      "expected": 44,
+      "missing": 0,
+      "ok": 44,
+      "reused": 12
+    },
+    "nodes": {
+      "errors": 0,
+      "expected": 190,
+      "missing": 0,
+      "ok": 190,
+      "reused": 82
+    }
+  },
+  "detail_errors": [],
+  "detail_errors_count": 0,
+  "files": {
+    "boards_dir": "paragon_optimizer\\data\\normalized\\boards\\spiritborn",
+    "class": "paragon_optimizer\\data\\normalized\\classes\\spiritborn.json",
+    "glyphs_dir": "paragon_optimizer\\data\\normalized\\glyphs\\spiritborn"
+  },
+  "patch_version": "3.0.2",
+  "reuse_events": [],
+  "reuse_events_count": 0,
+  "schema_version": 1,
+  "source_urls": {
+    "glyphs": {
+      "en": "https://www.wowhead.com/diablo-4/paragon-glyphs#filtered:Spiritborn",
+      "ru": "https://www.wowhead.com/diablo-4/ru/paragon-glyphs#filtered:Духорожденный"
+    },
+    "nodes": {
+      "en": "https://www.wowhead.com/diablo-4/paragon-nodes#filtered:Spiritborn",
+      "ru": "https://www.wowhead.com/diablo-4/ru/paragon-nodes"
+    },
+    "paragon_calc": "https://www.wowhead.com/diablo-4/paragon-calc/spiritborn",
+    "paragon_data": "https://nether.wowhead.com/diablo-4/data/paragon-calc?dv=17&db=1778694731"
+  },
+  "warnings": []
+}

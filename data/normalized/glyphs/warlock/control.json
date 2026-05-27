@@ -1,0 +1,90 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nControl\nRadius Size: 3 \nFor every 5 Willpower purchased within range, you deal +1.0% increased damage to Crowd Controlled targets.\nAdditional Bonus: \nYou deal 10% [x] increased damage to Crowd Controlled enemies. Double this bonus against Feared enemies.\nRequired (purchased in range): +40 Willpower\nLegendary Bonus: \nIncrease damage to Crowd Controlled targets by 2.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nКонтроль\nРадиус: 3 \nЗа каждые 5 ед. силы воли, открытых в радиусе действия, вы наносите на +1.0% больше урона целям под действием эффектов контроля.\nДополнительный бонус: \nВы наносите на 10% [x] больше урона противникам под действием эффектов контроля. Этот бонус удваивается, когда вы атакуете испуганных противников.\nТребуется открыть в радиусе действия: +40 к силе воли\nЛегендарный бонус: \n+ 2.8% [x] к урону целям под действием эффектов контроля. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T11:02:00Z",
+  "class": "warlock",
+  "class_mask": 128,
+  "id": "control",
+  "max_level": 100,
+  "name": {
+    "en": "Control",
+    "ru": "Контроль"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 128,
+    "icon": 3933737818,
+    "maxLevel": 100,
+    "name": "Control",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      3639228442,
+      1901128789,
+      3567369300
+    ],
+    "sno": 2533053,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 11,
+        "attributeName": "Willpower",
+        "classMask": 130
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 3639228442,
+      "name": "Willpower",
+      "raw": {
+        "id": 3639228442,
+        "name": "Willpower"
+      }
+    },
+    {
+      "id": 1901128789,
+      "name": "Crowd Control",
+      "raw": {
+        "id": 1901128789,
+        "name": "Crowd Control"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    }
+  ],
+  "source_glyph_id": 2533053,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/control-2533053",
+  "threshold_attributes": [
+    {
+      "attribute": 11,
+      "attribute_name": "Willpower",
+      "class_mask": 130,
+      "stat_key": "willpower"
+    }
+  ]
+}

@@ -1,0 +1,7869 @@
+{
+  "checked_at": "2026-05-27T11:02:00Z",
+  "class": "warlock",
+  "edge_source": "inferred_grid_adjacency",
+  "edges": [
+    [
+      "dynamism_0_10",
+      "dynamism_1_10"
+    ],
+    [
+      "dynamism_1_9",
+      "dynamism_2_9"
+    ],
+    [
+      "dynamism_1_9",
+      "dynamism_1_10"
+    ],
+    [
+      "dynamism_1_10",
+      "dynamism_1_11"
+    ],
+    [
+      "dynamism_1_11",
+      "dynamism_2_11"
+    ],
+    [
+      "dynamism_2_8",
+      "dynamism_3_8"
+    ],
+    [
+      "dynamism_2_8",
+      "dynamism_2_9"
+    ],
+    [
+      "dynamism_2_9",
+      "dynamism_3_9"
+    ],
+    [
+      "dynamism_2_11",
+      "dynamism_3_11"
+    ],
+    [
+      "dynamism_2_11",
+      "dynamism_2_12"
+    ],
+    [
+      "dynamism_2_12",
+      "dynamism_3_12"
+    ],
+    [
+      "dynamism_3_8",
+      "dynamism_4_8"
+    ],
+    [
+      "dynamism_3_8",
+      "dynamism_3_9"
+    ],
+    [
+      "dynamism_3_9",
+      "dynamism_4_9"
+    ],
+    [
+      "dynamism_3_11",
+      "dynamism_4_11"
+    ],
+    [
+      "dynamism_3_11",
+      "dynamism_3_12"
+    ],
+    [
+      "dynamism_3_12",
+      "dynamism_4_12"
+    ],
+    [
+      "dynamism_4_6",
+      "dynamism_5_6"
+    ],
+    [
+      "dynamism_4_6",
+      "dynamism_4_7"
+    ],
+    [
+      "dynamism_4_7",
+      "dynamism_5_7"
+    ],
+    [
+      "dynamism_4_7",
+      "dynamism_4_8"
+    ],
+    [
+      "dynamism_4_8",
+      "dynamism_4_9"
+    ],
+    [
+      "dynamism_4_11",
+      "dynamism_4_12"
+    ],
+    [
+      "dynamism_4_12",
+      "dynamism_4_13"
+    ],
+    [
+      "dynamism_4_13",
+      "dynamism_5_13"
+    ],
+    [
+      "dynamism_4_13",
+      "dynamism_4_14"
+    ],
+    [
+      "dynamism_4_14",
+      "dynamism_5_14"
+    ],
+    [
+      "dynamism_5_6",
+      "dynamism_6_6"
+    ],
+    [
+      "dynamism_5_6",
+      "dynamism_5_7"
+    ],
+    [
+      "dynamism_5_7",
+      "dynamism_6_7"
+    ],
+    [
+      "dynamism_5_13",
+      "dynamism_6_13"
+    ],
+    [
+      "dynamism_5_13",
+      "dynamism_5_14"
+    ],
+    [
+      "dynamism_5_14",
+      "dynamism_6_14"
+    ],
+    [
+      "dynamism_6_6",
+      "dynamism_7_6"
+    ],
+    [
+      "dynamism_6_6",
+      "dynamism_6_7"
+    ],
+    [
+      "dynamism_6_7",
+      "dynamism_7_7"
+    ],
+    [
+      "dynamism_6_7",
+      "dynamism_6_8"
+    ],
+    [
+      "dynamism_6_8",
+      "dynamism_7_8"
+    ],
+    [
+      "dynamism_6_10",
+      "dynamism_7_10"
+    ],
+    [
+      "dynamism_6_12",
+      "dynamism_7_12"
+    ],
+    [
+      "dynamism_6_12",
+      "dynamism_6_13"
+    ],
+    [
+      "dynamism_6_13",
+      "dynamism_7_13"
+    ],
+    [
+      "dynamism_6_13",
+      "dynamism_6_14"
+    ],
+    [
+      "dynamism_6_14",
+      "dynamism_7_14"
+    ],
+    [
+      "dynamism_7_6",
+      "dynamism_8_6"
+    ],
+    [
+      "dynamism_7_6",
+      "dynamism_7_7"
+    ],
+    [
+      "dynamism_7_7",
+      "dynamism_8_7"
+    ],
+    [
+      "dynamism_7_7",
+      "dynamism_7_8"
+    ],
+    [
+      "dynamism_7_8",
+      "dynamism_7_9"
+    ],
+    [
+      "dynamism_7_9",
+      "dynamism_7_10"
+    ],
+    [
+      "dynamism_7_10",
+      "dynamism_8_10"
+    ],
+    [
+      "dynamism_7_10",
+      "dynamism_7_11"
+    ],
+    [
+      "dynamism_7_11",
+      "dynamism_7_12"
+    ],
+    [
+      "dynamism_7_12",
+      "dynamism_7_13"
+    ],
+    [
+      "dynamism_7_13",
+      "dynamism_8_13"
+    ],
+    [
+      "dynamism_7_13",
+      "dynamism_7_14"
+    ],
+    [
+      "dynamism_7_14",
+      "dynamism_8_14"
+    ],
+    [
+      "dynamism_8_6",
+      "dynamism_9_6"
+    ],
+    [
+      "dynamism_8_6",
+      "dynamism_8_7"
+    ],
+    [
+      "dynamism_8_13",
+      "dynamism_8_14"
+    ],
+    [
+      "dynamism_8_14",
+      "dynamism_9_14"
+    ],
+    [
+      "dynamism_9_6",
+      "dynamism_10_6"
+    ],
+    [
+      "dynamism_9_8",
+      "dynamism_10_8"
+    ],
+    [
+      "dynamism_9_8",
+      "dynamism_9_9"
+    ],
+    [
+      "dynamism_9_9",
+      "dynamism_10_9"
+    ],
+    [
+      "dynamism_9_11",
+      "dynamism_10_11"
+    ],
+    [
+      "dynamism_9_11",
+      "dynamism_9_12"
+    ],
+    [
+      "dynamism_9_12",
+      "dynamism_10_12"
+    ],
+    [
+      "dynamism_9_14",
+      "dynamism_10_14"
+    ],
+    [
+      "dynamism_10_0",
+      "dynamism_10_1"
+    ],
+    [
+      "dynamism_10_1",
+      "dynamism_11_1"
+    ],
+    [
+      "dynamism_10_1",
+      "dynamism_10_2"
+    ],
+    [
+      "dynamism_10_2",
+      "dynamism_10_3"
+    ],
+    [
+      "dynamism_10_3",
+      "dynamism_10_4"
+    ],
+    [
+      "dynamism_10_4",
+      "dynamism_11_4"
+    ],
+    [
+      "dynamism_10_4",
+      "dynamism_10_5"
+    ],
+    [
+      "dynamism_10_5",
+      "dynamism_10_6"
+    ],
+    [
+      "dynamism_10_6",
+      "dynamism_11_6"
+    ],
+    [
+      "dynamism_10_6",
+      "dynamism_10_7"
+    ],
+    [
+      "dynamism_10_7",
+      "dynamism_11_7"
+    ],
+    [
+      "dynamism_10_7",
+      "dynamism_10_8"
+    ],
+    [
+      "dynamism_10_8",
+      "dynamism_11_8"
+    ],
+    [
+      "dynamism_10_8",
+      "dynamism_10_9"
+    ],
+    [
+      "dynamism_10_9",
+      "dynamism_11_9"
+    ],
+    [
+      "dynamism_10_11",
+      "dynamism_11_11"
+    ],
+    [
+      "dynamism_10_11",
+      "dynamism_10_12"
+    ],
+    [
+      "dynamism_10_12",
+      "dynamism_11_12"
+    ],
+    [
+      "dynamism_10_12",
+      "dynamism_10_13"
+    ],
+    [
+      "dynamism_10_13",
+      "dynamism_11_13"
+    ],
+    [
+      "dynamism_10_13",
+      "dynamism_10_14"
+    ],
+    [
+      "dynamism_10_14",
+      "dynamism_11_14"
+    ],
+    [
+      "dynamism_10_14",
+      "dynamism_10_15"
+    ],
+    [
+      "dynamism_10_15",
+      "dynamism_10_16"
+    ],
+    [
+      "dynamism_10_16",
+      "dynamism_11_16"
+    ],
+    [
+      "dynamism_10_16",
+      "dynamism_10_17"
+    ],
+    [
+      "dynamism_10_17",
+      "dynamism_10_18"
+    ],
+    [
+      "dynamism_10_18",
+      "dynamism_10_19"
+    ],
+    [
+      "dynamism_10_19",
+      "dynamism_11_19"
+    ],
+    [
+      "dynamism_10_19",
+      "dynamism_10_20"
+    ],
+    [
+      "dynamism_11_1",
+      "dynamism_12_1"
+    ],
+    [
+      "dynamism_11_4",
+      "dynamism_12_4"
+    ],
+    [
+      "dynamism_11_6",
+      "dynamism_12_6"
+    ],
+    [
+      "dynamism_11_6",
+      "dynamism_11_7"
+    ],
+    [
+      "dynamism_11_7",
+      "dynamism_12_7"
+    ],
+    [
+      "dynamism_11_7",
+      "dynamism_11_8"
+    ],
+    [
+      "dynamism_11_8",
+      "dynamism_12_8"
+    ],
+    [
+      "dynamism_11_8",
+      "dynamism_11_9"
+    ],
+    [
+      "dynamism_11_9",
+      "dynamism_12_9"
+    ],
+    [
+      "dynamism_11_9",
+      "dynamism_11_10"
+    ],
+    [
+      "dynamism_11_10",
+      "dynamism_12_10"
+    ],
+    [
+      "dynamism_11_10",
+      "dynamism_11_11"
+    ],
+    [
+      "dynamism_11_11",
+      "dynamism_12_11"
+    ],
+    [
+      "dynamism_11_11",
+      "dynamism_11_12"
+    ],
+    [
+      "dynamism_11_12",
+      "dynamism_12_12"
+    ],
+    [
+      "dynamism_11_12",
+      "dynamism_11_13"
+    ],
+    [
+      "dynamism_11_13",
+      "dynamism_12_13"
+    ],
+    [
+      "dynamism_11_13",
+      "dynamism_11_14"
+    ],
+    [
+      "dynamism_11_14",
+      "dynamism_12_14"
+    ],
+    [
+      "dynamism_11_16",
+      "dynamism_12_16"
+    ],
+    [
+      "dynamism_11_19",
+      "dynamism_12_19"
+    ],
+    [
+      "dynamism_12_1",
+      "dynamism_13_1"
+    ],
+    [
+      "dynamism_12_1",
+      "dynamism_12_2"
+    ],
+    [
+      "dynamism_12_2",
+      "dynamism_13_2"
+    ],
+    [
+      "dynamism_12_4",
+      "dynamism_13_4"
+    ],
+    [
+      "dynamism_12_6",
+      "dynamism_13_6"
+    ],
+    [
+      "dynamism_12_6",
+      "dynamism_12_7"
+    ],
+    [
+      "dynamism_12_7",
+      "dynamism_13_7"
+    ],
+    [
+      "dynamism_12_7",
+      "dynamism_12_8"
+    ],
+    [
+      "dynamism_12_8",
+      "dynamism_12_9"
+    ],
+    [
+      "dynamism_12_9",
+      "dynamism_13_9"
+    ],
+    [
+      "dynamism_12_9",
+      "dynamism_12_10"
+    ],
+    [
+      "dynamism_12_10",
+      "dynamism_13_10"
+    ],
+    [
+      "dynamism_12_10",
+      "dynamism_12_11"
+    ],
+    [
+      "dynamism_12_11",
+      "dynamism_13_11"
+    ],
+    [
+      "dynamism_12_11",
+      "dynamism_12_12"
+    ],
+    [
+      "dynamism_12_12",
+      "dynamism_12_13"
+    ],
+    [
+      "dynamism_12_13",
+      "dynamism_13_13"
+    ],
+    [
+      "dynamism_12_13",
+      "dynamism_12_14"
+    ],
+    [
+      "dynamism_12_14",
+      "dynamism_13_14"
+    ],
+    [
+      "dynamism_12_16",
+      "dynamism_13_16"
+    ],
+    [
+      "dynamism_12_18",
+      "dynamism_13_18"
+    ],
+    [
+      "dynamism_12_18",
+      "dynamism_12_19"
+    ],
+    [
+      "dynamism_12_19",
+      "dynamism_13_19"
+    ],
+    [
+      "dynamism_13_1",
+      "dynamism_14_1"
+    ],
+    [
+      "dynamism_13_1",
+      "dynamism_13_2"
+    ],
+    [
+      "dynamism_13_2",
+      "dynamism_14_2"
+    ],
+    [
+      "dynamism_13_4",
+      "dynamism_14_4"
+    ],
+    [
+      "dynamism_13_4",
+      "dynamism_13_5"
+    ],
+    [
+      "dynamism_13_5",
+      "dynamism_14_5"
+    ],
+    [
+      "dynamism_13_5",
+      "dynamism_13_6"
+    ],
+    [
+      "dynamism_13_6",
+      "dynamism_14_6"
+    ],
+    [
+      "dynamism_13_6",
+      "dynamism_13_7"
+    ],
+    [
+      "dynamism_13_7",
+      "dynamism_14_7"
+    ],
+    [
+      "dynamism_13_9",
+      "dynamism_14_9"
+    ],
+    [
+      "dynamism_13_9",
+      "dynamism_13_10"
+    ],
+    [
+      "dynamism_13_10",
+      "dynamism_14_10"
+    ],
+    [
+      "dynamism_13_10",
+      "dynamism_13_11"
+    ],
+    [
+      "dynamism_13_11",
+      "dynamism_14_11"
+    ],
+    [
+      "dynamism_13_13",
+      "dynamism_14_13"
+    ],
+    [
+      "dynamism_13_13",
+      "dynamism_13_14"
+    ],
+    [
+      "dynamism_13_14",
+      "dynamism_14_14"
+    ],
+    [
+      "dynamism_13_14",
+      "dynamism_13_15"
+    ],
+    [
+      "dynamism_13_15",
+      "dynamism_14_15"
+    ],
+    [
+      "dynamism_13_15",
+      "dynamism_13_16"
+    ],
+    [
+      "dynamism_13_16",
+      "dynamism_14_16"
+    ],
+    [
+      "dynamism_13_18",
+      "dynamism_14_18"
+    ],
+    [
+      "dynamism_13_18",
+      "dynamism_13_19"
+    ],
+    [
+      "dynamism_13_19",
+      "dynamism_14_19"
+    ],
+    [
+      "dynamism_14_1",
+      "dynamism_14_2"
+    ],
+    [
+      "dynamism_14_2",
+      "dynamism_15_2"
+    ],
+    [
+      "dynamism_14_2",
+      "dynamism_14_3"
+    ],
+    [
+      "dynamism_14_3",
+      "dynamism_15_3"
+    ],
+    [
+      "dynamism_14_3",
+      "dynamism_14_4"
+    ],
+    [
+      "dynamism_14_4",
+      "dynamism_15_4"
+    ],
+    [
+      "dynamism_14_4",
+      "dynamism_14_5"
+    ],
+    [
+      "dynamism_14_5",
+      "dynamism_14_6"
+    ],
+    [
+      "dynamism_14_6",
+      "dynamism_14_7"
+    ],
+    [
+      "dynamism_14_7",
+      "dynamism_14_8"
+    ],
+    [
+      "dynamism_14_8",
+      "dynamism_15_8"
+    ],
+    [
+      "dynamism_14_8",
+      "dynamism_14_9"
+    ],
+    [
+      "dynamism_14_9",
+      "dynamism_15_9"
+    ],
+    [
+      "dynamism_14_9",
+      "dynamism_14_10"
+    ],
+    [
+      "dynamism_14_10",
+      "dynamism_15_10"
+    ],
+    [
+      "dynamism_14_10",
+      "dynamism_14_11"
+    ],
+    [
+      "dynamism_14_11",
+      "dynamism_15_11"
+    ],
+    [
+      "dynamism_14_11",
+      "dynamism_14_12"
+    ],
+    [
+      "dynamism_14_12",
+      "dynamism_15_12"
+    ],
+    [
+      "dynamism_14_12",
+      "dynamism_14_13"
+    ],
+    [
+      "dynamism_14_13",
+      "dynamism_14_14"
+    ],
+    [
+      "dynamism_14_14",
+      "dynamism_14_15"
+    ],
+    [
+      "dynamism_14_15",
+      "dynamism_14_16"
+    ],
+    [
+      "dynamism_14_16",
+      "dynamism_15_16"
+    ],
+    [
+      "dynamism_14_16",
+      "dynamism_14_17"
+    ],
+    [
+      "dynamism_14_17",
+      "dynamism_15_17"
+    ],
+    [
+      "dynamism_14_17",
+      "dynamism_14_18"
+    ],
+    [
+      "dynamism_14_18",
+      "dynamism_15_18"
+    ],
+    [
+      "dynamism_14_18",
+      "dynamism_14_19"
+    ],
+    [
+      "dynamism_15_2",
+      "dynamism_15_3"
+    ],
+    [
+      "dynamism_15_3",
+      "dynamism_15_4"
+    ],
+    [
+      "dynamism_15_8",
+      "dynamism_15_9"
+    ],
+    [
+      "dynamism_15_9",
+      "dynamism_16_9"
+    ],
+    [
+      "dynamism_15_9",
+      "dynamism_15_10"
+    ],
+    [
+      "dynamism_15_10",
+      "dynamism_16_10"
+    ],
+    [
+      "dynamism_15_10",
+      "dynamism_15_11"
+    ],
+    [
+      "dynamism_15_11",
+      "dynamism_16_11"
+    ],
+    [
+      "dynamism_15_11",
+      "dynamism_15_12"
+    ],
+    [
+      "dynamism_15_16",
+      "dynamism_15_17"
+    ],
+    [
+      "dynamism_15_17",
+      "dynamism_15_18"
+    ],
+    [
+      "dynamism_16_9",
+      "dynamism_17_9"
+    ],
+    [
+      "dynamism_16_9",
+      "dynamism_16_10"
+    ],
+    [
+      "dynamism_16_10",
+      "dynamism_17_10"
+    ],
+    [
+      "dynamism_16_10",
+      "dynamism_16_11"
+    ],
+    [
+      "dynamism_16_11",
+      "dynamism_17_11"
+    ],
+    [
+      "dynamism_17_9",
+      "dynamism_18_9"
+    ],
+    [
+      "dynamism_17_9",
+      "dynamism_17_10"
+    ],
+    [
+      "dynamism_17_10",
+      "dynamism_17_11"
+    ],
+    [
+      "dynamism_17_11",
+      "dynamism_18_11"
+    ],
+    [
+      "dynamism_18_9",
+      "dynamism_19_9"
+    ],
+    [
+      "dynamism_18_11",
+      "dynamism_19_11"
+    ],
+    [
+      "dynamism_19_9",
+      "dynamism_19_10"
+    ],
+    [
+      "dynamism_19_10",
+      "dynamism_20_10"
+    ],
+    [
+      "dynamism_19_10",
+      "dynamism_19_11"
+    ]
+  ],
+  "gates": [
+    {
+      "id": "dynamism_10_0",
+      "side": "top",
+      "x": 10,
+      "y": 0
+    },
+    {
+      "id": "dynamism_0_10",
+      "side": "left",
+      "x": 0,
+      "y": 10
+    },
+    {
+      "id": "dynamism_20_10",
+      "side": "right",
+      "x": 20,
+      "y": 10
+    },
+    {
+      "id": "dynamism_10_20",
+      "side": "bottom",
+      "x": 10,
+      "y": 20
+    }
+  ],
+  "glyph_sockets": [
+    "dynamism_12_10"
+  ],
+  "height": 21,
+  "id": "dynamism",
+  "legendary_nodes": [
+    "dynamism_6_10"
+  ],
+  "name": {
+    "en": "Dynamism",
+    "ru": "Динамизм"
+  },
+  "node_type_counts": {
+    "board_gate": 4,
+    "glyph_socket": 1,
+    "legendary": 1,
+    "magic": 30,
+    "normal": 114,
+    "rare": 6
+  },
+  "nodes": [
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_10_0",
+      "is_starting_node": false,
+      "name": {
+        "en": "Board Gate",
+        "ru": "Ворота доски"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 3778111510,
+        "list_tags": "Strength, Intelligence, Willpower, Dexterity",
+        "popularity": 23,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength intelligence willpower dexterity board attachment gate +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          },
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          },
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          },
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 994337,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/board-attachment-gate-994337",
+      "stats": {
+        "dexterity": 5.0,
+        "intelligence": 5.0,
+        "strength": 5.0,
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "board_gate",
+      "x": 10,
+      "y": 0
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_10_1",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 1
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_11_1",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 1
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_12_1",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 1
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_13_1",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 1
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_14_1",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 1
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_10_2",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 2
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_12_2",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 2
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_13_2",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 2
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_14_2",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HPPercent",
+        "ru": "Generic Magic HPPercent"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Life",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "life magic node 2.0% maximum all classes",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 679184,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hppercent-679184",
+      "stats": {
+        "max_life": 2.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 14,
+      "y": 2
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_15_2",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HealingBonus",
+        "ru": "Generic Magic HealingBonus"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 2303449541,
+        "list_tags": "Healing",
+        "popularity": 16,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "healing magic node +3.0% received all classes",
+        "skill_tags": [
+          {
+            "id": 2772682893,
+            "name": "Healing",
+            "raw": {
+              "id": 2772682893,
+              "name": "Healing"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 1195913,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-healingbonus-1195913",
+      "stats": {
+        "healing_received": 3.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 15,
+      "y": 2
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_10_3",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 3
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_14_3",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HPPercent",
+        "ru": "Generic Magic HPPercent"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Life",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "life magic node 2.0% maximum all classes",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 679184,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hppercent-679184",
+      "stats": {
+        "max_life": 2.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 14,
+      "y": 3
+    },
+    {
+      "bonus_stats": {
+        "max_life": 4.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
+      "cost": 1,
+      "id": "dynamism_15_3",
+      "is_starting_node": false,
+      "name": {
+        "en": "Fiendish Renewal",
+        "ru": "Изуверское обновление"
+      },
+      "raw": {
+        "attributes": [
+          "4.0% Maximum Life",
+          "+6.0% Healing Received"
+        ],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Life, Healing",
+        "popularity": 8,
+        "quality": 3,
+        "rarity": 3,
+        "search_text": "life healing rare node fiendish renewal 4.0% maximum +6.0% received bonus: another if requirements met: 210 intelligence warlock",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          },
+          {
+            "id": 2772682893,
+            "name": "Healing",
+            "raw": {
+              "id": 2772682893,
+              "name": "Healing"
+            }
+          }
+        ]
+      },
+      "requirements": {
+        "intelligence": 210.0
+      },
+      "source_node_id": 2451144,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/fiendish-renewal-2451144",
+      "stats": {
+        "healing_received": 6.0,
+        "max_life": 4.0
+      },
+      "stats_source": "class_board_attributes",
+      "type": "rare",
+      "x": 15,
+      "y": 3
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_10_4",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 4
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_11_4",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 4
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_12_4",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 4
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_13_4",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 4
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_14_4",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HPPercent",
+        "ru": "Generic Magic HPPercent"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Life",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "life magic node 2.0% maximum all classes",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 679184,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hppercent-679184",
+      "stats": {
+        "max_life": 2.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 14,
+      "y": 4
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_15_4",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HealingBonus",
+        "ru": "Generic Magic HealingBonus"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 2303449541,
+        "list_tags": "Healing",
+        "popularity": 16,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "healing magic node +3.0% received all classes",
+        "skill_tags": [
+          {
+            "id": 2772682893,
+            "name": "Healing",
+            "raw": {
+              "id": 2772682893,
+              "name": "Healing"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 1195913,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-healingbonus-1195913",
+      "stats": {
+        "healing_received": 3.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 15,
+      "y": 4
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_10_5",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 5
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_13_5",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 5
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_14_5",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 5
+    },
+    {
+      "bonus_stats": {
+        "max_life": 4.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
+      "cost": 1,
+      "id": "dynamism_4_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Tortured",
+        "ru": "Истязания"
+      },
+      "raw": {
+        "attributes": [
+          "4.0% Maximum Life",
+          "+3.0% Resistance to All Elements"
+        ],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Life, Resistance",
+        "popularity": 8,
+        "quality": 3,
+        "rarity": 3,
+        "search_text": "life resistance rare node tortured 4.0% maximum +3.0% to all elements bonus: another if requirements met: 760 willpower warlock",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          },
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          }
+        ]
+      },
+      "requirements": {
+        "willpower": 760.0
+      },
+      "source_node_id": 2451140,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/tortured-2451140",
+      "stats": {
+        "max_life": 4.0,
+        "resistance_all": 3.0
+      },
+      "stats_source": "class_board_attributes",
+      "type": "rare",
+      "x": 4,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_5_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic ResistanceFire",
+        "ru": "Generic Magic ResistanceFire"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1720318871,
+        "list_tags": "Resistance, Non-Physical",
+        "popularity": 10,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "resistance non-physical magic node +1.5% to all elements barbarian, sorcerer, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          },
+          {
+            "id": 1838231677,
+            "name": "Non-Physical",
+            "raw": {
+              "id": 1838231677,
+              "name": "Non-Physical"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 671272,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "magic",
+      "x": 5,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_6_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HPPercent",
+        "ru": "Generic Magic HPPercent"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Life",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "life magic node 2.0% maximum all classes",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 679184,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hppercent-679184",
+      "stats": {
+        "max_life": 2.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 6,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_7_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_8_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_9_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_10_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_11_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_12_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_13_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_14_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_4_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HPPercent",
+        "ru": "Generic Magic HPPercent"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Life",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "life magic node 2.0% maximum all classes",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 679184,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hppercent-679184",
+      "stats": {
+        "max_life": 2.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 4,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_5_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic ResistanceFire",
+        "ru": "Generic Magic ResistanceFire"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1720318871,
+        "list_tags": "Resistance, Non-Physical",
+        "popularity": 10,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "resistance non-physical magic node +1.5% to all elements barbarian, sorcerer, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          },
+          {
+            "id": 1838231677,
+            "name": "Non-Physical",
+            "raw": {
+              "id": 1838231677,
+              "name": "Non-Physical"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 671272,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "magic",
+      "x": 5,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_6_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 6,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_7_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_8_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_10_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Int",
+        "ru": "Generic Magic Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 18,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "intelligence magic node +7 druid, paladin, rogue, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678627,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-int-678627",
+      "stats": {
+        "intelligence": 7.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 10,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_11_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Damage",
+        "ru": "Generic Magic Damage"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 4073752204,
+        "list_tags": "Damage",
+        "popularity": 14,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "damage magic node +5% barbarian, druid, necromancer, paladin, rogue, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678754,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damage-678754",
+      "stats": {
+        "damage": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 11,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_12_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_13_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_14_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_2_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 2,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_3_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 3,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_4_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HPPercent",
+        "ru": "Generic Magic HPPercent"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Life",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "life magic node 2.0% maximum all classes",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 679184,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hppercent-679184",
+      "stats": {
+        "max_life": 2.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 4,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_6_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 6,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_7_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_9_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 8
+    },
+    {
+      "bonus_stats": {
+        "damage": 10.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
+      "cost": 1,
+      "id": "dynamism_10_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Bolster",
+        "ru": "Подспорье"
+      },
+      "raw": {
+        "attributes": [
+          "+10% Damage",
+          "+10 Willpower"
+        ],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 4073752204,
+        "list_tags": "Damage, Willpower",
+        "popularity": 7,
+        "quality": 3,
+        "rarity": 3,
+        "search_text": "damage willpower rare node bolster +10% +10 bonus: another if requirements met: 210 intelligence warlock",
+        "skill_tags": [
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          },
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {
+        "intelligence": 210.0
+      },
+      "source_node_id": 2451142,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/bolster-2451142",
+      "stats": {
+        "damage": 10.0,
+        "willpower": 10.0
+      },
+      "stats_source": "class_board_attributes",
+      "type": "rare",
+      "x": 10,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_11_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Damage",
+        "ru": "Generic Magic Damage"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 4073752204,
+        "list_tags": "Damage",
+        "popularity": 14,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "damage magic node +5% barbarian, druid, necromancer, paladin, rogue, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678754,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damage-678754",
+      "stats": {
+        "damage": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 11,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_12_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_14_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_15_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 15,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_1_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 1,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_2_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 2,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_3_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 3,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_4_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 4,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_7_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_9_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Int",
+        "ru": "Generic Magic Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 18,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "intelligence magic node +7 druid, paladin, rogue, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678627,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-int-678627",
+      "stats": {
+        "intelligence": 7.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 9,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_10_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Damage",
+        "ru": "Generic Magic Damage"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 4073752204,
+        "list_tags": "Damage",
+        "popularity": 14,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "damage magic node +5% barbarian, druid, necromancer, paladin, rogue, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678754,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damage-678754",
+      "stats": {
+        "damage": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 10,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_11_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_12_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_13_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_14_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_15_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 15,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_16_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 16,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_17_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 17,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_18_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 18,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_19_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 19,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_0_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Board Gate",
+        "ru": "Ворота доски"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 3778111510,
+        "list_tags": "Strength, Intelligence, Willpower, Dexterity",
+        "popularity": 23,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength intelligence willpower dexterity board attachment gate +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          },
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          },
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          },
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 994337,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/board-attachment-gate-994337",
+      "stats": {
+        "dexterity": 5.0,
+        "intelligence": 5.0,
+        "strength": 5.0,
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "board_gate",
+      "x": 0,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_1_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 1,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_6_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Dynamism",
+        "ru": "Динамизм"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 2713617609,
+        "list_tags": "Demonform",
+        "popularity": 19,
+        "quality": 5,
+        "rarity": 4,
+        "search_text": "demonform legendary node dynamism while in demonform, your demonology skill damage is increased by 3%[x] for every point of dominance you currently have. not gain 1 2 seconds. warlock",
+        "skill_tags": [
+          {
+            "id": 1080846731,
+            "name": "Demonform",
+            "raw": {
+              "id": 1080846731,
+              "name": "Demonform"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 2459124,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/dynamism-2459124",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "legendary",
+      "x": 6,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_7_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_8_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_11_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_12_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Glyph Socket",
+        "ru": "Ячейка символа"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": null,
+        "list_tags": "",
+        "popularity": 40,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "glyph socket all classes",
+        "skill_tags": []
+      },
+      "requirements": {},
+      "source_node_id": 681756,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/glyph-socket-681756",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "glyph_socket",
+      "x": 12,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_13_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_14_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_15_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 15,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_16_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 16,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_17_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 17,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_19_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 19,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_20_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Board Gate",
+        "ru": "Ворота доски"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 3778111510,
+        "list_tags": "Strength, Intelligence, Willpower, Dexterity",
+        "popularity": 23,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength intelligence willpower dexterity board attachment gate +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          },
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          },
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          },
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 994337,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/board-attachment-gate-994337",
+      "stats": {
+        "dexterity": 5.0,
+        "intelligence": 5.0,
+        "strength": 5.0,
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "board_gate",
+      "x": 20,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_1_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 1,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_2_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 2,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_3_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 3,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_4_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 4,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_7_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_9_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Str",
+        "ru": "Generic Magic Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 8,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "strength magic node +7 paladin, rogue, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678624,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-str-678624",
+      "stats": {
+        "strength": 7.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 9,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_10_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic DamageInDemonform",
+        "ru": "Generic Magic DamageInDemonform"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 626209156,
+        "list_tags": "Demonform, Damage",
+        "popularity": 6,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "demonform damage magic node +10.0% bonus warlock",
+        "skill_tags": [
+          {
+            "id": 1080846731,
+            "name": "Demonform",
+            "raw": {
+              "id": 1080846731,
+              "name": "Demonform"
+            }
+          },
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 2528601,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageindemonform-2528601",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "magic",
+      "x": 10,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_11_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_12_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_13_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_14_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_15_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 15,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_16_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 16,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_17_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 17,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_18_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 18,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_19_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 19,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_2_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 2,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_3_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 3,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_4_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic DamageReductionFromBleedingTarget",
+        "ru": "Generic Magic DamageReductionFromBleedingTarget"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1812457486,
+        "list_tags": "Bleed, Armor",
+        "popularity": 13,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "bleed armor magic node +1.5% total barbarian, warlock",
+        "skill_tags": [
+          {
+            "id": 2318675889,
+            "name": "Bleed",
+            "raw": {
+              "id": 2318675889,
+              "name": "Bleed"
+            }
+          },
+          {
+            "id": 2317714646,
+            "name": "Armor",
+            "raw": {
+              "id": 2317714646,
+              "name": "Armor"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 691929,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagereductionfrombleedingtarget-691929",
+      "stats": {
+        "armor": 1.5
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 4,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_6_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 6,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_7_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_9_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 12
+    },
+    {
+      "bonus_stats": {
+        "damage": 10.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
+      "cost": 1,
+      "id": "dynamism_10_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Augmented",
+        "ru": "Трансформация"
+      },
+      "raw": {
+        "attributes": [
+          "+10.0% Demonform Damage Bonus",
+          "+10 Willpower"
+        ],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 626209156,
+        "list_tags": "Demonform, Willpower",
+        "popularity": 6,
+        "quality": 3,
+        "rarity": 3,
+        "search_text": "demonform willpower rare node augmented +10.0% damage bonus +10 bonus: another if requirements met: 210 strength warlock",
+        "skill_tags": [
+          {
+            "id": 1080846731,
+            "name": "Demonform",
+            "raw": {
+              "id": 1080846731,
+              "name": "Demonform"
+            }
+          },
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {
+        "strength": 210.0
+      },
+      "source_node_id": 2451136,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/augmented-2451136",
+      "stats": {
+        "damage": 10.0,
+        "willpower": 10.0
+      },
+      "stats_source": "class_board_attributes",
+      "type": "rare",
+      "x": 10,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_11_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic DamageInDemonform",
+        "ru": "Generic Magic DamageInDemonform"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 626209156,
+        "list_tags": "Demonform, Damage",
+        "popularity": 6,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "demonform damage magic node +10.0% bonus warlock",
+        "skill_tags": [
+          {
+            "id": 1080846731,
+            "name": "Demonform",
+            "raw": {
+              "id": 1080846731,
+              "name": "Demonform"
+            }
+          },
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 2528601,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageindemonform-2528601",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "magic",
+      "x": 11,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_12_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_14_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_15_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 15,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_4_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic DamageReductionFromBleedingTarget",
+        "ru": "Generic Magic DamageReductionFromBleedingTarget"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1812457486,
+        "list_tags": "Bleed, Armor",
+        "popularity": 13,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "bleed armor magic node +1.5% total barbarian, warlock",
+        "skill_tags": [
+          {
+            "id": 2318675889,
+            "name": "Bleed",
+            "raw": {
+              "id": 2318675889,
+              "name": "Bleed"
+            }
+          },
+          {
+            "id": 2317714646,
+            "name": "Armor",
+            "raw": {
+              "id": 2317714646,
+              "name": "Armor"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 691929,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagereductionfrombleedingtarget-691929",
+      "stats": {
+        "armor": 1.5
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 4,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_5_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic ResistanceFire",
+        "ru": "Generic Magic ResistanceFire"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1720318871,
+        "list_tags": "Resistance, Non-Physical",
+        "popularity": 10,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "resistance non-physical magic node +1.5% to all elements barbarian, sorcerer, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          },
+          {
+            "id": 1838231677,
+            "name": "Non-Physical",
+            "raw": {
+              "id": 1838231677,
+              "name": "Non-Physical"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 671272,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "magic",
+      "x": 5,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_6_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 6,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_7_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_8_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_10_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Str",
+        "ru": "Generic Magic Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 8,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "strength magic node +7 paladin, rogue, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678624,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-str-678624",
+      "stats": {
+        "strength": 7.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 10,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_11_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic DamageInDemonform",
+        "ru": "Generic Magic DamageInDemonform"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 626209156,
+        "list_tags": "Demonform, Damage",
+        "popularity": 6,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "demonform damage magic node +10.0% bonus warlock",
+        "skill_tags": [
+          {
+            "id": 1080846731,
+            "name": "Demonform",
+            "raw": {
+              "id": 1080846731,
+              "name": "Demonform"
+            }
+          },
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 2528601,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageindemonform-2528601",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "magic",
+      "x": 11,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_12_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_13_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_14_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 13
+    },
+    {
+      "bonus_stats": {
+        "armor": 3.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
+      "cost": 1,
+      "id": "dynamism_4_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Demonskin",
+        "ru": "Демоническая кожа"
+      },
+      "raw": {
+        "attributes": [
+          "+3.0% Total Armor",
+          "+3.0% Resistance to All Elements"
+        ],
+        "glyph_attributes": [],
+        "icon": 1812457486,
+        "list_tags": "Armor, Resistance",
+        "popularity": 7,
+        "quality": 3,
+        "rarity": 3,
+        "search_text": "armor resistance rare node demonskin +3.0% total to all elements bonus: another if requirements met: 760 willpower warlock",
+        "skill_tags": [
+          {
+            "id": 2317714646,
+            "name": "Armor",
+            "raw": {
+              "id": 2317714646,
+              "name": "Armor"
+            }
+          },
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          }
+        ]
+      },
+      "requirements": {
+        "willpower": 760.0
+      },
+      "source_node_id": 2451134,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/demonskin-2451134",
+      "stats": {
+        "armor": 3.0,
+        "resistance_all": 3.0
+      },
+      "stats_source": "class_board_attributes",
+      "type": "rare",
+      "x": 4,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_5_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic ResistanceFire",
+        "ru": "Generic Magic ResistanceFire"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1720318871,
+        "list_tags": "Resistance, Non-Physical",
+        "popularity": 10,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "resistance non-physical magic node +1.5% to all elements barbarian, sorcerer, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          },
+          {
+            "id": 1838231677,
+            "name": "Non-Physical",
+            "raw": {
+              "id": 1838231677,
+              "name": "Non-Physical"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 671272,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "magic",
+      "x": 5,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_6_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic DamageReductionFromBleedingTarget",
+        "ru": "Generic Magic DamageReductionFromBleedingTarget"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1812457486,
+        "list_tags": "Bleed, Armor",
+        "popularity": 13,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "bleed armor magic node +1.5% total barbarian, warlock",
+        "skill_tags": [
+          {
+            "id": 2318675889,
+            "name": "Bleed",
+            "raw": {
+              "id": 2318675889,
+              "name": "Bleed"
+            }
+          },
+          {
+            "id": 2317714646,
+            "name": "Armor",
+            "raw": {
+              "id": 2317714646,
+              "name": "Armor"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 691929,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagereductionfrombleedingtarget-691929",
+      "stats": {
+        "armor": 1.5
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 6,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_7_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_8_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_9_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_10_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_11_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_12_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_13_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_14_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_10_15",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 15
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_13_15",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 15
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_14_15",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 15
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_10_16",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 16
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_11_16",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 16
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_12_16",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 16
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_13_16",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 16
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_14_16",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic DamageInDemonform",
+        "ru": "Generic Magic DamageInDemonform"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 626209156,
+        "list_tags": "Demonform, Damage",
+        "popularity": 6,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "demonform damage magic node +10.0% bonus warlock",
+        "skill_tags": [
+          {
+            "id": 1080846731,
+            "name": "Demonform",
+            "raw": {
+              "id": 1080846731,
+              "name": "Demonform"
+            }
+          },
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 2528601,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageindemonform-2528601",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "magic",
+      "x": 14,
+      "y": 16
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_15_16",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Armor",
+        "ru": "Generic Magic Armor"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1812457486,
+        "list_tags": "Armor",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "armor magic node +1.5% total all classes",
+        "skill_tags": [
+          {
+            "id": 2317714646,
+            "name": "Armor",
+            "raw": {
+              "id": 2317714646,
+              "name": "Armor"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 671247,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-armor-671247",
+      "stats": {
+        "armor": 1.5
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 15,
+      "y": 16
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_10_17",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 17
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_14_17",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic DamageInDemonform",
+        "ru": "Generic Magic DamageInDemonform"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 626209156,
+        "list_tags": "Demonform, Damage",
+        "popularity": 6,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "demonform damage magic node +10.0% bonus warlock",
+        "skill_tags": [
+          {
+            "id": 1080846731,
+            "name": "Demonform",
+            "raw": {
+              "id": 1080846731,
+              "name": "Demonform"
+            }
+          },
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 2528601,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageindemonform-2528601",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "magic",
+      "x": 14,
+      "y": 17
+    },
+    {
+      "bonus_stats": {
+        "damage": 10.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
+      "cost": 1,
+      "id": "dynamism_15_17",
+      "is_starting_node": false,
+      "name": {
+        "en": "Eldrich Carapace",
+        "ru": "Потусторонний панцирь"
+      },
+      "raw": {
+        "attributes": [
+          "+10.0% Demonform Damage Bonus",
+          "+1.5% Total Armor"
+        ],
+        "glyph_attributes": [],
+        "icon": 626209156,
+        "list_tags": "Demonform, Willpower",
+        "popularity": 12,
+        "quality": 3,
+        "rarity": 3,
+        "search_text": "demonform willpower rare node eldrich carapace +10.0% damage bonus +1.5% total armor bonus: another if requirements met: 700 willpower, 190 intelligence warlock",
+        "skill_tags": [
+          {
+            "id": 1080846731,
+            "name": "Demonform",
+            "raw": {
+              "id": 1080846731,
+              "name": "Demonform"
+            }
+          },
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {
+        "intelligence": 190.0,
+        "willpower": 700.0
+      },
+      "source_node_id": 2451138,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/eldrich-carapace-2451138",
+      "stats": {
+        "armor": 1.5,
+        "damage": 10.0
+      },
+      "stats_source": "class_board_attributes",
+      "type": "rare",
+      "x": 15,
+      "y": 17
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_10_18",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 18
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_12_18",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 18
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_13_18",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 18
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_14_18",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic DamageInDemonform",
+        "ru": "Generic Magic DamageInDemonform"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 626209156,
+        "list_tags": "Demonform, Damage",
+        "popularity": 6,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "demonform damage magic node +10.0% bonus warlock",
+        "skill_tags": [
+          {
+            "id": 1080846731,
+            "name": "Demonform",
+            "raw": {
+              "id": 1080846731,
+              "name": "Demonform"
+            }
+          },
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 2528601,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageindemonform-2528601",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "magic",
+      "x": 14,
+      "y": 18
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_15_18",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Armor",
+        "ru": "Generic Magic Armor"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1812457486,
+        "list_tags": "Armor",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "armor magic node +1.5% total all classes",
+        "skill_tags": [
+          {
+            "id": 2317714646,
+            "name": "Armor",
+            "raw": {
+              "id": 2317714646,
+              "name": "Armor"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 671247,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-armor-671247",
+      "stats": {
+        "armor": 1.5
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 15,
+      "y": 18
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_10_19",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 19
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_11_19",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 19
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_12_19",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 19
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_13_19",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 19
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_14_19",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 19
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "dynamism_10_20",
+      "is_starting_node": false,
+      "name": {
+        "en": "Board Gate",
+        "ru": "Ворота доски"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 3778111510,
+        "list_tags": "Strength, Intelligence, Willpower, Dexterity",
+        "popularity": 23,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength intelligence willpower dexterity board attachment gate +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          },
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          },
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          },
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 994337,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/board-attachment-gate-994337",
+      "stats": {
+        "dexterity": 5.0,
+        "intelligence": 5.0,
+        "strength": 5.0,
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "board_gate",
+      "x": 10,
+      "y": 20
+    }
+  ],
+  "patch_version": "3.0.2",
+  "schema_version": 1,
+  "source_board_id": 2458680,
+  "source_url": "https://nether.wowhead.com/diablo-4/data/paragon-calc?dv=17&db=1778694731",
+  "start_node": null,
+  "width": 21
+}

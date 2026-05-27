@@ -1,0 +1,99 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nInnate\nRadius Size: 3 \nFor every 5 Strength purchased within range, you deal +1.0% increased damage with Incarnate Skills.\nAdditional Bonus: \nCasting an Incarnate Skill grants you 15% [x] Damage Reduction for 7 seconds.\nRequired (purchased in range): +25 Strength\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nРефлекс\nРадиус: 3 \nЗа каждые 5 ед. силы, открытых в радиусе действия, урон от умений категории \"Воплощение\" увеличивается на 1.0% .\nДополнительный бонус: \nУмения категории \"Воплощение\" уменьшают получаемый вами урон на 15% [x] на 7 сек.\nТребуется открыть в радиусе действия: +25 к силе\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:50:24Z",
+  "class": "spiritborn",
+  "class_mask": 32,
+  "id": "innate",
+  "max_level": 100,
+  "name": {
+    "en": "Innate",
+    "ru": "Рефлекс"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 32,
+    "icon": 2519972743,
+    "maxLevel": 100,
+    "name": "Innate",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      510015620,
+      3567369300,
+      256351827,
+      4011612737
+    ],
+    "sno": 2067561,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 9,
+        "attributeName": "Strength",
+        "classMask": 168
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 510015620,
+      "name": "Strength",
+      "raw": {
+        "id": 510015620,
+        "name": "Strength"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 256351827,
+      "name": "Incarnate",
+      "raw": {
+        "id": 256351827,
+        "name": "Incarnate"
+      }
+    },
+    {
+      "id": 4011612737,
+      "name": "Damage Reduction",
+      "raw": {
+        "id": 4011612737,
+        "name": "Damage Reduction"
+      }
+    }
+  ],
+  "source_glyph_id": 2067561,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/innate-2067561",
+  "threshold_attributes": [
+    {
+      "attribute": 9,
+      "attribute_name": "Strength",
+      "class_mask": 168,
+      "stat_key": "strength"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nTectonic\nRadius Size: 3 \nFor every 5 Dexterity purchased within range, your Earth Skills gain 1.5% [+] Critical Strike Damage.\nAdditional Bonus: \nYou gain 15% [x] Damage to Crowd Controlled enemies.\nRequired (purchased in range): +25 Dexterity\nLegendary Bonus: \nIncrease Earth Skill damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nДвижение земли\nРадиус: 3 \nЗа каждые 5 ед. ловкости, открытых в радиусе действия, критический урон умений земли увеличивается на 1.5% [+] .\nДополнительный бонус: \nВы наносите на 15% [x] больше урона противникам, находящимся под действием эффектов контроля.\nТребуется открыть в радиусе действия: +25 к ловкости\nЛегендарный бонус: \n+ 0.5% [x] к урону от умений земли . \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:20:54Z",
+  "class": "druid",
+  "class_mask": 2,
+  "id": "tectonic",
+  "max_level": 100,
+  "name": {
+    "en": "Tectonic",
+    "ru": "Движение земли"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 2,
+    "icon": 1236117199,
+    "maxLevel": 100,
+    "name": "Tectonic",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      809827735,
+      3567369300,
+      2892145024,
+      3540574146,
+      1400607680,
+      3359304269
+    ],
+    "sno": 1624740,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 12,
+        "attributeName": "Dexterity",
+        "classMask": 119
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 809827735,
+      "name": "Dexterity",
+      "raw": {
+        "id": 809827735,
+        "name": "Dexterity"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 2892145024,
+      "name": "Critical Strikes",
+      "raw": {
+        "id": 2892145024,
+        "name": "Critical Strikes"
+      }
+    },
+    {
+      "id": 3540574146,
+      "name": "Lucky Hit",
+      "raw": {
+        "id": 3540574146,
+        "name": "Lucky Hit"
+      }
+    },
+    {
+      "id": 1400607680,
+      "name": "Earth",
+      "raw": {
+        "id": 1400607680,
+        "name": "Earth"
+      }
+    },
+    {
+      "id": 3359304269,
+      "name": "Nature Magic",
+      "raw": {
+        "id": 3359304269,
+        "name": "Nature Magic"
+      }
+    }
+  ],
+  "source_glyph_id": 1624740,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/tectonic-1624740",
+  "threshold_attributes": [
+    {
+      "attribute": 12,
+      "attribute_name": "Dexterity",
+      "class_mask": 119,
+      "stat_key": "dexterity"
+    }
+  ]
+}

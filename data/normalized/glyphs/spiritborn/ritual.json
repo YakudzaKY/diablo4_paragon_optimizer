@@ -1,0 +1,90 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nRitual\nRadius Size: 3 \nFor every 5 Intelligence purchased within range, you gain +0.20% increased Mystic Circle potency.\nAdditional Bonus: \nWhile standing in a Mystic Circle you deal 10% [x] increased damage and take 10% [x] reduced damage.\nRequired (purchased in range): +25 Intelligence\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nРитуал\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, мощь мистического круга увеличивается на +0.20% .\nДополнительный бонус: \nПока вы стоите в мистическом круге , вы наносите на 10% [x] больше и получаете на 10% [x] меньше урона.\nТребуется открыть в радиусе действия: +25 к интеллекту\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:50:24Z",
+  "class": "spiritborn",
+  "class_mask": 32,
+  "id": "ritual",
+  "max_level": 100,
+  "name": {
+    "en": "Ritual",
+    "ru": "Ритуал"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 32,
+    "icon": 2456702841,
+    "maxLevel": 100,
+    "name": "Ritual",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      1834748264,
+      1903816479,
+      3567369300
+    ],
+    "sno": 2069914,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 10,
+        "attributeName": "Intelligence",
+        "classMask": 234
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 1834748264,
+      "name": "Intelligence",
+      "raw": {
+        "id": 1834748264,
+        "name": "Intelligence"
+      }
+    },
+    {
+      "id": 1903816479,
+      "name": "Mystic Circle",
+      "raw": {
+        "id": 1903816479,
+        "name": "Mystic Circle"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    }
+  ],
+  "source_glyph_id": 2069914,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/ritual-2069914",
+  "threshold_attributes": [
+    {
+      "attribute": 10,
+      "attribute_name": "Intelligence",
+      "class_mask": 234,
+      "stat_key": "intelligence"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nBane\nRadius Size: 3 \nFor every 5 Strength purchased within range, you deal +1.0% increased Poison damage.\nAdditional Bonus: \nPoisoning damage effects have a 15% chance to deal double the amount of damage over their duration.\nRequired (purchased in range): +25 Strength\nLegendary Bonus: \nIncrease Poison damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nБич\nРадиус: 3 \nЗа каждые 5 ед. силы, открытых в радиусе действия, урон от яда увеличивается на +1.0% .\nДополнительный бонус: \nЭффекты периодического урона от отравления с вероятностью 15% наносят удвоенный урон за все время действия.\nТребуется открыть в радиусе действия: +25 к силе\nЛегендарный бонус: \n+ 0.5% [x] к урону от яда. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:36:02Z",
+  "class": "rogue",
+  "class_mask": 40,
+  "id": "bane",
+  "max_level": 100,
+  "name": {
+    "en": "Bane",
+    "ru": "Бич"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 40,
+    "icon": 2519972743,
+    "maxLevel": 100,
+    "name": "Bane",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      510015620,
+      4053473037,
+      3567369300
+    ],
+    "sno": 1029497,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 9,
+        "attributeName": "Strength",
+        "classMask": 168
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 510015620,
+      "name": "Strength",
+      "raw": {
+        "id": 510015620,
+        "name": "Strength"
+      }
+    },
+    {
+      "id": 4053473037,
+      "name": "Poison",
+      "raw": {
+        "id": 4053473037,
+        "name": "Poison"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    }
+  ],
+  "source_glyph_id": 1029497,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/bane-1029497",
+  "threshold_attributes": [
+    {
+      "attribute": 9,
+      "attribute_name": "Strength",
+      "class_mask": 168,
+      "stat_key": "strength"
+    }
+  ]
+}

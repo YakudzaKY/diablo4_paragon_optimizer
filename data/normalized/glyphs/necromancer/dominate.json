@@ -1,0 +1,90 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nDominate\nRadius Size: 3 \nFor every 5 Willpower purchased within range, you deal +1.5% increased damage per Overpower charge.\nAdditional Bonus: \nWhen you gain an Overpower charge, you deal 12% [x] increased damage for 5 seconds.\nRequired (purchased in range): +25 Willpower\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nПодчинение\nРадиус: 3 \nЗа каждые 5 ед. силы воли, открытых в радиусе действия, урон увеличивается на +1.5% за каждый накопленный эффект \"Подавления\" .\nДополнительный бонус: \nКогда вы получаете эффект \"Подавления\" , вы наносите на 12% [x] больше урона в течение 5 сек.\nТребуется открыть в радиусе действия: +25 к силе воли\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:42:26Z",
+  "class": "necromancer",
+  "class_mask": 16,
+  "id": "dominate",
+  "max_level": 100,
+  "name": {
+    "en": "Dominate",
+    "ru": "Подчинение"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 16,
+    "icon": 3933961978,
+    "maxLevel": 100,
+    "name": "Dominate",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      3639228442,
+      2440772653,
+      3567369300
+    ],
+    "sno": 1331811,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 11,
+        "attributeName": "Willpower",
+        "classMask": 117
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 3639228442,
+      "name": "Willpower",
+      "raw": {
+        "id": 3639228442,
+        "name": "Willpower"
+      }
+    },
+    {
+      "id": 2440772653,
+      "name": "Overpower",
+      "raw": {
+        "id": 2440772653,
+        "name": "Overpower"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    }
+  ],
+  "source_glyph_id": 1331811,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/dominate-1331811",
+  "threshold_attributes": [
+    {
+      "attribute": 11,
+      "attribute_name": "Willpower",
+      "class_mask": 117,
+      "stat_key": "willpower"
+    }
+  ]
+}

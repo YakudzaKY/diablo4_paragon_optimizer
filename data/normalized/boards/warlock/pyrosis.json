@@ -1,0 +1,8030 @@
+{
+  "checked_at": "2026-05-27T11:02:00Z",
+  "class": "warlock",
+  "edge_source": "inferred_grid_adjacency",
+  "edges": [
+    [
+      "pyrosis_0_10",
+      "pyrosis_1_10"
+    ],
+    [
+      "pyrosis_1_10",
+      "pyrosis_2_10"
+    ],
+    [
+      "pyrosis_1_10",
+      "pyrosis_1_11"
+    ],
+    [
+      "pyrosis_1_11",
+      "pyrosis_2_11"
+    ],
+    [
+      "pyrosis_2_10",
+      "pyrosis_3_10"
+    ],
+    [
+      "pyrosis_2_10",
+      "pyrosis_2_11"
+    ],
+    [
+      "pyrosis_2_11",
+      "pyrosis_3_11"
+    ],
+    [
+      "pyrosis_2_11",
+      "pyrosis_2_12"
+    ],
+    [
+      "pyrosis_2_12",
+      "pyrosis_3_12"
+    ],
+    [
+      "pyrosis_2_14",
+      "pyrosis_3_14"
+    ],
+    [
+      "pyrosis_3_10",
+      "pyrosis_4_10"
+    ],
+    [
+      "pyrosis_3_10",
+      "pyrosis_3_11"
+    ],
+    [
+      "pyrosis_3_11",
+      "pyrosis_3_12"
+    ],
+    [
+      "pyrosis_3_12",
+      "pyrosis_4_12"
+    ],
+    [
+      "pyrosis_3_12",
+      "pyrosis_3_13"
+    ],
+    [
+      "pyrosis_3_13",
+      "pyrosis_4_13"
+    ],
+    [
+      "pyrosis_3_13",
+      "pyrosis_3_14"
+    ],
+    [
+      "pyrosis_3_14",
+      "pyrosis_4_14"
+    ],
+    [
+      "pyrosis_4_9",
+      "pyrosis_5_9"
+    ],
+    [
+      "pyrosis_4_9",
+      "pyrosis_4_10"
+    ],
+    [
+      "pyrosis_4_10",
+      "pyrosis_5_10"
+    ],
+    [
+      "pyrosis_4_12",
+      "pyrosis_5_12"
+    ],
+    [
+      "pyrosis_4_12",
+      "pyrosis_4_13"
+    ],
+    [
+      "pyrosis_4_13",
+      "pyrosis_5_13"
+    ],
+    [
+      "pyrosis_4_13",
+      "pyrosis_4_14"
+    ],
+    [
+      "pyrosis_5_8",
+      "pyrosis_6_8"
+    ],
+    [
+      "pyrosis_5_8",
+      "pyrosis_5_9"
+    ],
+    [
+      "pyrosis_5_9",
+      "pyrosis_6_9"
+    ],
+    [
+      "pyrosis_5_9",
+      "pyrosis_5_10"
+    ],
+    [
+      "pyrosis_5_10",
+      "pyrosis_6_10"
+    ],
+    [
+      "pyrosis_5_12",
+      "pyrosis_6_12"
+    ],
+    [
+      "pyrosis_5_12",
+      "pyrosis_5_13"
+    ],
+    [
+      "pyrosis_5_13",
+      "pyrosis_6_13"
+    ],
+    [
+      "pyrosis_5_16",
+      "pyrosis_6_16"
+    ],
+    [
+      "pyrosis_6_7",
+      "pyrosis_7_7"
+    ],
+    [
+      "pyrosis_6_7",
+      "pyrosis_6_8"
+    ],
+    [
+      "pyrosis_6_8",
+      "pyrosis_7_8"
+    ],
+    [
+      "pyrosis_6_8",
+      "pyrosis_6_9"
+    ],
+    [
+      "pyrosis_6_9",
+      "pyrosis_7_9"
+    ],
+    [
+      "pyrosis_6_9",
+      "pyrosis_6_10"
+    ],
+    [
+      "pyrosis_6_10",
+      "pyrosis_7_10"
+    ],
+    [
+      "pyrosis_6_12",
+      "pyrosis_7_12"
+    ],
+    [
+      "pyrosis_6_12",
+      "pyrosis_6_13"
+    ],
+    [
+      "pyrosis_6_13",
+      "pyrosis_7_13"
+    ],
+    [
+      "pyrosis_6_15",
+      "pyrosis_6_16"
+    ],
+    [
+      "pyrosis_6_16",
+      "pyrosis_7_16"
+    ],
+    [
+      "pyrosis_6_16",
+      "pyrosis_6_17"
+    ],
+    [
+      "pyrosis_6_17",
+      "pyrosis_7_17"
+    ],
+    [
+      "pyrosis_7_6",
+      "pyrosis_8_6"
+    ],
+    [
+      "pyrosis_7_6",
+      "pyrosis_7_7"
+    ],
+    [
+      "pyrosis_7_7",
+      "pyrosis_8_7"
+    ],
+    [
+      "pyrosis_7_7",
+      "pyrosis_7_8"
+    ],
+    [
+      "pyrosis_7_8",
+      "pyrosis_8_8"
+    ],
+    [
+      "pyrosis_7_8",
+      "pyrosis_7_9"
+    ],
+    [
+      "pyrosis_7_9",
+      "pyrosis_7_10"
+    ],
+    [
+      "pyrosis_7_10",
+      "pyrosis_8_10"
+    ],
+    [
+      "pyrosis_7_12",
+      "pyrosis_8_12"
+    ],
+    [
+      "pyrosis_7_12",
+      "pyrosis_7_13"
+    ],
+    [
+      "pyrosis_7_13",
+      "pyrosis_8_13"
+    ],
+    [
+      "pyrosis_7_13",
+      "pyrosis_7_14"
+    ],
+    [
+      "pyrosis_7_14",
+      "pyrosis_8_14"
+    ],
+    [
+      "pyrosis_7_16",
+      "pyrosis_8_16"
+    ],
+    [
+      "pyrosis_7_16",
+      "pyrosis_7_17"
+    ],
+    [
+      "pyrosis_7_17",
+      "pyrosis_8_17"
+    ],
+    [
+      "pyrosis_7_17",
+      "pyrosis_7_18"
+    ],
+    [
+      "pyrosis_7_18",
+      "pyrosis_8_18"
+    ],
+    [
+      "pyrosis_7_18",
+      "pyrosis_7_19"
+    ],
+    [
+      "pyrosis_7_19",
+      "pyrosis_8_19"
+    ],
+    [
+      "pyrosis_8_5",
+      "pyrosis_9_5"
+    ],
+    [
+      "pyrosis_8_5",
+      "pyrosis_8_6"
+    ],
+    [
+      "pyrosis_8_6",
+      "pyrosis_9_6"
+    ],
+    [
+      "pyrosis_8_6",
+      "pyrosis_8_7"
+    ],
+    [
+      "pyrosis_8_7",
+      "pyrosis_8_8"
+    ],
+    [
+      "pyrosis_8_8",
+      "pyrosis_9_8"
+    ],
+    [
+      "pyrosis_8_10",
+      "pyrosis_9_10"
+    ],
+    [
+      "pyrosis_8_12",
+      "pyrosis_9_12"
+    ],
+    [
+      "pyrosis_8_12",
+      "pyrosis_8_13"
+    ],
+    [
+      "pyrosis_8_13",
+      "pyrosis_9_13"
+    ],
+    [
+      "pyrosis_8_13",
+      "pyrosis_8_14"
+    ],
+    [
+      "pyrosis_8_14",
+      "pyrosis_9_14"
+    ],
+    [
+      "pyrosis_8_14",
+      "pyrosis_8_15"
+    ],
+    [
+      "pyrosis_8_15",
+      "pyrosis_8_16"
+    ],
+    [
+      "pyrosis_8_16",
+      "pyrosis_8_17"
+    ],
+    [
+      "pyrosis_8_17",
+      "pyrosis_8_18"
+    ],
+    [
+      "pyrosis_8_18",
+      "pyrosis_9_18"
+    ],
+    [
+      "pyrosis_8_18",
+      "pyrosis_8_19"
+    ],
+    [
+      "pyrosis_8_19",
+      "pyrosis_9_19"
+    ],
+    [
+      "pyrosis_9_1",
+      "pyrosis_10_1"
+    ],
+    [
+      "pyrosis_9_1",
+      "pyrosis_9_2"
+    ],
+    [
+      "pyrosis_9_2",
+      "pyrosis_10_2"
+    ],
+    [
+      "pyrosis_9_2",
+      "pyrosis_9_3"
+    ],
+    [
+      "pyrosis_9_3",
+      "pyrosis_10_3"
+    ],
+    [
+      "pyrosis_9_3",
+      "pyrosis_9_4"
+    ],
+    [
+      "pyrosis_9_4",
+      "pyrosis_9_5"
+    ],
+    [
+      "pyrosis_9_5",
+      "pyrosis_10_5"
+    ],
+    [
+      "pyrosis_9_5",
+      "pyrosis_9_6"
+    ],
+    [
+      "pyrosis_9_6",
+      "pyrosis_10_6"
+    ],
+    [
+      "pyrosis_9_8",
+      "pyrosis_10_8"
+    ],
+    [
+      "pyrosis_9_8",
+      "pyrosis_9_9"
+    ],
+    [
+      "pyrosis_9_9",
+      "pyrosis_10_9"
+    ],
+    [
+      "pyrosis_9_9",
+      "pyrosis_9_10"
+    ],
+    [
+      "pyrosis_9_10",
+      "pyrosis_10_10"
+    ],
+    [
+      "pyrosis_9_10",
+      "pyrosis_9_11"
+    ],
+    [
+      "pyrosis_9_11",
+      "pyrosis_10_11"
+    ],
+    [
+      "pyrosis_9_11",
+      "pyrosis_9_12"
+    ],
+    [
+      "pyrosis_9_12",
+      "pyrosis_9_13"
+    ],
+    [
+      "pyrosis_9_13",
+      "pyrosis_10_13"
+    ],
+    [
+      "pyrosis_9_13",
+      "pyrosis_9_14"
+    ],
+    [
+      "pyrosis_9_14",
+      "pyrosis_10_14"
+    ],
+    [
+      "pyrosis_9_18",
+      "pyrosis_9_19"
+    ],
+    [
+      "pyrosis_9_19",
+      "pyrosis_10_19"
+    ],
+    [
+      "pyrosis_10_0",
+      "pyrosis_10_1"
+    ],
+    [
+      "pyrosis_10_1",
+      "pyrosis_11_1"
+    ],
+    [
+      "pyrosis_10_1",
+      "pyrosis_10_2"
+    ],
+    [
+      "pyrosis_10_2",
+      "pyrosis_11_2"
+    ],
+    [
+      "pyrosis_10_2",
+      "pyrosis_10_3"
+    ],
+    [
+      "pyrosis_10_3",
+      "pyrosis_11_3"
+    ],
+    [
+      "pyrosis_10_5",
+      "pyrosis_11_5"
+    ],
+    [
+      "pyrosis_10_5",
+      "pyrosis_10_6"
+    ],
+    [
+      "pyrosis_10_6",
+      "pyrosis_11_6"
+    ],
+    [
+      "pyrosis_10_6",
+      "pyrosis_10_7"
+    ],
+    [
+      "pyrosis_10_7",
+      "pyrosis_10_8"
+    ],
+    [
+      "pyrosis_10_8",
+      "pyrosis_11_8"
+    ],
+    [
+      "pyrosis_10_8",
+      "pyrosis_10_9"
+    ],
+    [
+      "pyrosis_10_9",
+      "pyrosis_11_9"
+    ],
+    [
+      "pyrosis_10_9",
+      "pyrosis_10_10"
+    ],
+    [
+      "pyrosis_10_10",
+      "pyrosis_11_10"
+    ],
+    [
+      "pyrosis_10_10",
+      "pyrosis_10_11"
+    ],
+    [
+      "pyrosis_10_11",
+      "pyrosis_11_11"
+    ],
+    [
+      "pyrosis_10_13",
+      "pyrosis_11_13"
+    ],
+    [
+      "pyrosis_10_13",
+      "pyrosis_10_14"
+    ],
+    [
+      "pyrosis_10_14",
+      "pyrosis_11_14"
+    ],
+    [
+      "pyrosis_10_14",
+      "pyrosis_10_15"
+    ],
+    [
+      "pyrosis_10_19",
+      "pyrosis_11_19"
+    ],
+    [
+      "pyrosis_10_19",
+      "pyrosis_10_20"
+    ],
+    [
+      "pyrosis_11_1",
+      "pyrosis_11_2"
+    ],
+    [
+      "pyrosis_11_2",
+      "pyrosis_11_3"
+    ],
+    [
+      "pyrosis_11_3",
+      "pyrosis_11_4"
+    ],
+    [
+      "pyrosis_11_4",
+      "pyrosis_11_5"
+    ],
+    [
+      "pyrosis_11_5",
+      "pyrosis_12_5"
+    ],
+    [
+      "pyrosis_11_5",
+      "pyrosis_11_6"
+    ],
+    [
+      "pyrosis_11_6",
+      "pyrosis_12_6"
+    ],
+    [
+      "pyrosis_11_8",
+      "pyrosis_12_8"
+    ],
+    [
+      "pyrosis_11_8",
+      "pyrosis_11_9"
+    ],
+    [
+      "pyrosis_11_9",
+      "pyrosis_11_10"
+    ],
+    [
+      "pyrosis_11_10",
+      "pyrosis_12_10"
+    ],
+    [
+      "pyrosis_11_10",
+      "pyrosis_11_11"
+    ],
+    [
+      "pyrosis_11_11",
+      "pyrosis_11_12"
+    ],
+    [
+      "pyrosis_11_12",
+      "pyrosis_12_12"
+    ],
+    [
+      "pyrosis_11_12",
+      "pyrosis_11_13"
+    ],
+    [
+      "pyrosis_11_13",
+      "pyrosis_12_13"
+    ],
+    [
+      "pyrosis_11_13",
+      "pyrosis_11_14"
+    ],
+    [
+      "pyrosis_11_14",
+      "pyrosis_12_14"
+    ],
+    [
+      "pyrosis_11_18",
+      "pyrosis_12_18"
+    ],
+    [
+      "pyrosis_11_18",
+      "pyrosis_11_19"
+    ],
+    [
+      "pyrosis_11_19",
+      "pyrosis_12_19"
+    ],
+    [
+      "pyrosis_12_5",
+      "pyrosis_12_6"
+    ],
+    [
+      "pyrosis_12_6",
+      "pyrosis_13_6"
+    ],
+    [
+      "pyrosis_12_6",
+      "pyrosis_12_7"
+    ],
+    [
+      "pyrosis_12_7",
+      "pyrosis_13_7"
+    ],
+    [
+      "pyrosis_12_7",
+      "pyrosis_12_8"
+    ],
+    [
+      "pyrosis_12_8",
+      "pyrosis_13_8"
+    ],
+    [
+      "pyrosis_12_10",
+      "pyrosis_13_10"
+    ],
+    [
+      "pyrosis_12_12",
+      "pyrosis_13_12"
+    ],
+    [
+      "pyrosis_12_12",
+      "pyrosis_12_13"
+    ],
+    [
+      "pyrosis_12_13",
+      "pyrosis_13_13"
+    ],
+    [
+      "pyrosis_12_13",
+      "pyrosis_12_14"
+    ],
+    [
+      "pyrosis_12_14",
+      "pyrosis_13_14"
+    ],
+    [
+      "pyrosis_12_14",
+      "pyrosis_12_15"
+    ],
+    [
+      "pyrosis_12_15",
+      "pyrosis_12_16"
+    ],
+    [
+      "pyrosis_12_16",
+      "pyrosis_13_16"
+    ],
+    [
+      "pyrosis_12_16",
+      "pyrosis_12_17"
+    ],
+    [
+      "pyrosis_12_17",
+      "pyrosis_13_17"
+    ],
+    [
+      "pyrosis_12_17",
+      "pyrosis_12_18"
+    ],
+    [
+      "pyrosis_12_18",
+      "pyrosis_13_18"
+    ],
+    [
+      "pyrosis_12_18",
+      "pyrosis_12_19"
+    ],
+    [
+      "pyrosis_12_19",
+      "pyrosis_13_19"
+    ],
+    [
+      "pyrosis_13_6",
+      "pyrosis_13_7"
+    ],
+    [
+      "pyrosis_13_7",
+      "pyrosis_14_7"
+    ],
+    [
+      "pyrosis_13_7",
+      "pyrosis_13_8"
+    ],
+    [
+      "pyrosis_13_8",
+      "pyrosis_14_8"
+    ],
+    [
+      "pyrosis_13_8",
+      "pyrosis_13_9"
+    ],
+    [
+      "pyrosis_13_9",
+      "pyrosis_14_9"
+    ],
+    [
+      "pyrosis_13_9",
+      "pyrosis_13_10"
+    ],
+    [
+      "pyrosis_13_10",
+      "pyrosis_14_10"
+    ],
+    [
+      "pyrosis_13_12",
+      "pyrosis_14_12"
+    ],
+    [
+      "pyrosis_13_12",
+      "pyrosis_13_13"
+    ],
+    [
+      "pyrosis_13_13",
+      "pyrosis_14_13"
+    ],
+    [
+      "pyrosis_13_13",
+      "pyrosis_13_14"
+    ],
+    [
+      "pyrosis_13_16",
+      "pyrosis_14_16"
+    ],
+    [
+      "pyrosis_13_16",
+      "pyrosis_13_17"
+    ],
+    [
+      "pyrosis_13_17",
+      "pyrosis_14_17"
+    ],
+    [
+      "pyrosis_13_17",
+      "pyrosis_13_18"
+    ],
+    [
+      "pyrosis_13_18",
+      "pyrosis_13_19"
+    ],
+    [
+      "pyrosis_14_7",
+      "pyrosis_14_8"
+    ],
+    [
+      "pyrosis_14_8",
+      "pyrosis_15_8"
+    ],
+    [
+      "pyrosis_14_8",
+      "pyrosis_14_9"
+    ],
+    [
+      "pyrosis_14_9",
+      "pyrosis_15_9"
+    ],
+    [
+      "pyrosis_14_9",
+      "pyrosis_14_10"
+    ],
+    [
+      "pyrosis_14_10",
+      "pyrosis_15_10"
+    ],
+    [
+      "pyrosis_14_12",
+      "pyrosis_15_12"
+    ],
+    [
+      "pyrosis_14_12",
+      "pyrosis_14_13"
+    ],
+    [
+      "pyrosis_14_13",
+      "pyrosis_15_13"
+    ],
+    [
+      "pyrosis_14_15",
+      "pyrosis_14_16"
+    ],
+    [
+      "pyrosis_14_16",
+      "pyrosis_15_16"
+    ],
+    [
+      "pyrosis_14_16",
+      "pyrosis_14_17"
+    ],
+    [
+      "pyrosis_15_8",
+      "pyrosis_15_9"
+    ],
+    [
+      "pyrosis_15_9",
+      "pyrosis_16_9"
+    ],
+    [
+      "pyrosis_15_9",
+      "pyrosis_15_10"
+    ],
+    [
+      "pyrosis_15_10",
+      "pyrosis_16_10"
+    ],
+    [
+      "pyrosis_15_12",
+      "pyrosis_16_12"
+    ],
+    [
+      "pyrosis_15_12",
+      "pyrosis_15_13"
+    ],
+    [
+      "pyrosis_15_13",
+      "pyrosis_16_13"
+    ],
+    [
+      "pyrosis_16_9",
+      "pyrosis_16_10"
+    ],
+    [
+      "pyrosis_16_10",
+      "pyrosis_17_10"
+    ],
+    [
+      "pyrosis_16_12",
+      "pyrosis_17_12"
+    ],
+    [
+      "pyrosis_16_12",
+      "pyrosis_16_13"
+    ],
+    [
+      "pyrosis_16_13",
+      "pyrosis_17_13"
+    ],
+    [
+      "pyrosis_16_13",
+      "pyrosis_16_14"
+    ],
+    [
+      "pyrosis_16_14",
+      "pyrosis_17_14"
+    ],
+    [
+      "pyrosis_17_10",
+      "pyrosis_18_10"
+    ],
+    [
+      "pyrosis_17_10",
+      "pyrosis_17_11"
+    ],
+    [
+      "pyrosis_17_11",
+      "pyrosis_18_11"
+    ],
+    [
+      "pyrosis_17_11",
+      "pyrosis_17_12"
+    ],
+    [
+      "pyrosis_17_12",
+      "pyrosis_18_12"
+    ],
+    [
+      "pyrosis_17_12",
+      "pyrosis_17_13"
+    ],
+    [
+      "pyrosis_17_13",
+      "pyrosis_17_14"
+    ],
+    [
+      "pyrosis_17_14",
+      "pyrosis_18_14"
+    ],
+    [
+      "pyrosis_18_10",
+      "pyrosis_19_10"
+    ],
+    [
+      "pyrosis_18_10",
+      "pyrosis_18_11"
+    ],
+    [
+      "pyrosis_18_11",
+      "pyrosis_19_11"
+    ],
+    [
+      "pyrosis_18_11",
+      "pyrosis_18_12"
+    ],
+    [
+      "pyrosis_19_10",
+      "pyrosis_20_10"
+    ],
+    [
+      "pyrosis_19_10",
+      "pyrosis_19_11"
+    ]
+  ],
+  "gates": [
+    {
+      "id": "pyrosis_10_0",
+      "side": "top",
+      "x": 10,
+      "y": 0
+    },
+    {
+      "id": "pyrosis_0_10",
+      "side": "left",
+      "x": 0,
+      "y": 10
+    },
+    {
+      "id": "pyrosis_20_10",
+      "side": "right",
+      "x": 20,
+      "y": 10
+    },
+    {
+      "id": "pyrosis_10_20",
+      "side": "bottom",
+      "x": 10,
+      "y": 20
+    }
+  ],
+  "glyph_sockets": [
+    "pyrosis_10_8"
+  ],
+  "height": 21,
+  "id": "pyrosis",
+  "legendary_nodes": [
+    "pyrosis_10_15"
+  ],
+  "name": {
+    "en": "Pyrosis",
+    "ru": "Изжога"
+  },
+  "node_type_counts": {
+    "board_gate": 4,
+    "glyph_socket": 1,
+    "legendary": 1,
+    "magic": 30,
+    "normal": 118,
+    "rare": 6
+  },
+  "nodes": [
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_10_0",
+      "is_starting_node": false,
+      "name": {
+        "en": "Board Gate",
+        "ru": "Ворота доски"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 3778111510,
+        "list_tags": "Strength, Intelligence, Willpower, Dexterity",
+        "popularity": 23,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength intelligence willpower dexterity board attachment gate +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          },
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          },
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          },
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 994337,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/board-attachment-gate-994337",
+      "stats": {
+        "dexterity": 5.0,
+        "intelligence": 5.0,
+        "strength": 5.0,
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "board_gate",
+      "x": 10,
+      "y": 0
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_9_1",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 1
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_10_1",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 1
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_11_1",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 1
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_9_2",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 2
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_10_2",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 2
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_11_2",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 2
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_9_3",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 3
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_10_3",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 3
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_11_3",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 3
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_9_4",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 4
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_11_4",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 4
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_8_5",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 5
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_9_5",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 5
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_10_5",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 5
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_11_5",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 5
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_12_5",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 5
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_7_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_8_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_9_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_10_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_11_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_12_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_13_6",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 6
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_6_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 6,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_7_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Str",
+        "ru": "Generic Magic Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 8,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "strength magic node +7 paladin, rogue, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678624,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-str-678624",
+      "stats": {
+        "strength": 7.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 7,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_8_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_10_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_12_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_13_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Int",
+        "ru": "Generic Magic Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 18,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "intelligence magic node +7 druid, paladin, rogue, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678627,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-int-678627",
+      "stats": {
+        "intelligence": 7.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 13,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_14_7",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 7
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_5_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 5,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_6_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic DamageHellfire",
+        "ru": "Generic Magic DamageHellfire"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 2165142952,
+        "list_tags": "Damage, Hellfire",
+        "popularity": 16,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "damage hellfire magic node +7.5% warlock",
+        "skill_tags": [
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          },
+          {
+            "id": 1835365385,
+            "name": "Hellfire",
+            "raw": {
+              "id": 1835365385,
+              "name": "Hellfire"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 2526908,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagehellfire-2526908",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "magic",
+      "x": 6,
+      "y": 8
+    },
+    {
+      "bonus_stats": {
+        "fire_damage": 15.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
+      "cost": 1,
+      "id": "pyrosis_7_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Burn",
+        "ru": "Горение"
+      },
+      "raw": {
+        "attributes": [
+          "+15.0% <span style=\"color: #E3E0D9\">Hellfire</span> Damage",
+          "+10 Willpower"
+        ],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 2165142952,
+        "list_tags": "Hellfire, Willpower",
+        "popularity": 9,
+        "quality": 3,
+        "rarity": 3,
+        "search_text": "hellfire willpower rare node burn +15.0% damage +10 bonus: another if requirements met: 210 strength warlock",
+        "skill_tags": [
+          {
+            "id": 1835365385,
+            "name": "Hellfire",
+            "raw": {
+              "id": 1835365385,
+              "name": "Hellfire"
+            }
+          },
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {
+        "strength": 210.0
+      },
+      "source_node_id": 2451154,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/burn-2451154",
+      "stats": {
+        "fire_damage": 15.0,
+        "willpower": 10.0
+      },
+      "stats_source": "class_board_attributes",
+      "type": "rare",
+      "x": 7,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_8_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic DamageHellfire",
+        "ru": "Generic Magic DamageHellfire"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 2165142952,
+        "list_tags": "Damage, Hellfire",
+        "popularity": 16,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "damage hellfire magic node +7.5% warlock",
+        "skill_tags": [
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          },
+          {
+            "id": 1835365385,
+            "name": "Hellfire",
+            "raw": {
+              "id": 1835365385,
+              "name": "Hellfire"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 2526908,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagehellfire-2526908",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "magic",
+      "x": 8,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_9_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_10_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Glyph Socket",
+        "ru": "Ячейка символа"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": null,
+        "list_tags": "",
+        "popularity": 40,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "glyph socket all classes",
+        "skill_tags": []
+      },
+      "requirements": {},
+      "source_node_id": 681756,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/glyph-socket-681756",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "glyph_socket",
+      "x": 10,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_11_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_12_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Damage",
+        "ru": "Generic Magic Damage"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 4073752204,
+        "list_tags": "Damage",
+        "popularity": 14,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "damage magic node +5% barbarian, druid, necromancer, paladin, rogue, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678754,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damage-678754",
+      "stats": {
+        "damage": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 12,
+      "y": 8
+    },
+    {
+      "bonus_stats": {
+        "damage": 10.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
+      "cost": 1,
+      "id": "pyrosis_13_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Blaze",
+        "ru": "Пламя"
+      },
+      "raw": {
+        "attributes": [
+          "+10% Damage",
+          "+10 Willpower"
+        ],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 4073752204,
+        "list_tags": "Damage, Willpower",
+        "popularity": 14,
+        "quality": 3,
+        "rarity": 3,
+        "search_text": "damage willpower rare node blaze +10% +10 bonus: another if requirements met: 210 intelligence warlock",
+        "skill_tags": [
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          },
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {
+        "intelligence": 210.0
+      },
+      "source_node_id": 2451156,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/blaze-2451156",
+      "stats": {
+        "damage": 10.0,
+        "willpower": 10.0
+      },
+      "stats_source": "class_board_attributes",
+      "type": "rare",
+      "x": 13,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_14_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Damage",
+        "ru": "Generic Magic Damage"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 4073752204,
+        "list_tags": "Damage",
+        "popularity": 14,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "damage magic node +5% barbarian, druid, necromancer, paladin, rogue, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678754,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damage-678754",
+      "stats": {
+        "damage": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 14,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_15_8",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 15,
+      "y": 8
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_4_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 4,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_5_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 5,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_6_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Str",
+        "ru": "Generic Magic Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 8,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "strength magic node +7 paladin, rogue, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678624,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-str-678624",
+      "stats": {
+        "strength": 7.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 6,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_7_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic DamageHellfire",
+        "ru": "Generic Magic DamageHellfire"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 2165142952,
+        "list_tags": "Damage, Hellfire",
+        "popularity": 16,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "damage hellfire magic node +7.5% warlock",
+        "skill_tags": [
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          },
+          {
+            "id": 1835365385,
+            "name": "Hellfire",
+            "raw": {
+              "id": 1835365385,
+              "name": "Hellfire"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 2526908,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagehellfire-2526908",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "magic",
+      "x": 7,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_9_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_10_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_11_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_13_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Damage",
+        "ru": "Generic Magic Damage"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 4073752204,
+        "list_tags": "Damage",
+        "popularity": 14,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "damage magic node +5% barbarian, druid, necromancer, paladin, rogue, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678754,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damage-678754",
+      "stats": {
+        "damage": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 13,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_14_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Int",
+        "ru": "Generic Magic Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 18,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "intelligence magic node +7 druid, paladin, rogue, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678627,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-int-678627",
+      "stats": {
+        "intelligence": 7.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 14,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_15_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 15,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_16_9",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 16,
+      "y": 9
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_0_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Board Gate",
+        "ru": "Ворота доски"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 3778111510,
+        "list_tags": "Strength, Intelligence, Willpower, Dexterity",
+        "popularity": 23,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength intelligence willpower dexterity board attachment gate +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          },
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          },
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          },
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 994337,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/board-attachment-gate-994337",
+      "stats": {
+        "dexterity": 5.0,
+        "intelligence": 5.0,
+        "strength": 5.0,
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "board_gate",
+      "x": 0,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_1_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 1,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_2_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 2,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_3_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 3,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_4_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 4,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_5_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 5,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_6_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 6,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_7_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_8_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_9_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_10_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_11_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_12_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_13_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_14_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_15_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 15,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_16_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 16,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_17_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 17,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_18_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 18,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_19_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 19,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_20_10",
+      "is_starting_node": false,
+      "name": {
+        "en": "Board Gate",
+        "ru": "Ворота доски"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 3778111510,
+        "list_tags": "Strength, Intelligence, Willpower, Dexterity",
+        "popularity": 23,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength intelligence willpower dexterity board attachment gate +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          },
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          },
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          },
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 994337,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/board-attachment-gate-994337",
+      "stats": {
+        "dexterity": 5.0,
+        "intelligence": 5.0,
+        "strength": 5.0,
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "board_gate",
+      "x": 20,
+      "y": 10
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_1_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 1,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_2_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 2,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_3_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 3,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_9_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_10_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_11_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_17_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 17,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_18_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 18,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_19_11",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 19,
+      "y": 11
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_2_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 2,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_3_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 3,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_4_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HPPercent",
+        "ru": "Generic Magic HPPercent"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Life",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "life magic node 2.0% maximum all classes",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 679184,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hppercent-679184",
+      "stats": {
+        "max_life": 2.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 4,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_5_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 5,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_6_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 6,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_7_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_8_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_9_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_11_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_12_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_13_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_14_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_15_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 15,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_16_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HPPercent",
+        "ru": "Generic Magic HPPercent"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Life",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "life magic node 2.0% maximum all classes",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 679184,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hppercent-679184",
+      "stats": {
+        "max_life": 2.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 16,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_17_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 17,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_18_12",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 18,
+      "y": 12
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_3_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HealingBonus",
+        "ru": "Generic Magic HealingBonus"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 2303449541,
+        "list_tags": "Healing",
+        "popularity": 16,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "healing magic node +3.0% received all classes",
+        "skill_tags": [
+          {
+            "id": 2772682893,
+            "name": "Healing",
+            "raw": {
+              "id": 2772682893,
+              "name": "Healing"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 1195913,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-healingbonus-1195913",
+      "stats": {
+        "healing_received": 3.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 3,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_4_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HPPercent",
+        "ru": "Generic Magic HPPercent"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Life",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "life magic node 2.0% maximum all classes",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 679184,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hppercent-679184",
+      "stats": {
+        "max_life": 2.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 4,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_5_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 5,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_6_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 6,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_7_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_8_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_9_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_10_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_11_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_12_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_13_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_14_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 14,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_15_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 15,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_16_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HPPercent",
+        "ru": "Generic Magic HPPercent"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Life",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "life magic node 2.0% maximum all classes",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 679184,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hppercent-679184",
+      "stats": {
+        "max_life": 2.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 16,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_17_13",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Armor",
+        "ru": "Generic Magic Armor"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1812457486,
+        "list_tags": "Armor",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "armor magic node +1.5% total all classes",
+        "skill_tags": [
+          {
+            "id": 2317714646,
+            "name": "Armor",
+            "raw": {
+              "id": 2317714646,
+              "name": "Armor"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 671247,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-armor-671247",
+      "stats": {
+        "armor": 1.5
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 17,
+      "y": 13
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_2_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HealingBonus",
+        "ru": "Generic Magic HealingBonus"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 2303449541,
+        "list_tags": "Healing",
+        "popularity": 16,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "healing magic node +3.0% received all classes",
+        "skill_tags": [
+          {
+            "id": 2772682893,
+            "name": "Healing",
+            "raw": {
+              "id": 2772682893,
+              "name": "Healing"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 1195913,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-healingbonus-1195913",
+      "stats": {
+        "healing_received": 3.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 2,
+      "y": 14
+    },
+    {
+      "bonus_stats": {
+        "max_life": 4.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
+      "cost": 1,
+      "id": "pyrosis_3_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Flames Devour",
+        "ru": "Всеядный огонь"
+      },
+      "raw": {
+        "attributes": [
+          "4.0% Maximum Life",
+          "+6.0% Healing Received"
+        ],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Life, Healing",
+        "popularity": 7,
+        "quality": 3,
+        "rarity": 3,
+        "search_text": "life healing rare node flames devour 4.0% maximum +6.0% received bonus: another if requirements met: 190 intelligence warlock",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          },
+          {
+            "id": 2772682893,
+            "name": "Healing",
+            "raw": {
+              "id": 2772682893,
+              "name": "Healing"
+            }
+          }
+        ]
+      },
+      "requirements": {
+        "intelligence": 190.0
+      },
+      "source_node_id": 2451146,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/flames-devour-2451146",
+      "stats": {
+        "healing_received": 6.0,
+        "max_life": 4.0
+      },
+      "stats_source": "class_board_attributes",
+      "type": "rare",
+      "x": 3,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_4_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HPPercent",
+        "ru": "Generic Magic HPPercent"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Life",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "life magic node 2.0% maximum all classes",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 679184,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hppercent-679184",
+      "stats": {
+        "max_life": 2.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 4,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_7_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_8_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_9_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_10_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_11_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_12_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_13_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_16_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic HPPercent",
+        "ru": "Generic Magic HPPercent"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Life",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "life magic node 2.0% maximum all classes",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 679184,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hppercent-679184",
+      "stats": {
+        "max_life": 2.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 16,
+      "y": 14
+    },
+    {
+      "bonus_stats": {
+        "max_life": 4.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
+      "cost": 1,
+      "id": "pyrosis_17_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Charred Flesh",
+        "ru": "Обугленная плоть"
+      },
+      "raw": {
+        "attributes": [
+          "4.0% Maximum Life",
+          "+2.0% Total Armor"
+        ],
+        "glyph_attributes": [],
+        "icon": 1486963981,
+        "list_tags": "Life, Armor",
+        "popularity": 9,
+        "quality": 3,
+        "rarity": 3,
+        "search_text": "life armor rare node charred flesh 4.0% maximum +2.0% total bonus: another if requirements met: 190 strength warlock",
+        "skill_tags": [
+          {
+            "id": 2543478997,
+            "name": "Life",
+            "raw": {
+              "id": 2543478997,
+              "name": "Life"
+            }
+          },
+          {
+            "id": 2317714646,
+            "name": "Armor",
+            "raw": {
+              "id": 2317714646,
+              "name": "Armor"
+            }
+          }
+        ]
+      },
+      "requirements": {
+        "strength": 190.0
+      },
+      "source_node_id": 2451152,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/charred-flesh-2451152",
+      "stats": {
+        "armor": 2.0,
+        "max_life": 4.0
+      },
+      "stats_source": "class_board_attributes",
+      "type": "rare",
+      "x": 17,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_18_14",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Armor",
+        "ru": "Generic Magic Armor"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1812457486,
+        "list_tags": "Armor",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "armor magic node +1.5% total all classes",
+        "skill_tags": [
+          {
+            "id": 2317714646,
+            "name": "Armor",
+            "raw": {
+              "id": 2317714646,
+              "name": "Armor"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 671247,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-armor-671247",
+      "stats": {
+        "armor": 1.5
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 18,
+      "y": 14
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_6_15",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Armor",
+        "ru": "Generic Magic Armor"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1812457486,
+        "list_tags": "Armor",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "armor magic node +1.5% total all classes",
+        "skill_tags": [
+          {
+            "id": 2317714646,
+            "name": "Armor",
+            "raw": {
+              "id": 2317714646,
+              "name": "Armor"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 671247,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-armor-671247",
+      "stats": {
+        "armor": 1.5
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 6,
+      "y": 15
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_8_15",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 15
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_10_15",
+      "is_starting_node": false,
+      "name": {
+        "en": "Pyrosis",
+        "ru": "Изжога"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1457660148,
+        "list_tags": "Damage, Healthy",
+        "popularity": 27,
+        "quality": 5,
+        "rarity": 4,
+        "search_text": "damage healthy legendary node pyrosis hellfire skills deal 450%[x] increased to enemies. warlock",
+        "skill_tags": [
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          },
+          {
+            "id": 3918074131,
+            "name": "Healthy",
+            "raw": {
+              "id": 3918074131,
+              "name": "Healthy"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 2459126,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/pyrosis-2459126",
+      "stats": {},
+      "stats_source": "empty",
+      "type": "legendary",
+      "x": 10,
+      "y": 15
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_12_15",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 15
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_14_15",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic ResistanceAll",
+        "ru": "Generic Magic ResistanceAll"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1720318871,
+        "list_tags": "Resistance",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "resistance magic node +1.5% to all elements classes",
+        "skill_tags": [
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678750,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistanceall-678750",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 14,
+      "y": 15
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_5_16",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic ResistanceAll",
+        "ru": "Generic Magic ResistanceAll"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1720318871,
+        "list_tags": "Resistance",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "resistance magic node +1.5% to all elements classes",
+        "skill_tags": [
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678750,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistanceall-678750",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 5,
+      "y": 16
+    },
+    {
+      "bonus_stats": {
+        "resistance_all": 3.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
+      "cost": 1,
+      "id": "pyrosis_6_16",
+      "is_starting_node": false,
+      "name": {
+        "en": "Infernal Ward",
+        "ru": "Адский оберег"
+      },
+      "raw": {
+        "attributes": [
+          "+3.0% Resistance to All Elements",
+          "+2.0% Total Armor"
+        ],
+        "glyph_attributes": [],
+        "icon": 1720318871,
+        "list_tags": "Resistance, Willpower",
+        "popularity": 9,
+        "quality": 3,
+        "rarity": 3,
+        "search_text": "resistance willpower rare node infernal ward +3.0% to all elements +2.0% total armor bonus: another if requirements met: 230 intelligence warlock",
+        "skill_tags": [
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          },
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {
+        "intelligence": 230.0
+      },
+      "source_node_id": 2451148,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/infernal-ward-2451148",
+      "stats": {
+        "armor": 2.0,
+        "resistance_all": 3.0
+      },
+      "stats_source": "class_board_attributes",
+      "type": "rare",
+      "x": 6,
+      "y": 16
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_7_16",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Armor",
+        "ru": "Generic Magic Armor"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1812457486,
+        "list_tags": "Armor",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "armor magic node +1.5% total all classes",
+        "skill_tags": [
+          {
+            "id": 2317714646,
+            "name": "Armor",
+            "raw": {
+              "id": 2317714646,
+              "name": "Armor"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 671247,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-armor-671247",
+      "stats": {
+        "armor": 1.5
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 7,
+      "y": 16
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_8_16",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 16
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_12_16",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 16
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_13_16",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic ResistanceAll",
+        "ru": "Generic Magic ResistanceAll"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1720318871,
+        "list_tags": "Resistance",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "resistance magic node +1.5% to all elements classes",
+        "skill_tags": [
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678750,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistanceall-678750",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 13,
+      "y": 16
+    },
+    {
+      "bonus_stats": {
+        "damage": 10.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
+      "cost": 1,
+      "id": "pyrosis_14_16",
+      "is_starting_node": false,
+      "name": {
+        "en": "Heat Shield",
+        "ru": "Тепловой щит"
+      },
+      "raw": {
+        "attributes": [
+          "+10% Damage",
+          "+3.0% Resistance to All Elements"
+        ],
+        "glyph_attributes": [],
+        "icon": 4073752204,
+        "list_tags": "Damage, Resistance",
+        "popularity": 11,
+        "quality": 3,
+        "rarity": 3,
+        "search_text": "damage resistance rare node heat shield +10% +3.0% to all elements bonus: another if requirements met: 760 willpower warlock",
+        "skill_tags": [
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          },
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          }
+        ]
+      },
+      "requirements": {
+        "willpower": 760.0
+      },
+      "source_node_id": 2451150,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/heat-shield-2451150",
+      "stats": {
+        "damage": 10.0,
+        "resistance_all": 3.0
+      },
+      "stats_source": "class_board_attributes",
+      "type": "rare",
+      "x": 14,
+      "y": 16
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_15_16",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Damage",
+        "ru": "Generic Magic Damage"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 4073752204,
+        "list_tags": "Damage",
+        "popularity": 14,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "damage magic node +5% barbarian, druid, necromancer, paladin, rogue, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678754,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damage-678754",
+      "stats": {
+        "damage": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 15,
+      "y": 16
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_6_17",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic ResistanceAll",
+        "ru": "Generic Magic ResistanceAll"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1720318871,
+        "list_tags": "Resistance",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "resistance magic node +1.5% to all elements classes",
+        "skill_tags": [
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678750,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistanceall-678750",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 6,
+      "y": 17
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_7_17",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic ResistanceAll",
+        "ru": "Generic Magic ResistanceAll"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 1720318871,
+        "list_tags": "Resistance",
+        "popularity": 12,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "resistance magic node +1.5% to all elements classes",
+        "skill_tags": [
+          {
+            "id": 2788607590,
+            "name": "Resistance",
+            "raw": {
+              "id": 2788607590,
+              "name": "Resistance"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678750,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistanceall-678750",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 7,
+      "y": 17
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_8_17",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 17
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_12_17",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 17
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_13_17",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Damage",
+        "ru": "Generic Magic Damage"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 4073752204,
+        "list_tags": "Damage",
+        "popularity": 14,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "damage magic node +5% barbarian, druid, necromancer, paladin, rogue, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678754,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damage-678754",
+      "stats": {
+        "damage": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 13,
+      "y": 17
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_14_17",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Magic Damage",
+        "ru": "Generic Magic Damage"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [],
+        "icon": 4073752204,
+        "list_tags": "Damage",
+        "popularity": 14,
+        "quality": 1,
+        "rarity": 2,
+        "search_text": "damage magic node +5% barbarian, druid, necromancer, paladin, rogue, spiritborn, warlock",
+        "skill_tags": [
+          {
+            "id": 3567369300,
+            "name": "Damage",
+            "raw": {
+              "id": 3567369300,
+              "name": "Damage"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678754,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damage-678754",
+      "stats": {
+        "damage": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "magic",
+      "x": 14,
+      "y": 17
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_7_18",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 18
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_8_18",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 18
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_9_18",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 18
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_11_18",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 18
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_12_18",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 18
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_13_18",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 18
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_7_19",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 7,
+      "y": 19
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_8_19",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 8,
+      "y": 19
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_9_19",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Will",
+        "ru": "Generic Normal Will"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          11
+        ],
+        "icon": 635108001,
+        "list_tags": "Willpower",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "willpower normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678773,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-will-678773",
+      "stats": {
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 9,
+      "y": 19
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_10_19",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 10,
+      "y": 19
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_11_19",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Dex",
+        "ru": "Generic Normal Dex"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 635087190,
+        "list_tags": "Dexterity",
+        "popularity": 20,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "dexterity normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678775,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-dex-678775",
+      "stats": {
+        "dexterity": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 11,
+      "y": 19
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_12_19",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Int",
+        "ru": "Generic Normal Int"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          10
+        ],
+        "icon": 635092928,
+        "list_tags": "Intelligence",
+        "popularity": 13,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "intelligence normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678776,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-int-678776",
+      "stats": {
+        "intelligence": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 12,
+      "y": 19
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_13_19",
+      "is_starting_node": false,
+      "name": {
+        "en": "Generic Normal Str",
+        "ru": "Generic Normal Str"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          9
+        ],
+        "icon": 635104014,
+        "list_tags": "Strength",
+        "popularity": 12,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength normal node +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 678769,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-normal-str-678769",
+      "stats": {
+        "strength": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "normal",
+      "x": 13,
+      "y": 19
+    },
+    {
+      "bonus_stats": {},
+      "bonus_stats_source": null,
+      "cost": 1,
+      "id": "pyrosis_10_20",
+      "is_starting_node": false,
+      "name": {
+        "en": "Board Gate",
+        "ru": "Ворота доски"
+      },
+      "raw": {
+        "attributes": [],
+        "glyph_attributes": [
+          12
+        ],
+        "icon": 3778111510,
+        "list_tags": "Strength, Intelligence, Willpower, Dexterity",
+        "popularity": 23,
+        "quality": 0,
+        "rarity": 0,
+        "search_text": "strength intelligence willpower dexterity board attachment gate +5 all classes",
+        "skill_tags": [
+          {
+            "id": 510015620,
+            "name": "Strength",
+            "raw": {
+              "id": 510015620,
+              "name": "Strength"
+            }
+          },
+          {
+            "id": 1834748264,
+            "name": "Intelligence",
+            "raw": {
+              "id": 1834748264,
+              "name": "Intelligence"
+            }
+          },
+          {
+            "id": 3639228442,
+            "name": "Willpower",
+            "raw": {
+              "id": 3639228442,
+              "name": "Willpower"
+            }
+          },
+          {
+            "id": 809827735,
+            "name": "Dexterity",
+            "raw": {
+              "id": 809827735,
+              "name": "Dexterity"
+            }
+          }
+        ]
+      },
+      "requirements": {},
+      "source_node_id": 994337,
+      "source_url": "https://www.wowhead.com/diablo-4/paragon-node/board-attachment-gate-994337",
+      "stats": {
+        "dexterity": 5.0,
+        "intelligence": 5.0,
+        "strength": 5.0,
+        "willpower": 5.0
+      },
+      "stats_source": "search_text",
+      "type": "board_gate",
+      "x": 10,
+      "y": 20
+    }
+  ],
+  "patch_version": "3.0.2",
+  "schema_version": 1,
+  "source_board_id": 2458682,
+  "source_url": "https://nether.wowhead.com/diablo-4/data/paragon-calc?dv=17&db=1778694731",
+  "start_node": null,
+  "width": 21
+}

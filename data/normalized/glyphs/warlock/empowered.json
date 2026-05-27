@@ -1,0 +1,108 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nEmpowered\nRadius Size: 3 \nFor every 5 Willpower purchased within range, you deal +0.10% increased Overpower damage per stack.\nAdditional Bonus: \nYour Occult Skills deal 15% [x] increased damage while you have any Overpower .\nRequired (purchased in range): +40 Willpower\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nУсиление\nРадиус: 3 \nЗа каждые 5 ед. силы воли, открытых в радиусе действия, подавляющий урон увеличивается на +0.10% за каждый эффект.\nДополнительный бонус: \nПока на вас действует эффект \"Подавления\" , ваши умения категории \"Оккультизм\" наносят на 15% [x] больше урона.\nТребуется открыть в радиусе действия: +40 к силе воли\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T11:02:00Z",
+  "class": "warlock",
+  "class_mask": 128,
+  "id": "empowered",
+  "max_level": 100,
+  "name": {
+    "en": "Empowered",
+    "ru": "Усиление"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 128,
+    "icon": 2519972743,
+    "maxLevel": 100,
+    "name": "Empowered",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      3639228442,
+      2440772653,
+      3567369300,
+      510015620,
+      3467551624
+    ],
+    "sno": 2533580,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 11,
+        "attributeName": "Willpower",
+        "classMask": 130
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 3639228442,
+      "name": "Willpower",
+      "raw": {
+        "id": 3639228442,
+        "name": "Willpower"
+      }
+    },
+    {
+      "id": 2440772653,
+      "name": "Overpower",
+      "raw": {
+        "id": 2440772653,
+        "name": "Overpower"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 510015620,
+      "name": "Strength",
+      "raw": {
+        "id": 510015620,
+        "name": "Strength"
+      }
+    },
+    {
+      "id": 3467551624,
+      "name": "Occult",
+      "raw": {
+        "id": 3467551624,
+        "name": "Occult"
+      }
+    }
+  ],
+  "source_glyph_id": 2533580,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/empowered-2533580",
+  "threshold_attributes": [
+    {
+      "attribute": 11,
+      "attribute_name": "Willpower",
+      "class_mask": 130,
+      "stat_key": "willpower"
+    }
+  ]
+}

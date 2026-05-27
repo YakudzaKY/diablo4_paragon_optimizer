@@ -1,0 +1,12 @@
+{
+  "class": "paladin",
+  "points": 252,
+  "legendary_glyphs": true,
+  "weights": "../weights/paladin_juggernaut_shield_bash.json",
+  "starting_stats": {
+    "strength": 2246,
+    "intelligence": 261,
+    "willpower": 261,
+    "dexterity": 262
+  }
+}

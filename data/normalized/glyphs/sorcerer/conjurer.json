@@ -1,0 +1,90 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nConjurer\nRadius Size: 3 \nFor every 5 Intelligence within range, Conjuration Skills gain +1.5% increased damage.\nAdditional Bonus: \nConjuration Skills have 10% increased Critical Hit Chance.\nRequired (purchased in range): +40 Intelligence\nLegendary Bonus: \nIncrease Conjuration Skill damage by 2.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nЧаротворец\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, урон от умений категории \"Колдовство\" увеличивается на +1.5% .\nДополнительный бонус: \nВероятность критического удара умений категории \"Колдовство\" увеличивается на 10% .\nТребуется открыть в радиусе действия: +40 к интеллекту\nЛегендарный бонус: \n+ 2.8% [x] к урону от умений категории \"Колдовство\" . \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:10:45Z",
+  "class": "sorcerer",
+  "class_mask": 1,
+  "id": "conjurer",
+  "max_level": 100,
+  "name": {
+    "en": "Conjurer",
+    "ru": "Чаротворец"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 1,
+    "icon": 2456478681,
+    "maxLevel": 100,
+    "name": "Conjurer",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      1834748264,
+      1930421581,
+      3567369300
+    ],
+    "sno": 1023188,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 10,
+        "attributeName": "Intelligence",
+        "classMask": 19
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 1834748264,
+      "name": "Intelligence",
+      "raw": {
+        "id": 1834748264,
+        "name": "Intelligence"
+      }
+    },
+    {
+      "id": 1930421581,
+      "name": "Conjuration",
+      "raw": {
+        "id": 1930421581,
+        "name": "Conjuration"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    }
+  ],
+  "source_glyph_id": 1023188,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/conjurer-1023188",
+  "threshold_attributes": [
+    {
+      "attribute": 10,
+      "attribute_name": "Intelligence",
+      "class_mask": 19,
+      "stat_key": "intelligence"
+    }
+  ]
+}

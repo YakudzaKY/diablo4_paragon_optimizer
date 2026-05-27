@@ -1,0 +1,99 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nDarkness\nRadius Size: 3 \nFor every 5 Intelligence purchased within range, you deal +0.66% increased Shadow damage.\nAdditional Bonus: \nWhenever you deal Shadow damage to an enemy, that enemy deals 2% reduced damage, up to 10% , for 5 seconds.\nRequired (purchased in range): +40 Intelligence\nLegendary Bonus: \nIncrease Shadow damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nТьма\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, урон от темной магии увеличивается на +0.66% .\nДополнительный бонус: \nКогда цель получает от вас урон от темной магии, наносимый этой целью урон уменьшается на 2% вплоть до 10% на 5 сек.\nТребуется открыть в радиусе действия: +40 к интеллекту\nЛегендарный бонус: \n+ 0.5% [x] к урону от темной магии. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:42:26Z",
+  "class": "necromancer",
+  "class_mask": 16,
+  "id": "darkness",
+  "max_level": 100,
+  "name": {
+    "en": "Darkness",
+    "ru": "Тьма"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 16,
+    "icon": 2456478681,
+    "maxLevel": 100,
+    "name": "Darkness",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      1834748264,
+      4162273947,
+      3567369300,
+      4011612737
+    ],
+    "sno": 1294418,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 10,
+        "attributeName": "Intelligence",
+        "classMask": 19
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 1834748264,
+      "name": "Intelligence",
+      "raw": {
+        "id": 1834748264,
+        "name": "Intelligence"
+      }
+    },
+    {
+      "id": 4162273947,
+      "name": "Shadow",
+      "raw": {
+        "id": 4162273947,
+        "name": "Shadow"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 4011612737,
+      "name": "Damage Reduction",
+      "raw": {
+        "id": 4011612737,
+        "name": "Damage Reduction"
+      }
+    }
+  ],
+  "source_glyph_id": 1294418,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/darkness-1294418",
+  "threshold_attributes": [
+    {
+      "attribute": 10,
+      "attribute_name": "Intelligence",
+      "class_mask": 19,
+      "stat_key": "intelligence"
+    }
+  ]
+}

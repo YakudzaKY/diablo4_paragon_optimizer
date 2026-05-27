@@ -1,0 +1,90 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nAmplify\nRadius Size: 3 \nGrants +30.0% bonus to all Magic nodes within range.\nAdditional Bonus: \nEnemies affected by Curse Skills take 10% [x] increased damage from you.\nRequired (purchased in range): +40 Intelligence\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nУсиление\nРадиус: 3 \nУсиливает все магические узлы в радиусе действия на +30.0% .\nДополнительный бонус: \nЦели, на которые действуют умения категории \"Проклятие\" , получают на 10% [x] больше урона от вас.\nТребуется открыть в радиусе действия: +40 к интеллекту\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:42:26Z",
+  "class": "necromancer",
+  "class_mask": 16,
+  "id": "amplify",
+  "max_level": 100,
+  "name": {
+    "en": "Amplify",
+    "ru": "Усиление"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 16,
+    "icon": 2456478681,
+    "maxLevel": 100,
+    "name": "Amplify",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      1834748264,
+      3341905859,
+      3567369300
+    ],
+    "sno": 1031006,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 10,
+        "attributeName": "Intelligence",
+        "classMask": 19
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 1834748264,
+      "name": "Intelligence",
+      "raw": {
+        "id": 1834748264,
+        "name": "Intelligence"
+      }
+    },
+    {
+      "id": 3341905859,
+      "name": "Curse",
+      "raw": {
+        "id": 3341905859,
+        "name": "Curse"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    }
+  ],
+  "source_glyph_id": 1031006,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/amplify-1031006",
+  "threshold_attributes": [
+    {
+      "attribute": 10,
+      "attribute_name": "Intelligence",
+      "class_mask": 19,
+      "stat_key": "intelligence"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nCryopathy\nRadius Size: 3 \nFor every 5 Willpower purchased within range, you deal +1.5% increased damage to Chilled targets.\nAdditional Bonus: \nEnemies deal 15% reduced damage to you for 5 seconds after they are no longer Frozen .\nRequired (purchased in range): +25 Willpower\nLegendary Bonus: \nIncrease Cold damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nКриопатия\nРадиус: 3 \nЗа каждые 5 ед. силы воли, открытых в радиусе действия, урон, наносимый окоченевшим целям, увеличивается на +1.5% .\nДополнительный бонус: \nПротивники наносят вам на 15% меньше урона в течение 5 сек. после снятия эффекта заморозки .\nТребуется открыть в радиусе действия: +25 к силе воли\nЛегендарный бонус: \n+ 0.5% [x] к урону от холода . \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:10:45Z",
+  "class": "sorcerer",
+  "class_mask": 1,
+  "id": "cryopathy",
+  "max_level": 100,
+  "name": {
+    "en": "Cryopathy",
+    "ru": "Криопатия"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 1,
+    "icon": 3933961978,
+    "maxLevel": 100,
+    "name": "Cryopathy",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      3639228442,
+      340908880,
+      3567369300,
+      2789173029,
+      4011612737,
+      2543162295
+    ],
+    "sno": 1023192,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 11,
+        "attributeName": "Willpower",
+        "classMask": 117
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 3639228442,
+      "name": "Willpower",
+      "raw": {
+        "id": 3639228442,
+        "name": "Willpower"
+      }
+    },
+    {
+      "id": 340908880,
+      "name": "Chill",
+      "raw": {
+        "id": 340908880,
+        "name": "Chill"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 2789173029,
+      "name": "Frozen",
+      "raw": {
+        "id": 2789173029,
+        "name": "Frozen"
+      }
+    },
+    {
+      "id": 4011612737,
+      "name": "Damage Reduction",
+      "raw": {
+        "id": 4011612737,
+        "name": "Damage Reduction"
+      }
+    },
+    {
+      "id": 2543162295,
+      "name": "Cold",
+      "raw": {
+        "id": 2543162295,
+        "name": "Cold"
+      }
+    }
+  ],
+  "source_glyph_id": 1023192,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/cryopathy-1023192",
+  "threshold_attributes": [
+    {
+      "attribute": 11,
+      "attribute_name": "Willpower",
+      "class_mask": 117,
+      "stat_key": "willpower"
+    }
+  ]
+}

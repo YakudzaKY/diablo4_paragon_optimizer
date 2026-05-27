@@ -1,0 +1,99 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nGravekeeper\nRadius Size: 3 \nGrants +25.0% bonus to all Rare nodes within range.\nAdditional Bonus: \nYou deal 3% [x] increased damage, up to 18% [x] , for every Close Corpse.\nRequired (purchased in range): +25 Dexterity\nLegendary Bonus: \nYou deal 3.2% [x] increased damage to Healthy and Injured enemies. \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nМогильщик\nРадиус: 3 \nУсиливает все редкие узлы в радиусе действия на +25.0% .\nДополнительный бонус: \nНаносимый вами урон увеличивается на 3% [x] , вплоть до 18% [x] , за каждый находящийся рядом труп.\nТребуется открыть в радиусе действия: +25 к ловкости\nЛегендарный бонус: \nВы наносите на 3.2% [x] больше урона противникам с высоким и низким уровнями здоровья. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:42:26Z",
+  "class": "necromancer",
+  "class_mask": 16,
+  "id": "gravekeeper",
+  "max_level": 100,
+  "name": {
+    "en": "Gravekeeper",
+    "ru": "Могильщик"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 16,
+    "icon": 1236117199,
+    "maxLevel": 100,
+    "name": "Gravekeeper",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      809827735,
+      3567369300,
+      25029371,
+      3918074131
+    ],
+    "sno": 1031012,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 12,
+        "attributeName": "Dexterity",
+        "classMask": 119
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 809827735,
+      "name": "Dexterity",
+      "raw": {
+        "id": 809827735,
+        "name": "Dexterity"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 25029371,
+      "name": "Corpse",
+      "raw": {
+        "id": 25029371,
+        "name": "Corpse"
+      }
+    },
+    {
+      "id": 3918074131,
+      "name": "Healthy",
+      "raw": {
+        "id": 3918074131,
+        "name": "Healthy"
+      }
+    }
+  ],
+  "source_glyph_id": 1031012,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/gravekeeper-1031012",
+  "threshold_attributes": [
+    {
+      "attribute": 12,
+      "attribute_name": "Dexterity",
+      "class_mask": 119,
+      "stat_key": "dexterity"
+    }
+  ]
+}

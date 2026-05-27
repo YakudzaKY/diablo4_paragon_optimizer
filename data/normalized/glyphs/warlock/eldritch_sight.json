@@ -1,0 +1,90 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nEldritch Sight\nRadius Size: 3 \nFor every 5 Willpower purchased within range, you deal +0.7% increased damage to Vulnerable targets.\nAdditional Bonus: \nDealing damage to a Vulnerable target increases your damage by 3% [x] for 20 seconds, up to 18% [x] .\nRequired (purchased in range): +40 Willpower\nLegendary Bonus: \nIncrease damage to Vulnerable targets by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nПотусторонний взгляд\nРадиус: 3 \nЗа каждые 5 ед. силы воли, открытых в радиусе действия, урон, наносимый уязвимым целям, увеличивается на +0.7% .\nДополнительный бонус: \nКогда вы наносите урон уязвимому противнику, наносимый вами урон увеличивается на 3% [x] на 20 сек. вплоть до 18% [x] .\nТребуется открыть в радиусе действия: +40 к силе воли\nЛегендарный бонус: \n+ 0.5% [x] к урону уязвимым целям. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T11:02:00Z",
+  "class": "warlock",
+  "class_mask": 128,
+  "id": "eldritch_sight",
+  "max_level": 100,
+  "name": {
+    "en": "Eldritch Sight",
+    "ru": "Потусторонний взгляд"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 128,
+    "icon": 3933737818,
+    "maxLevel": 100,
+    "name": "Eldritch Sight",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      3639228442,
+      2434110708,
+      3567369300
+    ],
+    "sno": 2532087,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 11,
+        "attributeName": "Willpower",
+        "classMask": 130
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 3639228442,
+      "name": "Willpower",
+      "raw": {
+        "id": 3639228442,
+        "name": "Willpower"
+      }
+    },
+    {
+      "id": 2434110708,
+      "name": "Vulnerable",
+      "raw": {
+        "id": 2434110708,
+        "name": "Vulnerable"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    }
+  ],
+  "source_glyph_id": 2532087,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/eldritch-sight-2532087",
+  "threshold_attributes": [
+    {
+      "attribute": 11,
+      "attribute_name": "Willpower",
+      "class_mask": 130,
+      "stat_key": "willpower"
+    }
+  ]
+}

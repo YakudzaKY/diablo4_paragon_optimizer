@@ -1,0 +1,108 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nHone\nRadius Size: 3 \nFor every 5 Strength purchased within range, you deal +1.0% increased Damage with your Jaguar Skills.\nAdditional Bonus: \nDealing damage with your Jaguar Skills increases your Critical Strike Chance by 1% [+] for 6 seconds, up to 5% [+] .\nRequired (purchased in range): +25 Strength\nLegendary Bonus: \nIncrease Critical Strike Damage by 2.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nТренировка\nРадиус: 3 \nЗа каждые 5 ед. силы, открытых в радиусе действия, урон от умений ягуара увеличивается на 1.0% .\nДополнительный бонус: \nКогда умения ягуара наносят урон, вероятность вашего критического удара повышается на 1% [+] на 6 сек. вплоть до 5% [+] .\nТребуется открыть в радиусе действия: +25 к силе\nЛегендарный бонус: \n+ 2.8% [x] к критическому урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:50:24Z",
+  "class": "spiritborn",
+  "class_mask": 32,
+  "id": "hone",
+  "max_level": 100,
+  "name": {
+    "en": "Hone",
+    "ru": "Тренировка"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 32,
+    "icon": 2519972743,
+    "maxLevel": 100,
+    "name": "Hone",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      1834748264,
+      987307551,
+      3567369300,
+      510015620,
+      2892145024
+    ],
+    "sno": 2067363,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 9,
+        "attributeName": "Strength",
+        "classMask": 168
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 1834748264,
+      "name": "Intelligence",
+      "raw": {
+        "id": 1834748264,
+        "name": "Intelligence"
+      }
+    },
+    {
+      "id": 987307551,
+      "name": "Jaguar",
+      "raw": {
+        "id": 987307551,
+        "name": "Jaguar"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 510015620,
+      "name": "Strength",
+      "raw": {
+        "id": 510015620,
+        "name": "Strength"
+      }
+    },
+    {
+      "id": 2892145024,
+      "name": "Critical Strikes",
+      "raw": {
+        "id": 2892145024,
+        "name": "Critical Strikes"
+      }
+    }
+  ],
+  "source_glyph_id": 2067363,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/hone-2067363",
+  "threshold_attributes": [
+    {
+      "attribute": 9,
+      "attribute_name": "Strength",
+      "class_mask": 168,
+      "stat_key": "strength"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nElementalist\nRadius Size: 3 \nGrants +25.0% bonus to all Rare nodes within range.\nAdditional Bonus: \nDealing Fire, Cold, or Lightning damage to an enemy increases all damage you deal to them by 5% [x] for 10 seconds, stacking once per Element.\nRequired (purchased in range): +40 Intelligence\nLegendary Bonus: \nIncrease Non-Physical damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nСтихии\nРадиус: 3 \nУсиливает все редкие узлы в радиусе действия на +25.0% .\nДополнительный бонус: \nКогда вы наносите противнику урон от огня, холода или молнии, весь урон, который вы наносите этой цели, увеличивается на 5% [x] на 10 сек. Суммируется один раз для каждой стихии.\nТребуется открыть в радиусе действия: +40 к интеллекту\nЛегендарный бонус: \n+ 0.5% [x] к нефизическому урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:10:45Z",
+  "class": "sorcerer",
+  "class_mask": 1,
+  "id": "elementalist",
+  "max_level": 100,
+  "name": {
+    "en": "Elementalist",
+    "ru": "Стихии"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 1,
+    "icon": 2456478681,
+    "maxLevel": 100,
+    "name": "Elementalist",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      1834748264,
+      2543263771,
+      2543162295,
+      1302406649,
+      3567369300,
+      1838231677
+    ],
+    "sno": 1023186,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 10,
+        "attributeName": "Intelligence",
+        "classMask": 19
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 1834748264,
+      "name": "Intelligence",
+      "raw": {
+        "id": 1834748264,
+        "name": "Intelligence"
+      }
+    },
+    {
+      "id": 2543263771,
+      "name": "Fire",
+      "raw": {
+        "id": 2543263771,
+        "name": "Fire"
+      }
+    },
+    {
+      "id": 2543162295,
+      "name": "Cold",
+      "raw": {
+        "id": 2543162295,
+        "name": "Cold"
+      }
+    },
+    {
+      "id": 1302406649,
+      "name": "Lightning",
+      "raw": {
+        "id": 1302406649,
+        "name": "Lightning"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 1838231677,
+      "name": "Non-Physical",
+      "raw": {
+        "id": 1838231677,
+        "name": "Non-Physical"
+      }
+    }
+  ],
+  "source_glyph_id": 1023186,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/elementalist-1023186",
+  "threshold_attributes": [
+    {
+      "attribute": 10,
+      "attribute_name": "Intelligence",
+      "class_mask": 19,
+      "stat_key": "intelligence"
+    }
+  ]
+}

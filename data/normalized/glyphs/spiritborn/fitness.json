@@ -1,0 +1,99 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nFitness\nRadius Size: 3 \nFor every 5 Dexterity purchased within range, you deal +1.0% increased Critical Strike Damage.\nAdditional Bonus: \nSkills that Critically Strike generate 3 Vigor.\nRequired (purchased in range): +40 Dexterity\nLegendary Bonus: \nIncrease Critical Strike Damage by 2.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nЖивучесть\nРадиус: 3 \nЗа каждые 5 ед. ловкости, открытых в радиусе действия, наносимый критический урон увеличивается на 1.0% .\nДополнительный бонус: \nУмения, наносящие критический урон, позволяют накопить 3 ед. бодрости.\nТребуется открыть в радиусе действия: +40 к ловкости\nЛегендарный бонус: \n+ 2.8% [x] к критическому урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:50:24Z",
+  "class": "spiritborn",
+  "class_mask": 32,
+  "id": "fitness",
+  "max_level": 100,
+  "name": {
+    "en": "Fitness",
+    "ru": "Живучесть"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 32,
+    "icon": 1235893039,
+    "maxLevel": 100,
+    "name": "Fitness",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      809827735,
+      2892145024,
+      3567369300,
+      2995320125
+    ],
+    "sno": 2063983,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 12,
+        "attributeName": "Dexterity",
+        "classMask": 42
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 809827735,
+      "name": "Dexterity",
+      "raw": {
+        "id": 809827735,
+        "name": "Dexterity"
+      }
+    },
+    {
+      "id": 2892145024,
+      "name": "Critical Strikes",
+      "raw": {
+        "id": 2892145024,
+        "name": "Critical Strikes"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 2995320125,
+      "name": "Resource",
+      "raw": {
+        "id": 2995320125,
+        "name": "Resource"
+      }
+    }
+  ],
+  "source_glyph_id": 2063983,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/fitness-2063983",
+  "threshold_attributes": [
+    {
+      "attribute": 12,
+      "attribute_name": "Dexterity",
+      "class_mask": 42,
+      "stat_key": "dexterity"
+    }
+  ]
+}

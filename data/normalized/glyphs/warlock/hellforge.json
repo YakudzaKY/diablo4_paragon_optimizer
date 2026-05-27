@@ -1,0 +1,99 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nHellforge\nRadius Size: 3 \nFor every 5 Intelligence purchased within range, you deal +1.0% increased damage with Hellfire Skills.\nAdditional Bonus: \nSkills empowered by Volatility deal an additional 15% [x] damage.\nRequired (purchased in range): +25 Intelligence\nLegendary Bonus: \nIncrease Hellfire Skill damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nАдская кузня\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, урон умений категории \"Адское пламя\" увеличивается на +1.0% .\nДополнительный бонус: \nНестабильные умения наносят на 15% [x] больше урона.\nТребуется открыть в радиусе действия: +25 к интеллекту\nЛегендарный бонус: \n+ 0.5% [x] к урону от умений категории \"Адское пламя\" . \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T11:02:00Z",
+  "class": "warlock",
+  "class_mask": 128,
+  "id": "hellforge",
+  "max_level": 100,
+  "name": {
+    "en": "Hellforge",
+    "ru": "Адская кузня"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 128,
+    "icon": 2456702841,
+    "maxLevel": 100,
+    "name": "Hellforge",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      1834748264,
+      1835365385,
+      3567369300,
+      265717013
+    ],
+    "sno": 2531451,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 10,
+        "attributeName": "Intelligence",
+        "classMask": 234
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 1834748264,
+      "name": "Intelligence",
+      "raw": {
+        "id": 1834748264,
+        "name": "Intelligence"
+      }
+    },
+    {
+      "id": 1835365385,
+      "name": "Hellfire",
+      "raw": {
+        "id": 1835365385,
+        "name": "Hellfire"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 265717013,
+      "name": "Volatility",
+      "raw": {
+        "id": 265717013,
+        "name": "Volatility"
+      }
+    }
+  ],
+  "source_glyph_id": 2531451,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/hellforge-2531451",
+  "threshold_attributes": [
+    {
+      "attribute": 10,
+      "attribute_name": "Intelligence",
+      "class_mask": 234,
+      "stat_key": "intelligence"
+    }
+  ]
+}

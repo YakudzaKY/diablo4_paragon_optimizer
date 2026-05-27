@@ -1,0 +1,12 @@
+{
+  "class": "paladin",
+  "points": 225,
+  "legendary_glyphs": true,
+  "weights": "../weights/paladin_balanced.json",
+  "starting_stats": {
+    "strength": 2600.0,
+    "intelligence": 480.0,
+    "willpower": 450.0,
+    "dexterity": 330.0
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-05-27T10:10:45Z",
+  "class": "sorcerer",
+  "counts": {
+    "available_stats": 22,
+    "boards": 10,
+    "glyphs": 23
+  },
+  "detail_coverage": {
+    "glyphs": {
+      "errors": 0,
+      "expected": 46,
+      "missing": 0,
+      "ok": 46,
+      "reused": 0
+    },
+    "nodes": {
+      "errors": 0,
+      "expected": 196,
+      "missing": 0,
+      "ok": 196,
+      "reused": 0
+    }
+  },
+  "detail_errors": [],
+  "detail_errors_count": 0,
+  "files": {
+    "boards_dir": "paragon_optimizer\\data\\normalized\\boards\\sorcerer",
+    "class": "paragon_optimizer\\data\\normalized\\classes\\sorcerer.json",
+    "glyphs_dir": "paragon_optimizer\\data\\normalized\\glyphs\\sorcerer"
+  },
+  "patch_version": "3.0.2",
+  "reuse_events": [],
+  "reuse_events_count": 0,
+  "schema_version": 1,
+  "source_urls": {
+    "glyphs": {
+      "en": "https://www.wowhead.com/diablo-4/paragon-glyphs#filtered:Sorcerer",
+      "ru": "https://www.wowhead.com/diablo-4/ru/paragon-glyphs#filtered:Чародей"
+    },
+    "nodes": {
+      "en": "https://www.wowhead.com/diablo-4/paragon-nodes#filtered:Sorcerer",
+      "ru": "https://www.wowhead.com/diablo-4/ru/paragon-nodes"
+    },
+    "paragon_calc": "https://www.wowhead.com/diablo-4/paragon-calc/sorcerer",
+    "paragon_data": "https://nether.wowhead.com/diablo-4/data/paragon-calc?dv=17&db=1778694731"
+  },
+  "warnings": []
+}

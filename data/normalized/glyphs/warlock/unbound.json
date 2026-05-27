@@ -1,0 +1,90 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nUnbound\nRadius Size: 3 \nGrants +30.0% bonus to all Magic nodes within range.\nAdditional Bonus: \nAfter spending 50 Wrath, you deal 10% [x] increased damage and gain 25% increased Wrath Regeneration for 3 seconds.\nRequired (purchased in range): +25 Intelligence\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nОсвобождение\nРадиус: 3 \nУсиливает все магические узлы в радиусе действия на +30.0% .\nДополнительный бонус: \nПотратив 50 ед. гнева, вы наносите на 10% [x] больше урона, а восстановление гнева ускоряется на 25% на 3 сек.\nТребуется открыть в радиусе действия: +25 к интеллекту\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T11:02:00Z",
+  "class": "warlock",
+  "class_mask": 128,
+  "id": "unbound",
+  "max_level": 100,
+  "name": {
+    "en": "Unbound",
+    "ru": "Освобождение"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 128,
+    "icon": 2456702841,
+    "maxLevel": 100,
+    "name": "Unbound",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      1834748264,
+      2656982659,
+      3567369300
+    ],
+    "sno": 2530989,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 10,
+        "attributeName": "Intelligence",
+        "classMask": 234
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 1834748264,
+      "name": "Intelligence",
+      "raw": {
+        "id": 1834748264,
+        "name": "Intelligence"
+      }
+    },
+    {
+      "id": 2656982659,
+      "name": "Wrath",
+      "raw": {
+        "id": 2656982659,
+        "name": "Wrath"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    }
+  ],
+  "source_glyph_id": 2530989,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/unbound-2530989",
+  "threshold_attributes": [
+    {
+      "attribute": 10,
+      "attribute_name": "Intelligence",
+      "class_mask": 234,
+      "stat_key": "intelligence"
+    }
+  ]
+}

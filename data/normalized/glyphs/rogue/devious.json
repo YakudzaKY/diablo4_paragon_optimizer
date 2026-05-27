@@ -1,0 +1,99 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nDevious\nRadius Size: 3 \nGrants +30.0% bonus to all Magic nodes within range.\nAdditional Bonus: \nWhen you hit an enemy or Boss with an attack that applies a Crowd Control effect, they take 3% [x] , up to 15% [x] , increased damage from you for 20 seconds.\nRequired (purchased in range): +40 Dexterity\nLegendary Bonus: \nIncrease damage to Crowd Controlled targets by 2.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nХитрость\nРадиус: 3 \nУсиливает все магические узлы в радиусе действия на +30.0% .\nДополнительный бонус: \nКогда ваша атака применяет к цели эффект контроля, весь урон, который цель получает от вас, увеличивается на 3% [x] на 20 сек. Бонус суммируется до 15% [x] .\nТребуется открыть в радиусе действия: +40 к ловкости\nЛегендарный бонус: \n+ 2.8% [x] к урону целям под действием эффектов контроля. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:36:02Z",
+  "class": "rogue",
+  "class_mask": 8,
+  "id": "devious",
+  "max_level": 100,
+  "name": {
+    "en": "Devious",
+    "ru": "Хитрость"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 8,
+    "icon": 1235893039,
+    "maxLevel": 100,
+    "name": "Devious",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      809827735,
+      1901128789,
+      3567369300,
+      2322238504
+    ],
+    "sno": 1029482,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 12,
+        "attributeName": "Dexterity",
+        "classMask": 42
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 809827735,
+      "name": "Dexterity",
+      "raw": {
+        "id": 809827735,
+        "name": "Dexterity"
+      }
+    },
+    {
+      "id": 1901128789,
+      "name": "Crowd Control",
+      "raw": {
+        "id": 1901128789,
+        "name": "Crowd Control"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 2322238504,
+      "name": "Elite Monsters",
+      "raw": {
+        "id": 2322238504,
+        "name": "Elite Monsters"
+      }
+    }
+  ],
+  "source_glyph_id": 1029482,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/devious-1029482",
+  "threshold_attributes": [
+    {
+      "attribute": 12,
+      "attribute_name": "Dexterity",
+      "class_mask": 42,
+      "stat_key": "dexterity"
+    }
+  ]
+}

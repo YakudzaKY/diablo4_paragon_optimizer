@@ -1,0 +1,99 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nBrawl\nRadius Size: 3 \nGrants +25.0% bonus to all Rare nodes within range.\nAdditional Bonus: \nBrawling Skills deal 25% [x] increased damage.\nRequired (purchased in range): +25 Willpower\nLegendary Bonus: \nIncrease Brawling Skill damage by 5.2% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nПотасовка\nРадиус: 3 \nУсиливает все редкие узлы в радиусе действия на +25.0% .\nДополнительный бонус: \nУмения категории \"Бой без правил\" наносят на 25% [x] больше урона.\nТребуется открыть в радиусе действия: +25 к силе воли\nЛегендарный бонус: \n+ 5.2% [x] к урону от умений категории \"Бой без правил\" . \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:28:54Z",
+  "class": "barbarian",
+  "class_mask": 4,
+  "id": "brawl",
+  "max_level": 100,
+  "name": {
+    "en": "Brawl",
+    "ru": "Потасовка"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 4,
+    "icon": 3933961978,
+    "maxLevel": 100,
+    "name": "Brawl",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      3639228442,
+      2286929143,
+      3567369300,
+      510015620
+    ],
+    "sno": 1027099,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 11,
+        "attributeName": "Willpower",
+        "classMask": 117
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 3639228442,
+      "name": "Willpower",
+      "raw": {
+        "id": 3639228442,
+        "name": "Willpower"
+      }
+    },
+    {
+      "id": 2286929143,
+      "name": "Brawling",
+      "raw": {
+        "id": 2286929143,
+        "name": "Brawling"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 510015620,
+      "name": "Strength",
+      "raw": {
+        "id": 510015620,
+        "name": "Strength"
+      }
+    }
+  ],
+  "source_glyph_id": 1027099,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/brawl-1027099",
+  "threshold_attributes": [
+    {
+      "attribute": 11,
+      "attribute_name": "Willpower",
+      "class_mask": 117,
+      "stat_key": "willpower"
+    }
+  ]
+}

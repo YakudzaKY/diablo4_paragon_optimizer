@@ -1,0 +1,90 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nTwister\nRadius Size: 3 \nFor every 5 Strength purchased within range, your Dust Devils deal 6.6% [+] increased damage.\nAdditional Bonus: \nYou deal 13% [x] increased damage for 4 seconds after creating a Dust Devil .\nRequired (purchased in range): +40 Strength\nLegendary Bonus: \nIncrease Dust Devil damage by 2.4% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nУраган\nРадиус: 3 \nЗа каждые 5 ед. силы, открытых в радиусе действия, урон пылевых демонов увеличивается на 6.6% [+] .\nДополнительный бонус: \nВы наносите на 13% [x] больше урона в течение 4 сек. после создания пылевого демона .\nТребуется открыть в радиусе действия: +40 к силе\nЛегендарный бонус: \n+ 2.4% [x] к урону пылевого демона. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:28:54Z",
+  "class": "barbarian",
+  "class_mask": 4,
+  "id": "twister",
+  "max_level": 100,
+  "name": {
+    "en": "Twister",
+    "ru": "Ураган"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 4,
+    "icon": 2519748583,
+    "maxLevel": 100,
+    "name": "Twister",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      510015620,
+      3567369300,
+      2258379325
+    ],
+    "sno": 1621704,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 9,
+        "attributeName": "Strength",
+        "classMask": 68
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 510015620,
+      "name": "Strength",
+      "raw": {
+        "id": 510015620,
+        "name": "Strength"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 2258379325,
+      "name": "Dust Devil",
+      "raw": {
+        "id": 2258379325,
+        "name": "Dust Devil"
+      }
+    }
+  ],
+  "source_glyph_id": 1621704,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/twister-1621704",
+  "threshold_attributes": [
+    {
+      "attribute": 9,
+      "attribute_name": "Strength",
+      "class_mask": 68,
+      "stat_key": "strength"
+    }
+  ]
+}

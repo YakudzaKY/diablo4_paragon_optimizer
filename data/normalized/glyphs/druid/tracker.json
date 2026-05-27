@@ -1,0 +1,90 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nTracker\nRadius Size: 3 \nFor every 5 Dexterity purchased within range, you deal +1.0% increased damage to Poisoned targets.\nAdditional Bonus: \nPoisoning damage effects last 40% [x] longer.\nRequired (purchased in range): +25 Dexterity\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nСледопыт\nРадиус: 3 \nЗа каждые 5 ед. ловкости, открытых в радиусе действия, урон, наносимый отравленным целям, увеличивается на +1.0% .\nДополнительный бонус: \nЭффекты периодического урона от отравления действуют на 40% [x] дольше.\nТребуется открыть в радиусе действия: +25 к ловкости\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:20:54Z",
+  "class": "druid",
+  "class_mask": 2,
+  "id": "tracker",
+  "max_level": 100,
+  "name": {
+    "en": "Tracker",
+    "ru": "Следопыт"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 2,
+    "icon": 1236117199,
+    "maxLevel": 100,
+    "name": "Tracker",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      809827735,
+      4053473037,
+      3567369300
+    ],
+    "sno": 1028235,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 12,
+        "attributeName": "Dexterity",
+        "classMask": 119
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 809827735,
+      "name": "Dexterity",
+      "raw": {
+        "id": 809827735,
+        "name": "Dexterity"
+      }
+    },
+    {
+      "id": 4053473037,
+      "name": "Poison",
+      "raw": {
+        "id": 4053473037,
+        "name": "Poison"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    }
+  ],
+  "source_glyph_id": 1028235,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/tracker-1028235",
+  "threshold_attributes": [
+    {
+      "attribute": 12,
+      "attribute_name": "Dexterity",
+      "class_mask": 119,
+      "stat_key": "dexterity"
+    }
+  ]
+}

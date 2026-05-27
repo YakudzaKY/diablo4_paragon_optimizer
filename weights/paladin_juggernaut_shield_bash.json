@@ -1,0 +1,44 @@
+{
+  "weights": {
+    "strength": 1.2,
+    "dexterity": 0.15,
+    "intelligence": 0.8,
+    "willpower": 0.8,
+    "max_life": 2.6,
+    "armor": 1.9,
+    "resistance_all": 1.6,
+    "block_chance": 5.2,
+    "blocked_damage_reduction": 3.2,
+    "physical_damage": 3.0,
+    "vulnerable_damage": 3.2,
+    "critical_strike_damage": 3.0,
+    "damage": 3.0,
+    "crowd_controlled_damage": 1.0,
+    "damage_while_fortified": 1.0,
+    "damage_while_healthy": 1.0,
+    "damage_to_elites": 1.0,
+    "attack_speed": 2.4,
+    "cooldown_reduction": 3.4,
+    "max_faith": 2.5,
+    "movement_speed": 0.55,
+    "lucky_hit_chance": 0.2,
+    "healing_received": 0.35,
+    "life_per_5_seconds": 0.1,
+    "thorns": 0.05,
+    "glyph_bonus": 90.0,
+    "glyph_socket": 100.0
+  },
+  "scheme": {
+    "castle": 135.0,
+    "shield_bearer": 145.0,
+    "beacon": 85.0,
+    "relentless": 25.0
+  },
+  "glyphs": {
+    "sentinel": 170.0,
+    "exploit": 150.0,
+    "turf": 135.0,
+    "spirit": 125.0,
+    "honed": 95.0
+  }
+}

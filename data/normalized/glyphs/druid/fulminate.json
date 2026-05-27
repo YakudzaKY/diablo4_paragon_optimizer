@@ -1,0 +1,108 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nFulminate\nRadius Size: 3 \nFor every 5 Dexterity purchased within range, you deal +1.0% increased Lightning damage.\nAdditional Bonus: \nYou deal 12% [x] increased Lightning damage to both Healthy and Injured enemies.\nRequired (purchased in range): +25 Dexterity\nLegendary Bonus: \nIncrease Lightning damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nСверкание\nРадиус: 3 \nЗа каждые 5 ед. ловкости, открытых в радиусе действия, урон от молнии увеличивается на +1.0% .\nДополнительный бонус: \nВы наносите на 12% [x] больше урона от молнии целям с высоким и низким уровнем здоровья.\nТребуется открыть в радиусе действия: +25 к ловкости\nЛегендарный бонус: \n+ 0.5% [x] к урону от молнии. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:20:54Z",
+  "class": "druid",
+  "class_mask": 2,
+  "id": "fulminate",
+  "max_level": 100,
+  "name": {
+    "en": "Fulminate",
+    "ru": "Сверкание"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 2,
+    "icon": 1236117199,
+    "maxLevel": 100,
+    "name": "Fulminate",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      809827735,
+      1302406649,
+      3567369300,
+      3918074131,
+      1277787765
+    ],
+    "sno": 1028234,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 12,
+        "attributeName": "Dexterity",
+        "classMask": 119
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 809827735,
+      "name": "Dexterity",
+      "raw": {
+        "id": 809827735,
+        "name": "Dexterity"
+      }
+    },
+    {
+      "id": 1302406649,
+      "name": "Lightning",
+      "raw": {
+        "id": 1302406649,
+        "name": "Lightning"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 3918074131,
+      "name": "Healthy",
+      "raw": {
+        "id": 3918074131,
+        "name": "Healthy"
+      }
+    },
+    {
+      "id": 1277787765,
+      "name": "Injured",
+      "raw": {
+        "id": 1277787765,
+        "name": "Injured"
+      }
+    }
+  ],
+  "source_glyph_id": 1028234,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/fulminate-1028234",
+  "threshold_attributes": [
+    {
+      "attribute": 12,
+      "attribute_name": "Dexterity",
+      "class_mask": 119,
+      "stat_key": "dexterity"
+    }
+  ]
+}

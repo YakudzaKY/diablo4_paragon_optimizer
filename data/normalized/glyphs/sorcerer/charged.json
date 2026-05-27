@@ -1,0 +1,99 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nCharged\nRadius Size: 3 \nFor every 5 Intelligence purchased within range, Crackling Energy deals +1.32% increased damage.\nAdditional Bonus: \nPicking up Crackling Energy grants you 5% [x] increased damage for 5 seconds, up to 15% [x] .\nRequired (purchased in range): +40 Intelligence\nLegendary Bonus: \nIncrease Lightning damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nЗаряд\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, урон от искрящихся зарядов энергии увеличивается на +1.32% .\nДополнительный бонус: \nКогда вы подбираете искрящийся заряд энергии , наносимый урон увеличивается на 5% [x] на 5 сек. вплоть до 15% [x] .\nТребуется открыть в радиусе действия: +40 к интеллекту\nЛегендарный бонус: \n+ 0.5% [x] к урону от молнии. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:10:45Z",
+  "class": "sorcerer",
+  "class_mask": 1,
+  "id": "charged",
+  "max_level": 100,
+  "name": {
+    "en": "Charged",
+    "ru": "Заряд"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 1,
+    "icon": 2456478681,
+    "maxLevel": 100,
+    "name": "Charged",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      1834748264,
+      1382655799,
+      3567369300,
+      1302406649
+    ],
+    "sno": 1023189,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 10,
+        "attributeName": "Intelligence",
+        "classMask": 19
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 1834748264,
+      "name": "Intelligence",
+      "raw": {
+        "id": 1834748264,
+        "name": "Intelligence"
+      }
+    },
+    {
+      "id": 1382655799,
+      "name": "Crackling Energy",
+      "raw": {
+        "id": 1382655799,
+        "name": "Crackling Energy"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 1302406649,
+      "name": "Lightning",
+      "raw": {
+        "id": 1302406649,
+        "name": "Lightning"
+      }
+    }
+  ],
+  "source_glyph_id": 1023189,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/charged-1023189",
+  "threshold_attributes": [
+    {
+      "attribute": 10,
+      "attribute_name": "Intelligence",
+      "class_mask": 19,
+      "stat_key": "intelligence"
+    }
+  ]
+}

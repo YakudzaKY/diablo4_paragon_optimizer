@@ -1,0 +1,117 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nJudicator\nRadius Size: 3 \nFor every 5 Intelligence purchased within range, your Judicator skills deal 1.5% [+] increased damage.\nAdditional Bonus: \nDeal an additional 20% [x] Non-physical Damage to Elites.\nRequired (purchased in range): +25 Intelligence\nLegendary Bonus: \nIncrease Holy and Fire damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nВершитель\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, урон умений категории \"Вершитель\" увеличивается на 1.5% [+] .\nДополнительный бонус: \nОсобые противники получают на 20% [x] больше нефизического урона.\nТребуется открыть в радиусе действия: +25 к интеллекту\nЛегендарный бонус: \n+ 0.5% [x] к урону от огня и сил Света. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:56:38Z",
+  "class": "paladin",
+  "class_mask": 64,
+  "id": "judicator",
+  "max_level": 100,
+  "name": {
+    "en": "Judicator",
+    "ru": "Вершитель"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 64,
+    "icon": 2456702841,
+    "maxLevel": 100,
+    "name": "Judicator",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      1834748264,
+      3567369300,
+      3044847613,
+      1838231677,
+      2322238504,
+      2543342001
+    ],
+    "sno": 2478561,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 10,
+        "attributeName": "Intelligence",
+        "classMask": 234
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 1834748264,
+      "name": "Intelligence",
+      "raw": {
+        "id": 1834748264,
+        "name": "Intelligence"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 3044847613,
+      "name": "Judicator",
+      "raw": {
+        "id": 3044847613,
+        "name": "Judicator"
+      }
+    },
+    {
+      "id": 1838231677,
+      "name": "Non-Physical",
+      "raw": {
+        "id": 1838231677,
+        "name": "Non-Physical"
+      }
+    },
+    {
+      "id": 2322238504,
+      "name": "Elite Monsters",
+      "raw": {
+        "id": 2322238504,
+        "name": "Elite Monsters"
+      }
+    },
+    {
+      "id": 2543342001,
+      "name": "Holy",
+      "raw": {
+        "id": 2543342001,
+        "name": "Holy"
+      }
+    }
+  ],
+  "source_glyph_id": 2478561,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/judicator-2478561",
+  "threshold_attributes": [
+    {
+      "attribute": 10,
+      "attribute_name": "Intelligence",
+      "class_mask": 234,
+      "stat_key": "intelligence"
+    }
+  ]
+}

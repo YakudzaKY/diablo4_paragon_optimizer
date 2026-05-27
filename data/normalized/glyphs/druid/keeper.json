@@ -1,0 +1,99 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nKeeper\nRadius Size: 3 \nGrants +25.0% bonus to all Rare nodes within range.\nAdditional Bonus: \nYou and your Companions deal 15% [x] increased Non-Physical damage.\nRequired (purchased in range): +25 Intelligence\nLegendary Bonus: \nIncrease Non-Physical damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nХранитель\nРадиус: 3 \nУсиливает все редкие узлы в радиусе действия на +25.0% .\nДополнительный бонус: \nВы и ваши питомцы наносите на 15% [x] больше нефизического урона.\nТребуется открыть в радиусе действия: +25 к интеллекту\nЛегендарный бонус: \n+ 0.5% [x] к нефизическому урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T10:20:54Z",
+  "class": "druid",
+  "class_mask": 2,
+  "id": "keeper",
+  "max_level": 100,
+  "name": {
+    "en": "Keeper",
+    "ru": "Хранитель"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 2,
+    "icon": 2456702841,
+    "maxLevel": 100,
+    "name": "Keeper",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      1834748264,
+      3433148261,
+      1838231677,
+      3567369300
+    ],
+    "sno": 1028233,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 10,
+        "attributeName": "Intelligence",
+        "classMask": 234
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 1834748264,
+      "name": "Intelligence",
+      "raw": {
+        "id": 1834748264,
+        "name": "Intelligence"
+      }
+    },
+    {
+      "id": 3433148261,
+      "name": "Companion",
+      "raw": {
+        "id": 3433148261,
+        "name": "Companion"
+      }
+    },
+    {
+      "id": 1838231677,
+      "name": "Non-Physical",
+      "raw": {
+        "id": 1838231677,
+        "name": "Non-Physical"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    }
+  ],
+  "source_glyph_id": 1028233,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/keeper-1028233",
+  "threshold_attributes": [
+    {
+      "attribute": 10,
+      "attribute_name": "Intelligence",
+      "class_mask": 234,
+      "stat_key": "intelligence"
+    }
+  ]
+}

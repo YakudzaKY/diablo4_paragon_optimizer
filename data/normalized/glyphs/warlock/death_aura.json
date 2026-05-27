@@ -1,0 +1,99 @@
+{
+  "bonus_text": {
+    "en": "Rare Glyph \nDeath Aura\nRadius Size: 3 \nGrants +25.0% bonus to all Rare nodes within range.\nAdditional Bonus: \nYou gain 40% [+] to All Resistances for 10 seconds when one of your Demons dies.\nRequired (purchased in range): +40 Willpower\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
+    "ru": "Редкий символ \nАура смерти\nРадиус: 3 \nУсиливает все редкие узлы в радиусе действия на +25.0% .\nДополнительный бонус: \nКогда один из ваших демонов умирает, ваше сопротивление всем видам урона повышается на 40% [+] на 10 сек.\nТребуется открыть в радиусе действия: +40 к силе воли\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
+  },
+  "checked_at": "2026-05-27T11:02:00Z",
+  "class": "warlock",
+  "class_mask": 128,
+  "id": "death_aura",
+  "max_level": 100,
+  "name": {
+    "en": "Death Aura",
+    "ru": "Аура смерти"
+  },
+  "patch_version": "3.0.2",
+  "quality": 3,
+  "radius": {
+    "legendary": 5,
+    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
+    "starting": 3,
+    "upgrade_levels": [
+      25,
+      50
+    ]
+  },
+  "rarity": 1,
+  "raw": {
+    "classMask": 128,
+    "icon": 3933737818,
+    "maxLevel": 100,
+    "name": "Death Aura",
+    "quality": 3,
+    "rarity": 1,
+    "skillTags": [
+      3639228442,
+      850110203,
+      3567369300,
+      2788607590
+    ],
+    "sno": 2530489,
+    "startingSize": 3,
+    "thresholdAttrs": [
+      {
+        "attribute": 11,
+        "attributeName": "Willpower",
+        "classMask": 130
+      }
+    ],
+    "upgradeLevels": [
+      25,
+      50
+    ]
+  },
+  "schema_version": 1,
+  "skill_tags": [
+    {
+      "id": 3639228442,
+      "name": "Willpower",
+      "raw": {
+        "id": 3639228442,
+        "name": "Willpower"
+      }
+    },
+    {
+      "id": 850110203,
+      "name": "Demonology",
+      "raw": {
+        "id": 850110203,
+        "name": "Demonology"
+      }
+    },
+    {
+      "id": 3567369300,
+      "name": "Damage",
+      "raw": {
+        "id": 3567369300,
+        "name": "Damage"
+      }
+    },
+    {
+      "id": 2788607590,
+      "name": "Resistance",
+      "raw": {
+        "id": 2788607590,
+        "name": "Resistance"
+      }
+    }
+  ],
+  "source_glyph_id": 2530489,
+  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/death-aura-2530489",
+  "threshold_attributes": [
+    {
+      "attribute": 11,
+      "attribute_name": "Willpower",
+      "class_mask": 130,
+      "stat_key": "willpower"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "classes": [
+    "barbarian",
+    "druid",
+    "necromancer",
+    "paladin",
+    "rogue",
+    "sorcerer",
+    "spiritborn",
+    "warlock"
+  ],
+  "counts": {
+    "boards": 79,
+    "classes": 8,
+    "glyphs": 182
+  },
+  "results": [
+    {
+      "class": "barbarian",
+      "counts": {
+        "available_stats": 19,
+        "boards": 10,
+        "glyphs": 23
+      },
+      "detail_errors_count": 0,
+      "manifest": "paragon_optimizer\\data\\normalized\\manifest\\barbarian.json",
+      "warnings": []
+    },
+    {
+      "class": "druid",
+      "counts": {
+        "available_stats": 20,
+        "boards": 10,
+        "glyphs": 23
+      },
+      "detail_errors_count": 0,
+      "manifest": "paragon_optimizer\\data\\normalized\\manifest\\druid.json",
+      "warnings": []
+    },
+    {
+      "class": "necromancer",
+      "counts": {
+        "available_stats": 19,
+        "boards": 10,
+        "glyphs": 23
+      },
+      "detail_errors_count": 0,
+      "manifest": "paragon_optimizer\\data\\normalized\\manifest\\necromancer.json",
+      "warnings": []
+    },
+    {
+      "class": "paladin",
+      "counts": {
+        "available_stats": 25,
+        "boards": 10,
+        "glyphs": 21
+      },
+      "detail_errors_count": 0,
+      "manifest": "paragon_optimizer\\data\\normalized\\manifest\\paladin.json",
+      "warnings": []
+    },
+    {
+      "class": "rogue",
+      "counts": {
+        "available_stats": 20,
+        "boards": 10,
+        "glyphs": 26
+      },
+      "detail_errors_count": 0,
+      "manifest": "paragon_optimizer\\data\\normalized\\manifest\\rogue.json",
+      "warnings": []
+    },
+    {
+      "class": "sorcerer",
+      "counts": {
+        "available_stats": 22,
+        "boards": 10,
+        "glyphs": 23
+      },
+      "detail_errors_count": 0,
+      "manifest": "paragon_optimizer\\data\\normalized\\manifest\\sorcerer.json",
+      "warnings": []
+    },
+    {
+      "class": "spiritborn",
+      "counts": {
+        "available_stats": 21,
+        "boards": 9,
+        "glyphs": 22
+      },
+      "detail_errors_count": 0,
+      "manifest": "paragon_optimizer\\data\\normalized\\manifest\\spiritborn.json",
+      "warnings": []
+    },
+    {
+      "class": "warlock",
+      "counts": {
+        "available_stats": 16,
+        "boards": 10,
+        "glyphs": 21
+      },
+      "detail_errors_count": 0,
+      "manifest": "paragon_optimizer\\data\\normalized\\manifest\\warlock.json",
+      "warnings": []
+    }
+  ],
+  "schema_version": 1
+}
