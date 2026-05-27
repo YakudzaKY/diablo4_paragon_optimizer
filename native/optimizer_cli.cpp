@@ -41,6 +41,9 @@ namespace {
 constexpr int TYPE_LEGENDARY = 3;
 constexpr int TYPE_GLYPH_SOCKET = 4;
 constexpr double GLYPH_ROUTE_BONUS_FACTOR = 0.5;
+constexpr double GLYPH_ROUTE_FUTURE_STAT_FACTOR = 0.15;
+constexpr double GLYPH_SCALING_STEP = 5.0;
+constexpr double GLYPH_SCALING_PARTIAL_CREDIT = 0.35;
 constexpr int MAX_GLYPH_CANDIDATES_PER_SOCKET = 8;
 constexpr double UNMET_PREFERRED_GLYPH_WEIGHT_FACTOR = 0.25;
 constexpr int DEFAULT_MAX_ROUTES = 3000;
@@ -208,6 +211,38 @@ struct GlyphEvaluation {
     std::string bonus_stat;
     double scaling_value_per_5 = 0.0;
     std::vector<std::string> warnings;
+};
+
+struct GlyphRouteStatPressure {
+    double demand = 0.0;
+    double supply = 0.0;
+    int opportunities = 0;
+};
+
+struct GlyphThresholdCandidate {
+    int node_index = -1;
+    double stat_value = 0.0;
+};
+
+struct GlyphNodeValueContribution {
+    int node_index = -1;
+    double direct = 0.0;
+    double activation_value = 0.0;
+    double scaling_value = 0.0;
+    double future_value = 0.0;
+    double selected_stat = 0.0;
+    double remaining_stat = 0.0;
+    double fill_before = 0.0;
+    double fill_after = 0.0;
+};
+
+struct GlyphValueMatrix {
+    int socket_index = -1;
+    int glyph_index = -1;
+    double available_stat = 0.0;
+    double expected_fill = 0.0;
+    double scarcity_multiplier = 1.0;
+    std::vector<GlyphNodeValueContribution> node_values;
 };
 
 struct ScoringContext {
@@ -1127,55 +1162,65 @@ ScoringContext build_scoring_context(
     return context;
 }
 
-std::unordered_map<int, double> glyph_route_node_bonuses(
+bool is_route_eligible_glyph(const std::vector<Glyph>& glyphs, const WeightModel& weights, int glyph_index) {
+    return weights.glyph_weights.empty() || weights.glyph_weights.count(glyphs[glyph_index].id) > 0;
+}
+
+const std::vector<int>& radius_nodes_for(const ScoringContext& context, int socket_index, int glyph_index) {
+    static const std::vector<int> empty;
+    auto it = context.radius_nodes.find(radius_key(socket_index, glyph_index));
+    return it == context.radius_nodes.end() ? empty : it->second;
+}
+
+double glyph_activation_progress(double stat, double requirement) {
+    if (requirement <= 0.0) {
+        return 1.0;
+    }
+    double progress = std::clamp(stat / requirement, 0.0, 1.0);
+    return 0.35 * progress + 0.65 * progress * progress;
+}
+
+double glyph_activation_value_between(double before, double after, double activation_pool, double requirement) {
+    if (activation_pool <= 0.0 || requirement <= 0.0 || after <= before) {
+        return 0.0;
+    }
+    double before_progress = glyph_activation_progress(before, requirement);
+    double after_progress = glyph_activation_progress(after, requirement);
+    return std::max(after_progress - before_progress, 0.0) * activation_pool;
+}
+
+double glyph_scaling_units(double stat) {
+    if (stat <= 0.0) {
+        return 0.0;
+    }
+    double completed = std::floor(stat / GLYPH_SCALING_STEP);
+    double partial = (stat - completed * GLYPH_SCALING_STEP) / GLYPH_SCALING_STEP;
+    return completed + GLYPH_SCALING_PARTIAL_CREDIT * std::clamp(partial, 0.0, 1.0);
+}
+
+double glyph_scaling_value_between(
+    double before,
+    double after,
+    double scaling_value_per_5,
+    double scaling_weight
+) {
+    if (scaling_value_per_5 <= 0.0 || scaling_weight <= 0.0 || after <= before) {
+        return 0.0;
+    }
+    double units = std::max(glyph_scaling_units(after) - glyph_scaling_units(before), 0.0);
+    return units * scaling_value_per_5 * scaling_weight;
+}
+
+std::map<std::string, GlyphRouteStatPressure> glyph_route_stat_pressures(
     const Graph& graph,
     const std::vector<Glyph>& glyphs,
     const WeightModel& weights,
     const ScoringContext& context
 ) {
-    struct StatPressure {
-        double demand = 0.0;
-        double supply = 0.0;
-        int opportunities = 0;
-    };
-
-    struct NodeAccumulator {
-        double best_direct = 0.0;
-        double total_direct = 0.0;
-        int hits = 0;
-        std::set<std::string> glyph_ids;
-        std::set<int> socket_indices;
-    };
-
-    struct ThresholdCandidate {
-        int node_index = -1;
-        double stat_value = 0.0;
-    };
-
-    std::unordered_map<int, double> bonuses;
-    if (glyphs.empty() || graph.glyph_sockets.empty()) {
-        return bonuses;
-    }
-
-    bool use_all_glyphs = weights.glyph_weights.empty();
-    double activation_bonus =
-        std::max(weight_for(weights.weights, "glyph_bonus"), 0.0) +
-        (weights.scheme_is_dict ? std::max(weight_for(weights.scheme_weights, "glyph_bonus"), 0.0) : 0.0);
-    std::map<std::string, StatPressure> pressures;
-
-    auto is_eligible_glyph = [&](int glyph_index) {
-        return use_all_glyphs || weights.glyph_weights.count(glyphs[glyph_index].id) > 0;
-    };
-
-    auto radius_nodes_for = [&](int socket_index, int glyph_index) -> const std::vector<int>& {
-        static const std::vector<int> empty;
-        auto it = context.radius_nodes.find(radius_key(socket_index, glyph_index));
-        return it == context.radius_nodes.end() ? empty : it->second;
-    };
-
+    std::map<std::string, GlyphRouteStatPressure> pressures;
     for (int socket_index : graph.glyph_sockets) {
         for (int glyph_index = 0; glyph_index < static_cast<int>(glyphs.size()); ++glyph_index) {
-            if (!is_eligible_glyph(glyph_index)) {
+            if (!is_route_eligible_glyph(glyphs, weights, glyph_index)) {
                 continue;
             }
             const GlyphInfo& info = context.glyph_info[glyph_index];
@@ -1183,7 +1228,7 @@ std::unordered_map<int, double> glyph_route_node_bonuses(
                 continue;
             }
             double supply = 0.0;
-            for (int node_index : radius_nodes_for(socket_index, glyph_index)) {
+            for (int node_index : radius_nodes_for(context, socket_index, glyph_index)) {
                 if (node_index == socket_index) {
                     continue;
                 }
@@ -1193,19 +1238,72 @@ std::unordered_map<int, double> glyph_route_node_bonuses(
                 continue;
             }
             double target = std::min(supply, std::max(info.requirement, info.requirement * weights.glyph_route.fill_target));
-            StatPressure& pressure = pressures[info.threshold_stat];
+            GlyphRouteStatPressure& pressure = pressures[info.threshold_stat];
             pressure.demand += target;
             pressure.supply += supply;
             pressure.opportunities += 1;
         }
     }
+    return pressures;
+}
 
-    std::vector<NodeAccumulator> accumulators(graph.nodes.size());
+std::vector<GlyphThresholdCandidate> glyph_threshold_candidates(
+    const Graph& graph,
+    const ScoringContext& context,
+    int socket_index,
+    int glyph_index,
+    const std::string& threshold_stat
+) {
+    std::vector<GlyphThresholdCandidate> candidates;
+    for (int node_index : radius_nodes_for(context, socket_index, glyph_index)) {
+        if (node_index == socket_index) {
+            continue;
+        }
+        double stat_value = weight_for(graph.nodes[node_index].stats, threshold_stat);
+        if (stat_value > 0.0) {
+            candidates.push_back({node_index, stat_value});
+        }
+    }
+    return candidates;
+}
+
+double glyph_scarcity_multiplier(
+    const std::map<std::string, GlyphRouteStatPressure>& pressures,
+    const WeightModel& weights,
+    const std::string& threshold_stat
+) {
+    double multiplier = 1.0;
+    auto pressure_it = pressures.find(threshold_stat);
+    if (pressure_it != pressures.end() && pressure_it->second.supply > 0.0) {
+        double demand_ratio = pressure_it->second.demand / pressure_it->second.supply;
+        double pressure_boost = std::clamp(demand_ratio - 0.80, 0.0, 2.0) * weights.glyph_route.scarcity;
+        double opportunity_boost = std::log1p(static_cast<double>(std::max(pressure_it->second.opportunities - 1, 0))) *
+            weights.glyph_route.synergy * 0.05;
+        multiplier += pressure_boost + opportunity_boost;
+    }
+    return multiplier;
+}
+
+std::vector<GlyphValueMatrix> build_glyph_value_matrices(
+    const Graph& graph,
+    const std::vector<Glyph>& glyphs,
+    const WeightModel& weights,
+    const ScoringContext& context
+) {
+    std::vector<GlyphValueMatrix> matrices;
+    if (glyphs.empty() || graph.glyph_sockets.empty()) {
+        return matrices;
+    }
+
+    double activation_bonus =
+        std::max(weight_for(weights.weights, "glyph_bonus"), 0.0) +
+        (weights.scheme_is_dict ? std::max(weight_for(weights.scheme_weights, "glyph_bonus"), 0.0) : 0.0);
+    auto pressures = glyph_route_stat_pressures(graph, glyphs, weights, context);
 
     for (int socket_index : graph.glyph_sockets) {
         const GraphNode& socket = graph.nodes[socket_index];
         for (int glyph_index = 0; glyph_index < static_cast<int>(glyphs.size()); ++glyph_index) {
-            if (!is_eligible_glyph(glyph_index)) {
+            if (!is_route_eligible_glyph(glyphs, weights, glyph_index)) {
                 continue;
             }
             const Glyph& glyph = glyphs[glyph_index];
@@ -1214,24 +1312,24 @@ std::unordered_map<int, double> glyph_route_node_bonuses(
                 continue;
             }
 
-            std::vector<ThresholdCandidate> threshold_nodes;
-            double available_stat = 0.0;
-            for (int node_index : radius_nodes_for(socket_index, glyph_index)) {
-                if (node_index == socket_index) {
-                    continue;
-                }
-                const GraphNode& node = graph.nodes[node_index];
-                double stat_value = weight_for(node.stats, info.threshold_stat);
-                if (stat_value > 0.0) {
-                    threshold_nodes.push_back({node_index, stat_value});
-                    available_stat += stat_value;
-                }
+            std::vector<GlyphThresholdCandidate> threshold_nodes =
+                glyph_threshold_candidates(graph, context, socket_index, glyph_index, info.threshold_stat);
+            if (threshold_nodes.empty()) {
+                continue;
             }
-            if (threshold_nodes.empty() || available_stat <= 0.0) {
+            double available_stat = std::accumulate(
+                threshold_nodes.begin(),
+                threshold_nodes.end(),
+                0.0,
+                [](double total, const GlyphThresholdCandidate& candidate) {
+                    return total + candidate.stat_value;
+                }
+            );
+            if (available_stat <= 0.0) {
                 continue;
             }
 
-            std::sort(threshold_nodes.begin(), threshold_nodes.end(), [&](const ThresholdCandidate& left, const ThresholdCandidate& right) {
+            std::sort(threshold_nodes.begin(), threshold_nodes.end(), [&](const GlyphThresholdCandidate& left, const GlyphThresholdCandidate& right) {
                 const GraphNode& left_node = graph.nodes[left.node_index];
                 const GraphNode& right_node = graph.nodes[right.node_index];
                 int left_distance = std::abs(left_node.x - socket.x) + std::abs(left_node.y - socket.y);
@@ -1245,54 +1343,109 @@ std::unordered_map<int, double> glyph_route_node_bonuses(
             });
 
             double preference_bonus = std::max(weight_for(weights.glyph_weights, glyph.id), 0.0);
-            double activation_per_stat = (activation_bonus + preference_bonus) / info.requirement;
+            double activation_pool = activation_bonus + preference_bonus;
             double scaling_weight = info.bonus_stat.empty() ? 0.0 : std::max(weight_for(weights.weights, info.bonus_stat), 0.0);
-            double scaling_per_stat = std::max(info.scaling_value_per_5 * scaling_weight / 5.0, 0.0);
-            if (activation_per_stat <= 0.0 && scaling_per_stat <= 0.0) {
+            if (activation_pool <= 0.0 && (info.scaling_value_per_5 <= 0.0 || scaling_weight <= 0.0)) {
                 continue;
             }
 
-            double scarcity_multiplier = 1.0;
-            auto pressure_it = pressures.find(info.threshold_stat);
-            if (pressure_it != pressures.end() && pressure_it->second.supply > 0.0) {
-                double demand_ratio = pressure_it->second.demand / pressure_it->second.supply;
-                double pressure_boost = std::clamp(demand_ratio - 0.80, 0.0, 2.0) * weights.glyph_route.scarcity;
-                double opportunity_boost = std::log1p(static_cast<double>(std::max(pressure_it->second.opportunities - 1, 0))) *
-                    weights.glyph_route.synergy * 0.05;
-                scarcity_multiplier += pressure_boost + opportunity_boost;
-            }
-
-            double expected_fill = std::min(
+            GlyphValueMatrix matrix;
+            matrix.socket_index = socket_index;
+            matrix.glyph_index = glyph_index;
+            matrix.available_stat = available_stat;
+            matrix.expected_fill = std::min(
                 available_stat,
                 std::max(info.requirement, info.requirement * weights.glyph_route.fill_target)
             );
-            double accumulated_stat = 0.0;
-            for (const ThresholdCandidate& candidate : threshold_nodes) {
-                double remaining_fill = std::max(expected_fill - accumulated_stat, 0.0);
-                double selected_stat = std::min(candidate.stat_value, remaining_fill);
-                if (selected_stat <= 0.0 && weights.glyph_route.future <= 0.0) {
-                    accumulated_stat += candidate.stat_value;
-                    continue;
-                }
+            matrix.scarcity_multiplier = glyph_scarcity_multiplier(pressures, weights, info.threshold_stat);
 
-                double activation_gap = std::max(info.requirement - std::min(accumulated_stat, info.requirement), 0.0);
-                double activation_stat = std::min(selected_stat, activation_gap);
-                double future_stat = (candidate.stat_value - selected_stat) * weights.glyph_route.future * 0.15;
-                double scaling_stat = selected_stat + future_stat;
-                double direct =
-                    activation_stat * activation_per_stat * weights.glyph_route.activation +
-                    scaling_stat * scaling_per_stat * weights.glyph_route.scaling;
-                direct *= GLYPH_ROUTE_BONUS_FACTOR * scarcity_multiplier;
-                if (direct > 0.0) {
-                    NodeAccumulator& accumulator = accumulators[candidate.node_index];
-                    accumulator.best_direct = std::max(accumulator.best_direct, direct);
-                    accumulator.total_direct += direct;
-                    accumulator.hits += 1;
-                    accumulator.glyph_ids.insert(glyph.id);
-                    accumulator.socket_indices.insert(socket_index);
+            double accumulated_stat = 0.0;
+            for (const GlyphThresholdCandidate& candidate : threshold_nodes) {
+                double fill_before = accumulated_stat;
+                double remaining_fill = std::max(matrix.expected_fill - fill_before, 0.0);
+                double selected_stat = std::min(candidate.stat_value, remaining_fill);
+                double fill_after = fill_before + selected_stat;
+                double remaining_stat = std::max(candidate.stat_value - selected_stat, 0.0);
+                double future_stat = remaining_stat * GLYPH_ROUTE_FUTURE_STAT_FACTOR;
+
+                GlyphNodeValueContribution contribution;
+                contribution.node_index = candidate.node_index;
+                contribution.selected_stat = selected_stat;
+                contribution.remaining_stat = remaining_stat;
+                contribution.fill_before = fill_before;
+                contribution.fill_after = fill_after;
+                contribution.activation_value = glyph_activation_value_between(fill_before, fill_after, activation_pool, info.requirement);
+                contribution.scaling_value = glyph_scaling_value_between(
+                    fill_before,
+                    fill_after,
+                    info.scaling_value_per_5,
+                    scaling_weight
+                );
+                double future_activation = glyph_activation_value_between(
+                    fill_after,
+                    fill_after + future_stat,
+                    activation_pool,
+                    info.requirement
+                );
+                double future_scaling = glyph_scaling_value_between(
+                    fill_after,
+                    fill_after + future_stat,
+                    info.scaling_value_per_5,
+                    scaling_weight
+                );
+                contribution.future_value =
+                    (future_activation * weights.glyph_route.activation + future_scaling * weights.glyph_route.scaling) *
+                    weights.glyph_route.future;
+                contribution.direct =
+                    (contribution.activation_value * weights.glyph_route.activation +
+                     contribution.scaling_value * weights.glyph_route.scaling +
+                     contribution.future_value) *
+                    GLYPH_ROUTE_BONUS_FACTOR * matrix.scarcity_multiplier;
+
+                if (contribution.direct > 0.0) {
+                    matrix.node_values.push_back(std::move(contribution));
                 }
                 accumulated_stat += candidate.stat_value;
             }
+
+            if (!matrix.node_values.empty()) {
+                matrices.push_back(std::move(matrix));
+            }
+        }
+    }
+    return matrices;
+}
+
+std::unordered_map<int, double> glyph_route_node_bonuses(
+    const Graph& graph,
+    const std::vector<Glyph>& glyphs,
+    const WeightModel& weights,
+    const ScoringContext& context
+) {
+    struct NodeAccumulator {
+        double best_direct = 0.0;
+        double total_direct = 0.0;
+        int hits = 0;
+        std::set<std::string> glyph_ids;
+        std::set<int> socket_indices;
+    };
+
+    std::unordered_map<int, double> bonuses;
+    if (glyphs.empty() || graph.glyph_sockets.empty()) {
+        return bonuses;
+    }
+
+    std::vector<NodeAccumulator> accumulators(graph.nodes.size());
+
+    for (const GlyphValueMatrix& matrix : build_glyph_value_matrices(graph, glyphs, weights, context)) {
+        const Glyph& glyph = glyphs[matrix.glyph_index];
+        for (const GlyphNodeValueContribution& contribution : matrix.node_values) {
+            NodeAccumulator& accumulator = accumulators[contribution.node_index];
+            accumulator.best_direct = std::max(accumulator.best_direct, contribution.direct);
+            accumulator.total_direct += contribution.direct;
+            accumulator.hits += 1;
+            accumulator.glyph_ids.insert(glyph.id);
+            accumulator.socket_indices.insert(matrix.socket_index);
         }
     }
 
