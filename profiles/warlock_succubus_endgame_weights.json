@@ -1,0 +1,12 @@
+{
+  "class": "warlock",
+  "points": 257,
+  "legendary_glyphs": true,
+  "weights": "../weights/warlock_succubus_endgame_weights.json",
+  "starting_stats": {
+    "strength": 526,
+    "intelligence": 527,
+    "willpower": 1962,
+    "dexterity": 526
+  }
+}

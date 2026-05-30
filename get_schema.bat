@@ -9,7 +9,7 @@ if not exist "%EXE%" (
   if errorlevel 1 exit /b 1
 )
 
-"%EXE%" schema --class paladin
+"%EXE%" schema --class warlock
 pause
 
 endlocal

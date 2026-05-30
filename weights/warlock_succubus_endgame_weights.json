@@ -1,0 +1,45 @@
+{
+  "weights": {
+    "willpower": 2.8,
+    "intelligence": 0.9,
+    "dexterity": 0.25,
+    "strength": 0.15,
+    "max_life": 3.2,
+    "armor": 2.2,
+    "resistance_all": 2.0,
+    "healing_received": 0.75,
+    "vulnerable_damage": 3.4,
+    "critical_strike_damage": 3.0,
+    "damage": 2.8,
+    "damage_to_elites": 2.4,
+    "cooldown_reduction": 3.6,
+    "max_wrath": 1.4,
+    "lucky_hit_chance": 0.45,
+    "fire_damage": 0.15,
+    "glyph_bonus": 95.0,
+    "glyph_socket": 110.0
+  },
+  "glyph_route": {
+    "activation": 1.15,
+    "scaling": 1.05,
+    "future": 0.4,
+    "synergy": 0.45,
+    "scarcity": 0.25,
+    "fill_target": 1.25,
+    "max_bonus_multiplier": 1.65
+  },
+  "scheme": {
+    "starter": 115.0,
+    "ritualism": 155.0,
+    "demonic_spicules": 160.0,
+    "overmind": 145.0,
+    "fathomless": 135.0
+  },
+  "glyphs": {
+    "abyssal": 175.0,
+    "demonologist": 165.0,
+    "eldritch_sight": 155.0,
+    "mastermind": 145.0,
+    "ichor_carapace": 125.0
+  }
+}
