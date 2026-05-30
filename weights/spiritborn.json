@@ -1,0 +1,46 @@
+{
+  "weights": {
+    "dexterity": 1.5,
+    "attack_speed": 3.5,
+    "critical_strike_damage": 3.2,
+    "cooldown_reduction": 3.4,
+    "vulnerable_damage": 2.8,
+    "damage": 2.0,
+    "non_physical_damage": 2.2,
+    "damage_to_elites": 1.8,
+    "max_life": 2.8,
+    "armor": 1.8,
+    "resistance_all": 1.6,
+    "movement_speed": 1.0,
+    "healing_received": 0.5,
+    "lucky_hit_chance": 0.5,
+    "strength": 0.1,
+    "intelligence": 0.1,
+    "willpower": 0.1,
+    "glyph_bonus": 90.0,
+    "glyph_socket": 100.0
+  },
+  "scheme": {
+    "prodigy_s_tempo": 150.0,
+    "in_fighter": 140.0,
+    "convergence": 130.0,
+    "revealing": 120.0,
+    "starter": 80.0
+  },
+  "glyphs": {
+    "spirit": 170.0,
+    "menagerist": 160.0,
+    "wildfire": 150.0,
+    "turf": 140.0,
+    "exploit": 130.0
+  },
+  "glyph_route": {
+    "activation": 1.0,
+    "scaling": 1.0,
+    "future": 0.35,
+    "synergy": 0.25,
+    "scarcity": 0.30,
+    "fill_target": 1.20,
+    "max_bonus_multiplier": 1.60
+  }
+}

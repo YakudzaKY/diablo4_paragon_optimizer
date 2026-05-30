@@ -1,0 +1,12 @@
+{
+  "class": "druid",
+  "points": 258,
+  "legendary_glyphs": true,
+  "weights": "../weights/druid.json",
+  "starting_stats": {
+    "strength": 153,
+    "intelligence": 154,
+    "willpower": 912,
+    "dexterity": 153
+  }
+}

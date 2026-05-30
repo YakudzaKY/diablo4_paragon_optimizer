@@ -1,0 +1,12 @@
+{
+  "class": "spiritborn",
+  "points": 258,
+  "legendary_glyphs": true,
+  "weights": "../weights/spiritborn.json",
+  "starting_stats": {
+    "strength": 109,
+    "intelligence": 108,
+    "willpower": 108,
+    "dexterity": 714
+  }
+}

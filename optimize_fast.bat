@@ -9,7 +9,7 @@ if not exist "%EXE%" (
   if errorlevel 1 exit /b 1
 )
 
-"%EXE%" optimize --profile "%ROOT%profiles\warlock_succubus_endgame_weights.json"
+"%EXE%" optimize --profile "%ROOT%profiles\druid.json"
 pause
 
 endlocal

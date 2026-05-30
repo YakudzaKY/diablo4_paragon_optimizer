@@ -1,0 +1,53 @@
+{
+  "weights": {
+    "willpower": 2.8,
+    "max_life": 2.8,
+    "armor": 1.6,
+    "resistance_all": 1.6,
+    "cooldown_reduction": 2.6,
+    "attack_speed": 1.8,
+    "critical_strike_damage": 2.0,
+    "damage_while_fortified": 2.8,
+    "damage_to_elites": 1.8,
+    "damage": 0.8,
+    "crowd_controlled_damage": 2.0,
+    "vulnerable_damage": 0.8,
+    "dexterity": 0.7,
+    "intelligence": 0.7,
+    "strength": 0.35,
+    "lucky_hit_chance": 0.5,
+    "damage_to_healthy_enemies": 0.3,
+    "damage_while_healthy": 0.3,
+    "healing_received": 0.2,
+    "life_per_5_seconds": 0.1,
+    "glyph_bonus": 110.0,
+    "glyph_socket": 120.0
+  },
+  "glyph_route": {
+    "activation": 1.0,
+    "scaling": 1.0,
+    "future": 0.35,
+    "synergy": 0.25,
+    "scarcity": 0.30,
+    "fill_target": 1.20,
+    "max_bonus_multiplier": 1.60
+  },
+  "scheme": {
+    "starter": 10.0,
+    "earthen_devastation": 150.0,
+    "survival_instincts": 140.0,
+    "inner_beast": 130.0,
+    "ancestral_guidance": 120.0
+  },
+  "glyphs": {
+    "spirit": 230.0,
+    "fang_and_claw": 220.0,
+    "outmatch": 210.0,
+    "tectonic": 200.0,
+    "dominate": 190.0,
+    "werebear": 120.0,
+    "undaunted": 90.0,
+    "earth_and_sky": 80.0,
+    "shapeshifter": 60.0
+  }
+}
