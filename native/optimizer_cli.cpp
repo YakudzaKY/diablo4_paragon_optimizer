@@ -42,6 +42,7 @@ constexpr int TYPE_LEGENDARY = 3;
 constexpr int TYPE_GLYPH_SOCKET = 4;
 constexpr double GLYPH_ROUTE_BONUS_FACTOR = 0.5;
 constexpr double GLYPH_ROUTE_FUTURE_STAT_FACTOR = 0.15;
+constexpr int GLYPH_ROUTE_CLUSTER_RADIUS = 2;
 constexpr double GLYPH_SCALING_STEP = 5.0;
 constexpr double GLYPH_SCALING_PARTIAL_CREDIT = 0.35;
 constexpr int MAX_GLYPH_CANDIDATES_PER_SOCKET = 8;
@@ -118,6 +119,9 @@ struct GlyphRouteTuning {
     double future = 0.35;
     double synergy = 0.25;
     double scarcity = 0.30;
+    double cluster = 0.35;
+    double detour = 0.25;
+    double path_efficiency = 0.50;
     double fill_target = 1.20;
     double max_bonus_multiplier = 1.60;
 };
@@ -169,11 +173,15 @@ struct RouteInput {
     std::vector<std::string> node_ids;
     std::vector<int> costs;
     std::vector<double> scores;
+    std::vector<double> cluster_scores;
     std::vector<int> types;
     std::vector<std::vector<int>> adjacency;
     std::vector<int> targets;
     int start_index = -1;
     int points = 0;
+    double detour_penalty = 0.0;
+    double low_value_threshold = 0.0;
+    double cluster_gain_factor = 0.0;
 };
 
 struct RouteStep {
@@ -182,6 +190,10 @@ struct RouteStep {
     std::vector<int> added_nodes;
     int cost = 0;
     double gain = 0.0;
+    double adjusted_gain = 0.0;
+    double cluster_gain = 0.0;
+    double detour_cost = 0.0;
+    double path_efficiency = 0.0;
     int points_used = 0;
 };
 
@@ -194,6 +206,10 @@ struct Candidate {
     bool valid = false;
     double ratio = -std::numeric_limits<double>::infinity();
     double gain = -std::numeric_limits<double>::infinity();
+    double adjusted_gain = -std::numeric_limits<double>::infinity();
+    double cluster_gain = 0.0;
+    double detour_cost = 0.0;
+    double path_efficiency = 0.0;
     int negative_cost = std::numeric_limits<int>::min();
     int target = -1;
     std::vector<int> path;
@@ -360,6 +376,9 @@ void read_glyph_route_tuning(const json& value, GlyphRouteTuning& tuning) {
     read_optional_tuning_double(value, "future", tuning.future, 0.0, 10.0);
     read_optional_tuning_double(value, "synergy", tuning.synergy, 0.0, 10.0);
     read_optional_tuning_double(value, "scarcity", tuning.scarcity, 0.0, 10.0);
+    read_optional_tuning_double(value, "cluster", tuning.cluster, 0.0, 10.0);
+    read_optional_tuning_double(value, "detour", tuning.detour, 0.0, 10.0);
+    read_optional_tuning_double(value, "path_efficiency", tuning.path_efficiency, 0.0, 10.0);
     read_optional_tuning_double(value, "fill_target", tuning.fill_target, 1.0, 4.0);
     read_optional_tuning_double(value, "max_bonus_multiplier", tuning.max_bonus_multiplier, 0.10, 20.0);
 }
@@ -1521,23 +1540,110 @@ std::unordered_map<int, double> glyph_route_node_bonuses(
     return bonuses;
 }
 
+double bonus_for_node(const std::unordered_map<int, double>& bonuses, int index) {
+    auto it = bonuses.find(index);
+    return it == bonuses.end() ? 0.0 : it->second;
+}
+
+std::unordered_map<int, double> glyph_cluster_route_bonuses(
+    const Graph& graph,
+    const WeightModel& weights,
+    const std::unordered_map<int, double>& route_bonuses
+) {
+    std::unordered_map<int, double> bonuses;
+    if (weights.glyph_route.cluster <= 0.0 || graph.nodes.empty() || graph.start_index < 0) {
+        return bonuses;
+    }
+
+    std::vector<int> reachable = reachable_nodes(graph);
+    std::vector<unsigned char> reachable_set(graph.nodes.size(), 0);
+    std::vector<double> direct_scores(graph.nodes.size(), 0.0);
+    for (int index : reachable) {
+        reachable_set[index] = 1;
+        direct_scores[index] = std::max(route_node_score(graph.nodes[index], weights, &route_bonuses, index), 0.0);
+    }
+
+    for (int center : reachable) {
+        std::vector<unsigned char> seen(graph.nodes.size(), 0);
+        std::queue<std::pair<int, int>> queue;
+        seen[center] = 1;
+        queue.push({center, 0});
+
+        double local_value = 0.0;
+        int valuable_nodes = 0;
+        while (!queue.empty()) {
+            auto [current, distance] = queue.front();
+            queue.pop();
+
+            if (current != center && reachable_set[current] && direct_scores[current] > 0.0) {
+                double distance_weight = 1.0 / static_cast<double>(distance + 1);
+                local_value += direct_scores[current] * distance_weight;
+                valuable_nodes += 1;
+            }
+
+            if (distance >= GLYPH_ROUTE_CLUSTER_RADIUS) {
+                continue;
+            }
+            for (int neighbor : graph.adjacency[current]) {
+                if (!seen[neighbor]) {
+                    seen[neighbor] = 1;
+                    queue.push({neighbor, distance + 1});
+                }
+            }
+        }
+
+        if (local_value <= 0.0 || valuable_nodes == 0) {
+            continue;
+        }
+
+        double density = std::clamp(static_cast<double>(valuable_nodes) / 4.0, 0.25, 1.0);
+        double candidate_bonus = local_value * weights.glyph_route.cluster * (0.50 + density * 0.50);
+        double cap = std::max({
+            direct_scores[center] * weights.glyph_route.max_bonus_multiplier,
+            local_value * 0.75,
+            1.0
+        });
+        bonuses[center] = std::min(candidate_bonus, cap);
+    }
+
+    return bonuses;
+}
+
+double route_score_reference(const std::vector<double>& scores) {
+    std::vector<double> positive;
+    positive.reserve(scores.size());
+    for (double score : scores) {
+        if (score > 0.0 && std::isfinite(score)) {
+            positive.push_back(score);
+        }
+    }
+    if (positive.empty()) {
+        return 0.0;
+    }
+    std::sort(positive.begin(), positive.end());
+    return positive[positive.size() / 2];
+}
+
 std::vector<int> candidate_targets(
     const Graph& graph,
     const WeightModel& weights,
     int candidate_limit,
-    const std::unordered_map<int, double>& route_bonuses
+    const std::unordered_map<int, double>& route_bonuses,
+    const std::unordered_map<int, double>& cluster_bonuses
 ) {
     struct TargetCandidate {
         int index = -1;
         double score = 0.0;
         std::string type;
+        bool cluster_anchor = false;
     };
     std::vector<TargetCandidate> candidates;
     for (int index : reachable_nodes(graph)) {
         const GraphNode& node = graph.nodes[index];
-        double score = route_node_score(node, weights, &route_bonuses, index);
+        double cluster_bonus = bonus_for_node(cluster_bonuses, index);
+        double score = route_node_score(node, weights, &route_bonuses, index) + cluster_bonus;
         if (node.type == "rare" || node.type == "legendary" || node.type == "glyph_socket" || score > 0.0) {
-            candidates.push_back({index, score, node.type});
+            candidates.push_back({index, score, node.type, cluster_bonus > 0.0});
         }
     }
     std::sort(candidates.begin(), candidates.end(), [&](const TargetCandidate& left, const TargetCandidate& right) {
@@ -1550,7 +1656,7 @@ std::vector<int> candidate_targets(
         std::vector<TargetCandidate> priority;
         std::vector<TargetCandidate> attributes;
         for (const TargetCandidate& candidate : candidates) {
-            if (candidate.type == "normal") attributes.push_back(candidate);
+            if (candidate.type == "normal" && !candidate.cluster_anchor) attributes.push_back(candidate);
             else priority.push_back(candidate);
         }
         std::vector<TargetCandidate> limited;
@@ -1638,8 +1744,10 @@ bool better_candidate(const Candidate& candidate, const Candidate& best, const R
     constexpr double eps = 1e-12;
     if (candidate.ratio > best.ratio + eps) return true;
     if (std::abs(candidate.ratio - best.ratio) <= eps) {
-        if (candidate.gain > best.gain + eps) return true;
-        if (std::abs(candidate.gain - best.gain) <= eps) {
+        if (candidate.adjusted_gain > best.adjusted_gain + eps) return true;
+        if (std::abs(candidate.adjusted_gain - best.adjusted_gain) <= eps) {
+            if (candidate.gain > best.gain + eps) return true;
+            if (std::abs(candidate.gain - best.gain) > eps) return false;
             if (candidate.negative_cost > best.negative_cost) return true;
             if (candidate.negative_cost == best.negative_cost) {
                 return input.node_ids[candidate.target] > input.node_ids[best.target];
@@ -1664,20 +1772,37 @@ void consider_targets(
         std::vector<int> new_nodes;
         int cost = 0;
         double gain = 0.0;
+        double detour_pressure = 0.0;
         for (int node : path) {
             if (!selected[node]) {
                 new_nodes.push_back(node);
                 cost += input.costs[node];
                 gain += input.scores[node];
+                if (node != target && input.low_value_threshold > 0.0 && input.costs[node] > 0) {
+                    double score = std::max(input.scores[node], 0.0);
+                    if (score < input.low_value_threshold) {
+                        double weak_fraction = (input.low_value_threshold - score) / input.low_value_threshold;
+                        detour_pressure += weak_fraction * static_cast<double>(input.costs[node]);
+                    }
+                }
             }
         }
         if (cost <= 0 || points_used + cost > input.points) continue;
-        if (gain <= 0.0 && input.types[target] != TYPE_GLYPH_SOCKET && input.types[target] != TYPE_LEGENDARY) continue;
+        double cluster_gain = target >= 0 && static_cast<size_t>(target) < input.cluster_scores.size()
+            ? input.cluster_scores[target] * input.cluster_gain_factor
+            : 0.0;
+        double detour_cost = detour_pressure * input.detour_penalty;
+        double adjusted_gain = gain + cluster_gain - detour_cost;
+        if (adjusted_gain <= 0.0 && input.types[target] != TYPE_GLYPH_SOCKET && input.types[target] != TYPE_LEGENDARY) continue;
 
         Candidate candidate;
         candidate.valid = true;
-        candidate.ratio = gain / static_cast<double>(cost);
+        candidate.ratio = adjusted_gain / static_cast<double>(cost);
         candidate.gain = gain;
+        candidate.adjusted_gain = adjusted_gain;
+        candidate.cluster_gain = cluster_gain;
+        candidate.detour_cost = detour_cost;
+        candidate.path_efficiency = candidate.ratio;
         candidate.negative_cost = -cost;
         candidate.target = target;
         candidate.path = std::move(path);
@@ -1756,6 +1881,10 @@ RouteOutput run_greedy_route(const RouteInput& input, const std::vector<int>& ta
         step.added_nodes = std::move(added_nodes);
         step.cost = cost;
         step.gain = best.gain;
+        step.adjusted_gain = best.adjusted_gain;
+        step.cluster_gain = best.cluster_gain;
+        step.detour_cost = best.detour_cost;
+        step.path_efficiency = best.path_efficiency;
         step.points_used = points_used;
         output.steps.push_back(std::move(step));
     }
@@ -1767,7 +1896,8 @@ RouteInput build_route_input(
     const WeightModel& weights,
     int points,
     const std::vector<int>& targets,
-    const std::unordered_map<int, double>& route_bonuses
+    const std::unordered_map<int, double>& route_bonuses,
+    const std::unordered_map<int, double>& cluster_bonuses
 ) {
     RouteInput input;
     input.points = points;
@@ -1777,6 +1907,7 @@ RouteInput build_route_input(
     input.node_ids.reserve(size);
     input.costs.reserve(size);
     input.scores.reserve(size);
+    input.cluster_scores.reserve(size);
     input.types.reserve(size);
     input.adjacency = graph.adjacency;
     for (int index = 0; index < size; ++index) {
@@ -1784,8 +1915,13 @@ RouteInput build_route_input(
         input.node_ids.push_back(node.id);
         input.costs.push_back(node.cost);
         input.scores.push_back(route_node_score(node, weights, &route_bonuses, index));
+        input.cluster_scores.push_back(bonus_for_node(cluster_bonuses, index));
         input.types.push_back(node_type_code(node.type));
     }
+    double score_reference = route_score_reference(input.scores);
+    input.low_value_threshold = score_reference * 0.35;
+    input.detour_penalty = score_reference * weights.glyph_route.detour;
+    input.cluster_gain_factor = weights.glyph_route.path_efficiency;
     return input;
 }
 
@@ -1981,6 +2117,9 @@ json glyph_route_tuning_json(const GlyphRouteTuning& tuning) {
         {"future", round4(tuning.future)},
         {"synergy", round4(tuning.synergy)},
         {"scarcity", round4(tuning.scarcity)},
+        {"cluster", round4(tuning.cluster)},
+        {"detour", round4(tuning.detour)},
+        {"path_efficiency", round4(tuning.path_efficiency)},
         {"fill_target", round4(tuning.fill_target)},
         {"max_bonus_multiplier", round4(tuning.max_bonus_multiplier)}
     };
@@ -2403,6 +2542,10 @@ ScoredRoute score_route(
             for (int index : step.added_nodes) item["added_nodes"].push_back(graph.nodes[index].id);
             item["cost"] = step.cost;
             item["gain_estimate"] = round4(step.gain);
+            item["adjusted_gain_estimate"] = round4(step.adjusted_gain);
+            item["cluster_gain_estimate"] = round4(step.cluster_gain);
+            item["detour_cost_estimate"] = round4(step.detour_cost);
+            item["path_efficiency"] = round4(step.path_efficiency);
             item["points_used"] = step.points_used;
             steps.push_back(std::move(item));
         }
@@ -3846,8 +3989,9 @@ json optimize(const Options& options) {
             Graph graph = build_combined_graph(boards, sequence, rotations, attachments);
             ScoringContext scoring_context = build_scoring_context(graph, glyphs, weights, options.legendary_glyphs);
             auto route_bonuses = glyph_route_node_bonuses(graph, glyphs, weights, scoring_context);
+            auto cluster_bonuses = glyph_cluster_route_bonuses(graph, weights, route_bonuses);
             variants_checked += 1;
-            std::vector<int> targets = candidate_targets(graph, weights, options.candidate_targets, route_bonuses);
+            std::vector<int> targets = candidate_targets(graph, weights, options.candidate_targets, route_bonuses, cluster_bonuses);
             std::vector<int> seeds;
             seeds.push_back(-1);
             seeds.insert(seeds.end(), targets.begin(), targets.end());
@@ -3861,7 +4005,7 @@ json optimize(const Options& options) {
                 return;
             }
 
-            RouteInput input = build_route_input(graph, weights, options.points, targets, route_bonuses);
+            RouteInput input = build_route_input(graph, weights, options.points, targets, route_bonuses, cluster_bonuses);
             std::vector<ScoredRoute> scored(seeds.size());
             std::atomic<size_t> next_index(0);
             int layout_workers = std::min(worker_count, static_cast<int>(seeds.size()));

@@ -193,13 +193,16 @@ paragon_optimizer/bin/paragon_optimize.exe optimize --profile paragon_optimizer/
     "future": 0.35,
     "synergy": 0.25,
     "scarcity": 0.30,
+    "cluster": 0.35,
+    "detour": 0.25,
+    "path_efficiency": 0.50,
     "fill_target": 1.20,
     "max_bonus_multiplier": 1.60
   }
 }
 ```
 
-`activation` усиливает добор порога глифа, `scaling` - ценность статов сверх порога, `future` и `synergy` - ноды, полезные нескольким возможным глифам, `scarcity` - дефицитные общие threshold-статы, `fill_target` задаёт желаемое заполнение радиуса относительно требования, `max_bonus_multiplier` ограничивает максимальный маршрутный hint. Внутри эвристики строится матрица marginal-value для нод в радиусе глифа: она учитывает частичный прогресс к threshold, шаги scaling по 5 статов и небольшой кредит за неполное заполнение следующего scaling-шага.
+`activation` усиливает добор порога глифа, `scaling` - ценность статов сверх порога, `future` и `synergy` - ноды, полезные нескольким возможным глифам, `scarcity` - дефицитные общие threshold-статы, `cluster` добавляет ценность плотных групп полезных нод, `detour` штрафует проход через слабые промежуточные ноды, `path_efficiency` управляет тем, насколько кластерная ценность влияет на выбор следующего шага, `fill_target` задаёт желаемое заполнение радиуса относительно требования, `max_bonus_multiplier` ограничивает максимальный маршрутный hint. Внутри эвристики строится матрица marginal-value для нод в радиусе глифа: она учитывает частичный прогресс к threshold, шаги scaling по 5 статов и небольшой кредит за неполное заполнение следующего scaling-шага.
 
 Явные аргументы CLI переопределяют профиль:
 
@@ -231,6 +234,8 @@ paragon_optimizer/bin/paragon_optimize.exe optimize \
 ```bash
 paragon_optimizer/bin/paragon_optimize.exe optimize --profile paragon_optimizer/profiles/paladin_juggernaut_shield_bash.json --include-route-steps
 ```
+
+Если маршрут не был переписан локальными заменами, в `route_steps` для каждого greedy-шага выводятся `gain_estimate`, `adjusted_gain_estimate`, `cluster_gain_estimate`, `detour_cost_estimate` и `path_efficiency`; это помогает увидеть, где эвристика делает крюк ради плотного кластера.
 
 CLI всегда пишет в stdout чистый JSON. HTML создаётся по умолчанию, а путь попадает в поле `html_file`; если нужен только JSON без HTML-файла, используется `--no-html`.
 
