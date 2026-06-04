@@ -2,7 +2,7 @@
   "class": "druid",
   "points": 270,
   "legendary_glyphs": true,
-  "weights": "../weights/druid.json",
+  "weights": "../weights/druid.example.json",
   "starting_stats": {
     "strength": 440,
     "intelligence": 461,

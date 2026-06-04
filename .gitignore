@@ -19,3 +19,9 @@ bin/
 node_modules/
 __pycache__/
 *.pyc
+
+# Personal optimizer profiles and weights
+/profiles/*.json
+!/profiles/*.example.json
+/weights/*.json
+!/weights/*.example.json
