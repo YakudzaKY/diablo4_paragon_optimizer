@@ -43,9 +43,9 @@ echo [2/3] Running crawler (downloading all classes)...
 echo     This step is slow and may be interrupted by Wowhead rate limits.
 echo.
 
-set "PYTHONPATH=%~dp0.."
+set "PYTHONPATH=%~dp0"
 
-python -m paragon_optimizer.crawler.wowhead_crawler crawl ^
+python -m crawler.wowhead_crawler crawl ^
     --class all ^
     --out data/raw ^
     --sleep 1.5 ^
@@ -67,7 +67,7 @@ echo.
 
 echo [3/3] Normalizing data for all classes...
 
-python -m paragon_optimizer.crawler.normalize normalize ^
+python -m crawler.normalize normalize ^
     --in data/raw ^
     --out data/normalized ^
     --class all
