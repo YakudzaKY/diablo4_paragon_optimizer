@@ -1394,8 +1394,10 @@
       "requirements": {},
       "source_node_id": 671264,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancelightning-671264",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 2
@@ -1441,8 +1443,10 @@
       "requirements": {},
       "source_node_id": 2126158,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxlightning-2126158",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 2
@@ -1531,8 +1535,10 @@
       "requirements": {},
       "source_node_id": 671264,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancelightning-671264",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 3
@@ -1815,8 +1821,10 @@
       "requirements": {},
       "source_node_id": 671264,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancelightning-671264",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 4
@@ -1862,8 +1870,10 @@
       "requirements": {},
       "source_node_id": 2126158,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxlightning-2126158",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 4
@@ -2783,8 +2793,10 @@
       "requirements": {},
       "source_node_id": 671232,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagelightning-671232",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "lightning_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 7
@@ -3282,8 +3294,10 @@
       "requirements": {},
       "source_node_id": 671232,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagelightning-671232",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "lightning_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 8
@@ -3716,8 +3730,10 @@
       "requirements": {},
       "source_node_id": 671232,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagelightning-671232",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "lightning_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 10,
       "y": 9
@@ -7257,8 +7273,10 @@
       "requirements": {},
       "source_node_id": 2126797,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resourcecostreduction-2126797",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resource_cost_reduction": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 16
@@ -7412,7 +7430,8 @@
       "source_node_id": 674305,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/paralyzing-674305",
       "stats": {
-        "damage": 17.5
+        "damage": 17.5,
+        "resource_cost_reduction": 4.0
       },
       "stats_source": "class_board_attributes",
       "type": "rare",
@@ -7630,8 +7649,10 @@
       "requirements": {},
       "source_node_id": 2126797,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resourcecostreduction-2126797",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resource_cost_reduction": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 18

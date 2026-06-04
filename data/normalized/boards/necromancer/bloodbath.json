@@ -1868,8 +1868,10 @@
       "requirements": {},
       "source_node_id": 1023952,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-bonusfortify-1023952",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "fortify_generation": 1.6
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 5
@@ -1915,8 +1917,10 @@
       "requirements": {},
       "source_node_id": 679122,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-overpowerdamage-679122",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "overpower_damage": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 6
@@ -2003,8 +2007,10 @@
       "requirements": {},
       "source_node_id": 679122,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-overpowerdamage-679122",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "overpower_damage": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 6
@@ -2234,7 +2240,8 @@
       "source_node_id": 676093,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/guarded-advance-676093",
       "stats": {
-        "damage_while_fortified": 10.0
+        "damage_while_fortified": 10.0,
+        "fortify_generation": 3.2
       },
       "stats_source": "class_board_attributes",
       "type": "rare",
@@ -2425,8 +2432,8 @@
       "source_node_id": 1193577,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/powerhouse-1193577",
       "stats": {
-        "damage": 2.0,
-        "healing_received": 6.0
+        "healing_received": 6.0,
+        "overpower_damage": 2.0
       },
       "stats_source": "class_board_attributes",
       "type": "rare",
@@ -2595,8 +2602,10 @@
       "requirements": {},
       "source_node_id": 1023952,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-bonusfortify-1023952",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "fortify_generation": 1.6
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 7
@@ -7216,8 +7225,10 @@
       "requirements": {},
       "source_node_id": 679122,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-overpowerdamage-679122",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "overpower_damage": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 17
@@ -7654,7 +7665,7 @@
     },
     {
       "bonus_stats": {
-        "damage": 2.0
+        "overpower_damage": 2.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -7703,8 +7714,8 @@
       "source_node_id": 1198783,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/remedy-1198783",
       "stats": {
-        "damage": 2.0,
-        "intelligence": 10.0
+        "intelligence": 10.0,
+        "overpower_damage": 2.0
       },
       "stats_source": "class_board_attributes",
       "type": "rare",
@@ -7752,8 +7763,10 @@
       "requirements": {},
       "source_node_id": 679122,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-overpowerdamage-679122",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "overpower_damage": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 18
@@ -7971,8 +7984,10 @@
       "requirements": {},
       "source_node_id": 679122,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-overpowerdamage-679122",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "overpower_damage": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 19

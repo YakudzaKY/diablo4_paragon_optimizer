@@ -7632,8 +7632,10 @@
       "requirements": {},
       "source_node_id": 2063127,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-dodgechance-2063127",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "dodge_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 14
@@ -7712,8 +7714,10 @@
       "requirements": {},
       "source_node_id": 2063127,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-dodgechance-2063127",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "dodge_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 14
@@ -8038,8 +8042,10 @@
       "y": 15
     },
     {
-      "bonus_stats": {},
-      "bonus_stats_source": null,
+      "bonus_stats": {
+        "dodge_chance": 2.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
       "id": "in_fighter_13_15",
       "is_starting_node": false,
@@ -8085,7 +8091,8 @@
       "source_node_id": 2041273,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/mosquito-2041273",
       "stats": {
-        "armor": 2.0
+        "armor": 2.0,
+        "dodge_chance": 2.0
       },
       "stats_source": "class_board_attributes",
       "type": "rare",
@@ -8297,8 +8304,10 @@
       "requirements": {},
       "source_node_id": 2063127,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-dodgechance-2063127",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "dodge_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 16
@@ -8344,8 +8353,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 2,
       "y": 17
@@ -8391,8 +8402,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 3,
       "y": 17
@@ -8567,8 +8580,10 @@
       "requirements": {},
       "source_node_id": 2126154,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxfire-2126154",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 1,
       "y": 18
@@ -8687,8 +8702,10 @@
       "requirements": {},
       "source_node_id": 2126154,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxfire-2126154",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 3,
       "y": 18
@@ -9078,8 +9095,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 2,
       "y": 19

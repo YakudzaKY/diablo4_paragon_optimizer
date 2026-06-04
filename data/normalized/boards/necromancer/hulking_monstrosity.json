@@ -1604,15 +1604,18 @@
       "requirements": {},
       "source_node_id": 1199109,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-golemdamage-1199109",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "golem_damage": 12.5,
+        "minion_damage": 12.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 3
     },
     {
       "bonus_stats": {
-        "damage": 25.0
+        "golem_damage": 25.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -1668,7 +1671,7 @@
       "source_node_id": 680358,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/infused-golem-680358",
       "stats": {
-        "damage": 25.0,
+        "golem_damage": 25.0,
         "max_life": 4.0
       },
       "stats_source": "class_board_attributes",
@@ -1717,8 +1720,11 @@
       "requirements": {},
       "source_node_id": 1199109,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-golemdamage-1199109",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "golem_damage": 12.5,
+        "minion_damage": 12.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 3
@@ -1764,8 +1770,10 @@
       "requirements": {},
       "source_node_id": 679368,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-miniondamage-679368",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "minion_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 4
@@ -1940,8 +1948,11 @@
       "requirements": {},
       "source_node_id": 1199109,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-golemdamage-1199109",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "golem_damage": 12.5,
+        "minion_damage": 12.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 4
@@ -2028,15 +2039,17 @@
       "requirements": {},
       "source_node_id": 679368,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-miniondamage-679368",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "minion_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 5
     },
     {
       "bonus_stats": {
-        "damage": 25.0
+        "golem_damage": 25.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -2099,7 +2112,7 @@
       "source_node_id": 680362,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/flesh-horror-680362",
       "stats": {
-        "damage": 25.0,
+        "golem_damage": 25.0,
         "resistance_all": 3.0
       },
       "stats_source": "class_board_attributes",
@@ -2361,8 +2374,10 @@
       "requirements": {},
       "source_node_id": 679368,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-miniondamage-679368",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "minion_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 6
@@ -3352,8 +3367,10 @@
       "requirements": {},
       "source_node_id": 679368,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-miniondamage-679368",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "minion_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 8
@@ -3626,8 +3643,10 @@
       "requirements": {},
       "source_node_id": 679368,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-miniondamage-679368",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "minion_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 9
@@ -4154,8 +4173,10 @@
       "requirements": {},
       "source_node_id": 679368,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-miniondamage-679368",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "minion_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 10
@@ -4744,8 +4765,11 @@
       "requirements": {},
       "source_node_id": 1199109,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-golemdamage-1199109",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "golem_damage": 12.5,
+        "minion_damage": 12.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 9,
       "y": 11
@@ -5436,15 +5460,18 @@
       "requirements": {},
       "source_node_id": 1199109,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-golemdamage-1199109",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "golem_damage": 12.5,
+        "minion_damage": 12.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 8,
       "y": 12
     },
     {
       "bonus_stats": {
-        "damage": 25.0
+        "golem_damage": 25.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -5501,7 +5528,7 @@
       "source_node_id": 680351,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/mutation-680351",
       "stats": {
-        "damage": 25.0,
+        "golem_damage": 25.0,
         "intelligence": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -5550,8 +5577,11 @@
       "requirements": {},
       "source_node_id": 1199109,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-golemdamage-1199109",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "golem_damage": 12.5,
+        "minion_damage": 12.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 10,
       "y": 12
@@ -7317,8 +7347,11 @@
       "requirements": {},
       "source_node_id": 1199109,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-golemdamage-1199109",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "golem_damage": 12.5,
+        "minion_damage": 12.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 17,
       "y": 15
@@ -7579,8 +7612,11 @@
       "requirements": {},
       "source_node_id": 1199109,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-golemdamage-1199109",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "golem_damage": 12.5,
+        "minion_damage": 12.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 16
@@ -7847,8 +7883,11 @@
       "requirements": {},
       "source_node_id": 1199109,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-golemdamage-1199109",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "golem_damage": 12.5,
+        "minion_damage": 12.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 17
@@ -7904,7 +7943,7 @@
     },
     {
       "bonus_stats": {
-        "damage": 25.0
+        "golem_damage": 25.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -7960,7 +7999,7 @@
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/frenzied-golem-680353",
       "stats": {
         "attack_speed": 8.5,
-        "damage": 25.0
+        "golem_damage": 25.0
       },
       "stats_source": "class_board_attributes",
       "type": "rare",

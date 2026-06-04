@@ -2,7 +2,7 @@
   "checked_at": "2026-05-27T10:36:02Z",
   "class": "rogue",
   "counts": {
-    "available_stats": 20,
+    "available_stats": 28,
     "boards": 10,
     "glyphs": 26
   },
@@ -25,9 +25,9 @@
   "detail_errors": [],
   "detail_errors_count": 0,
   "files": {
-    "boards_dir": "paragon_optimizer\\data\\normalized\\boards\\rogue",
-    "class": "paragon_optimizer\\data\\normalized\\classes\\rogue.json",
-    "glyphs_dir": "paragon_optimizer\\data\\normalized\\glyphs\\rogue"
+    "boards_dir": "data\\normalized\\boards\\rogue",
+    "class": "data\\normalized\\classes\\rogue.json",
+    "glyphs_dir": "data\\normalized\\glyphs\\rogue"
   },
   "patch_version": "3.0.2",
   "reuse_events": [],

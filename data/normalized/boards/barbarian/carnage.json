@@ -1394,8 +1394,10 @@
       "requirements": {},
       "source_node_id": 671256,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancecold-671256",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 2
@@ -1441,8 +1443,10 @@
       "requirements": {},
       "source_node_id": 2126156,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxcold-2126156",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 2
@@ -1531,8 +1535,10 @@
       "requirements": {},
       "source_node_id": 671256,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancecold-671256",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 3
@@ -1815,8 +1821,10 @@
       "requirements": {},
       "source_node_id": 671256,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancecold-671256",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 4
@@ -1862,8 +1870,10 @@
       "requirements": {},
       "source_node_id": 2126156,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxcold-2126156",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 4
@@ -2095,8 +2105,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 6
@@ -2568,8 +2580,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 7
@@ -5073,8 +5087,10 @@
       "requirements": {},
       "source_node_id": 1194233,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-berserkdamage-1194233",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "berserking_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 10,
       "y": 11
@@ -5724,7 +5740,7 @@
     },
     {
       "bonus_stats": {
-        "damage": 10.0
+        "berserking_damage": 10.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -5781,7 +5797,7 @@
       "source_node_id": 671198,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/berserker-671198",
       "stats": {
-        "damage": 10.0,
+        "berserking_damage": 10.0,
         "strength": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -5830,8 +5846,10 @@
       "requirements": {},
       "source_node_id": 1194233,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-berserkdamage-1194233",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "berserking_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 12
@@ -6260,8 +6278,10 @@
       "requirements": {},
       "source_node_id": 1194233,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-berserkdamage-1194233",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "berserking_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 13
@@ -7220,8 +7240,10 @@
       "requirements": {},
       "source_node_id": 1194233,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-berserkdamage-1194233",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "berserking_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 16
@@ -7259,8 +7281,10 @@
       "requirements": {},
       "source_node_id": 671235,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-criticalchance-671235",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "critical_strike_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 16
@@ -7349,15 +7373,17 @@
       "requirements": {},
       "source_node_id": 1194233,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-berserkdamage-1194233",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "berserking_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 17
     },
     {
       "bonus_stats": {
-        "damage": 10.0
+        "berserking_damage": 10.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -7405,7 +7431,8 @@
       "source_node_id": 993429,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/enraged-993429",
       "stats": {
-        "damage": 10.0
+        "berserking_damage": 10.0,
+        "critical_strike_chance": 1.0
       },
       "stats_source": "class_board_attributes",
       "type": "rare",
@@ -7582,8 +7609,10 @@
       "requirements": {},
       "source_node_id": 1194233,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-berserkdamage-1194233",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "berserking_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 18
@@ -7621,8 +7650,10 @@
       "requirements": {},
       "source_node_id": 671235,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-criticalchance-671235",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "critical_strike_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 18

@@ -2415,15 +2415,17 @@
       "requirements": {},
       "source_node_id": 680083,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-damagewolf-680083",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "werewolf_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 8
     },
     {
       "bonus_stats": {
-        "damage": 10.0
+        "werewolf_damage": 10.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -2480,7 +2482,7 @@
       "source_node_id": 1195354,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/feral-1195354",
       "stats": {
-        "damage": 10.0,
+        "werewolf_damage": 10.0,
         "willpower": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -2529,8 +2531,10 @@
       "requirements": {},
       "source_node_id": 680083,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-damagewolf-680083",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "werewolf_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 8,
       "y": 8
@@ -3029,8 +3033,10 @@
       "requirements": {},
       "source_node_id": 680083,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-damagewolf-680083",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "werewolf_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 7,
       "y": 9
@@ -5913,8 +5919,10 @@
       "requirements": {},
       "source_node_id": 679159,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-spirit-679159",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_spirit": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 17,
       "y": 13
@@ -6450,7 +6458,8 @@
       "source_node_id": 676190,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/wild-s-call-676190",
       "stats": {
-        "attack_speed": 1.3
+        "attack_speed": 1.3,
+        "max_spirit": 4.0
       },
       "stats_source": "class_board_attributes",
       "type": "rare",
@@ -6490,8 +6499,10 @@
       "requirements": {},
       "source_node_id": 679159,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-spirit-679159",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_spirit": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 18,
       "y": 14
@@ -6719,8 +6730,10 @@
       "requirements": {},
       "source_node_id": 2063127,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-dodgechance-2063127",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "dodge_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 15
@@ -6984,15 +6997,19 @@
       "requirements": {},
       "source_node_id": 2063127,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-dodgechance-2063127",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "dodge_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 16
     },
     {
-      "bonus_stats": {},
-      "bonus_stats_source": null,
+      "bonus_stats": {
+        "crowd_control_duration_reduction": 12.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
       "id": "lust_for_carnage_14_16",
       "is_starting_node": false,
@@ -7038,8 +7055,11 @@
       },
       "source_node_id": 679801,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/fleeting-679801",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "crowd_control_duration_reduction": 12.0,
+        "dodge_chance": 2.0
+      },
+      "stats_source": "class_board_attributes",
       "type": "rare",
       "x": 14,
       "y": 16
@@ -7077,8 +7097,10 @@
       "requirements": {},
       "source_node_id": 679129,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-ccdurationreduction-679129",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "crowd_control_duration_reduction": 6.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 16
@@ -7284,8 +7306,10 @@
       "requirements": {},
       "source_node_id": 679129,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-ccdurationreduction-679129",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "crowd_control_duration_reduction": 6.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 17
@@ -7323,8 +7347,10 @@
       "requirements": {},
       "source_node_id": 679129,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-ccdurationreduction-679129",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "crowd_control_duration_reduction": 6.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 17

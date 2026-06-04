@@ -4770,8 +4770,10 @@
       "requirements": {},
       "source_node_id": 680076,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-damageearth-680076",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "earth_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 9,
       "y": 11
@@ -5462,15 +5464,17 @@
       "requirements": {},
       "source_node_id": 680076,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-damageearth-680076",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "earth_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 8,
       "y": 12
     },
     {
       "bonus_stats": {
-        "damage": 10.0
+        "earth_damage": 10.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -5535,7 +5539,7 @@
       "source_node_id": 676100,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/earthen-power-676100",
       "stats": {
-        "damage": 10.0,
+        "earth_damage": 10.0,
         "willpower": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -5584,8 +5588,10 @@
       "requirements": {},
       "source_node_id": 680076,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-damageearth-680076",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "earth_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 10,
       "y": 12

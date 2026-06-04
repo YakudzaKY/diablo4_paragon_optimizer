@@ -2076,6 +2076,7 @@
       "source_node_id": 678825,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageelemental-678825",
       "stats": {
+        "non_physical_damage": 5.0,
         "physical_damage": 5.0
       },
       "stats_source": "search_text",
@@ -2456,6 +2457,7 @@
       "source_node_id": 678825,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageelemental-678825",
       "stats": {
+        "non_physical_damage": 5.0,
         "physical_damage": 5.0
       },
       "stats_source": "search_text",
@@ -2952,6 +2954,7 @@
       "source_node_id": 678825,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageelemental-678825",
       "stats": {
+        "non_physical_damage": 5.0,
         "physical_damage": 5.0
       },
       "stats_source": "search_text",
@@ -7079,8 +7082,11 @@
       "requirements": {},
       "source_node_id": 678800,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagetoburning-678800",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "burning_damage": 5.0,
+        "damage_to_burning": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 7,
       "y": 14
@@ -7345,15 +7351,18 @@
       "requirements": {},
       "source_node_id": 678800,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagetoburning-678800",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "burning_damage": 5.0,
+        "damage_to_burning": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 15
     },
     {
       "bonus_stats": {
-        "damage": 10.0
+        "burning_damage": 10.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -7408,8 +7417,8 @@
       "source_node_id": 674303,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/kindling-674303",
       "stats": {
-        "critical_strike_damage": 15.0,
-        "damage": 10.0
+        "burning_damage": 10.0,
+        "critical_strike_damage": 15.0
       },
       "stats_source": "class_board_attributes",
       "type": "rare",
@@ -7828,8 +7837,11 @@
       "requirements": {},
       "source_node_id": 678800,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagetoburning-678800",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "burning_damage": 5.0,
+        "damage_to_burning": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 7,
       "y": 16

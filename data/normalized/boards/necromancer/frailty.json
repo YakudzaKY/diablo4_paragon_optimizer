@@ -4536,8 +4536,10 @@
       "requirements": {},
       "source_node_id": 955670,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageshadowdot-955670",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "shadow_damage": 7.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 9
@@ -4583,8 +4585,10 @@
       "requirements": {},
       "source_node_id": 671248,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageshadow-671248",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "shadow_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 9
@@ -5185,8 +5189,10 @@
       "requirements": {},
       "source_node_id": 955670,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageshadowdot-955670",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "shadow_damage": 7.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 10
@@ -5248,6 +5254,7 @@
       "source_node_id": 953578,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/lingering-shadows-953578",
       "stats": {
+        "resource_cost_reduction": 4.0,
         "shadow_damage": 15.0
       },
       "stats_source": "class_board_attributes",
@@ -6007,8 +6014,10 @@
       "requirements": {},
       "source_node_id": 955670,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageshadowdot-955670",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "shadow_damage": 7.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 11
@@ -6054,8 +6063,10 @@
       "requirements": {},
       "source_node_id": 671248,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageshadow-671248",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "shadow_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 11
@@ -7262,8 +7273,10 @@
       "requirements": {},
       "source_node_id": 671266,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistanceshadow-671266",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 14
@@ -7736,8 +7749,10 @@
       "requirements": {},
       "source_node_id": 671266,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistanceshadow-671266",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 15
@@ -8080,8 +8095,10 @@
       "requirements": {},
       "source_node_id": 671266,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistanceshadow-671266",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 16

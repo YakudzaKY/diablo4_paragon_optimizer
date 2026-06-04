@@ -1386,8 +1386,10 @@
       "requirements": {},
       "source_node_id": 1044933,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-barrierpotency-1044933",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "barrier_generation": 3.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 2
@@ -1517,15 +1519,19 @@
       "requirements": {},
       "source_node_id": 1044933,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-barrierpotency-1044933",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "barrier_generation": 3.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 3
     },
     {
-      "bonus_stats": {},
-      "bonus_stats_source": null,
+      "bonus_stats": {
+        "barrier_generation": 6.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
       "id": "viscous_shield_15_3",
       "is_starting_node": false,
@@ -1578,6 +1584,7 @@
       "source_node_id": 2049880,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/primal-ward-2049880",
       "stats": {
+        "barrier_generation": 6.0,
         "critical_strike_damage": 15.0
       },
       "stats_source": "class_board_attributes",
@@ -1790,8 +1797,10 @@
       "requirements": {},
       "source_node_id": 1044933,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-barrierpotency-1044933",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "barrier_generation": 3.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 4
@@ -5031,8 +5040,10 @@
       "requirements": {},
       "source_node_id": 2066590,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-barrierdamage-2066590",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "barrier_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 10,
       "y": 11
@@ -5682,7 +5693,7 @@
     },
     {
       "bonus_stats": {
-        "damage": 10.0
+        "barrier_damage": 10.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -5739,7 +5750,7 @@
       "source_node_id": 2046067,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/fearless-2046067",
       "stats": {
-        "damage": 10.0,
+        "barrier_damage": 10.0,
         "dexterity": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -5788,8 +5799,10 @@
       "requirements": {},
       "source_node_id": 2066590,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-barrierdamage-2066590",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "barrier_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 12
@@ -6226,8 +6239,10 @@
       "requirements": {},
       "source_node_id": 2066590,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-barrierdamage-2066590",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "barrier_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 13
@@ -7194,8 +7209,10 @@
       "requirements": {},
       "source_node_id": 1044933,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-barrierpotency-1044933",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "barrier_generation": 3.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 16
@@ -7241,8 +7258,10 @@
       "requirements": {},
       "source_node_id": 671264,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancelightning-671264",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 16
@@ -7323,8 +7342,10 @@
       "requirements": {},
       "source_node_id": 1044933,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-barrierpotency-1044933",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "barrier_generation": 3.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 17
@@ -7544,8 +7565,10 @@
       "requirements": {},
       "source_node_id": 1044933,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-barrierpotency-1044933",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "barrier_generation": 3.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 18
@@ -7591,8 +7614,10 @@
       "requirements": {},
       "source_node_id": 671264,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancelightning-671264",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 18

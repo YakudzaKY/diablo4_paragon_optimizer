@@ -3065,8 +3065,10 @@
       "requirements": {},
       "source_node_id": 2126166,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-fury-glyph-2126166",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_fury": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 3,
       "y": 6
@@ -3319,8 +3321,10 @@
       "requirements": {},
       "source_node_id": 953414,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-furyonkill-953414",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "fury_on_kill": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 6
@@ -3468,8 +3472,10 @@
       "requirements": {},
       "source_node_id": 2126166,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-fury-glyph-2126166",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_fury": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 7
@@ -3648,7 +3654,7 @@
     },
     {
       "bonus_stats": {
-        "max_fury": 2.0
+        "fury_on_kill": 2.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -3703,7 +3709,7 @@
       "source_node_id": 679912,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/hunter-killer-679912",
       "stats": {
-        "max_fury": 2.0,
+        "fury_on_kill": 2.0,
         "movement_speed": 20.0
       },
       "stats_source": "class_board_attributes",
@@ -3879,8 +3885,10 @@
       "requirements": {},
       "source_node_id": 2126166,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-fury-glyph-2126166",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_fury": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 8
@@ -4090,8 +4098,10 @@
       "requirements": {},
       "source_node_id": 953414,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-furyonkill-953414",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "fury_on_kill": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 8
@@ -4129,8 +4139,10 @@
       "requirements": {},
       "source_node_id": 953414,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-furyonkill-953414",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "fury_on_kill": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 8
@@ -7047,8 +7059,10 @@
       "requirements": {},
       "source_node_id": 2126158,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxlightning-2126158",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 14
@@ -7374,8 +7388,10 @@
       "requirements": {},
       "source_node_id": 671264,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancelightning-671264",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 15
@@ -7679,8 +7695,10 @@
       "requirements": {},
       "source_node_id": 671264,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancelightning-671264",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 10,
       "y": 16
@@ -7726,8 +7744,10 @@
       "requirements": {},
       "source_node_id": 2126158,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxlightning-2126158",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 16
@@ -7773,8 +7793,10 @@
       "requirements": {},
       "source_node_id": 671264,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancelightning-671264",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 16

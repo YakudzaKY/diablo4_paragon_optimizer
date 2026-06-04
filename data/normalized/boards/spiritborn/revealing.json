@@ -2661,7 +2661,8 @@
       "source_node_id": 2052378,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/patience-2052378",
       "stats": {
-        "armor": 3.0
+        "armor": 3.0,
+        "dodge_chance": 2.0
       },
       "stats_source": "class_board_attributes",
       "type": "rare",
@@ -3127,8 +3128,10 @@
       "requirements": {},
       "source_node_id": 2063127,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-dodgechance-2063127",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "dodge_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 7
@@ -3207,8 +3210,10 @@
       "requirements": {},
       "source_node_id": 2063127,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-dodgechance-2063127",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "dodge_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 8,
       "y": 7
@@ -4368,8 +4373,10 @@
       "requirements": {},
       "source_node_id": 671265,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancepoison-671265",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 9
@@ -4829,8 +4836,10 @@
       "requirements": {},
       "source_node_id": 671265,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancepoison-671265",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 9,
       "y": 10
@@ -6262,8 +6271,10 @@
       "requirements": {},
       "source_node_id": 671264,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancelightning-671264",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 12
@@ -7308,8 +7319,10 @@
       "requirements": {},
       "source_node_id": 671264,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancelightning-671264",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 14

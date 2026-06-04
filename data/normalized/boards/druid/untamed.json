@@ -4252,8 +4252,10 @@
       "requirements": {},
       "source_node_id": 2060154,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-companioncdr-2060154",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "cooldown_reduction": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 9
@@ -4887,8 +4889,10 @@
       "requirements": {},
       "source_node_id": 2060154,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-companioncdr-2060154",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "cooldown_reduction": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 10
@@ -5526,8 +5530,10 @@
       "requirements": {},
       "source_node_id": 2060154,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-companioncdr-2060154",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "cooldown_reduction": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 11

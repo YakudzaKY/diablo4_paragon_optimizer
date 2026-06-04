@@ -1602,8 +1602,10 @@
       "requirements": {},
       "source_node_id": 671256,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancecold-671256",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 2
@@ -1948,8 +1950,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 2
@@ -2061,8 +2065,10 @@
       "requirements": {},
       "source_node_id": 671256,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancecold-671256",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 3
@@ -2290,8 +2296,10 @@
       "requirements": {},
       "source_node_id": 671256,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancecold-671256",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 4
@@ -2464,8 +2472,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 4

@@ -2,7 +2,7 @@
   "checked_at": "2026-05-27T10:56:38Z",
   "class": "paladin",
   "counts": {
-    "available_stats": 25,
+    "available_stats": 27,
     "boards": 10,
     "glyphs": 21
   },
@@ -25,9 +25,9 @@
   "detail_errors": [],
   "detail_errors_count": 0,
   "files": {
-    "boards_dir": "paragon_optimizer\\data\\normalized\\boards\\paladin",
-    "class": "paragon_optimizer\\data\\normalized\\classes\\paladin.json",
-    "glyphs_dir": "paragon_optimizer\\data\\normalized\\glyphs\\paladin"
+    "boards_dir": "data\\normalized\\boards\\paladin",
+    "class": "data\\normalized\\classes\\paladin.json",
+    "glyphs_dir": "data\\normalized\\glyphs\\paladin"
   },
   "patch_version": "3.0.2",
   "reuse_events": [],

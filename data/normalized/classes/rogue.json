@@ -3,13 +3,19 @@
     "armor",
     "attack_speed",
     "cooldown_reduction",
+    "core_damage",
+    "critical_strike_chance",
     "critical_strike_damage",
+    "crowd_control_duration_reduction",
     "crowd_controlled_damage",
     "damage",
     "damage_to_elites",
     "damage_to_healthy_enemies",
+    "damage_to_trapped",
     "dexterity",
+    "dodge_chance",
     "healing_received",
+    "imbuement_damage",
     "intelligence",
     "life_per_5_seconds",
     "lucky_hit_chance",
@@ -18,6 +24,8 @@
     "physical_damage",
     "resistance_all",
     "strength",
+    "trap_damage",
+    "ultimate_damage",
     "vulnerable_damage",
     "willpower"
   ],
@@ -88,7 +96,7 @@
   "primary_attributes": [
     "dexterity"
   ],
-  "raw_data_file": "paragon_optimizer\\data\\raw\\rogue\\wowhead_raw.json",
+  "raw_data_file": "data\\raw\\rogue\\wowhead_raw.json",
   "resource": null,
   "schema_version": 1,
   "source_url": "https://www.wowhead.com/diablo-4/paragon-calc/rogue"

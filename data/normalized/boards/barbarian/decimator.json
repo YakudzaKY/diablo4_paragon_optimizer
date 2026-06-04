@@ -2696,15 +2696,17 @@
       "requirements": {},
       "source_node_id": 679122,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-overpowerdamage-679122",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "overpower_damage": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 8
     },
     {
       "bonus_stats": {
-        "damage": 4.0
+        "overpower_damage": 4.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -2753,7 +2755,7 @@
       "source_node_id": 675474,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/destroyer-675474",
       "stats": {
-        "damage": 4.0,
+        "overpower_damage": 4.0,
         "strength": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -2802,8 +2804,10 @@
       "requirements": {},
       "source_node_id": 679122,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-overpowerdamage-679122",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "overpower_damage": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 8
@@ -3199,8 +3203,10 @@
       "requirements": {},
       "source_node_id": 679122,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-overpowerdamage-679122",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "overpower_damage": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 9

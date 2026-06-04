@@ -1901,8 +1901,10 @@
       "requirements": {},
       "source_node_id": 680588,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-bloodorbhealing-680588",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "blood_orb_healing": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 2
@@ -2087,15 +2089,19 @@
       "requirements": {},
       "source_node_id": 680588,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-bloodorbhealing-680588",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "blood_orb_healing": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 3
     },
     {
-      "bonus_stats": {},
-      "bonus_stats_source": null,
+      "bonus_stats": {
+        "blood_orb_healing": 10.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
       "id": "blood_begets_blood_15_3",
       "is_starting_node": false,
@@ -2148,6 +2154,7 @@
       "source_node_id": 680332,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/blooddrinker-680332",
       "stats": {
+        "blood_orb_healing": 10.0,
         "max_life": 4.0
       },
       "stats_source": "class_board_attributes",
@@ -2407,8 +2414,10 @@
       "requirements": {},
       "source_node_id": 680588,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-bloodorbhealing-680588",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "blood_orb_healing": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 4
@@ -3572,15 +3581,19 @@
       "requirements": {},
       "source_node_id": 680588,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-bloodorbhealing-680588",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "blood_orb_healing": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 7
     },
     {
-      "bonus_stats": {},
-      "bonus_stats_source": null,
+      "bonus_stats": {
+        "blood_orb_healing": 10.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
       "id": "blood_begets_blood_5_7",
       "is_starting_node": false,
@@ -3633,6 +3646,7 @@
       "source_node_id": 680342,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/vampiric-680342",
       "stats": {
+        "blood_orb_healing": 10.0,
         "max_life": 4.0
       },
       "stats_source": "class_board_attributes",
@@ -3771,7 +3785,7 @@
     },
     {
       "bonus_stats": {
-        "damage": 10.0
+        "blood_damage": 10.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -3827,7 +3841,7 @@
       "source_node_id": 680338,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/invigorated-680338",
       "stats": {
-        "damage": 10.0,
+        "blood_damage": 10.0,
         "damage_while_healthy": 12.5
       },
       "stats_source": "class_board_attributes",
@@ -3876,8 +3890,10 @@
       "requirements": {},
       "source_node_id": 680604,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-damageblood-680604",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "blood_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 7
@@ -4058,8 +4074,10 @@
       "requirements": {},
       "source_node_id": 680588,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-bloodorbhealing-680588",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "blood_orb_healing": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 8
@@ -4146,8 +4164,10 @@
       "requirements": {},
       "source_node_id": 680588,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-bloodorbhealing-680588",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "blood_orb_healing": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 8
@@ -4365,8 +4385,10 @@
       "requirements": {},
       "source_node_id": 680604,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-damageblood-680604",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "blood_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 8
@@ -4461,8 +4483,10 @@
       "requirements": {},
       "source_node_id": 680604,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-damageblood-680604",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "blood_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 8
@@ -6368,8 +6392,10 @@
       "requirements": {},
       "source_node_id": 680604,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-damageblood-680604",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "blood_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 8,
       "y": 11
@@ -6894,15 +6920,17 @@
       "requirements": {},
       "source_node_id": 680604,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-damageblood-680604",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "blood_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 12
     },
     {
       "bonus_stats": {
-        "damage": 10.0
+        "blood_damage": 10.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -6959,7 +6987,7 @@
       "source_node_id": 680370,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/blood-empowered-680370",
       "stats": {
-        "damage": 10.0,
+        "blood_damage": 10.0,
         "intelligence": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -7361,8 +7389,10 @@
       "requirements": {},
       "source_node_id": 680604,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-damageblood-680604",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "blood_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 7,
       "y": 13

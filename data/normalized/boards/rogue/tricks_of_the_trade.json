@@ -1744,8 +1744,10 @@
       "requirements": {},
       "source_node_id": 671266,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistanceshadow-671266",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 4
@@ -2002,8 +2004,10 @@
       "requirements": {},
       "source_node_id": 671266,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistanceshadow-671266",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 5
@@ -2114,8 +2118,10 @@
       "requirements": {},
       "source_node_id": 2126160,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxshadow-2126160",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 5
@@ -2333,8 +2339,10 @@
       "requirements": {},
       "source_node_id": 671266,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistanceshadow-671266",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 6
@@ -2380,8 +2388,10 @@
       "requirements": {},
       "source_node_id": 2126160,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxshadow-2126160",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 6

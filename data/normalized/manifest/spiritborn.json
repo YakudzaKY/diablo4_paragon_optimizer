@@ -2,7 +2,7 @@
   "checked_at": "2026-05-27T10:50:24Z",
   "class": "spiritborn",
   "counts": {
-    "available_stats": 21,
+    "available_stats": 27,
     "boards": 9,
     "glyphs": 22
   },
@@ -25,9 +25,9 @@
   "detail_errors": [],
   "detail_errors_count": 0,
   "files": {
-    "boards_dir": "paragon_optimizer\\data\\normalized\\boards\\spiritborn",
-    "class": "paragon_optimizer\\data\\normalized\\classes\\spiritborn.json",
-    "glyphs_dir": "paragon_optimizer\\data\\normalized\\glyphs\\spiritborn"
+    "boards_dir": "data\\normalized\\boards\\spiritborn",
+    "class": "data\\normalized\\classes\\spiritborn.json",
+    "glyphs_dir": "data\\normalized\\glyphs\\spiritborn"
   },
   "patch_version": "3.0.2",
   "reuse_events": [],

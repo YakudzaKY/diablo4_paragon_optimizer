@@ -3323,8 +3323,10 @@
       "requirements": {},
       "source_node_id": 1194233,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-berserkdamage-1194233",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "berserking_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 8
@@ -3589,15 +3591,17 @@
       "requirements": {},
       "source_node_id": 1194233,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-berserkdamage-1194233",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "berserking_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 9
     },
     {
       "bonus_stats": {
-        "damage": 10.0
+        "berserking_damage": 10.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -3654,7 +3658,7 @@
       "source_node_id": 2113387,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/wrath-2113387",
       "stats": {
-        "damage": 10.0,
+        "berserking_damage": 10.0,
         "strength": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -4117,8 +4121,10 @@
       "requirements": {},
       "source_node_id": 1194233,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-berserkdamage-1194233",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "berserking_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 10
@@ -4707,8 +4713,11 @@
       "requirements": {},
       "source_node_id": 1194229,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagetobleed-1194229",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "bleed_damage": 5.0,
+        "damage_to_bleeding": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 9,
       "y": 11
@@ -5399,15 +5408,18 @@
       "requirements": {},
       "source_node_id": 1194229,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagetobleed-1194229",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "bleed_damage": 5.0,
+        "damage_to_bleeding": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 8,
       "y": 12
     },
     {
       "bonus_stats": {
-        "damage": 10.0
+        "bleed_damage": 10.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -5464,7 +5476,7 @@
       "source_node_id": 889877,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/revel-889877",
       "stats": {
-        "damage": 10.0,
+        "bleed_damage": 10.0,
         "strength": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -5513,8 +5525,11 @@
       "requirements": {},
       "source_node_id": 1194229,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagetobleed-1194229",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "bleed_damage": 5.0,
+        "damage_to_bleeding": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 10,
       "y": 12
@@ -5891,8 +5906,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 3,
       "y": 13
@@ -5938,8 +5955,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 13
@@ -6544,8 +6563,10 @@
       "requirements": {},
       "source_node_id": 2126154,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxfire-2126154",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 2,
       "y": 14
@@ -6656,8 +6677,10 @@
       "requirements": {},
       "source_node_id": 2126154,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxfire-2126154",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 14
@@ -7004,8 +7027,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 3,
       "y": 15
@@ -7309,8 +7334,11 @@
       "requirements": {},
       "source_node_id": 1194229,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagetobleed-1194229",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "bleed_damage": 5.0,
+        "damage_to_bleeding": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 17,
       "y": 15
@@ -7571,8 +7599,11 @@
       "requirements": {},
       "source_node_id": 1194229,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagetobleed-1194229",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "bleed_damage": 5.0,
+        "damage_to_bleeding": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 16
@@ -7618,8 +7649,10 @@
       "requirements": {},
       "source_node_id": 1194233,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-berserkdamage-1194233",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "berserking_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 17,
       "y": 16
@@ -7837,8 +7870,11 @@
       "requirements": {},
       "source_node_id": 1194229,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagetobleed-1194229",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "bleed_damage": 5.0,
+        "damage_to_bleeding": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 17
@@ -7884,15 +7920,17 @@
       "requirements": {},
       "source_node_id": 1194233,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-berserkdamage-1194233",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "berserking_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 17
     },
     {
       "bonus_stats": {
-        "damage": 10.0
+        "bleed_damage": 10.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -7947,7 +7985,8 @@
       "source_node_id": 873326,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/craving-873326",
       "stats": {
-        "damage": 20.0
+        "berserking_damage": 10.0,
+        "bleed_damage": 10.0
       },
       "stats_source": "class_board_attributes",
       "type": "rare",

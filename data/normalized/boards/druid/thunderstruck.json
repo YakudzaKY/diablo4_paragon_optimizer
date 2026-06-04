@@ -1500,8 +1500,10 @@
       "requirements": {},
       "source_node_id": 680079,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-damagestorm-680079",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "storm_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 1
@@ -1762,15 +1764,17 @@
       "requirements": {},
       "source_node_id": 680079,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-damagestorm-680079",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "storm_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 2
     },
     {
       "bonus_stats": {
-        "damage": 10.0
+        "storm_damage": 10.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -1827,7 +1831,7 @@
       "source_node_id": 676079,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/stormcaller-676079",
       "stats": {
-        "damage": 10.0,
+        "storm_damage": 10.0,
         "willpower": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -2091,8 +2095,10 @@
       "requirements": {},
       "source_node_id": 680079,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-damagestorm-680079",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "storm_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 3
@@ -3212,8 +3218,10 @@
       "requirements": {},
       "source_node_id": 671264,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancelightning-671264",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 6
@@ -3859,8 +3867,10 @@
       "requirements": {},
       "source_node_id": 671264,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancelightning-671264",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 7
@@ -3971,8 +3981,10 @@
       "requirements": {},
       "source_node_id": 2126158,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxlightning-2126158",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 7
@@ -4448,8 +4460,10 @@
       "requirements": {},
       "source_node_id": 2126158,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxlightning-2126158",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 8
@@ -4495,8 +4509,10 @@
       "requirements": {},
       "source_node_id": 671264,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancelightning-671264",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 8
@@ -8417,8 +8433,10 @@
       "requirements": {},
       "source_node_id": 671235,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-criticalchance-671235",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "critical_strike_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 2,
       "y": 17
@@ -8651,8 +8669,10 @@
       "y": 18
     },
     {
-      "bonus_stats": {},
-      "bonus_stats_source": null,
+      "bonus_stats": {
+        "critical_strike_chance": 1.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
       "id": "thunderstruck_2_18",
       "is_starting_node": false,
@@ -8706,6 +8726,7 @@
       "source_node_id": 680040,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/tempest-680040",
       "stats": {
+        "critical_strike_chance": 1.0,
         "vulnerable_damage": 13.0
       },
       "stats_source": "class_board_attributes",
@@ -8746,8 +8767,10 @@
       "requirements": {},
       "source_node_id": 671235,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-criticalchance-671235",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "critical_strike_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 3,
       "y": 18
@@ -9129,8 +9152,10 @@
       "requirements": {},
       "source_node_id": 671235,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-criticalchance-671235",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "critical_strike_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 2,
       "y": 19

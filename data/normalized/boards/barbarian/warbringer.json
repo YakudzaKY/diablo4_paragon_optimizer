@@ -1649,8 +1649,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 4
@@ -1825,8 +1827,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 5
@@ -1905,8 +1909,10 @@
       "requirements": {},
       "source_node_id": 953414,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-furyonkill-953414",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "fury_on_kill": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 6
@@ -1944,8 +1950,10 @@
       "requirements": {},
       "source_node_id": 671223,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-fury-671223",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_fury": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 6
@@ -1983,8 +1991,10 @@
       "requirements": {},
       "source_node_id": 953414,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-furyonkill-953414",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "fury_on_kill": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 6
@@ -2022,8 +2032,10 @@
       "requirements": {},
       "source_node_id": 671223,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-fury-671223",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_fury": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 7,
       "y": 6
@@ -2155,8 +2167,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 6
@@ -2345,8 +2359,10 @@
       "requirements": {},
       "source_node_id": 671223,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-fury-671223",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_fury": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 7
@@ -2392,7 +2408,8 @@
       "source_node_id": 675444,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/hungering-fury-675444",
       "stats": {
-        "max_fury": 6.0
+        "fury_on_kill": 2.0,
+        "max_fury": 4.0
       },
       "stats_source": "class_board_attributes",
       "type": "rare",
@@ -5467,8 +5484,10 @@
       "requirements": {},
       "source_node_id": 671223,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-fury-671223",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_fury": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 13
@@ -6420,8 +6439,10 @@
       "requirements": {},
       "source_node_id": 671223,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-fury-671223",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_fury": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 15
@@ -6459,8 +6480,10 @@
       "requirements": {},
       "source_node_id": 671223,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-fury-671223",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_fury": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 15

@@ -53,6 +53,70 @@ ATTRIBUTE_KEYS = {
     "lightning damage": "lightning_damage",
     "shadow damage": "shadow_damage",
     "poison damage": "poison_damage",
+    "earth damage": "earth_damage",
+    "nature damage": "nature_damage",
+    "werebear damage": "werebear_damage",
+    "werewolf damage": "werewolf_damage",
+    "shapeshifting damage": "shapeshifting_damage",
+    "demonform damage": "demonform_damage",
+    "shadowform damage": "shadowform_damage",
+    "volatile damage": "volatile_damage",
+    "crackling energy damage": "crackling_energy_damage",
+    "trap damage": "trap_damage",
+    "ultimate damage": "ultimate_damage",
+    "burning damage": "burning_damage",
+    "damage to burning": "damage_to_burning",
+    "crackling energy damage": "crackling_energy_damage",
+    "conjuration damage": "conjuration_damage",
+    "barrier damage": "barrier_damage",
+    "demonology damage": "demonology_damage",
+    "hellfire damage": "hellfire_damage",
+    "hex damage": "hex_damage",
+    "abyss damage": "abyss_damage",
+    "damage recast": "damage_recast",
+    "conjuration damage": "conjuration_damage",
+    "barrier damage": "barrier_damage",
+    "demonology damage": "demonology_damage",
+    "hellfire damage": "hellfire_damage",
+    "hex damage": "hex_damage",
+    "abyss damage": "abyss_damage",
+    "damage recast": "damage_recast",
+    "blood orb healing": "blood_orb_healing",
+    "injured damage": "damage_to_injured_enemies",
+    "bleed damage": "bleed_damage",
+    "berserking damage": "berserking_damage",
+    "overpower damage": "overpower_damage",
+    "dust devil damage": "dust_devil_damage",
+    "earthquake damage": "earthquake_damage",
+    "damage to bleeding": "damage_to_bleeding",
+    "storm damage": "storm_damage",
+    "werebear damage": "werebear_damage",
+    "werewolf damage": "werewolf_damage",
+    "shapeshifting damage": "shapeshifting_damage",
+    "nature damage": "nature_damage",
+    "core damage": "core_damage",
+    "damage to poisoned": "damage_to_poisoned",
+    "minion damage": "minion_damage",
+    "skeleton mage damage": "skeleton_mage_damage",
+    "skeleton warrior damage": "skeleton_warrior_damage",
+    "golem damage": "golem_damage",
+    "bone damage": "bone_damage",
+    "blood damage": "blood_damage",
+    "judgement damage": "judgement_damage",
+    "imbuement damage": "imbuement_damage",
+    "trap damage": "trap_damage",
+    "damage to trapped": "damage_to_trapped",
+    "ultimate damage": "ultimate_damage",
+    "burning damage": "burning_damage",
+    "damage to burning": "damage_to_burning",
+    "crackling energy damage": "crackling_energy_damage",
+    "conjuration damage": "conjuration_damage",
+    "barrier damage": "barrier_damage",
+    "demonology damage": "demonology_damage",
+    "hellfire damage": "hellfire_damage",
+    "hex damage": "hex_damage",
+    "abyss damage": "abyss_damage",
+    "damage recast": "damage_recast",
     "damage to crowd controlled enemies": "crowd_controlled_damage",
     "damage to controlled enemies": "crowd_controlled_damage",
     "to controlled enemies": "crowd_controlled_damage",
@@ -74,6 +138,31 @@ ATTRIBUTE_KEYS = {
     "movement speed": "movement_speed",
     "lucky hit chance": "lucky_hit_chance",
     "block chance": "block_chance",
+    "dodge chance": "dodge_chance",
+    "dodge": "dodge_chance",
+    "critical strike chance": "critical_strike_chance",
+    "critical strikes chance": "critical_strike_chance",
+    "strike chance": "critical_strike_chance",
+    "impairment reduction": "crowd_control_duration_reduction",
+    "fortify generation": "fortify_generation",
+    "fury on kill": "fury_on_kill",
+    "earthquake duration": "earthquake_duration",
+    "dust devil size": "dust_devil_size",
+    "dust devils size": "dust_devil_size",
+    "resource generation": "resource_generation",
+    "maximum spirit": "max_spirit",
+    "spirit": "max_spirit",
+    "spirit on kill": "spirit_on_kill",
+    "maximum essence": "max_essence",
+    "essence": "max_essence",
+    "essence on kill": "essence_on_kill",
+    "blood orb healing": "blood_orb_healing",
+    "damage to injured enemies": "damage_to_injured_enemies",
+    "injured": "damage_to_injured_enemies",
+    "resource cost reduction": "resource_cost_reduction",
+    "barrier generation": "barrier_generation",
+    "maximum dominance": "max_dominance",
+    "dominance": "max_dominance",
     "damage reduction": "damage_reduction",
     "blocked damage reduction": "blocked_damage_reduction",
     "thorns": "thorns",
@@ -218,6 +307,106 @@ def stat_key_from_phrase(phrase: str) -> str | None:
     if "to elites" in text or "elite monsters" in text:
         return "damage_to_elites"
 
+    # Additional for barbarian/druid/etc special magic and rare node bonuses
+    if "impairment reduction" in text or "impairment" in text:
+        return "crowd_control_duration_reduction"
+    if "dodge chance" in text or "dodge" in text:
+        return "dodge_chance"
+    if "strike chance" in text or ("critical" in text and "chance" in text):
+        return "critical_strike_chance"
+    if "earthquake" in text and "duration" in text:
+        return "earthquake_duration"
+    if ("dust devil" in text or "dust devils" in text) and "size" in text:
+        return "dust_devil_size"
+    if "fortify" in text and "generation" in text:
+        return "fortify_generation"
+    if "barrier" in text and "generation" in text:
+        return "barrier_generation"
+    if "fury" in text and "on kill" in text:
+        return "fury_on_kill"
+    if "maximum spirit" in text or "max spirit" in text:
+        return "max_spirit"
+    if "spirit" in text and "on kill" in text:
+        return "spirit_on_kill"
+    if "resource generation" in text:
+        return "resource_generation"
+    if "maximum essence" in text or "max essence" in text:
+        return "max_essence"
+    if "essence" in text and "on kill" in text:
+        return "essence_on_kill"
+    if "blood orb" in text and "healing" in text:
+        return "blood_orb_healing"
+    if "injured" in text and "damage" in text:
+        return "damage_to_injured_enemies"
+    if "resource cost reduction" in text or ("cost reduction" in text and "resource" in text):
+        return "resource_cost_reduction"
+    if "berserking" in text and "damage" in text:
+        return "berserking_damage"
+    if "bleed" in text and "damage" in text:
+        return "bleed_damage"
+    if "overpower" in text and "damage" in text:
+        return "overpower_damage"
+    if "dust devil" in text and "damage" in text:
+        return "dust_devil_damage"
+    if "earthquake" in text and "damage" in text:
+        return "earthquake_damage"
+    if "storm" in text and "damage" in text:
+        return "storm_damage"
+    if "werebear" in text and "damage" in text:
+        return "werebear_damage"
+    if "werewolf" in text and "damage" in text or "wolf" in text and "damage" in text:
+        return "werewolf_damage"
+    if "shapeshifting" in text and "damage" in text:
+        return "shapeshifting_damage"
+    if "nature" in text and "damage" in text:
+        return "nature_damage"
+    if "core" in text and "damage" in text:
+        return "core_damage"
+    if "poison" in text and "damage" in text:
+        return "damage_to_poisoned"
+    if "minion" in text and "damage" in text:
+        if "skeleton mage" in text:
+            return "skeleton_mage_damage"
+        if "skeleton warrior" in text:
+            return "skeleton_warrior_damage"
+        if "golem" in text:
+            return "golem_damage"
+        return "minion_damage"
+    if "bone" in text and "damage" in text:
+        return "bone_damage"
+    if "blood" in text and "damage" in text:
+        return "blood_damage"
+    if "judgement" in text and "damage" in text:
+        return "judgement_damage"
+    if "imbuement" in text and "damage" in text:
+        return "imbuement_damage"
+    if "trap" in text and "damage" in text:
+        if "to enemies affected" in text:
+            return "damage_to_trapped"
+        return "trap_damage"
+    if "ultimate" in text and "damage" in text:
+        return "ultimate_damage"
+    if "burning" in text and "damage" in text:
+        if "to enemies" in text:
+            return "damage_to_burning"
+        return "burning_damage"
+    if "crackling energy" in text and "damage" in text:
+        return "crackling_energy_damage"
+    if "conjuration" in text and "damage" in text:
+        return "conjuration_damage"
+    if "barrier" in text and "damage" in text:
+        return "barrier_damage"
+    if "demonology" in text and "damage" in text:
+        return "demonology_damage"
+    if "hellfire" in text and "damage" in text:
+        return "hellfire_damage"
+    if "hex" in text and "damage" in text:
+        return "hex_damage"
+    if "abyss" in text and "damage" in text:
+        return "abyss_damage"
+    if "recast" in text and "damage" in text:
+        return "damage_recast"
+
     cleaned = re.sub(r"\b(to|while|from|of|your|all|another|bonus|if|requirements|met)\b", " ", text)
     cleaned = re.sub(r"[^a-z0-9 -]+", " ", cleaned)
     cleaned = re.sub(r"\s+", " ", cleaned).strip()
@@ -272,7 +461,48 @@ def parse_stats_from_search_text(search_text: str) -> dict[str, float]:
     simple_patterns = [
         (r"^damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "damage"),
         (r"\bphysical damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "physical_damage"),
+        (r"\bfire damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "fire_damage"),
+        (r"\bcold damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "cold_damage"),
+        (r"\blightning damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "lightning_damage"),
+        (r"\bshadow damage.*magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "shadow_damage"),
+        (r"\bnon.physical damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "non_physical_damage"),
         (r"\bvulnerable damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "vulnerable_damage"),
+        (r"bleed damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "bleed_damage"),
+        (r"bleed damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%.*to bleeding", "damage_to_bleeding"),
+        (r"berserking damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "berserking_damage"),
+        (r"overpower damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "overpower_damage"),
+        (r"dust devil damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "dust_devil_damage"),
+        (r"earthquake damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "earthquake_damage"),
+        (r"storm damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "storm_damage"),
+        (r"earth damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "earth_damage"),
+        (r"werebear damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "werebear_damage"),
+        (r"werewolf damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "werewolf_damage"),
+        (r"wolf damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "werewolf_damage"),
+        (r"shapeshifting damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "shapeshifting_damage"),
+        (r"nature magic damage\s+node\s+\+?(\d+(?:\.\d+)?)%", "nature_damage"),
+        (r"core damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "core_damage"),
+        (r"poison damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%.*to poisoned", "damage_to_poisoned"),
+        (r"minion damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "minion_damage"),
+        (r"minion damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%.*skeleton mage", "skeleton_mage_damage"),
+        (r"minion damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%.*skeleton warrior", "skeleton_warrior_damage"),
+        (r"minion damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%.*golem", "golem_damage"),
+        (r"bone damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "bone_damage"),
+        (r"blood damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "blood_damage"),
+        (r"judgement damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "judgement_damage"),
+        (r"imbuement damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "imbuement_damage"),
+        (r"trap damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "trap_damage"),
+        (r"trap damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%.*to enemies affected", "damage_to_trapped"),
+        (r"ultimate damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "ultimate_damage"),
+        (r"burning damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "burning_damage"),
+        (r"burning damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%.*to enemies", "damage_to_burning"),
+        (r"crackling energy damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "crackling_energy_damage"),
+        (r"damage conjuration\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "conjuration_damage"),
+        (r"barrier damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "barrier_damage"),
+        (r"demonology damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "demonology_damage"),
+        (r"damage hellfire\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "hellfire_damage"),
+        (r"hex damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "hex_damage"),
+        (r"damage abyss\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "abyss_damage"),
+        (r"demonology damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)% recast", "damage_recast"),
         (r"\bcritical strikes? damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "critical_strike_damage"),
         (r"\bholy\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "holy_damage"),
         (r"\bto (?:elites|elite)\b.*magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "damage_to_elites"),
@@ -289,15 +519,40 @@ def parse_stats_from_search_text(search_text: str) -> dict[str, float]:
         (r"\bhealthy damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%.*\bto enemies\b", "damage_to_healthy_enemies"),
         (r"magic\s+node\s+\+?(\d+(?:\.\d+)?)%.*\bto healthy enemies\b", "damage_to_healthy_enemies"),
         (r"\battack speed\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "attack_speed"),
-        (r"\bcooldown\s+magic\s+node\s+(\d+(?:\.\d+)?)%\s+reduction", "cooldown_reduction"),
+        (r"\bcooldown\s+.*magic\s+node\s+(\d+(?:\.\d+)?)%\s+.*reduction", "cooldown_reduction"),
         (r"\bmovement\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+speed", "movement_speed"),
         (r"\barmor\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+total", "armor"),
-        (r"\bresistance\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+to all elements", "resistance_all"),
+        (r"\bresistance\b.*magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+to all elements", "resistance_all"),
         (r"\blife\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+maximum", "max_life"),
         (r"\bhealing\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+received", "healing_received"),
         (r"\bhealing\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)\s+life per 5 seconds", "life_per_5_seconds"),
         (r"\blucky hit\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+chance", "lucky_hit_chance"),
         (r"\bblock\s+magic\s+node\s+(\d+(?:\.\d+)?)%\s+chance", "block_chance"),
+        (r"\bdodge\s+magic\s+node\s+(\d+(?:\.\d+)?)%\s+chance", "dodge_chance"),
+        (r"\bcritical strikes?\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+strike chance", "critical_strike_chance"),
+        (r"\bfortify\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+generation", "fortify_generation"),
+        (r"\bbarrier\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+generation", "barrier_generation"),
+        (r"\bdemonology damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)\s+maximum wrath", "max_wrath"),
+        (r"\bdemonology damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)\s+maximum dominance", "max_dominance"),
+        (r"\bdemonform damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "demonform_damage"),
+        (r"\bshadowform damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "shadowform_damage"),
+        (r"\bvolatility damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "volatile_damage"),
+        (r"\bfury\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)\s+maximum", "max_fury"),
+        (r"\bfury\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)\s+on kill", "fury_on_kill"),
+        (r"\bearthquake\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+duration", "earthquake_duration"),
+        (r"\bdust devils?\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+size", "dust_devil_size"),
+        (r"\bcrowd control\s+magic\s+node\s+(\d+(?:\.\d+)?)%\s+impairment reduction", "crowd_control_duration_reduction"),
+        (r"\b(?:mana|resource)\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+resource generation", "resource_generation"),
+        (r"\bspirit\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)\s+maximum", "max_spirit"),
+        (r"\bspirit\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)\s+on kill", "spirit_on_kill"),
+        (r"\bessence\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)\s+maximum", "max_essence"),
+        (r"\bessence\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)\s+on kill", "essence_on_kill"),
+        (r"blood orb healing\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "blood_orb_healing"),
+        (r"injured damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%.*\bto enemies\b", "damage_to_injured_enemies"),
+        (r"magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+resource cost reduction", "resource_cost_reduction"),
+        (r"magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+attack speed", "attack_speed"),
+        (r"\bcooldown\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+companion reduction", "cooldown_reduction"),
+        (r"\blife\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)\s+maximum", "max_life"),
         (r"\bthorns\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)", "thorns"),
         (r"\bfaith\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)\s+maximum", "max_faith"),
     ]
@@ -305,6 +560,26 @@ def parse_stats_from_search_text(search_text: str) -> dict[str, float]:
         match = re.search(pattern, text)
         if match:
             stats[key] = float(match.group(1))
+
+    # CRITICAL GUARD: never assign generic "damage" to a node that has any affix/qualifier
+    # (element, form, school, condition like "while in", "to trapped", "injured", "nature", "earth", "werebear" etc.)
+    # Plain "damage" must be unconditional % damage with no qualifiers whatsoever.
+    if "damage" in stats:
+        if re.search(r'\b(earth|nature|storm|fire|cold|lightning|shadow|poison|physical|non.physical|bleed|blood|bone|burning|crackling|crackling energy|volatility|conjuration|trap|ultimate|core|basic|minion|companion|blood orb|spirit|essence|fury|wrath|dominance|demonology)\s+damage\b', text) or \
+           re.search(r'\b(werebear|werewolf|shapeshifting|shapeshift|demonform|shadowform|human)\s+damage\b', text) or \
+           re.search(r'\bdamage\s+(while in|in|to|for|with|on|affected by|injured|low|trapped|healthy|elite|controlled|fortified|poisoned)\b', text) or \
+           re.search(r'\b(damage\s+\w+\s+magic\s+node|\w+\s+damage\s+magic\s+node)\b', text) or \
+           re.search(r'\b(while in|in form|shapeshifted)\b.*damage', text):
+            raise SystemExit(
+                "CRITICAL ERROR: Generic 'damage' was assigned to a damage node that has an affix/qualifier (element, form, school, condition, etc.). "
+                "Plain unconditional 'damage' must ONLY be used for nodes with NO such qualifiers in their description/search_text. "
+                "All others (earth damage, werebear damage, nature damage, trap damage, damage while in form, conjuration damage, etc.) "
+                "must map to a dedicated specific stat key.\n"
+                f"search_text: {search_text}\n"
+                "Add or fix a pattern in simple_patterns to map it to e.g. earth_damage, werebear_damage, etc. "
+                "Then re-run normalization."
+            )
+
     return stats
 
 
@@ -469,6 +744,8 @@ def normalize_boards(raw: dict[str, Any], output_root: Path, overrides: dict[str
 
     board_ids: list[str] = []
     available_stats: set[str] = set()
+    bad_empty_nodes: list[str] = []
+    boards_to_write: list[tuple[str, dict[str, Any], Path]] = []
     for board_sno, class_board in class_boards.items():
         raw_nodes = board_nodes.get(board_sno)
         if not raw_nodes:
@@ -528,6 +805,11 @@ def normalize_boards(raw: dict[str, Any], output_root: Path, overrides: dict[str
             if not stats:
                 stats = parse_stats_from_search_text(metadata.get("searchText") or "")
                 stats_source = "search_text" if stats else "empty"
+
+            if stats_source == "empty":
+                if current_type not in ("glyph_socket", "legendary", "board_gate") and not bool(metadata.get("isStarter")):
+                    node_desc = names.get("en") or str(source_node_id)
+                    bad_empty_nodes.append(f"{node_id}-{node_desc}")
 
             node_requirements = parse_requirements(metadata.get("searchText") or "")
 
@@ -595,8 +877,18 @@ def normalize_boards(raw: dict[str, Any], output_root: Path, overrides: dict[str
         }
         board_override = ((overrides.get("boards") or {}).get(board_slug) or {})
         board = deep_merge(board, board_override)
-        write_json(output_root / "boards" / class_slug / f"{board_slug}.json", board)
+        board_path = output_root / "boards" / class_slug / f"{board_slug}.json"
+        boards_to_write.append((board_slug, board, board_path))
         board_ids.append(board_slug)
+
+    if bad_empty_nodes:
+        raise SystemExit(
+            "Nodes with empty stats (not glyph socket, legendary or in/exit node): "
+            + ", ".join(bad_empty_nodes)
+        )
+
+    for _slug, bdata, bpath in boards_to_write:
+        write_json(bpath, bdata)
 
     return board_ids, available_stats
 

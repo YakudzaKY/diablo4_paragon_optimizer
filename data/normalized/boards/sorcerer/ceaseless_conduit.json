@@ -1917,8 +1917,10 @@
       "requirements": {},
       "source_node_id": 671232,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagelightning-671232",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "lightning_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 6
@@ -1956,8 +1958,10 @@
       "requirements": {},
       "source_node_id": 671235,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-criticalchance-671235",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "critical_strike_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 6
@@ -2003,8 +2007,10 @@
       "requirements": {},
       "source_node_id": 671232,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagelightning-671232",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "lightning_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 6
@@ -2042,8 +2048,10 @@
       "requirements": {},
       "source_node_id": 671235,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-criticalchance-671235",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "critical_strike_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 7,
       "y": 6
@@ -2360,15 +2368,19 @@
       "requirements": {},
       "source_node_id": 671235,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-criticalchance-671235",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "critical_strike_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 7
     },
     {
-      "bonus_stats": {},
-      "bonus_stats_source": null,
+      "bonus_stats": {
+        "critical_strike_chance": 1.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
       "id": "ceaseless_conduit_6_7",
       "is_starting_node": false,
@@ -2421,6 +2433,7 @@
       "source_node_id": 674310,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/conduit-674310",
       "stats": {
+        "critical_strike_chance": 1.0,
         "lightning_damage": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -2833,8 +2846,10 @@
       "requirements": {},
       "source_node_id": 2126158,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxlightning-2126158",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 8
@@ -2880,8 +2895,10 @@
       "requirements": {},
       "source_node_id": 671264,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancelightning-671264",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 8
@@ -3056,8 +3073,10 @@
       "requirements": {},
       "source_node_id": 2126158,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxlightning-2126158",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 9
@@ -3103,8 +3122,10 @@
       "requirements": {},
       "source_node_id": 671264,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancelightning-671264",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 9
@@ -3150,8 +3171,10 @@
       "requirements": {},
       "source_node_id": 671264,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancelightning-671264",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 9
@@ -5669,8 +5692,10 @@
       "requirements": {},
       "source_node_id": 671232,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagelightning-671232",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "lightning_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 2,
       "y": 14
@@ -6073,8 +6098,10 @@
       "requirements": {},
       "source_node_id": 671232,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagelightning-671232",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "lightning_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 1,
       "y": 15
@@ -6686,8 +6713,10 @@
       "requirements": {},
       "source_node_id": 671232,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagelightning-671232",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "lightning_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 3,
       "y": 16
@@ -7204,8 +7233,10 @@
       "requirements": {},
       "source_node_id": 680063,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/sorcerer-magic-cracklingenergy-680063",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "crackling_energy_damage": 11.3
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 17
@@ -7642,7 +7673,7 @@
     },
     {
       "bonus_stats": {
-        "damage": 22.5
+        "crackling_energy_damage": 22.5
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -7699,7 +7730,7 @@
       "source_node_id": 2113230,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/devastate-2113230",
       "stats": {
-        "damage": 22.5,
+        "crackling_energy_damage": 22.5,
         "intelligence": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -7748,8 +7779,10 @@
       "requirements": {},
       "source_node_id": 680063,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/sorcerer-magic-cracklingenergy-680063",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "crackling_energy_damage": 11.3
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 18
@@ -7967,8 +8000,10 @@
       "requirements": {},
       "source_node_id": 680063,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/sorcerer-magic-cracklingenergy-680063",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "crackling_energy_damage": 11.3
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 19

@@ -1897,8 +1897,10 @@
       "requirements": {},
       "source_node_id": 2075372,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-dustdevildamage-2075372",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "dust_devil_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 8,
       "y": 4
@@ -2161,7 +2163,7 @@
     },
     {
       "bonus_stats": {
-        "damage": 15.0
+        "dust_devil_damage": 15.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -2218,7 +2220,7 @@
       "source_node_id": 2075255,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/squall-2075255",
       "stats": {
-        "damage": 15.0,
+        "dust_devil_damage": 15.0,
         "strength": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -2267,8 +2269,10 @@
       "requirements": {},
       "source_node_id": 2075372,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-dustdevildamage-2075372",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "dust_devil_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 8,
       "y": 5
@@ -2680,8 +2684,10 @@
       "requirements": {},
       "source_node_id": 2075372,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-dustdevildamage-2075372",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "dust_devil_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 7,
       "y": 6
@@ -4209,8 +4215,10 @@
       "requirements": {},
       "source_node_id": 2075405,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-earthquakeduration-2075405",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "earthquake_duration": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 9
@@ -4248,8 +4256,10 @@
       "requirements": {},
       "source_node_id": 2126163,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-dustdevilssize-2126163",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "dust_devil_size": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 9
@@ -4794,8 +4804,10 @@
       "y": 10
     },
     {
-      "bonus_stats": {},
-      "bonus_stats_source": null,
+      "bonus_stats": {
+        "earthquake_duration": 10.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
       "id": "force_of_nature_4_10",
       "is_starting_node": false,
@@ -4855,8 +4867,11 @@
       },
       "source_node_id": 2075259,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/alloyed-2075259",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "dust_devil_size": 10.0,
+        "earthquake_duration": 10.0
+      },
+      "stats_source": "class_board_attributes",
       "type": "rare",
       "x": 4,
       "y": 10
@@ -4894,8 +4909,10 @@
       "requirements": {},
       "source_node_id": 2075405,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-earthquakeduration-2075405",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "earthquake_duration": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 10
@@ -5496,8 +5513,10 @@
       "requirements": {},
       "source_node_id": 2075405,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-earthquakeduration-2075405",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "earthquake_duration": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 11
@@ -5535,8 +5554,10 @@
       "requirements": {},
       "source_node_id": 2126163,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-dustdevilssize-2126163",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "dust_devil_size": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 11
@@ -7220,8 +7241,10 @@
       "requirements": {},
       "source_node_id": 2075440,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-earthquakedamage-2075440",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "earthquake_damage": 11.3
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 14
@@ -7267,8 +7290,10 @@
       "requirements": {},
       "source_node_id": 2075440,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-earthquakedamage-2075440",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "earthquake_damage": 11.3
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 14
@@ -7588,7 +7613,7 @@
     },
     {
       "bonus_stats": {
-        "damage": 2.0
+        "earthquake_damage": 2.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -7651,7 +7676,7 @@
       "source_node_id": 2075257,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/catalyst-2075257",
       "stats": {
-        "damage": 2.0,
+        "earthquake_damage": 2.0,
         "physical_damage": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -7700,8 +7725,10 @@
       "requirements": {},
       "source_node_id": 2075440,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/barbarian-magic-earthquakedamage-2075440",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "earthquake_damage": 11.3
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 15

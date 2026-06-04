@@ -1819,8 +1819,10 @@
       "requirements": {},
       "source_node_id": 2500772,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/paladin-magic-judgementdamage-2500772",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "judgement_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 5
@@ -2157,15 +2159,17 @@
       "requirements": {},
       "source_node_id": 2500772,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/paladin-magic-judgementdamage-2500772",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "judgement_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 6
     },
     {
       "bonus_stats": {
-        "damage": 17.5
+        "judgement_damage": 17.5
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -2220,8 +2224,8 @@
       "source_node_id": 2449924,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/benediction-2449924",
       "stats": {
-        "damage": 17.5,
-        "healing_received": 6.0
+        "healing_received": 6.0,
+        "judgement_damage": 17.5
       },
       "stats_source": "class_board_attributes",
       "type": "rare",
@@ -2582,8 +2586,10 @@
       "requirements": {},
       "source_node_id": 2500772,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/paladin-magic-judgementdamage-2500772",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "judgement_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 7

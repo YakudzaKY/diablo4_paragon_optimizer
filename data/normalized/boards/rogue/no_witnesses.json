@@ -1901,8 +1901,10 @@
       "requirements": {},
       "source_node_id": 2066781,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagewithultimates-2066781",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "ultimate_damage": 8.8
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 2
@@ -2087,8 +2089,10 @@
       "requirements": {},
       "source_node_id": 2066781,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagewithultimates-2066781",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "ultimate_damage": 8.8
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 3
@@ -2402,8 +2406,10 @@
       "requirements": {},
       "source_node_id": 2066781,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagewithultimates-2066781",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "ultimate_damage": 8.8
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 4
@@ -3754,8 +3760,10 @@
       "y": 7
     },
     {
-      "bonus_stats": {},
-      "bonus_stats_source": null,
+      "bonus_stats": {
+        "crowd_control_duration_reduction": 12.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
       "id": "no_witnesses_15_7",
       "is_starting_node": false,
@@ -3801,8 +3809,11 @@
       },
       "source_node_id": 679801,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/fleeting-679801",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "crowd_control_duration_reduction": 12.0,
+        "dodge_chance": 2.0
+      },
+      "stats_source": "class_board_attributes",
       "type": "rare",
       "x": 15,
       "y": 7
@@ -3840,8 +3851,10 @@
       "requirements": {},
       "source_node_id": 679129,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-ccdurationreduction-679129",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "crowd_control_duration_reduction": 6.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 7
@@ -3879,8 +3892,10 @@
       "requirements": {},
       "source_node_id": 2063127,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-dodgechance-2063127",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "dodge_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 17,
       "y": 7
@@ -4299,8 +4314,10 @@
       "requirements": {},
       "source_node_id": 679129,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-ccdurationreduction-679129",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "crowd_control_duration_reduction": 6.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 8
@@ -4338,8 +4355,10 @@
       "requirements": {},
       "source_node_id": 2063127,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-dodgechance-2063127",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "dodge_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 8
@@ -4377,8 +4396,10 @@
       "requirements": {},
       "source_node_id": 679129,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-ccdurationreduction-679129",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "crowd_control_duration_reduction": 6.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 8
@@ -6454,8 +6475,10 @@
       "requirements": {},
       "source_node_id": 2066781,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagewithultimates-2066781",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "ultimate_damage": 8.8
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 11
@@ -6979,7 +7002,7 @@
     },
     {
       "bonus_stats": {
-        "damage": 17.5
+        "ultimate_damage": 17.5
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -7036,8 +7059,8 @@
       "source_node_id": 2113524,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/deliverance-2113524",
       "stats": {
-        "damage": 17.5,
-        "dexterity": 10.0
+        "dexterity": 10.0,
+        "ultimate_damage": 17.5
       },
       "stats_source": "class_board_attributes",
       "type": "rare",
@@ -7085,8 +7108,10 @@
       "requirements": {},
       "source_node_id": 2066781,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagewithultimates-2066781",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "ultimate_damage": 8.8
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 12
@@ -7517,8 +7542,10 @@
       "requirements": {},
       "source_node_id": 2066781,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagewithultimates-2066781",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "ultimate_damage": 8.8
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 13

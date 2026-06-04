@@ -1872,15 +1872,17 @@
       "requirements": {},
       "source_node_id": 1196013,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-damagecore-1196013",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "core_damage": 7.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 3
     },
     {
       "bonus_stats": {
-        "damage": 14.0
+        "core_damage": 14.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -1937,7 +1939,7 @@
       "source_node_id": 993706,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/harmony-993706",
       "stats": {
-        "damage": 14.0,
+        "core_damage": 14.0,
         "willpower": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -2330,8 +2332,10 @@
       "requirements": {},
       "source_node_id": 1196013,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-damagecore-1196013",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "core_damage": 7.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 7,
       "y": 4
@@ -2377,8 +2381,10 @@
       "requirements": {},
       "source_node_id": 1196013,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-damagecore-1196013",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "core_damage": 7.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 8,
       "y": 4
@@ -3347,8 +3353,10 @@
       "requirements": {},
       "source_node_id": 2127462,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resourcegain-2127462",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resource_generation": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 6
@@ -3669,8 +3677,10 @@
       "y": 7
     },
     {
-      "bonus_stats": {},
-      "bonus_stats_source": null,
+      "bonus_stats": {
+        "resource_generation": 4.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
       "id": "ancestral_guidance_11_7",
       "is_starting_node": false,
@@ -3715,7 +3725,8 @@
       "source_node_id": 676111,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/natural-attunement-676111",
       "stats": {
-        "max_life": 4.0
+        "max_life": 4.0,
+        "resource_generation": 4.0
       },
       "stats_source": "class_board_attributes",
       "type": "rare",
@@ -4095,8 +4106,10 @@
       "requirements": {},
       "source_node_id": 2127462,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resourcegain-2127462",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resource_generation": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 8
@@ -4134,8 +4147,10 @@
       "requirements": {},
       "source_node_id": 2127462,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resourcegain-2127462",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resource_generation": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 8
@@ -5402,8 +5417,10 @@
       "requirements": {},
       "source_node_id": 679159,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-spirit-679159",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_spirit": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 10
@@ -5781,7 +5798,7 @@
     },
     {
       "bonus_stats": {
-        "damage": 14.0
+        "core_damage": 14.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -5838,7 +5855,7 @@
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/spiritual-power-676108",
       "stats": {
         "attack_speed": 2.5,
-        "damage": 14.0
+        "core_damage": 14.0
       },
       "stats_source": "class_board_attributes",
       "type": "rare",
@@ -5886,8 +5903,10 @@
       "requirements": {},
       "source_node_id": 1196013,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-damagecore-1196013",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "core_damage": 7.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 8,
       "y": 11
@@ -6022,8 +6041,10 @@
       "y": 11
     },
     {
-      "bonus_stats": {},
-      "bonus_stats_source": null,
+      "bonus_stats": {
+        "max_spirit": 4.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
       "id": "ancestral_guidance_15_11",
       "is_starting_node": false,
@@ -6059,8 +6080,11 @@
       },
       "source_node_id": 676124,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/reclamation-676124",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_spirit": 4.0,
+        "spirit_on_kill": 2.0
+      },
+      "stats_source": "class_board_attributes",
       "type": "rare",
       "x": 15,
       "y": 11
@@ -6098,8 +6122,10 @@
       "requirements": {},
       "source_node_id": 994028,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-spiritonkill-994028",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "spirit_on_kill": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 11
@@ -6274,8 +6300,10 @@
       "requirements": {},
       "source_node_id": 1196013,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-damagecore-1196013",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "core_damage": 7.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 12
@@ -6321,8 +6349,10 @@
       "requirements": {},
       "source_node_id": 2127435,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-attackspeedbasic-2127435",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "attack_speed": 1.3
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 7,
       "y": 12
@@ -6368,8 +6398,10 @@
       "requirements": {},
       "source_node_id": 1196013,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-damagecore-1196013",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "core_damage": 7.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 8,
       "y": 12
@@ -6579,8 +6611,10 @@
       "requirements": {},
       "source_node_id": 994028,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-spiritonkill-994028",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "spirit_on_kill": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 12
@@ -6618,8 +6652,10 @@
       "requirements": {},
       "source_node_id": 679159,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-spirit-679159",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_spirit": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 12
@@ -6657,8 +6693,10 @@
       "requirements": {},
       "source_node_id": 679159,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-spirit-679159",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_spirit": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 12
@@ -6833,8 +6871,10 @@
       "requirements": {},
       "source_node_id": 2127435,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-attackspeedbasic-2127435",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "attack_speed": 1.3
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 8,
       "y": 13

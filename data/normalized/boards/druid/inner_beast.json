@@ -6296,8 +6296,10 @@
       "requirements": {},
       "source_node_id": 1195961,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-damageshapeshifting-1195961",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "shapeshifting_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 8,
       "y": 11
@@ -6814,15 +6816,17 @@
       "requirements": {},
       "source_node_id": 1195961,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-damageshapeshifting-1195961",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "shapeshifting_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 12
     },
     {
       "bonus_stats": {
-        "damage": 10.0
+        "shapeshifting_damage": 10.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -6879,7 +6883,7 @@
       "source_node_id": 676139,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/shapeshifter-676139",
       "stats": {
-        "damage": 10.0,
+        "shapeshifting_damage": 10.0,
         "willpower": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -7273,8 +7277,10 @@
       "requirements": {},
       "source_node_id": 1195961,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-damageshapeshifting-1195961",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "shapeshifting_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 7,
       "y": 13

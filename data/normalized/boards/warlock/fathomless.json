@@ -3002,15 +3002,17 @@
       "requirements": {},
       "source_node_id": 2528094,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagedemonology-2528094",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "demonology_damage": 17.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 17,
       "y": 5
     },
     {
       "bonus_stats": {
-        "damage": 17.5
+        "demonology_damage": 17.5
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -3067,7 +3069,7 @@
       "source_node_id": 2451117,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/chaining-2451117",
       "stats": {
-        "damage": 17.5,
+        "demonology_damage": 17.5,
         "willpower": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -3116,8 +3118,10 @@
       "requirements": {},
       "source_node_id": 2528094,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagedemonology-2528094",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "demonology_damage": 17.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 19,
       "y": 5
@@ -3634,8 +3638,10 @@
       "requirements": {},
       "source_node_id": 2528094,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagedemonology-2528094",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "demonology_damage": 17.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 18,
       "y": 6
@@ -4683,8 +4689,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 8
@@ -5246,8 +5254,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 10,
       "y": 9
@@ -7695,8 +7705,10 @@
       "requirements": {},
       "source_node_id": 2528094,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagedemonology-2528094",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "demonology_damage": 17.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 14
@@ -7791,8 +7803,10 @@
       "requirements": {},
       "source_node_id": 2528094,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagedemonology-2528094",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "demonology_damage": 17.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 14
@@ -8093,7 +8107,7 @@
     },
     {
       "bonus_stats": {
-        "damage": 17.5
+        "demonology_damage": 17.5
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -8149,7 +8163,7 @@
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/binding-2451111",
       "stats": {
         "critical_strike_damage": 15.0,
-        "damage": 17.5
+        "demonology_damage": 17.5
       },
       "stats_source": "class_board_attributes",
       "type": "rare",
@@ -8369,8 +8383,10 @@
       "requirements": {},
       "source_node_id": 2528094,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagedemonology-2528094",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "demonology_damage": 17.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 16

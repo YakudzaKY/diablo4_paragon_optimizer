@@ -2415,15 +2415,18 @@
       "requirements": {},
       "source_node_id": 680396,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/rogue-magic-damagetotrapped-680396",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "damage_to_trapped": 5.0,
+        "trap_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 8
     },
     {
       "bonus_stats": {
-        "damage": 10.0
+        "damage_to_trapped": 10.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -2480,7 +2483,7 @@
       "source_node_id": 678275,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/engineering-678275",
       "stats": {
-        "damage": 10.0,
+        "damage_to_trapped": 10.0,
         "dexterity": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -2529,8 +2532,11 @@
       "requirements": {},
       "source_node_id": 680396,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/rogue-magic-damagetotrapped-680396",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "damage_to_trapped": 5.0,
+        "trap_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 8,
       "y": 8
@@ -3021,8 +3027,11 @@
       "requirements": {},
       "source_node_id": 680396,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/rogue-magic-damagetotrapped-680396",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "damage_to_trapped": 5.0,
+        "trap_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 7,
       "y": 9
@@ -4719,8 +4728,10 @@
       "requirements": {},
       "source_node_id": 671265,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancepoison-671265",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 12
@@ -5196,8 +5207,10 @@
       "requirements": {},
       "source_node_id": 680360,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/rogue-magic-damagetrap-680360",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "trap_damage": 10.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 12
@@ -5370,8 +5383,10 @@
       "requirements": {},
       "source_node_id": 671265,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancepoison-671265",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 13
@@ -5890,8 +5905,10 @@
       "requirements": {},
       "source_node_id": 680360,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/rogue-magic-damagetrap-680360",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "trap_damage": 10.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 13
@@ -5937,8 +5954,10 @@
       "requirements": {},
       "source_node_id": 680418,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/rogue-magic-trapcooldown-680418",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "cooldown_reduction": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 17,
       "y": 13
@@ -6091,8 +6110,10 @@
       "requirements": {},
       "source_node_id": 671265,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancepoison-671265",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 14
@@ -6439,8 +6460,10 @@
       "requirements": {},
       "source_node_id": 680360,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/rogue-magic-damagetrap-680360",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "trap_damage": 10.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 14
@@ -6542,8 +6565,10 @@
       "requirements": {},
       "source_node_id": 680418,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/rogue-magic-trapcooldown-680418",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "cooldown_reduction": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 18,
       "y": 14
@@ -6581,8 +6606,10 @@
       "requirements": {},
       "source_node_id": 671235,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-criticalchance-671235",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "critical_strike_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 15
@@ -6810,15 +6837,17 @@
       "requirements": {},
       "source_node_id": 680360,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/rogue-magic-damagetrap-680360",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "trap_damage": 10.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 16
     },
     {
       "bonus_stats": {
-        "damage": 20.0
+        "trap_damage": 20.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -6866,7 +6895,8 @@
       "source_node_id": 678277,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/trapper-678277",
       "stats": {
-        "damage": 20.0
+        "critical_strike_chance": 1.0,
+        "trap_damage": 20.0
       },
       "stats_source": "class_board_attributes",
       "type": "rare",
@@ -6906,8 +6936,10 @@
       "requirements": {},
       "source_node_id": 671235,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-criticalchance-671235",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "critical_strike_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 7,
       "y": 16
@@ -7186,8 +7218,10 @@
       "requirements": {},
       "source_node_id": 680360,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/rogue-magic-damagetrap-680360",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "trap_damage": 10.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 17
@@ -7233,8 +7267,10 @@
       "requirements": {},
       "source_node_id": 680360,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/rogue-magic-damagetrap-680360",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "trap_damage": 10.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 7,
       "y": 17

@@ -2719,8 +2719,10 @@
       "requirements": {},
       "source_node_id": 671265,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancepoison-671265",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 8,
       "y": 6
@@ -3159,8 +3161,10 @@
       "requirements": {},
       "source_node_id": 2126150,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxpoison-2126150",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 7
@@ -3206,8 +3210,10 @@
       "requirements": {},
       "source_node_id": 671265,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancepoison-671265",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 7,
       "y": 7
@@ -3253,8 +3259,10 @@
       "requirements": {},
       "source_node_id": 2126150,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxpoison-2126150",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 8,
       "y": 7
@@ -3773,8 +3781,10 @@
       "requirements": {},
       "source_node_id": 671265,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancepoison-671265",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 7,
       "y": 8
@@ -6937,8 +6947,10 @@
       "requirements": {},
       "source_node_id": 1196013,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-damagecore-1196013",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "core_damage": 7.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 2,
       "y": 14
@@ -7412,15 +7424,17 @@
       "requirements": {},
       "source_node_id": 1196013,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-damagecore-1196013",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "core_damage": 7.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 1,
       "y": 15
     },
     {
       "bonus_stats": {
-        "damage": 14.0
+        "core_damage": 14.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -7469,7 +7483,7 @@
       "source_node_id": 2087258,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/essential-2087258",
       "stats": {
-        "damage": 14.0,
+        "core_damage": 14.0,
         "dexterity": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -7935,8 +7949,10 @@
       "requirements": {},
       "source_node_id": 1196013,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/druid-magic-damagecore-1196013",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "core_damage": 7.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 3,
       "y": 16

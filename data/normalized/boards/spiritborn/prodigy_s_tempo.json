@@ -3065,8 +3065,10 @@
       "requirements": {},
       "source_node_id": 2129267,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/spiritborn-magic-vigor-2129267",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_spirit": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 3,
       "y": 6
@@ -3467,8 +3469,10 @@
       "requirements": {},
       "source_node_id": 2129267,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/spiritborn-magic-vigor-2129267",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_spirit": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 7
@@ -3694,7 +3698,8 @@
       "source_node_id": 2112955,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/sprightful-2112955",
       "stats": {
-        "attack_speed": 1.3
+        "attack_speed": 1.3,
+        "dodge_chance": 2.0
       },
       "stats_source": "class_board_attributes",
       "type": "rare",
@@ -3734,8 +3739,10 @@
       "requirements": {},
       "source_node_id": 2063127,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-dodgechance-2063127",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "dodge_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 7
@@ -3859,8 +3866,10 @@
       "requirements": {},
       "source_node_id": 2129267,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/spiritborn-magic-vigor-2129267",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_spirit": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 8
@@ -4152,8 +4161,10 @@
       "requirements": {},
       "source_node_id": 2063127,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-dodgechance-2063127",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "dodge_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 8
@@ -7021,8 +7032,10 @@
       "requirements": {},
       "source_node_id": 2129267,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/spiritborn-magic-vigor-2129267",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_spirit": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 14
@@ -7243,8 +7256,10 @@
       "y": 15
     },
     {
-      "bonus_stats": {},
-      "bonus_stats_source": null,
+      "bonus_stats": {
+        "resource_generation": 4.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
       "id": "prodigy_s_tempo_11_15",
       "is_starting_node": false,
@@ -7297,8 +7312,10 @@
       },
       "source_node_id": 2060416,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/opportunist-2060416",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resource_generation": 4.0
+      },
+      "stats_source": "class_board_attributes",
       "type": "rare",
       "x": 11,
       "y": 15
@@ -7336,8 +7353,10 @@
       "requirements": {},
       "source_node_id": 2127462,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resourcegain-2127462",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resource_generation": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 15
@@ -7633,8 +7652,10 @@
       "requirements": {},
       "source_node_id": 2127462,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resourcegain-2127462",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resource_generation": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 10,
       "y": 16
@@ -7672,8 +7693,10 @@
       "requirements": {},
       "source_node_id": 2129267,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/spiritborn-magic-vigor-2129267",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_spirit": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 16
@@ -7711,8 +7734,10 @@
       "requirements": {},
       "source_node_id": 2127462,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resourcegain-2127462",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resource_generation": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 16

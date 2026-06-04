@@ -2,7 +2,7 @@
   "checked_at": "2026-05-27T10:42:26Z",
   "class": "necromancer",
   "counts": {
-    "available_stats": 19,
+    "available_stats": 33,
     "boards": 10,
     "glyphs": 23
   },
@@ -25,9 +25,9 @@
   "detail_errors": [],
   "detail_errors_count": 0,
   "files": {
-    "boards_dir": "paragon_optimizer\\data\\normalized\\boards\\necromancer",
-    "class": "paragon_optimizer\\data\\normalized\\classes\\necromancer.json",
-    "glyphs_dir": "paragon_optimizer\\data\\normalized\\glyphs\\necromancer"
+    "boards_dir": "data\\normalized\\boards\\necromancer",
+    "class": "data\\normalized\\classes\\necromancer.json",
+    "glyphs_dir": "data\\normalized\\glyphs\\necromancer"
   },
   "patch_version": "3.0.2",
   "reuse_events": [],

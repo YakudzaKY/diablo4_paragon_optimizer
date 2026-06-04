@@ -1854,8 +1854,11 @@
       "requirements": {},
       "source_node_id": 2612153,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagerecast-2612153",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "damage_recast": 17.5,
+        "demonology_damage": 17.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 7,
       "y": 4
@@ -1901,8 +1904,11 @@
       "requirements": {},
       "source_node_id": 2612153,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagerecast-2612153",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "damage_recast": 17.5,
+        "demonology_damage": 17.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 8,
       "y": 4
@@ -2179,7 +2185,7 @@
     },
     {
       "bonus_stats": {
-        "damage": 17.5
+        "damage_recast": 17.5
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -2228,7 +2234,7 @@
       "source_node_id": 2451214,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/rune-charged-2451214",
       "stats": {
-        "damage": 17.5,
+        "damage_recast": 17.5,
         "willpower": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -2645,8 +2651,11 @@
       "requirements": {},
       "source_node_id": 2612153,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagerecast-2612153",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "damage_recast": 17.5,
+        "demonology_damage": 17.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 6
@@ -4233,8 +4242,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 9
@@ -4585,8 +4596,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 9
@@ -5535,8 +5548,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 11
@@ -6059,8 +6074,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 11
@@ -7072,8 +7089,10 @@
       "requirements": {},
       "source_node_id": 2580336,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-maximumdominance-2580336",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_dominance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 14
@@ -7330,8 +7349,10 @@
       "requirements": {},
       "source_node_id": 2580336,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-maximumdominance-2580336",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_dominance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 14
@@ -7377,15 +7398,19 @@
       "requirements": {},
       "source_node_id": 2580336,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-maximumdominance-2580336",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_dominance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 15
     },
     {
-      "bonus_stats": {},
-      "bonus_stats_source": null,
+      "bonus_stats": {
+        "max_dominance": 2.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
       "id": "dominion_7_15",
       "is_starting_node": false,
@@ -7413,7 +7438,8 @@
       "source_node_id": 2451206,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/armored-summons-2451206",
       "stats": {
-        "armor": 2.0
+        "armor": 2.0,
+        "max_dominance": 2.0
       },
       "stats_source": "class_board_attributes",
       "type": "rare",
@@ -7636,8 +7662,10 @@
       "y": 15
     },
     {
-      "bonus_stats": {},
-      "bonus_stats_source": null,
+      "bonus_stats": {
+        "max_dominance": 2.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
       "id": "dominion_13_15",
       "is_starting_node": false,
@@ -7690,6 +7718,7 @@
       "source_node_id": 2451208,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/eye-of-newt-2451208",
       "stats": {
+        "max_dominance": 2.0,
         "max_life": 4.0
       },
       "stats_source": "class_board_attributes",
@@ -7738,8 +7767,10 @@
       "requirements": {},
       "source_node_id": 2580336,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-maximumdominance-2580336",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_dominance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 15
@@ -7785,8 +7816,10 @@
       "requirements": {},
       "source_node_id": 2580336,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-maximumdominance-2580336",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_dominance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 16
@@ -8129,8 +8162,10 @@
       "requirements": {},
       "source_node_id": 2580336,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-maximumdominance-2580336",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_dominance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 16

@@ -1,19 +1,30 @@
 {
   "available_stats": [
+    "abyss_damage",
     "armor",
     "cooldown_reduction",
+    "critical_strike_chance",
     "critical_strike_damage",
     "damage",
+    "damage_recast",
     "damage_to_elites",
+    "damage_to_injured_enemies",
+    "demonform_damage",
+    "demonology_damage",
     "dexterity",
-    "fire_damage",
     "healing_received",
+    "hellfire_damage",
+    "hex_damage",
     "intelligence",
     "lucky_hit_chance",
+    "max_dominance",
     "max_life",
     "max_wrath",
+    "overpower_damage",
     "resistance_all",
+    "shadowform_damage",
     "strength",
+    "volatile_damage",
     "vulnerable_damage",
     "willpower"
   ],
@@ -77,7 +88,7 @@
   "primary_attributes": [
     "willpower"
   ],
-  "raw_data_file": "paragon_optimizer\\data\\raw\\warlock\\wowhead_raw.json",
+  "raw_data_file": "data\\raw\\warlock\\wowhead_raw.json",
   "resource": null,
   "schema_version": 1,
   "source_url": "https://www.wowhead.com/diablo-4/paragon-calc/warlock"

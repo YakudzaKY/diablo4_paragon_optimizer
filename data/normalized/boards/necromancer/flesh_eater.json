@@ -1394,8 +1394,10 @@
       "requirements": {},
       "source_node_id": 671265,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancepoison-671265",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 2
@@ -1441,8 +1443,10 @@
       "requirements": {},
       "source_node_id": 2126150,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxpoison-2126150",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 2
@@ -1531,8 +1535,10 @@
       "requirements": {},
       "source_node_id": 671265,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancepoison-671265",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 3
@@ -1815,8 +1821,10 @@
       "requirements": {},
       "source_node_id": 671265,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancepoison-671265",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 4
@@ -1862,8 +1870,10 @@
       "requirements": {},
       "source_node_id": 2126150,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxpoison-2126150",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 4
@@ -1999,7 +2009,7 @@
     },
     {
       "bonus_stats": {
-        "damage": 12.5
+        "damage_to_injured_enemies": 12.5
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -2055,7 +2065,7 @@
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/stifle-679882",
       "stats": {
         "attack_speed": 2.5,
-        "damage": 12.5
+        "damage_to_injured_enemies": 12.5
       },
       "stats_source": "class_board_attributes",
       "type": "rare",
@@ -2144,8 +2154,10 @@
       "requirements": {},
       "source_node_id": 678856,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagetolow-678856",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "damage_to_injured_enemies": 6.3
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 6
@@ -2535,8 +2547,10 @@
       "requirements": {},
       "source_node_id": 678856,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagetolow-678856",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "damage_to_injured_enemies": 6.3
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 7
@@ -3059,8 +3073,10 @@
       "requirements": {},
       "source_node_id": 678856,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagetolow-678856",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "damage_to_injured_enemies": 6.3
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 8

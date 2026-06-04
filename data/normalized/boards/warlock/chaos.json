@@ -1872,15 +1872,17 @@
       "requirements": {},
       "source_node_id": 679122,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-overpowerdamage-679122",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "overpower_damage": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 3
     },
     {
       "bonus_stats": {
-        "damage": 2.0
+        "overpower_damage": 2.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -1937,7 +1939,7 @@
       "source_node_id": 2451196,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/overload-2451196",
       "stats": {
-        "damage": 2.0,
+        "overpower_damage": 2.0,
         "willpower": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -2330,8 +2332,10 @@
       "requirements": {},
       "source_node_id": 679122,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-overpowerdamage-679122",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "overpower_damage": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 7,
       "y": 4
@@ -2377,8 +2381,10 @@
       "requirements": {},
       "source_node_id": 679122,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-overpowerdamage-679122",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "overpower_damage": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 8,
       "y": 4
@@ -3099,8 +3105,10 @@
       "requirements": {},
       "source_node_id": 2630079,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hexdamage-2630079",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "hex_damage": 10.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 3,
       "y": 6
@@ -3406,7 +3414,7 @@
     },
     {
       "bonus_stats": {
-        "damage": 17.5
+        "hex_damage": 17.5
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -3455,7 +3463,7 @@
       "source_node_id": 2451194,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/fractal-beam-2451194",
       "stats": {
-        "damage": 17.5,
+        "hex_damage": 17.5,
         "willpower": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -3504,8 +3512,10 @@
       "requirements": {},
       "source_node_id": 2630079,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hexdamage-2630079",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "hex_damage": 10.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 7
@@ -3780,8 +3790,10 @@
       "requirements": {},
       "source_node_id": 2580331,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-maximumwrath-2580331",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_wrath": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 7
@@ -3913,8 +3925,10 @@
       "requirements": {},
       "source_node_id": 2630079,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hexdamage-2630079",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "hex_damage": 10.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 4,
       "y": 8
@@ -4214,8 +4228,10 @@
       "requirements": {},
       "source_node_id": 2580331,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-maximumwrath-2580331",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_wrath": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 8

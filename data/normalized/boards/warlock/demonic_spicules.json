@@ -1996,8 +1996,10 @@
       "y": 5
     },
     {
-      "bonus_stats": {},
-      "bonus_stats_source": null,
+      "bonus_stats": {
+        "critical_strike_chance": 1.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
       "id": "demonic_spicules_5_5",
       "is_starting_node": false,
@@ -2043,6 +2045,7 @@
       "source_node_id": 2451130,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/demon-wall-2451130",
       "stats": {
+        "critical_strike_chance": 1.0,
         "max_life": 4.0
       },
       "stats_source": "class_board_attributes",
@@ -2083,8 +2086,10 @@
       "requirements": {},
       "source_node_id": 671235,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-criticalchance-671235",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "critical_strike_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 5
@@ -2335,8 +2340,10 @@
       "requirements": {},
       "source_node_id": 671235,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-criticalchance-671235",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "critical_strike_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 6
@@ -3285,8 +3292,10 @@
       "requirements": {},
       "source_node_id": 2580331,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-maximumwrath-2580331",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_wrath": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 8
@@ -3551,8 +3560,10 @@
       "requirements": {},
       "source_node_id": 2580331,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-maximumwrath-2580331",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_wrath": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 9
@@ -4071,8 +4082,10 @@
       "requirements": {},
       "source_node_id": 2580331,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-maximumwrath-2580331",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_wrath": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 10

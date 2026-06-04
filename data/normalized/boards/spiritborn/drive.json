@@ -1885,8 +1885,10 @@
       "requirements": {},
       "source_node_id": 2063127,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-dodgechance-2063127",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "dodge_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 2
@@ -2063,15 +2065,19 @@
       "requirements": {},
       "source_node_id": 2063127,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-dodgechance-2063127",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "dodge_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 3
     },
     {
-      "bonus_stats": {},
-      "bonus_stats_source": null,
+      "bonus_stats": {
+        "dodge_chance": 2.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
       "id": "drive_15_3",
       "is_starting_node": false,
@@ -2117,6 +2123,7 @@
       "source_node_id": 2052774,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/nature-s-dance-2052774",
       "stats": {
+        "dodge_chance": 2.0,
         "lucky_hit_chance": 2.5
       },
       "stats_source": "class_board_attributes",
@@ -2325,8 +2332,10 @@
       "requirements": {},
       "source_node_id": 2063127,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-dodgechance-2063127",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "dodge_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 4
@@ -3441,8 +3450,10 @@
       "requirements": {},
       "source_node_id": 671235,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-criticalchance-671235",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "critical_strike_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 3,
       "y": 7
@@ -3538,6 +3549,7 @@
       "source_node_id": 2052793,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/piercing-gale-2052793",
       "stats": {
+        "critical_strike_chance": 1.0,
         "movement_speed": 5.0
       },
       "stats_source": "class_board_attributes",
@@ -3973,8 +3985,10 @@
       "requirements": {},
       "source_node_id": 671235,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-criticalchance-671235",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "critical_strike_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 8

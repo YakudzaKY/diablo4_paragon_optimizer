@@ -1602,8 +1602,10 @@
       "requirements": {},
       "source_node_id": 2630079,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hexdamage-2630079",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "hex_damage": 10.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 2
@@ -1958,7 +1960,7 @@
     },
     {
       "bonus_stats": {
-        "damage": 17.5
+        "hex_damage": 17.5
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -2006,7 +2008,7 @@
       "source_node_id": 2451178,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/resist-2451178",
       "stats": {
-        "damage": 17.5,
+        "hex_damage": 17.5,
         "resistance_all": 3.0
       },
       "stats_source": "class_board_attributes",
@@ -2055,8 +2057,10 @@
       "requirements": {},
       "source_node_id": 2630079,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hexdamage-2630079",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "hex_damage": 10.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 3
@@ -2285,8 +2289,10 @@
       "requirements": {},
       "source_node_id": 2630079,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-hexdamage-2630079",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "hex_damage": 10.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 6,
       "y": 4
@@ -6501,8 +6507,10 @@
       "requirements": {},
       "source_node_id": 2526910,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageabyss-2526910",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "abyss_damage": 7.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 11
@@ -7026,7 +7034,7 @@
     },
     {
       "bonus_stats": {
-        "damage": 10.0
+        "abyss_damage": 10.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -7083,7 +7091,7 @@
       "source_node_id": 2451172,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/forbidden-contact-2451172",
       "stats": {
-        "damage": 10.0,
+        "abyss_damage": 10.0,
         "willpower": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -7132,8 +7140,10 @@
       "requirements": {},
       "source_node_id": 2526910,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageabyss-2526910",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "abyss_damage": 7.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 12
@@ -7564,8 +7574,10 @@
       "requirements": {},
       "source_node_id": 2526910,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageabyss-2526910",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "abyss_damage": 7.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 13

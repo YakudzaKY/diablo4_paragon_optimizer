@@ -1,14 +1,14 @@
 import json
 import unittest
 
-from paragon_optimizer.crawler.normalize import (
+from crawler.normalize import (
     infer_edges,
     node_type,
     parse_bonus_stats_from_tooltip,
     parse_stats_from_attributes,
     parse_stats_from_search_text,
 )
-from paragon_optimizer.crawler.wowhead_crawler import (
+from crawler.wowhead_crawler import (
     extract_json_script,
     filter_list_page_by_class,
     infer_class_name_from_items,
@@ -74,6 +74,19 @@ class WowheadCrawlerParsingTests(unittest.TestCase):
             ("healing magic node +3.0% received all classes", {"healing_received": 3}),
             ("healthy damage magic node +6.3% while barbarian, druid, necromancer, paladin", {"damage_while_healthy": 6.3}),
             ("healthy damage magic node +6.3% to enemies necromancer, rogue", {"damage_to_healthy_enemies": 6.3}),
+            # form / school damage magic nodes (now parsed to damage or specific element)
+            ("earth damage magic node +5.0% druid", {"damage": 5.0}),
+            ("storm damage magic node +5.0% druid", {"damage": 5.0}),
+            ("core damage magic node +7.0% druid, rogue", {"damage": 7.0}),
+            ("shapeshifting damage magic node +5.0% druid", {"damage": 5.0}),
+            ("werewolf damage magic node +5.0% druid", {"damage": 5.0}),
+            ("werebear damage magic node +5.0% while in form druid", {"damage": 5.0}),
+            ("poison damage magic node +5.0% to poisoned enemies druid", {"damage": 5.0}),
+            ("fire damage magic node +5% sorcerer", {"fire_damage": 5}),
+            ("cold damage magic node +5% sorcerer", {"cold_damage": 5}),
+            ("lightning damage magic node +5% sorcerer", {"lightning_damage": 5}),
+            ("shadow damage magic node +5% necromancer", {"shadow_damage": 5}),
+            ("shadow damage over time magic node +7.5% necromancer", {"shadow_damage": 7.5}),
         ]
 
         for search_text, expected in cases:

@@ -1500,8 +1500,10 @@
       "requirements": {},
       "source_node_id": 1197900,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/rogue-magic-damageimbued-1197900",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "imbuement_damage": 10.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 1
@@ -1762,8 +1764,10 @@
       "requirements": {},
       "source_node_id": 1197900,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/rogue-magic-damageimbued-1197900",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "imbuement_damage": 10.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 2
@@ -2091,8 +2095,10 @@
       "requirements": {},
       "source_node_id": 1197900,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/rogue-magic-damageimbued-1197900",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "imbuement_damage": 10.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 3
@@ -3029,6 +3035,7 @@
       "source_node_id": 678825,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageelemental-678825",
       "stats": {
+        "non_physical_damage": 5.0,
         "physical_damage": 5.0
       },
       "stats_source": "search_text",
@@ -3145,6 +3152,7 @@
       "source_node_id": 678825,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageelemental-678825",
       "stats": {
+        "non_physical_damage": 5.0,
         "physical_damage": 5.0
       },
       "stats_source": "search_text",
@@ -3673,6 +3681,7 @@
       "source_node_id": 678825,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageelemental-678825",
       "stats": {
+        "non_physical_damage": 5.0,
         "physical_damage": 5.0
       },
       "stats_source": "search_text",
@@ -4691,6 +4700,7 @@
       "source_node_id": 678825,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageelemental-678825",
       "stats": {
+        "non_physical_damage": 5.0,
         "physical_damage": 5.0
       },
       "stats_source": "search_text",
@@ -5427,6 +5437,7 @@
       "source_node_id": 678825,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageelemental-678825",
       "stats": {
+        "non_physical_damage": 5.0,
         "physical_damage": 5.0
       },
       "stats_source": "search_text",
@@ -5804,6 +5815,7 @@
       "source_node_id": 678825,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageelemental-678825",
       "stats": {
+        "non_physical_damage": 5.0,
         "physical_damage": 5.0
       },
       "stats_source": "search_text",

@@ -1650,6 +1650,7 @@
       "source_node_id": 678825,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageelemental-678825",
       "stats": {
+        "non_physical_damage": 5.0,
         "physical_damage": 5.0
       },
       "stats_source": "search_text",
@@ -1828,6 +1829,7 @@
       "source_node_id": 678825,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageelemental-678825",
       "stats": {
+        "non_physical_damage": 5.0,
         "physical_damage": 5.0
       },
       "stats_source": "search_text",
@@ -2168,6 +2170,7 @@
       "source_node_id": 678825,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageelemental-678825",
       "stats": {
+        "non_physical_damage": 5.0,
         "physical_damage": 5.0
       },
       "stats_source": "search_text",
@@ -2872,6 +2875,7 @@
       "source_node_id": 678825,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageelemental-678825",
       "stats": {
+        "non_physical_damage": 5.0,
         "physical_damage": 5.0
       },
       "stats_source": "search_text",
@@ -3091,6 +3095,7 @@
       "source_node_id": 678825,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageelemental-678825",
       "stats": {
+        "non_physical_damage": 5.0,
         "physical_damage": 5.0
       },
       "stats_source": "search_text",
@@ -3140,6 +3145,7 @@
       "source_node_id": 678825,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageelemental-678825",
       "stats": {
+        "non_physical_damage": 5.0,
         "physical_damage": 5.0
       },
       "stats_source": "search_text",

@@ -2057,8 +2057,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 6
@@ -2530,8 +2532,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 7
@@ -4987,8 +4991,10 @@
       "requirements": {},
       "source_node_id": 2528601,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageindemonform-2528601",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "demonform_damage": 10.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 10,
       "y": 11
@@ -5646,7 +5652,7 @@
     },
     {
       "bonus_stats": {
-        "damage": 10.0
+        "demonform_damage": 10.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -5695,7 +5701,7 @@
       "source_node_id": 2451136,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/augmented-2451136",
       "stats": {
-        "damage": 10.0,
+        "demonform_damage": 10.0,
         "willpower": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -5744,8 +5750,10 @@
       "requirements": {},
       "source_node_id": 2528601,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageindemonform-2528601",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "demonform_damage": 10.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 12
@@ -5969,8 +5977,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 13
@@ -6188,8 +6198,10 @@
       "requirements": {},
       "source_node_id": 2528601,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageindemonform-2528601",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "demonform_damage": 10.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 11,
       "y": 13
@@ -6421,8 +6433,10 @@
       "requirements": {},
       "source_node_id": 671272,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancefire-671272",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 14
@@ -7162,8 +7176,10 @@
       "requirements": {},
       "source_node_id": 2528601,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageindemonform-2528601",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "demonform_damage": 10.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 16
@@ -7293,15 +7309,17 @@
       "requirements": {},
       "source_node_id": 2528601,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageindemonform-2528601",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "demonform_damage": 10.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 17
     },
     {
       "bonus_stats": {
-        "damage": 10.0
+        "demonform_damage": 10.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -7350,7 +7368,7 @@
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/eldrich-carapace-2451138",
       "stats": {
         "armor": 1.5,
-        "damage": 10.0
+        "demonform_damage": 10.0
       },
       "stats_source": "class_board_attributes",
       "type": "rare",
@@ -7527,8 +7545,10 @@
       "requirements": {},
       "source_node_id": 2528601,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageindemonform-2528601",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "demonform_damage": 10.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 18

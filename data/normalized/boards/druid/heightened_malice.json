@@ -2165,8 +2165,10 @@
       "requirements": {},
       "source_node_id": 671265,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancepoison-671265",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 4
@@ -2212,8 +2214,10 @@
       "requirements": {},
       "source_node_id": 2126150,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxpoison-2126150",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 15,
       "y": 4
@@ -2517,8 +2521,10 @@
       "requirements": {},
       "source_node_id": 2126150,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancemaxpoison-2126150",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 5
@@ -2630,8 +2636,10 @@
       "requirements": {},
       "source_node_id": 671265,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancepoison-671265",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 5
@@ -2998,8 +3006,10 @@
       "requirements": {},
       "source_node_id": 671265,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancepoison-671265",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 6
@@ -6928,8 +6938,10 @@
       "requirements": {},
       "source_node_id": 678810,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagetopoison-678810",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "damage_to_poisoned": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 2,
       "y": 14
@@ -7403,15 +7415,17 @@
       "requirements": {},
       "source_node_id": 678810,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagetopoison-678810",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "damage_to_poisoned": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 1,
       "y": 15
     },
     {
       "bonus_stats": {
-        "damage": 10.0
+        "damage_to_poisoned": 10.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -7468,7 +7482,7 @@
       "source_node_id": 676138,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/sinking-fangs-676138",
       "stats": {
-        "damage": 10.0,
+        "damage_to_poisoned": 10.0,
         "willpower": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -7934,8 +7948,10 @@
       "requirements": {},
       "source_node_id": 678810,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagetopoison-678810",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "damage_to_poisoned": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 3,
       "y": 16

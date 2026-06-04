@@ -2,13 +2,20 @@
   "available_stats": [
     "armor",
     "attack_speed",
+    "burning_damage",
     "cold_damage",
+    "conjuration_damage",
     "cooldown_reduction",
+    "crackling_energy_damage",
+    "critical_strike_chance",
     "critical_strike_damage",
+    "crowd_control_duration_reduction",
     "crowd_controlled_damage",
     "damage",
+    "damage_to_burning",
     "damage_to_elites",
     "dexterity",
+    "dodge_chance",
     "fire_damage",
     "healing_received",
     "intelligence",
@@ -19,6 +26,7 @@
     "non_physical_damage",
     "physical_damage",
     "resistance_all",
+    "resource_cost_reduction",
     "strength",
     "vulnerable_damage",
     "willpower"
@@ -86,7 +94,7 @@
   "primary_attributes": [
     "dexterity"
   ],
-  "raw_data_file": "paragon_optimizer\\data\\raw\\sorcerer\\wowhead_raw.json",
+  "raw_data_file": "data\\raw\\sorcerer\\wowhead_raw.json",
   "resource": null,
   "schema_version": 1,
   "source_url": "https://www.wowhead.com/diablo-4/paragon-calc/sorcerer"

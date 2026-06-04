@@ -2165,8 +2165,10 @@
       "requirements": {},
       "source_node_id": 671235,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-criticalchance-671235",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "critical_strike_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 4
@@ -2512,8 +2514,10 @@
       "y": 5
     },
     {
-      "bonus_stats": {},
-      "bonus_stats_source": null,
+      "bonus_stats": {
+        "critical_strike_chance": 1.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
       "id": "bone_graft_15_5",
       "is_starting_node": false,
@@ -2567,6 +2571,7 @@
       "source_node_id": 1332448,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/entomb-1332448",
       "stats": {
+        "critical_strike_chance": 1.0,
         "healing_received": 3.0
       },
       "stats_source": "class_board_attributes",
@@ -2607,8 +2612,10 @@
       "requirements": {},
       "source_node_id": 671235,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-criticalchance-671235",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "critical_strike_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 5
@@ -2967,8 +2974,10 @@
       "requirements": {},
       "source_node_id": 671235,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-criticalchance-671235",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "critical_strike_chance": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 16,
       "y": 6
@@ -6263,8 +6272,10 @@
       "requirements": {},
       "source_node_id": 1033296,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-essenceonkill-1033296",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "essence_on_kill": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 12
@@ -6302,8 +6313,10 @@
       "requirements": {},
       "source_node_id": 1033295,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-essence-1033295",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_essence": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 12
@@ -6728,8 +6741,10 @@
       "requirements": {},
       "source_node_id": 1033295,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-essence-1033295",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_essence": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 13
@@ -6767,15 +6782,19 @@
       "requirements": {},
       "source_node_id": 1033295,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-essence-1033295",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "max_essence": 2.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 13
     },
     {
-      "bonus_stats": {},
-      "bonus_stats_source": null,
+      "bonus_stats": {
+        "max_essence": 4.0
+      },
+      "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
       "id": "bone_graft_14_13",
       "is_starting_node": false,
@@ -6811,8 +6830,11 @@
       },
       "source_node_id": 845971,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/reinvigorate-845971",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "essence_on_kill": 2.0,
+        "max_essence": 4.0
+      },
+      "stats_source": "class_board_attributes",
       "type": "rare",
       "x": 14,
       "y": 13
@@ -6901,8 +6923,10 @@
       "requirements": {},
       "source_node_id": 680594,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-damagebone-680594",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "bone_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 2,
       "y": 14
@@ -7284,8 +7308,10 @@
       "requirements": {},
       "source_node_id": 1033296,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-essenceonkill-1033296",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "essence_on_kill": 1.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 14
@@ -7374,15 +7400,17 @@
       "requirements": {},
       "source_node_id": 680594,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-damagebone-680594",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "bone_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 1,
       "y": 15
     },
     {
       "bonus_stats": {
-        "damage": 10.0
+        "bone_damage": 10.0
       },
       "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
@@ -7439,7 +7467,7 @@
       "source_node_id": 680330,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/shaper-of-bone-680330",
       "stats": {
-        "damage": 10.0,
+        "bone_damage": 10.0,
         "intelligence": 10.0
       },
       "stats_source": "class_board_attributes",
@@ -7905,8 +7933,10 @@
       "requirements": {},
       "source_node_id": 680594,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/necromancer-magic-damagebone-680594",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "bone_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 3,
       "y": 16

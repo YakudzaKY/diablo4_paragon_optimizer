@@ -2,7 +2,7 @@
   "checked_at": "2026-05-27T10:20:54Z",
   "class": "druid",
   "counts": {
-    "available_stats": 20,
+    "available_stats": 35,
     "boards": 10,
     "glyphs": 23
   },
@@ -25,9 +25,9 @@
   "detail_errors": [],
   "detail_errors_count": 0,
   "files": {
-    "boards_dir": "paragon_optimizer\\data\\normalized\\boards\\druid",
-    "class": "paragon_optimizer\\data\\normalized\\classes\\druid.json",
-    "glyphs_dir": "paragon_optimizer\\data\\normalized\\glyphs\\druid"
+    "boards_dir": "data\\normalized\\boards\\druid",
+    "class": "data\\normalized\\classes\\druid.json",
+    "glyphs_dir": "data\\normalized\\glyphs\\druid"
   },
   "patch_version": "3.0.2",
   "reuse_events": [],

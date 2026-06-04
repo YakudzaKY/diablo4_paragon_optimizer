@@ -1561,8 +1561,10 @@
       "requirements": {},
       "source_node_id": 671256,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancecold-671256",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 2
@@ -2228,8 +2230,10 @@
       "requirements": {},
       "source_node_id": 671256,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-resistancecold-671256",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "resistance_all": 1.5
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 5,
       "y": 4
@@ -3570,6 +3574,7 @@
       "source_node_id": 678825,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageelemental-678825",
       "stats": {
+        "non_physical_damage": 5.0,
         "physical_damage": 5.0
       },
       "stats_source": "search_text",
@@ -4046,6 +4051,7 @@
       "source_node_id": 678825,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageelemental-678825",
       "stats": {
+        "non_physical_damage": 5.0,
         "physical_damage": 5.0
       },
       "stats_source": "search_text",
@@ -4136,6 +4142,7 @@
       "source_node_id": 678825,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damageelemental-678825",
       "stats": {
+        "non_physical_damage": 5.0,
         "physical_damage": 5.0
       },
       "stats_source": "search_text",
@@ -6517,8 +6524,10 @@
       "requirements": {},
       "source_node_id": 671231,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagecold-671231",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "cold_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 12,
       "y": 11
@@ -7172,8 +7181,10 @@
       "requirements": {},
       "source_node_id": 671231,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagecold-671231",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "cold_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 14,
       "y": 12
@@ -7612,8 +7623,10 @@
       "requirements": {},
       "source_node_id": 671231,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/generic-magic-damagecold-671231",
-      "stats": {},
-      "stats_source": "empty",
+      "stats": {
+        "cold_damage": 5.0
+      },
+      "stats_source": "search_text",
       "type": "magic",
       "x": 13,
       "y": 13
