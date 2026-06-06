@@ -12,6 +12,12 @@
     "en": "Resplendence",
     "ru": "Великолепие"
   },
+  "node_bonus": {
+    "bonus_percent": 30.0,
+    "multiplier": 0.3,
+    "node_type": "magic",
+    "source": "bonus_text.en"
+  },
   "patch_version": "3.0.2",
   "quality": 3,
   "radius": {

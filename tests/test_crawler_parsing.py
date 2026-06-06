@@ -5,6 +5,7 @@ from crawler.normalize import (
     infer_edges,
     node_type,
     parse_bonus_stats_from_tooltip,
+    parse_node_bonus,
     parse_stats_from_attributes,
     parse_stats_from_search_text,
 )
@@ -74,14 +75,14 @@ class WowheadCrawlerParsingTests(unittest.TestCase):
             ("healing magic node +3.0% received all classes", {"healing_received": 3}),
             ("healthy damage magic node +6.3% while barbarian, druid, necromancer, paladin", {"damage_while_healthy": 6.3}),
             ("healthy damage magic node +6.3% to enemies necromancer, rogue", {"damage_to_healthy_enemies": 6.3}),
-            # form / school damage magic nodes (now parsed to damage or specific element)
-            ("earth damage magic node +5.0% druid", {"damage": 5.0}),
-            ("storm damage magic node +5.0% druid", {"damage": 5.0}),
-            ("core damage magic node +7.0% druid, rogue", {"damage": 7.0}),
-            ("shapeshifting damage magic node +5.0% druid", {"damage": 5.0}),
-            ("werewolf damage magic node +5.0% druid", {"damage": 5.0}),
-            ("werebear damage magic node +5.0% while in form druid", {"damage": 5.0}),
-            ("poison damage magic node +5.0% to poisoned enemies druid", {"damage": 5.0}),
+            # form / school damage magic nodes use qualified stat keys
+            ("earth damage magic node +5.0% druid", {"earth_damage": 5.0}),
+            ("storm damage magic node +5.0% druid", {"storm_damage": 5.0}),
+            ("core damage magic node +7.0% druid, rogue", {"core_damage": 7.0}),
+            ("shapeshifting damage magic node +5.0% druid", {"shapeshifting_damage": 5.0}),
+            ("werewolf damage magic node +5.0% druid", {"werewolf_damage": 5.0}),
+            ("werebear damage magic node +5.0% while in form druid", {"werebear_damage": 5.0}),
+            ("poison damage magic node +5.0% to poisoned enemies druid", {"damage_to_poisoned": 5.0}),
             ("fire damage magic node +5% sorcerer", {"fire_damage": 5}),
             ("cold damage magic node +5% sorcerer", {"cold_damage": 5}),
             ("lightning damage magic node +5% sorcerer", {"lightning_damage": 5}),
@@ -103,6 +104,34 @@ Bonus: Another +15.0% Damage to Elites if requirements met:
 Barbarian, Paladin"""
 
         self.assertEqual(parse_bonus_stats_from_tooltip(tooltip), {"damage_to_elites": 15.0})
+
+    def test_parse_glyph_node_bonus_from_english_bonus_text(self) -> None:
+        cases = [
+            (
+                "Grants +30.0% bonus to all Magic nodes within range.",
+                {"node_type": "magic", "bonus_percent": 30.0, "multiplier": 0.3, "source": "bonus_text.en"},
+            ),
+            (
+                "Grants +25.0% bonus to all Rare nodes within range.",
+                {"node_type": "rare", "bonus_percent": 25.0, "multiplier": 0.25, "source": "bonus_text.en"},
+            ),
+            (
+                "Grants +20.0% bonus to all Normal nodes within range.",
+                {"node_type": "normal", "bonus_percent": 20.0, "multiplier": 0.2, "source": "bonus_text.en"},
+            ),
+        ]
+
+        for text, expected in cases:
+            with self.subTest(text=text):
+                self.assertEqual(parse_node_bonus({"en": text, "ru": None}), expected)
+
+    def test_parse_glyph_node_bonus_returns_none_without_matching_effect(self) -> None:
+        bonus_text = {
+            "en": "For every 5 Dexterity purchased within range, you deal +2.0% increased Critical Strike Damage.",
+            "ru": "За каждые 5 ед. ловкости, открытых в радиусе действия, наносимый критический урон увеличивается на 2.0% .",
+        }
+
+        self.assertIsNone(parse_node_bonus(bonus_text))
 
     def test_infer_and_filter_class_names_from_list_items(self) -> None:
         list_page = {

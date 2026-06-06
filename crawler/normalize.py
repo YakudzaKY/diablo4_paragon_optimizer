@@ -612,6 +612,57 @@ def parse_bonus_stats_from_tooltip(tooltip_text: str | None) -> dict[str, float]
     return stats
 
 
+def parse_node_bonus_from_tooltip(tooltip_text: str | None, source: str = "bonus_text.en") -> dict[str, Any] | None:
+    if not tooltip_text:
+        return None
+
+    text = re.sub(r"<[^>]+>", " ", tooltip_text)
+    text = re.sub(r"\s+", " ", text).strip()
+    en_match = re.search(
+        r"\bGrants\s+\+?\s*(\d+(?:\.\d+)?)\s*%\s+bonus\s+to\s+all\s+"
+        r"(Normal|Magic|Rare)\s+nodes\s+within\s+range\b",
+        text,
+        flags=re.IGNORECASE,
+    )
+    if en_match:
+        bonus_percent = float(en_match.group(1))
+        return {
+            "node_type": en_match.group(2).lower(),
+            "bonus_percent": bonus_percent,
+            "multiplier": round(bonus_percent / 100.0, 6),
+            "source": source,
+        }
+
+    ru_match = re.search(
+        r"\bУсиливает\s+все\s+(стандартные|магические|редкие)\s+узлы\s+"
+        r"в\s+радиусе\s+действия\s+на\s+\+?\s*(\d+(?:[\.,]\d+)?)\s*%",
+        text,
+        flags=re.IGNORECASE,
+    )
+    if not ru_match:
+        return None
+
+    node_type_by_ru = {
+        "стандартные": "normal",
+        "магические": "magic",
+        "редкие": "rare",
+    }
+    bonus_percent = float(ru_match.group(2).replace(",", "."))
+    return {
+        "node_type": node_type_by_ru[ru_match.group(1).lower()],
+        "bonus_percent": bonus_percent,
+        "multiplier": round(bonus_percent / 100.0, 6),
+        "source": source,
+    }
+
+
+def parse_node_bonus(bonus_text: dict[str, str | None]) -> dict[str, Any] | None:
+    return (
+        parse_node_bonus_from_tooltip(bonus_text.get("en"), "bonus_text.en")
+        or parse_node_bonus_from_tooltip(bonus_text.get("ru"), "bonus_text.ru")
+    )
+
+
 def deep_merge(base: Any, override: Any) -> Any:
     if isinstance(base, dict) and isinstance(override, dict):
         merged = deepcopy(base)
@@ -929,6 +980,10 @@ def normalize_glyphs(raw: dict[str, Any], output_root: Path, overrides: dict[str
         radius_starting = glyph_meta.get("startingSize")
         upgrade_levels = list(glyph_meta.get("upgradeLevels") or [])
         radius_legendary = radius_starting + len(upgrade_levels) if isinstance(radius_starting, int) else None
+        bonus_text = {
+            "en": detail_tooltip(raw, "glyphs", glyph_sno, "en"),
+            "ru": detail_tooltip(raw, "glyphs", glyph_sno, "ru"),
+        }
         glyph = {
             "schema_version": 1,
             "id": glyph_slug,
@@ -947,10 +1002,8 @@ def normalize_glyphs(raw: dict[str, Any], output_root: Path, overrides: dict[str
             },
             "threshold_attributes": threshold_attrs,
             "skill_tags": normalize_skill_tags(glyph_meta.get("skillTags") or [], tag_lookup),
-            "bonus_text": {
-                "en": detail_tooltip(raw, "glyphs", glyph_sno, "en"),
-                "ru": detail_tooltip(raw, "glyphs", glyph_sno, "ru"),
-            },
+            "bonus_text": bonus_text,
+            "node_bonus": parse_node_bonus(bonus_text),
             "source_url": detail_source_url(raw, "glyphs", glyph_sno) or raw["sources"]["paragon_data"],
             "checked_at": checked_at,
             "patch_version": patch_version,

@@ -12,6 +12,12 @@
     "en": "Elementalist",
     "ru": "Стихии"
   },
+  "node_bonus": {
+    "bonus_percent": 25.0,
+    "multiplier": 0.25,
+    "node_type": "rare",
+    "source": "bonus_text.en"
+  },
   "patch_version": "3.0.2",
   "quality": 3,
   "radius": {

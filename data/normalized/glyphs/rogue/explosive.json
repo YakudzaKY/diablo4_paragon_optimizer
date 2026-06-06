@@ -12,6 +12,7 @@
     "en": "Explosive",
     "ru": "Взрывчатка"
   },
+  "node_bonus": null,
   "patch_version": "3.0.2",
   "quality": 3,
   "radius": {
