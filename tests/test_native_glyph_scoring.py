@@ -72,6 +72,7 @@ class NativeGlyphScoringTests(unittest.TestCase):
         weights: dict[str, object],
         starting_stats: dict[str, float] | None = None,
         points: int = 20,
+        include_route_steps: bool = False,
     ) -> dict[str, object]:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -123,12 +124,16 @@ class NativeGlyphScoringTests(unittest.TestCase):
                     "max_routes": 1,
                     "candidate_targets": 20,
                     "workers": 1,
+                    "include_route_steps": include_route_steps,
                     "no_html": True,
                 },
             )
 
+            command = [str(self.binary), "optimize", "--profile", str(profile_path), "--no-html"]
+            if include_route_steps:
+                command.append("--include-route-steps")
             completed = subprocess.run(
-                [str(self.binary), "optimize", "--profile", str(profile_path), "--no-html"],
+                command,
                 cwd=REPO_ROOT,
                 check=True,
                 stdout=subprocess.PIPE,
@@ -244,6 +249,129 @@ class NativeGlyphScoringTests(unittest.TestCase):
         self.assertTrue(glyph["requirement_met"])
         self.assertAlmostEqual(glyph["stat_in_radius"], 45.5)
         self.assertAlmostEqual(glyph["node_bonus_score"], 10.5)
+
+    def test_final_node_bonus_score_is_kept_when_route_node_bonus_hint_is_disabled(self) -> None:
+        magic_bonus = glyph_payload(
+            "magic_bonus",
+            node_bonus={"node_type": "magic", "bonus_percent": 30.0, "multiplier": 0.3},
+        )
+        payload = self.run_optimizer(
+            nodes=[
+                {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
+                {"id": "socket_a", "x": 0, "y": 1, "type": "glyph_socket", "cost": 1, "stats": {}},
+                {"id": "willpower_magic", "x": 0, "y": 2, "type": "magic", "cost": 1, "stats": {"willpower": 35}},
+            ],
+            edges=[["start", "socket_a"], ["socket_a", "willpower_magic"]],
+            glyph_sockets=["socket_a"],
+            glyphs=[magic_bonus],
+            weights={
+                "weights": {"willpower": 1.0, "glyph_socket": 5.0},
+                "glyph_route": {"node_bonus": 0.0},
+            },
+            points=2,
+        )
+
+        glyph = payload["results"][0]["glyphs"][0]
+        self.assertEqual(glyph["glyph"], "magic_bonus")
+        self.assertAlmostEqual(glyph["node_bonus_score"], 10.5)
+        self.assertIn("willpower_magic", payload["results"][0]["selected_nodes"])
+
+    def test_route_node_bonus_hint_prefers_strengthened_nodes_in_radius(self) -> None:
+        magic_bonus = glyph_payload(
+            "magic_bonus",
+            node_bonus={"node_type": "magic", "bonus_percent": 30.0, "multiplier": 0.3},
+        )
+
+        def run(node_bonus_hint: float) -> dict[str, object]:
+            return self.run_optimizer(
+                nodes=[
+                    {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
+                    {"id": "socket_a", "x": 0, "y": 1, "type": "glyph_socket", "cost": 1, "stats": {}},
+                    {"id": "plain_value", "x": 1, "y": 1, "type": "normal", "cost": 2, "stats": {"damage": 11}},
+                    {"id": "path_to_bonus", "x": 0, "y": 2, "type": "normal", "cost": 1, "stats": {}},
+                    {"id": "bonus_magic", "x": 0, "y": 3, "type": "magic", "cost": 1, "stats": {"damage": 10}},
+                ],
+                edges=[
+                    ["start", "socket_a"],
+                    ["socket_a", "plain_value"],
+                    ["socket_a", "path_to_bonus"],
+                    ["path_to_bonus", "bonus_magic"],
+                ],
+                glyph_sockets=["socket_a"],
+                glyphs=[magic_bonus],
+                weights={
+                    "weights": {"damage": 1.0, "glyph_socket": 5.0},
+                    "glyph_route": {
+                        "node_bonus": node_bonus_hint,
+                        "cluster": 0.0,
+                        "detour": 0.0,
+                        "max_bonus_multiplier": 1.60,
+                    },
+                },
+                points=3,
+                include_route_steps=True,
+            )
+
+        without_hint = run(0.0)["results"][0]
+        with_hint = run(1.0)["results"][0]
+
+        self.assertIn("plain_value", without_hint["selected_nodes"])
+        self.assertNotIn("bonus_magic", without_hint["selected_nodes"])
+        self.assertIn("bonus_magic", with_hint["selected_nodes"])
+        self.assertNotIn("plain_value", with_hint["selected_nodes"])
+        self.assertAlmostEqual(with_hint["glyphs"][0]["node_bonus_score"], 3.0)
+
+    def test_route_node_bonus_hint_includes_potential_rare_bonus_stats(self) -> None:
+        rare_bonus = glyph_payload(
+            "rare_bonus",
+            node_bonus={"node_type": "rare", "bonus_percent": 25.0, "multiplier": 0.25},
+        )
+
+        def run(node_bonus_hint: float) -> dict[str, object]:
+            return self.run_optimizer(
+                nodes=[
+                    {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
+                    {"id": "socket_a", "x": 0, "y": 1, "type": "glyph_socket", "cost": 1, "stats": {}},
+                    {"id": "plain_value", "x": 1, "y": 1, "type": "normal", "cost": 2, "stats": {"damage": 8}},
+                    {"id": "path_to_rare", "x": 0, "y": 2, "type": "normal", "cost": 1, "stats": {}},
+                    {
+                        "id": "bonus_rare",
+                        "x": 0,
+                        "y": 3,
+                        "type": "rare",
+                        "cost": 1,
+                        "stats": {"damage": 1},
+                        "requirements": {"willpower": 999},
+                        "bonus_stats": {"damage": 10},
+                    },
+                ],
+                edges=[
+                    ["start", "socket_a"],
+                    ["socket_a", "plain_value"],
+                    ["socket_a", "path_to_rare"],
+                    ["path_to_rare", "bonus_rare"],
+                ],
+                glyph_sockets=["socket_a"],
+                glyphs=[rare_bonus],
+                weights={
+                    "weights": {"damage": 1.0, "glyph_socket": 5.0},
+                    "glyph_route": {
+                        "node_bonus": node_bonus_hint,
+                        "cluster": 0.0,
+                        "detour": 0.0,
+                        "max_bonus_multiplier": 1.60,
+                    },
+                },
+                points=3,
+            )
+
+        without_hint = run(0.0)["results"][0]
+        with_hint = run(1.0)["results"][0]
+
+        self.assertIn("plain_value", without_hint["selected_nodes"])
+        self.assertNotIn("bonus_rare", without_hint["selected_nodes"])
+        self.assertIn("bonus_rare", with_hint["selected_nodes"])
+        self.assertNotIn("plain_value", with_hint["selected_nodes"])
 
 
 if __name__ == "__main__":
