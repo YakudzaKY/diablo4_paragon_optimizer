@@ -2465,6 +2465,40 @@ json glyph_route_tuning_json(const GlyphRouteTuning& tuning) {
     };
 }
 
+json glyph_schema_entry(const Glyph& glyph) {
+    json radius = json::object();
+    radius["starting"] = glyph_starting_radius(glyph);
+    radius["upgrade_levels"] = glyph.radius_upgrade_levels;
+
+    json node_bonus = nullptr;
+    if (glyph.node_bonus.active) {
+        node_bonus = {
+            {"node_type", glyph.node_bonus.node_type},
+            {"bonus_percent", round4(glyph.node_bonus.bonus_percent)},
+            {"multiplier", round4(glyph.node_bonus.multiplier)}
+        };
+    }
+
+    return {
+        {"id", glyph.id},
+        {"name", glyph.name},
+        {"max_level", std::max(glyph.max_level, 1)},
+        {"radius", radius},
+        {"node_bonus", node_bonus}
+    };
+}
+
+json example_glyph_levels_for_schema(const std::vector<Glyph>& glyphs) {
+    json levels = json::object();
+    size_t count = std::min<size_t>(5, glyphs.size());
+    for (size_t index = 0; index < count; ++index) {
+        const Glyph& glyph = glyphs[index];
+        int max_level = std::max(glyph.max_level, 1);
+        levels[glyph.id] = std::min(51, max_level);
+    }
+    return levels;
+}
+
 std::string format_value(double value);
 
 json map_to_json_object(const std::map<std::string, double>& values, bool rounded = false) {
@@ -4288,14 +4322,29 @@ json class_schema(const Options& options) {
     for (size_t i = 0; i < std::min<size_t>(2, stats.size()); ++i) {
         example_weights[stats[i]] = 1.0;
     }
+    std::vector<Glyph> glyphs;
+    std::vector<std::string> glyph_ids = read_string_array(raw.value("glyphs", json::array()));
+    glyphs.reserve(glyph_ids.size());
+    json available_glyphs = json::array();
+    for (const std::string& glyph_id : glyph_ids) {
+        Glyph glyph = load_glyph(options.data_root, options.class_slug, glyph_id);
+        available_glyphs.push_back(glyph_schema_entry(glyph));
+        glyphs.push_back(std::move(glyph));
+    }
     return {
         {"class", raw.value("class", options.class_slug)},
         {"name", object_or_empty(raw.value("name", json::object()))},
         {"available_stats", raw.value("available_stats", json::array())},
         {"available_boards", raw.value("boards", json::array())},
-        {"available_glyphs", raw.value("glyphs", json::array())},
+        {"available_glyphs", available_glyphs},
         {"primary_attributes", raw.value("primary_attributes", json::array())},
         {"patch_version", raw.contains("patch_version") ? raw["patch_version"] : json(nullptr)},
+        {"profile_schema_example", {
+            {"class", raw.value("class", options.class_slug)},
+            {"points", 225},
+            {"weights", "../weights/" + options.class_slug + ".json"},
+            {"glyph_levels", example_glyph_levels_for_schema(glyphs)}
+        }},
         {"weight_schema_example", {
             {"weights", example_weights},
             {"glyph_route", glyph_route_tuning_json(GlyphRouteTuning{})},

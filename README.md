@@ -140,6 +140,8 @@ paragon_optimizer/build_native.bat
 paragon_optimizer/bin/paragon_optimize.exe schema --class paladin
 ```
 
+В `schema` поле `available_glyphs` выводится объектами, а не только id: для каждого глифа доступны `id`, `name`, `max_level`, `radius.starting`, `radius.upgrade_levels` и структурированный `node_bonus` или `null`. В `profile_schema_example` есть пример блока `glyph_levels` с уровнем `51`, чтобы было видно, где задается прокачка глифов.
+
 Запуск эвристического оптимизатора:
 
 ```bash
@@ -212,6 +214,7 @@ glyph_score =
   increments × scaling_value_per_5 × weights[bonus_stat]
   + glyph_bonus, если threshold выполнен
   + glyphs[glyph_id], если для глифа задан приоритет
+  + node_bonus_score от усиленных normal/magic/rare нод в радиусе
 ```
 
 Пример: глиф `spirit` у друида содержит текст `For every 5 Dexterity purchased within range, you deal +2.0% increased Critical Strike Damage` и требует `+25 Dexterity`. Если в радиусе набрано `59 Dexterity`, то `increments = floor(59 / 5) = 11`, а scaling-часть глифа будет `11 × 2.0 × weights[bonus_stat]`.

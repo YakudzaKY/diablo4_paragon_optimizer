@@ -27,6 +27,8 @@ def glyph_payload(
     threshold_stat: str | None = None,
     requirement: float = 999,
     node_bonus: dict[str, object] | None = None,
+    radius: dict[str, object] | None = None,
+    max_level: int = 100,
 ) -> dict[str, object]:
     threshold_attributes = []
     if threshold_stat:
@@ -35,8 +37,8 @@ def glyph_payload(
         "id": glyph_id,
         "class": "synthetic",
         "name": {"en": glyph_id},
-        "max_level": 100,
-        "radius": {
+        "max_level": max_level,
+        "radius": radius or {
             "starting": 3,
             "legendary": 5,
             "upgrade_levels": [25, 50],
@@ -62,6 +64,75 @@ class NativeGlyphScoringTests(unittest.TestCase):
         if cls.binary is None:
             raise unittest.SkipTest("native optimizer binary is not built")
 
+    def write_optimizer_fixture(
+        self,
+        *,
+        root: Path,
+        nodes: list[dict[str, object]],
+        edges: list[list[str]],
+        glyph_sockets: list[str],
+        glyphs: list[dict[str, object]],
+        weights: dict[str, object],
+        starting_stats: dict[str, float] | None = None,
+        points: int = 20,
+        include_route_steps: bool = False,
+        glyph_levels: dict[str, int] | None = None,
+        profile_extra: dict[str, object] | None = None,
+    ) -> tuple[Path, Path]:
+        data_root = root / "data" / "normalized"
+        glyph_ids = [str(glyph["id"]) for glyph in glyphs]
+        write_json(
+            data_root / "classes" / "synthetic.json",
+            {
+                "class": "synthetic",
+                "name": {"en": "Synthetic"},
+                "available_stats": ["damage", "willpower"],
+                "available_boards": ["starter"],
+                "boards": ["starter"],
+                "glyphs": glyph_ids,
+                "primary_attributes": ["willpower"],
+            },
+        )
+        write_json(
+            data_root / "boards" / "synthetic" / "starter.json",
+            {
+                "id": "starter",
+                "class": "synthetic",
+                "name": {"en": "Starter"},
+                "width": 20,
+                "height": 8,
+                "start_node": "start",
+                "nodes": nodes,
+                "edges": edges,
+                "gates": [],
+                "glyph_sockets": glyph_sockets,
+                "legendary_nodes": [],
+            },
+        )
+        for glyph in glyphs:
+            write_json(data_root / "glyphs" / "synthetic" / f"{glyph['id']}.json", glyph)
+
+        weights_path = root / "weights.json"
+        write_json(weights_path, weights)
+        profile_path = root / "profile.json"
+        profile = {
+            "class": "synthetic",
+            "points": points,
+            "weights": str(weights_path),
+            "data": str(data_root),
+            "glyph_levels": glyph_levels if glyph_levels is not None else {glyph_id: 1 for glyph_id in glyph_ids},
+            "starting_stats": starting_stats or {},
+            "max_routes": 1,
+            "candidate_targets": 20,
+            "workers": 1,
+            "include_route_steps": include_route_steps,
+            "no_html": True,
+        }
+        if profile_extra:
+            profile.update(profile_extra)
+        write_json(profile_path, profile)
+        return profile_path, data_root
+
     def run_optimizer(
         self,
         *,
@@ -73,60 +144,23 @@ class NativeGlyphScoringTests(unittest.TestCase):
         starting_stats: dict[str, float] | None = None,
         points: int = 20,
         include_route_steps: bool = False,
+        glyph_levels: dict[str, int] | None = None,
+        profile_extra: dict[str, object] | None = None,
     ) -> dict[str, object]:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
-            data_root = root / "data" / "normalized"
-            glyph_ids = [str(glyph["id"]) for glyph in glyphs]
-            write_json(
-                data_root / "classes" / "synthetic.json",
-                {
-                    "class": "synthetic",
-                    "name": {"en": "Synthetic"},
-                    "available_stats": ["damage", "willpower"],
-                    "available_boards": ["starter"],
-                    "boards": ["starter"],
-                    "glyphs": glyph_ids,
-                    "primary_attributes": ["willpower"],
-                },
-            )
-            write_json(
-                data_root / "boards" / "synthetic" / "starter.json",
-                {
-                    "id": "starter",
-                    "class": "synthetic",
-                    "name": {"en": "Starter"},
-                    "width": 20,
-                    "height": 8,
-                    "start_node": "start",
-                    "nodes": nodes,
-                    "edges": edges,
-                    "gates": [],
-                    "glyph_sockets": glyph_sockets,
-                    "legendary_nodes": [],
-                },
-            )
-            for glyph in glyphs:
-                write_json(data_root / "glyphs" / "synthetic" / f"{glyph['id']}.json", glyph)
-
-            weights_path = root / "weights.json"
-            write_json(weights_path, weights)
-            profile_path = root / "profile.json"
-            write_json(
-                profile_path,
-                {
-                    "class": "synthetic",
-                    "points": points,
-                    "weights": str(weights_path),
-                    "data": str(data_root),
-                    "glyph_levels": {glyph_id: 1 for glyph_id in glyph_ids},
-                    "starting_stats": starting_stats or {},
-                    "max_routes": 1,
-                    "candidate_targets": 20,
-                    "workers": 1,
-                    "include_route_steps": include_route_steps,
-                    "no_html": True,
-                },
+            profile_path, _ = self.write_optimizer_fixture(
+                root=root,
+                nodes=nodes,
+                edges=edges,
+                glyph_sockets=glyph_sockets,
+                glyphs=glyphs,
+                weights=weights,
+                starting_stats=starting_stats,
+                points=points,
+                include_route_steps=include_route_steps,
+                glyph_levels=glyph_levels,
+                profile_extra=profile_extra,
             )
 
             command = [str(self.binary), "optimize", "--profile", str(profile_path), "--no-html"]
@@ -142,6 +176,181 @@ class NativeGlyphScoringTests(unittest.TestCase):
                 encoding="utf-8",
             )
             return json.loads(completed.stdout)
+
+    def test_schema_lists_glyph_metadata_and_profile_glyph_levels_example(self) -> None:
+        magic_bonus = glyph_payload(
+            "magic_bonus",
+            node_bonus={"node_type": "magic", "bonus_percent": 30.0, "multiplier": 0.3},
+        )
+        filler = glyph_payload("filler")
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            _, data_root = self.write_optimizer_fixture(
+                root=root,
+                nodes=[{"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}}],
+                edges=[],
+                glyph_sockets=[],
+                glyphs=[magic_bonus, filler],
+                weights={"weights": {}},
+                points=1,
+            )
+
+            completed = subprocess.run(
+                [str(self.binary), "schema", "--class", "synthetic", "--data", str(data_root)],
+                cwd=REPO_ROOT,
+                check=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+                encoding="utf-8",
+            )
+            payload = json.loads(completed.stdout)
+
+        glyphs = {item["id"]: item for item in payload["available_glyphs"]}
+        self.assertEqual(glyphs["magic_bonus"]["max_level"], 100)
+        self.assertEqual(glyphs["magic_bonus"]["radius"]["starting"], 3)
+        self.assertEqual(glyphs["magic_bonus"]["radius"]["upgrade_levels"], [25, 50])
+        self.assertEqual(glyphs["magic_bonus"]["node_bonus"]["node_type"], "magic")
+        self.assertAlmostEqual(glyphs["magic_bonus"]["node_bonus"]["multiplier"], 0.3)
+        self.assertIsNone(glyphs["filler"]["node_bonus"])
+        self.assertIn("glyph_levels", payload["profile_schema_example"])
+        self.assertEqual(payload["profile_schema_example"]["glyph_levels"]["magic_bonus"], 51)
+
+    def test_glyph_radius_follows_level_upgrade_levels(self) -> None:
+        expected_by_level = {
+            1: 3,
+            24: 3,
+            25: 4,
+            49: 4,
+            50: 5,
+            51: 5,
+            100: 5,
+        }
+        glyph = glyph_payload("radius_test")
+        for level, expected_radius in expected_by_level.items():
+            with self.subTest(level=level):
+                payload = self.run_optimizer(
+                    nodes=[
+                        {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
+                        {"id": "socket_a", "x": 0, "y": 1, "type": "glyph_socket", "cost": 1, "stats": {}},
+                    ],
+                    edges=[["start", "socket_a"]],
+                    glyph_sockets=["socket_a"],
+                    glyphs=[glyph],
+                    weights={"weights": {"glyph_socket": 5.0}},
+                    points=1,
+                    glyph_levels={"radius_test": level},
+                )
+
+                self.assertEqual(payload["results"][0]["glyphs"][0]["level"], level)
+                self.assertEqual(payload["results"][0]["glyphs"][0]["radius"], expected_radius)
+
+    def test_glyph_radius_is_data_driven_for_custom_upgrade_levels(self) -> None:
+        glyph = glyph_payload(
+            "custom_radius",
+            radius={"starting": 2, "legendary": 5, "upgrade_levels": [10, 20, 80]},
+        )
+        payload = self.run_optimizer(
+            nodes=[
+                {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
+                {"id": "socket_a", "x": 0, "y": 1, "type": "glyph_socket", "cost": 1, "stats": {}},
+            ],
+            edges=[["start", "socket_a"]],
+            glyph_sockets=["socket_a"],
+            glyphs=[glyph],
+            weights={"weights": {"glyph_socket": 5.0}},
+            points=1,
+            glyph_levels={"custom_radius": 80},
+        )
+
+        glyph_output = payload["results"][0]["glyphs"][0]
+        self.assertEqual(glyph_output["level"], 80)
+        self.assertEqual(glyph_output["radius"], 5)
+
+    def test_profile_validation_rejects_bad_glyph_levels(self) -> None:
+        def run_with_levels(glyph_levels: dict[str, int]) -> subprocess.CompletedProcess[str]:
+            with tempfile.TemporaryDirectory() as tmp:
+                root = Path(tmp)
+                profile_path, _ = self.write_optimizer_fixture(
+                    root=root,
+                    nodes=[
+                        {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
+                        {"id": "socket_a", "x": 0, "y": 1, "type": "glyph_socket", "cost": 1, "stats": {}},
+                    ],
+                    edges=[["start", "socket_a"]],
+                    glyph_sockets=["socket_a"],
+                    glyphs=[glyph_payload("known_glyph")],
+                    weights={"weights": {"glyph_socket": 5.0}},
+                    points=1,
+                    glyph_levels=glyph_levels,
+                )
+                return subprocess.run(
+                    [str(self.binary), "optimize", "--profile", str(profile_path), "--no-html"],
+                    cwd=REPO_ROOT,
+                    check=False,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                    text=True,
+                    encoding="utf-8",
+                )
+
+        cases = [
+            ({"unknown_glyph": 1}, "unknown glyph id"),
+            ({"known_glyph": 0}, "level out of range"),
+            ({"known_glyph": 101}, "level out of range"),
+        ]
+        for glyph_levels, expected_error in cases:
+            with self.subTest(glyph_levels=glyph_levels):
+                completed = run_with_levels(glyph_levels)
+                self.assertNotEqual(completed.returncode, 0)
+                self.assertIn(expected_error, completed.stderr)
+
+    def test_output_contains_glyph_level_radius_node_bonus_and_legacy_warning(self) -> None:
+        magic_bonus = glyph_payload(
+            "magic_bonus",
+            node_bonus={"node_type": "magic", "bonus_percent": 30.0, "multiplier": 0.3},
+        )
+        payload = self.run_optimizer(
+            nodes=[
+                {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
+                {"id": "socket_a", "x": 0, "y": 1, "type": "glyph_socket", "cost": 1, "stats": {}},
+                {"id": "damage_magic", "x": 0, "y": 2, "type": "magic", "cost": 1, "stats": {"damage": 10}},
+            ],
+            edges=[["start", "socket_a"], ["socket_a", "damage_magic"]],
+            glyph_sockets=["socket_a"],
+            glyphs=[magic_bonus],
+            weights={"weights": {"damage": 1.0, "glyph_socket": 5.0}},
+            points=2,
+            glyph_levels={"magic_bonus": 25},
+            profile_extra={"legendary_glyphs": True},
+        )
+
+        self.assertEqual(payload["glyph_levels"], {"magic_bonus": 25})
+        self.assertNotIn("legendary_glyphs", payload)
+        self.assertTrue(any("legendary_glyphs" in warning and "deprecated" in warning for warning in payload["warnings"]))
+        glyph = payload["results"][0]["glyphs"][0]
+        self.assertEqual(glyph["level"], 25)
+        self.assertEqual(glyph["radius"], 4)
+        self.assertIn("node_bonus_score", glyph)
+        self.assertAlmostEqual(glyph["node_bonus_score"], 3.0)
+
+    def test_missing_profile_glyph_level_defaults_to_one(self) -> None:
+        payload = self.run_optimizer(
+            nodes=[
+                {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
+                {"id": "socket_a", "x": 0, "y": 1, "type": "glyph_socket", "cost": 1, "stats": {}},
+            ],
+            edges=[["start", "socket_a"]],
+            glyph_sockets=["socket_a"],
+            glyphs=[glyph_payload("default_level")],
+            weights={"weights": {"glyph_socket": 5.0}},
+            points=1,
+            glyph_levels={},
+        )
+
+        glyph = payload["results"][0]["glyphs"][0]
+        self.assertEqual(glyph["level"], 1)
+        self.assertEqual(glyph["radius"], 3)
 
     def test_node_bonus_glyph_prefers_socket_with_stronger_matching_nodes_even_when_requirement_unmet(self) -> None:
         magic_bonus = glyph_payload(
