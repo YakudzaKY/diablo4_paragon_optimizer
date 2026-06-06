@@ -99,6 +99,10 @@ struct Glyph {
     std::string class_slug;
     json name = json::object();
     std::map<std::string, double> radius;
+    double radius_starting = 0.0;
+    double radius_legendary = 0.0;
+    std::vector<int> radius_upgrade_levels;
+    int max_level = 100;
     std::vector<std::string> threshold_stats;
     std::string bonus_text_en;
     std::string bonus_text_ru;
@@ -220,6 +224,8 @@ struct GlyphInfo {
     std::string threshold_stat;
     double requirement = 25.0;
     double radius = 0.0;
+    int level = 1;
+    bool legendary_unlocked = false;
     std::string bonus_stat;
     double scaling_value_per_5 = 0.0;
 };
@@ -232,6 +238,8 @@ struct GlyphEvaluation {
     double requirement = 25.0;
     bool requirement_met = false;
     double radius = 0.0;
+    int level = 1;
+    bool legendary_unlocked = false;
     std::string bonus_stat;
     double scaling_value_per_5 = 0.0;
     std::vector<std::string> warnings;
@@ -306,7 +314,7 @@ struct Options {
     fs::path profile_path;
     std::string class_slug;
     int points = 0;
-    bool legendary_glyphs = true;
+    std::map<std::string, int> glyph_levels;
     fs::path weights_path;
     std::map<std::string, double> starting_stats;
     fs::path data_root;
@@ -316,6 +324,7 @@ struct Options {
     bool include_route_steps = false;
     bool no_html = false;
     std::vector<std::string> scheme;
+    std::vector<std::string> warnings;
 };
 
 std::string read_file(const fs::path& path) {
@@ -408,7 +417,35 @@ std::vector<std::string> read_string_array(const json& value) {
     return result;
 }
 
+std::vector<int> read_int_array(const json& value) {
+    std::vector<int> result;
+    if (!value.is_array()) {
+        return result;
+    }
+    result.reserve(value.size());
+    for (const auto& item : value) {
+        if (item.is_number_integer()) {
+            result.push_back(item.get<int>());
+        } else if (item.is_number() || item.is_string()) {
+            result.push_back(static_cast<int>(std::round(as_double(item))));
+        }
+    }
+    return result;
+}
 
+std::map<std::string, int> read_int_map(const json& value, const std::string& field_name) {
+    if (!value.is_object()) {
+        throw std::runtime_error("profile field must be an object: " + field_name);
+    }
+    std::map<std::string, int> result;
+    for (auto it = value.begin(); it != value.end(); ++it) {
+        if (!it.value().is_number_integer()) {
+            throw std::runtime_error("profile field '" + field_name + "' values must be integer levels: " + it.key());
+        }
+        result[it.key()] = it.value().get<int>();
+    }
+    return result;
+}
 
 json object_or_empty(const json& value) {
     return value.is_object() ? value : json::object();
@@ -585,7 +622,13 @@ Glyph load_glyph(const fs::path& data_root, const std::string& class_slug, const
     glyph.id = raw.value("id", glyph_id);
     glyph.class_slug = raw.value("class", class_slug);
     glyph.name = object_or_empty(raw.value("name", json::object()));
-    glyph.radius = read_float_map(raw.value("radius", json::object()));
+    glyph.max_level = static_cast<int>(as_double(raw.value("max_level", 100)));
+    json radius = raw.value("radius", json::object());
+    glyph.radius = read_float_map(radius);
+    glyph.radius_starting = as_double(radius.value("starting", 0.0));
+    glyph.radius_legendary = as_double(radius.value("legendary", 0.0));
+    glyph.radius_upgrade_levels = read_int_array(radius.value("upgrade_levels", json::array()));
+    std::sort(glyph.radius_upgrade_levels.begin(), glyph.radius_upgrade_levels.end());
     json bonus = raw.value("bonus_text", json::object());
     glyph.bonus_text_en = bonus.value("en", "");
     glyph.bonus_text_ru = bonus.value("ru", "");
@@ -645,6 +688,46 @@ WeightModel load_weights(const fs::path& weights_path) {
         }
     }
     return model;
+}
+
+std::map<std::string, int> validated_glyph_levels(
+    const Options& options,
+    const std::vector<Glyph>& glyphs,
+    const WeightModel& weights,
+    std::vector<std::string>& warnings
+) {
+    std::map<std::string, int> resolved;
+    std::map<std::string, int> max_level_by_id;
+    for (const Glyph& glyph : glyphs) {
+        resolved[glyph.id] = 1;
+        max_level_by_id[glyph.id] = std::max(glyph.max_level, 1);
+    }
+
+    for (const auto& [glyph_id, level] : options.glyph_levels) {
+        auto max_it = max_level_by_id.find(glyph_id);
+        if (max_it == max_level_by_id.end()) {
+            throw std::runtime_error("profile glyph_levels contains unknown glyph id: " + glyph_id);
+        }
+        int max_level = max_it->second;
+        if (level < 1 || level > max_level) {
+            throw std::runtime_error(
+                "profile glyph_levels level out of range for " + glyph_id +
+                ": " + std::to_string(level) + " (allowed 1.." + std::to_string(max_level) + ")"
+            );
+        }
+        resolved[glyph_id] = level;
+    }
+
+    for (const auto& [glyph_id, weight] : weights.glyph_weights) {
+        if (weight <= 0.0 || options.glyph_levels.count(glyph_id)) {
+            continue;
+        }
+        if (!max_level_by_id.count(glyph_id)) {
+            continue;
+        }
+        warnings.push_back("glyph '" + glyph_id + "' has positive weight but no glyph_levels entry; defaulting to level 1");
+    }
+    return resolved;
 }
 
 double priority_for_type(const GraphNode& node, const WeightModel& weights) {
@@ -1174,15 +1257,32 @@ std::string infer_glyph_bonus_stat(const Glyph& glyph, const WeightModel& weight
     });
 }
 
-double glyph_radius(const Glyph& glyph, bool legendary_glyphs) {
-    const std::string key = legendary_glyphs ? "legendary" : "starting";
-    auto it = glyph.radius.find(key);
-    if (it != glyph.radius.end()) return it->second;
-    it = glyph.radius.find("normal");
+double glyph_starting_radius(const Glyph& glyph) {
+    if (glyph.radius_starting > 0.0) {
+        return glyph.radius_starting;
+    }
+    auto it = glyph.radius.find("normal");
     if (it != glyph.radius.end()) return it->second;
     it = glyph.radius.find("starting");
     if (it != glyph.radius.end()) return it->second;
     return 0.0;
+}
+
+double glyph_radius_for_level(const Glyph& glyph, int level) {
+    double radius = glyph_starting_radius(glyph);
+    for (int upgrade_level : glyph.radius_upgrade_levels) {
+        if (level >= upgrade_level) {
+            radius += 1.0;
+        }
+    }
+    return radius;
+}
+
+bool glyph_legendary_unlocked_for_level(const Glyph& glyph, int level) {
+    if (glyph.radius_upgrade_levels.empty()) {
+        return false;
+    }
+    return level >= glyph.radius_upgrade_levels.back();
 }
 
 std::vector<int> nodes_in_radius(const Graph& graph, int socket_index, double radius) {
@@ -1205,15 +1305,22 @@ ScoringContext build_scoring_context(
     const Graph& graph,
     const std::vector<Glyph>& glyphs,
     const WeightModel& weights,
-    bool legendary_glyphs
+    const std::map<std::string, int>& glyph_levels
 ) {
     ScoringContext context;
     context.glyph_info.reserve(glyphs.size());
     for (const Glyph& glyph : glyphs) {
+        int level = 1;
+        auto level_it = glyph_levels.find(glyph.id);
+        if (level_it != glyph_levels.end()) {
+            level = level_it->second;
+        }
         GlyphInfo info;
         info.threshold_stat = glyph_threshold_stat(glyph);
         info.requirement = parse_glyph_requirement(glyph);
-        info.radius = glyph_radius(glyph, legendary_glyphs);
+        info.radius = glyph_radius_for_level(glyph, level);
+        info.level = level;
+        info.legendary_unlocked = glyph_legendary_unlocked_for_level(glyph, level);
         info.bonus_stat = infer_glyph_bonus_stat(glyph, weights);
         info.scaling_value_per_5 = parse_scaling_value_per_5(glyph);
         context.glyph_info.push_back(std::move(info));
@@ -1978,6 +2085,8 @@ GlyphEvaluation evaluate_glyph(
     evaluation.requirement = info.requirement;
     evaluation.requirement_met = requirement_met;
     evaluation.radius = info.radius;
+    evaluation.level = info.level;
+    evaluation.legendary_unlocked = info.legendary_unlocked;
     evaluation.bonus_stat = info.bonus_stat;
     evaluation.scaling_value_per_5 = info.scaling_value_per_5;
     if (!info.threshold_stat.empty() && !requirement_met) {
@@ -2367,7 +2476,9 @@ ScoredRoute score_route(
         item["glyph"] = glyph.id;
         item["name"] = glyph.name;
         item["score"] = round4(evaluation.score);
+        item["level"] = evaluation.level;
         item["radius"] = evaluation.radius;
+        item["legendary_unlocked"] = evaluation.legendary_unlocked;
         item["requirement_met"] = evaluation.requirement_met;
         item["stat_in_radius"] = evaluation.stat_in_radius;
         item["requirement"] = evaluation.requirement;
@@ -3840,7 +3951,11 @@ void apply_profile(Options& options) {
         options.points = static_cast<int>(as_double(raw["points"]));
     }
     if (raw.contains("legendary_glyphs")) {
-        options.legendary_glyphs = read_bool_field(raw["legendary_glyphs"], "legendary_glyphs");
+        (void)read_bool_field(raw["legendary_glyphs"], "legendary_glyphs");
+        options.warnings.push_back("profile field 'legendary_glyphs' is deprecated and ignored; use 'glyph_levels'");
+    }
+    if (raw.contains("glyph_levels")) {
+        options.glyph_levels = read_int_map(raw["glyph_levels"], "glyph_levels");
     }
     if (raw.contains("weights")) {
         options.weights_path = profile_relative_path(options.profile_path, raw["weights"].get<std::string>());
@@ -3903,7 +4018,8 @@ Options parse_args(int argc, char** argv) {
         else if (arg == "--class") options.class_slug = require_value(arg);
         else if (arg == "--points") options.points = std::stoi(require_value(arg));
         else if (arg == "--legendary-glyphs") {
-            options.legendary_glyphs = parse_bool_value(require_value(arg));
+            (void)parse_bool_value(require_value(arg));
+            options.warnings.push_back("CLI option '--legendary-glyphs' is deprecated and ignored; use 'glyph_levels' in the profile");
         } else if (arg == "--weights") options.weights_path = require_value(arg);
         else if (arg == "--data") options.data_root = require_value(arg);
         else if (arg == "--max-routes") options.max_routes = std::stoi(require_value(arg));
@@ -3963,6 +4079,8 @@ json optimize(const Options& options) {
     WeightModel weights = load_weights(options.weights_path);
     auto boards = load_boards(options.data_root, class_ref);
     auto glyphs = load_glyphs(options.data_root, class_ref);
+    std::vector<std::string> warnings = options.warnings;
+    auto glyph_levels = validated_glyph_levels(options, glyphs, weights, warnings);
     std::vector<std::string> scheme = effective_scheme(weights, class_ref, options);
     auto sequences = board_sequences(class_ref, boards, weights, scheme);
 
@@ -3975,7 +4093,6 @@ json optimize(const Options& options) {
     int variants_checked = 0;
     int routes_checked = 0;
     bool stopped_by_limit = false;
-    std::vector<std::string> warnings;
 
     for (const auto& sequence : sequences) {
         if (stopped_by_limit) break;
@@ -3987,7 +4104,7 @@ json optimize(const Options& options) {
                 return;
             }
             Graph graph = build_combined_graph(boards, sequence, rotations, attachments);
-            ScoringContext scoring_context = build_scoring_context(graph, glyphs, weights, options.legendary_glyphs);
+            ScoringContext scoring_context = build_scoring_context(graph, glyphs, weights, glyph_levels);
             auto route_bonuses = glyph_route_node_bonuses(graph, glyphs, weights, scoring_context);
             auto cluster_bonuses = glyph_cluster_route_bonuses(graph, weights, route_bonuses);
             variants_checked += 1;
@@ -4110,7 +4227,7 @@ json optimize(const Options& options) {
     json payload;
     payload["class"] = class_ref.class_slug;
     payload["points_limit"] = options.points;
-    payload["legendary_glyphs"] = options.legendary_glyphs;
+    payload["glyph_levels"] = options.glyph_levels;
     if (!options.profile_path.empty()) {
         payload["profile_file"] = path_for_json(options.profile_path);
     }

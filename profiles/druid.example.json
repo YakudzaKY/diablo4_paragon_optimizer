@@ -1,8 +1,14 @@
 {
   "class": "druid",
   "points": 270,
-  "legendary_glyphs": true,
   "weights": "../weights/druid.example.json",
+  "glyph_levels": {
+    "tectonic": 51,
+    "spirit": 51,
+    "earth_and_sky": 51,
+    "fang_and_claw": 51,
+    "outmatch": 51
+  },
   "starting_stats": {
     "strength": 440,
     "intelligence": 461,
