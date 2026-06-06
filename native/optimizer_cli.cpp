@@ -107,6 +107,12 @@ struct Glyph {
     std::string bonus_text_en;
     std::string bonus_text_ru;
     std::vector<std::string> skill_tag_names;
+    struct {
+        bool active = false;
+        std::string node_type;
+        double bonus_percent = 0.0;
+        double multiplier = 0.0;
+    } node_bonus;
 };
 
 struct ClassRef {
@@ -230,6 +236,12 @@ struct GlyphInfo {
     double scaling_value_per_5 = 0.0;
 };
 
+struct GlyphAffectedNode {
+    int node_index = -1;
+    double raw_score = 0.0;
+    double bonus_score = 0.0;
+};
+
 struct GlyphEvaluation {
     int glyph_index = -1;
     int socket_index = -1;
@@ -242,6 +254,8 @@ struct GlyphEvaluation {
     bool legendary_unlocked = false;
     std::string bonus_stat;
     double scaling_value_per_5 = 0.0;
+    double node_bonus_score = 0.0;
+    std::vector<GlyphAffectedNode> affected_nodes;
     std::vector<std::string> warnings;
 };
 
@@ -280,6 +294,17 @@ struct GlyphValueMatrix {
 struct ScoringContext {
     std::vector<GlyphInfo> glyph_info;
     std::unordered_map<long long, std::vector<int>> radius_nodes;
+};
+
+struct EffectiveStatsState {
+    std::vector<int> selected_indices;
+    std::vector<unsigned char> active_gated_bonus;
+    std::vector<double> node_bonus_multipliers;
+    std::map<std::string, double> totals;
+    std::map<std::string, double> base_node_bonus_totals;
+    std::map<std::string, double> bonus_totals;
+    std::map<std::string, double> bonus_node_bonus_totals;
+    std::map<std::string, double> effective_totals;
 };
 
 struct ScoredRoute {
@@ -629,6 +654,13 @@ Glyph load_glyph(const fs::path& data_root, const std::string& class_slug, const
     glyph.radius_legendary = as_double(radius.value("legendary", 0.0));
     glyph.radius_upgrade_levels = read_int_array(radius.value("upgrade_levels", json::array()));
     std::sort(glyph.radius_upgrade_levels.begin(), glyph.radius_upgrade_levels.end());
+    json node_bonus = raw.value("node_bonus", json(nullptr));
+    if (node_bonus.is_object()) {
+        glyph.node_bonus.active = true;
+        glyph.node_bonus.node_type = node_bonus.value("node_type", "");
+        glyph.node_bonus.bonus_percent = as_double(node_bonus.value("bonus_percent", 0.0));
+        glyph.node_bonus.multiplier = as_double(node_bonus.value("multiplier", 0.0));
+    }
     json bonus = raw.value("bonus_text", json::object());
     glyph.bonus_text_en = bonus.value("en", "");
     glyph.bonus_text_ru = bonus.value("ru", "");
@@ -758,6 +790,26 @@ double weighted_stats_score(const std::map<std::string, double>& stats, const We
         score += value * weight_for(weights.weights, stat);
     }
     return score;
+}
+
+void add_scaled_stats(
+    std::map<std::string, double>& target,
+    const std::map<std::string, double>& stats,
+    double scale
+) {
+    if (scale == 0.0) {
+        return;
+    }
+    for (const auto& [stat, value] : stats) {
+        target[stat] += value * scale;
+    }
+}
+
+bool glyph_node_bonus_applies_to(const Glyph& glyph, const GraphNode& node) {
+    return glyph.node_bonus.active &&
+        glyph.node_bonus.multiplier != 0.0 &&
+        !glyph.node_bonus.node_type.empty() &&
+        node.type == glyph.node_bonus.node_type;
 }
 
 double node_base_score(const GraphNode& node, const WeightModel& weights) {
@@ -2041,6 +2093,93 @@ bool requirements_met(const std::map<std::string, double>& requirements, const s
     return true;
 }
 
+std::vector<double> build_node_bonus_multipliers(
+    const Graph& graph,
+    const std::vector<Glyph>& glyphs,
+    const ScoringContext& context,
+    const std::vector<unsigned char>& selected,
+    const std::vector<GlyphEvaluation>& assigned_glyphs
+) {
+    std::vector<double> multipliers(graph.nodes.size(), 0.0);
+    for (const GlyphEvaluation& evaluation : assigned_glyphs) {
+        if (evaluation.glyph_index < 0 || evaluation.glyph_index >= static_cast<int>(glyphs.size())) {
+            continue;
+        }
+        const Glyph& glyph = glyphs[evaluation.glyph_index];
+        if (!glyph.node_bonus.active || glyph.node_bonus.multiplier == 0.0) {
+            continue;
+        }
+        for (int node_index : radius_nodes_for(context, evaluation.socket_index, evaluation.glyph_index)) {
+            if (!selected[node_index]) {
+                continue;
+            }
+            const GraphNode& node = graph.nodes[node_index];
+            if (glyph_node_bonus_applies_to(glyph, node)) {
+                multipliers[node_index] += glyph.node_bonus.multiplier;
+            }
+        }
+    }
+    return multipliers;
+}
+
+EffectiveStatsState compute_effective_stats(
+    const Graph& graph,
+    const std::map<std::string, double>& starting_stats,
+    const std::vector<Glyph>& glyphs,
+    const ScoringContext& context,
+    const std::vector<unsigned char>& selected,
+    const std::vector<GlyphEvaluation>& assigned_glyphs
+) {
+    EffectiveStatsState state;
+    state.selected_indices.reserve(selected.size());
+    for (int index = 0; index < static_cast<int>(selected.size()); ++index) {
+        if (selected[index]) {
+            state.selected_indices.push_back(index);
+        }
+    }
+    state.active_gated_bonus.assign(graph.nodes.size(), 0);
+    state.node_bonus_multipliers =
+        build_node_bonus_multipliers(graph, glyphs, context, selected, assigned_glyphs);
+
+    for (int index : state.selected_indices) {
+        const GraphNode& node = graph.nodes[index];
+        add_scaled_stats(state.totals, node.stats, 1.0);
+        add_scaled_stats(state.base_node_bonus_totals, node.stats, state.node_bonus_multipliers[index]);
+    }
+
+    state.effective_totals = state.totals;
+    add_scaled_stats(state.effective_totals, state.base_node_bonus_totals, 1.0);
+    add_scaled_stats(state.effective_totals, starting_stats, 1.0);
+
+    bool changed = true;
+    while (changed) {
+        changed = false;
+        for (int index : state.selected_indices) {
+            const GraphNode& node = graph.nodes[index];
+            if (state.active_gated_bonus[index] ||
+                (node.type != "rare" && node.type != "legendary") ||
+                node.requirements.empty()) {
+                continue;
+            }
+            if (!requirements_met(node.requirements, state.effective_totals)) {
+                continue;
+            }
+
+            state.active_gated_bonus[index] = 1;
+            changed = true;
+            add_scaled_stats(state.bonus_totals, node.bonus_stats, 1.0);
+            add_scaled_stats(state.effective_totals, node.bonus_stats, 1.0);
+            if (node.type == "rare") {
+                double multiplier = state.node_bonus_multipliers[index];
+                add_scaled_stats(state.bonus_node_bonus_totals, node.bonus_stats, multiplier);
+                add_scaled_stats(state.effective_totals, node.bonus_stats, multiplier);
+            }
+        }
+    }
+
+    return state;
+}
+
 GlyphEvaluation evaluate_glyph(
     const Graph& graph,
     const std::vector<Glyph>& glyphs,
@@ -2048,27 +2187,67 @@ GlyphEvaluation evaluate_glyph(
     const ScoringContext& context,
     const std::vector<unsigned char>& selected,
     int socket_index,
-    int glyph_index
+    int glyph_index,
+    const EffectiveStatsState* effective_state = nullptr
 ) {
     const Glyph& glyph = glyphs[glyph_index];
     const GlyphInfo& info = context.glyph_info[glyph_index];
     double stat_in_radius = 0.0;
+    double node_bonus_score = 0.0;
+    std::vector<GlyphAffectedNode> affected_nodes;
     if (!info.threshold_stat.empty()) {
         auto it = context.radius_nodes.find(radius_key(socket_index, glyph_index));
         if (it != context.radius_nodes.end()) {
             for (int node_index : it->second) {
                 if (selected[node_index]) {
-                    stat_in_radius += weight_for(graph.nodes[node_index].stats, info.threshold_stat);
+                    const GraphNode& node = graph.nodes[node_index];
+                    double value = weight_for(node.stats, info.threshold_stat);
+                    if (effective_state) {
+                        value *= 1.0 + effective_state->node_bonus_multipliers[node_index];
+                        if (effective_state->active_gated_bonus[node_index]) {
+                            double bonus_value = weight_for(node.bonus_stats, info.threshold_stat);
+                            double bonus_multiplier = node.type == "rare"
+                                ? effective_state->node_bonus_multipliers[node_index]
+                                : 0.0;
+                            value += bonus_value * (1.0 + bonus_multiplier);
+                        }
+                    } else if (glyph_node_bonus_applies_to(glyph, node)) {
+                        value *= 1.0 + glyph.node_bonus.multiplier;
+                    }
+                    stat_in_radius += value;
                 }
             }
         }
     }
+    if (glyph.node_bonus.active && glyph.node_bonus.multiplier != 0.0) {
+        for (int node_index : radius_nodes_for(context, socket_index, glyph_index)) {
+            if (!selected[node_index]) {
+                continue;
+            }
+            const GraphNode& node = graph.nodes[node_index];
+            if (!glyph_node_bonus_applies_to(glyph, node)) {
+                continue;
+            }
+            double raw_score = weighted_stats_score(node.stats, weights);
+            if (effective_state && effective_state->active_gated_bonus[node_index] && node.type == "rare") {
+                raw_score += weighted_stats_score(node.bonus_stats, weights);
+            }
+            double bonus_score = raw_score * glyph.node_bonus.multiplier;
+            node_bonus_score += bonus_score;
+            affected_nodes.push_back({node_index, raw_score, bonus_score});
+        }
+        std::sort(affected_nodes.begin(), affected_nodes.end(), [&](const GlyphAffectedNode& left, const GlyphAffectedNode& right) {
+            if (std::abs(left.bonus_score - right.bonus_score) > 1e-12) return left.bonus_score > right.bonus_score;
+            return graph.nodes[left.node_index].id < graph.nodes[right.node_index].id;
+        });
+    }
     bool requirement_met = !info.threshold_stat.empty() && stat_in_radius >= info.requirement;
-    int increments = static_cast<int>(std::floor(stat_in_radius / 5.0));
+    int increments = static_cast<int>(std::floor(stat_in_radius / GLYPH_SCALING_STEP));
     double score = 0.0;
     if (!info.bonus_stat.empty()) {
         score += increments * info.scaling_value_per_5 * weight_for(weights.weights, info.bonus_stat);
     }
+    score += node_bonus_score;
     if (requirement_met) {
         double scheme_bonus = weights.scheme_is_dict ? weight_for(weights.scheme_weights, "glyph_bonus") : 0.0;
         score += weight_for(weights.weights, "glyph_bonus") + scheme_bonus;
@@ -2089,6 +2268,8 @@ GlyphEvaluation evaluate_glyph(
     evaluation.legendary_unlocked = info.legendary_unlocked;
     evaluation.bonus_stat = info.bonus_stat;
     evaluation.scaling_value_per_5 = info.scaling_value_per_5;
+    evaluation.node_bonus_score = node_bonus_score;
+    evaluation.affected_nodes = std::move(affected_nodes);
     if (!info.threshold_stat.empty() && !requirement_met) {
         evaluation.warnings.push_back(
             glyph.id + " requirement not met at " + graph.nodes[socket_index].id + ": " +
@@ -2274,59 +2455,34 @@ double route_score_value(
     const std::vector<unsigned char>& selected,
     int points_limit
 ) {
-    std::vector<int> selected_indices = route_selected_indices(selected);
+    std::vector<GlyphEvaluation> assigned_glyphs = assign_glyphs(graph, glyphs, weights, context, selected);
+    EffectiveStatsState effective_state =
+        compute_effective_stats(graph, starting_stats, glyphs, context, selected, assigned_glyphs);
 
-    std::map<std::string, double> totals;
-    for (int index : selected_indices) {
-        for (const auto& [stat, value] : graph.nodes[index].stats) {
-            totals[stat] += value;
-        }
-    }
-    std::map<std::string, double> effective_totals = totals;
-    for (const auto& [stat, value] : starting_stats) {
-        effective_totals[stat] += value;
-    }
-
-    double base_score = weighted_stats_score(totals, weights);
+    double base_score = weighted_stats_score(effective_state.totals, weights);
     double type_bonus = 0.0;
-    std::vector<unsigned char> active_node_bonus(graph.nodes.size(), 0);
-    std::map<std::string, double> bonus_totals;
-    for (int index : selected_indices) {
+    for (int index : effective_state.selected_indices) {
         type_bonus += priority_for_type(graph.nodes[index], weights);
     }
 
-    // Gated rare/legendary node bonuses.
-    // These only contribute if the node is taken AND the (scaled) requirements are met
-    // using the final effective totals (including starting stats + all selected nodes).
-    // This matches in-game behavior: the attributes on such nodes are locked behind reqs.
-    bool changed = true;
-    while (changed) {
-        changed = false;
-        for (int index : selected_indices) {
-            const GraphNode& node = graph.nodes[index];
-            if (active_node_bonus[index] || (node.type != "rare" && node.type != "legendary") || node.requirements.empty()) {
-                continue;
-            }
-            if (!requirements_met(node.requirements, effective_totals)) {
-                continue;
-            }
-            active_node_bonus[index] = 1;
-            changed = true;
-            for (const auto& [stat, value] : node.bonus_stats) {
-                bonus_totals[stat] += value;
-                effective_totals[stat] += value;
-            }
-        }
-    }
-
     double glyph_score = 0.0;
-    for (const GlyphEvaluation& evaluation : assign_glyphs(graph, glyphs, weights, context, selected)) {
-        glyph_score += evaluation.score;
+    for (const GlyphEvaluation& evaluation : assigned_glyphs) {
+        GlyphEvaluation final_evaluation = evaluate_glyph(
+            graph,
+            glyphs,
+            weights,
+            context,
+            selected,
+            evaluation.socket_index,
+            evaluation.glyph_index,
+            &effective_state
+        );
+        glyph_score += final_evaluation.score;
     }
 
     double penalties = 0.0;
     for (const auto& [stat, minimum] : weights.minimums) {
-        double current = weight_for(effective_totals, stat);
+        double current = weight_for(effective_state.effective_totals, stat);
         if (current < minimum) {
             double shortfall = minimum - current;
             double penalty_weight = std::abs(weight_for(weights.weights, stat, 1.0));
@@ -2339,7 +2495,7 @@ double route_score_value(
         penalties += (points_used - points_limit) * 1000000.0;
     }
 
-    return base_score + type_bonus + weighted_stats_score(bonus_totals, weights) + glyph_score - penalties;
+    return base_score + type_bonus + weighted_stats_score(effective_state.bonus_totals, weights) + glyph_score - penalties;
 }
 
 ScoredRoute score_route(
@@ -2354,56 +2510,18 @@ ScoredRoute score_route(
     int points_limit,
     bool include_route_steps
 ) {
-    std::vector<int> selected_indices;
-    selected_indices.reserve(route.selected.size());
-    for (int index = 0; index < static_cast<int>(route.selected.size()); ++index) {
-        if (route.selected[index]) selected_indices.push_back(index);
-    }
+    std::vector<GlyphEvaluation> assigned_glyphs = assign_glyphs(graph, glyphs, weights, context, route.selected);
+    EffectiveStatsState effective_state =
+        compute_effective_stats(graph, starting_stats, glyphs, context, route.selected, assigned_glyphs);
+    const std::vector<int>& selected_indices = effective_state.selected_indices;
 
-    std::map<std::string, double> totals;
-    for (int index : selected_indices) {
-        for (const auto& [stat, value] : graph.nodes[index].stats) {
-            totals[stat] += value;
-        }
-    }
-    std::map<std::string, double> effective_totals = totals;
-    for (const auto& [stat, value] : starting_stats) {
-        effective_totals[stat] += value;
-    }
-
-    double base_score = weighted_stats_score(totals, weights);
+    double base_score = weighted_stats_score(effective_state.totals, weights);
     double type_bonus = 0.0;
-    std::vector<unsigned char> active_node_bonus(graph.nodes.size(), 0);
-    std::map<std::string, double> bonus_totals;
     for (int index : selected_indices) {
         type_bonus += priority_for_type(graph.nodes[index], weights);
     }
 
-    // Gated rare/legendary node bonuses.
-    // These only contribute if the node is taken AND the (scaled) requirements are met
-    // using the final effective totals (including starting stats + all selected nodes).
-    // This matches in-game behavior: the attributes on such nodes are locked behind reqs.
-    bool changed = true;
-    while (changed) {
-        changed = false;
-        for (int index : selected_indices) {
-            const GraphNode& node = graph.nodes[index];
-            if (active_node_bonus[index] || (node.type != "rare" && node.type != "legendary") || node.requirements.empty()) {
-                continue;
-            }
-            if (!requirements_met(node.requirements, effective_totals)) {
-                continue;
-            }
-            active_node_bonus[index] = 1;
-            changed = true;
-            for (const auto& [stat, value] : node.bonus_stats) {
-                bonus_totals[stat] += value;
-                effective_totals[stat] += value;
-            }
-        }
-    }
-
-    double gated_node_bonus_score = weighted_stats_score(bonus_totals, weights);
+    double gated_node_bonus_score = weighted_stats_score(effective_state.bonus_totals, weights);
     double node_bonus = type_bonus + gated_node_bonus_score;
     std::vector<std::string> activated;
     std::vector<std::string> requirement_warnings;
@@ -2413,7 +2531,8 @@ ScoredRoute score_route(
         if ((node.type != "rare" && node.type != "legendary") || node.requirements.empty()) {
             continue;
         }
-        bool met = active_node_bonus[index] != 0 || requirements_met(node.requirements, effective_totals);
+        bool met = effective_state.active_gated_bonus[index] != 0 ||
+            requirements_met(node.requirements, effective_state.effective_totals);
         if (met) {
             activated.push_back(node.id);
         }
@@ -2430,12 +2549,15 @@ ScoredRoute score_route(
         item["requirement_steps"] = map_to_json_object(node.requirement_steps);
         item["requirements"] = map_to_json_object(node.requirements);
         item["bonus_stats"] = map_to_json_object(node.bonus_stats);
-        item["bonus_score"] = met ? round4(weighted_stats_score(node.bonus_stats, weights)) : 0.0;
+        double raw_bonus_score = weighted_stats_score(node.bonus_stats, weights);
+        double effective_bonus_multiplier = node.type == "rare" ? effective_state.node_bonus_multipliers[index] : 0.0;
+        item["bonus_score"] = met ? round4(raw_bonus_score * (1.0 + effective_bonus_multiplier)) : 0.0;
+        item["node_bonus_multiplier"] = round4(effective_bonus_multiplier);
         json effective = json::object();
         json missing = json::object();
         std::vector<std::string> missing_bits;
         for (const auto& [stat, required] : node.requirements) {
-            double current = weight_for(effective_totals, stat);
+            double current = weight_for(effective_state.effective_totals, stat);
             effective[stat] = round4(current);
             double shortfall = std::max(0.0, required - current);
             missing[stat] = round4(shortfall);
@@ -2458,15 +2580,26 @@ ScoredRoute score_route(
         requirement_payload.push_back(std::move(item));
     }
 
-    std::vector<GlyphEvaluation> assigned_glyphs = assign_glyphs(graph, glyphs, weights, context, route.selected);
     double glyph_score = 0.0;
+    double glyph_node_bonus_score = 0.0;
     std::vector<std::string> warnings;
     warnings.insert(warnings.end(), requirement_warnings.begin(), requirement_warnings.end());
     json glyph_payload = json::array();
     std::unordered_map<int, GlyphEvaluation> glyph_by_socket;
-    for (const GlyphEvaluation& evaluation : assigned_glyphs) {
+    for (const GlyphEvaluation& assigned : assigned_glyphs) {
+        GlyphEvaluation evaluation = evaluate_glyph(
+            graph,
+            glyphs,
+            weights,
+            context,
+            route.selected,
+            assigned.socket_index,
+            assigned.glyph_index,
+            &effective_state
+        );
         const Glyph& glyph = glyphs[evaluation.glyph_index];
         glyph_score += evaluation.score;
+        glyph_node_bonus_score += evaluation.node_bonus_score;
         glyph_by_socket[evaluation.socket_index] = evaluation;
         for (const std::string& warning : evaluation.warnings) {
             warnings.push_back(warning);
@@ -2480,16 +2613,39 @@ ScoredRoute score_route(
         item["radius"] = evaluation.radius;
         item["legendary_unlocked"] = evaluation.legendary_unlocked;
         item["requirement_met"] = evaluation.requirement_met;
-        item["stat_in_radius"] = evaluation.stat_in_radius;
+        item["stat_in_radius"] = round4(evaluation.stat_in_radius);
         item["requirement"] = evaluation.requirement;
         item["bonus_stat"] = evaluation.bonus_stat.empty() ? json(nullptr) : json(evaluation.bonus_stat);
         item["scaling_value_per_5"] = evaluation.scaling_value_per_5;
+        if (glyph.node_bonus.active) {
+            item["node_bonus"] = {
+                {"node_type", glyph.node_bonus.node_type},
+                {"bonus_percent", round4(glyph.node_bonus.bonus_percent)}
+            };
+        } else {
+            item["node_bonus"] = nullptr;
+        }
+        item["node_bonus_score"] = round4(evaluation.node_bonus_score);
+        json affected_nodes = json::array();
+        for (const GlyphAffectedNode& affected : evaluation.affected_nodes) {
+            if (affected.node_index < 0 || affected.node_index >= static_cast<int>(graph.nodes.size())) {
+                continue;
+            }
+            const GraphNode& affected_node = graph.nodes[affected.node_index];
+            affected_nodes.push_back({
+                {"node", affected_node.id},
+                {"type", affected_node.type},
+                {"raw_score", round4(affected.raw_score)},
+                {"bonus_score", round4(affected.bonus_score)}
+            });
+        }
+        item["affected_nodes"] = std::move(affected_nodes);
         glyph_payload.push_back(std::move(item));
     }
 
     double penalties = 0.0;
     for (const auto& [stat, minimum] : weights.minimums) {
-        double current = weight_for(effective_totals, stat);
+        double current = weight_for(effective_state.effective_totals, stat);
         if (current < minimum) {
             double shortfall = minimum - current;
             double penalty_weight = std::abs(weight_for(weights.weights, stat, 1.0));
@@ -2616,9 +2772,12 @@ ScoredRoute score_route(
     for (int index : selected_indices) {
         selected_nodes.push_back(graph.nodes[index].id);
     }
-    json totals_payload = map_to_json_object(totals);
-    json bonus_totals_payload = map_to_json_object(bonus_totals);
-    json effective_totals_payload = map_to_json_object(effective_totals);
+    json totals_payload = map_to_json_object(effective_state.totals);
+    json bonus_totals_payload = map_to_json_object(effective_state.bonus_totals);
+    std::map<std::string, double> glyph_node_bonus_totals = effective_state.base_node_bonus_totals;
+    add_scaled_stats(glyph_node_bonus_totals, effective_state.bonus_node_bonus_totals, 1.0);
+    json glyph_node_bonus_totals_payload = map_to_json_object(glyph_node_bonus_totals);
+    json effective_totals_payload = map_to_json_object(effective_state.effective_totals);
 
     json result;
     result["score"] = round4(score);
@@ -2627,10 +2786,12 @@ ScoredRoute score_route(
     result["gated_node_bonus_score"] = round4(gated_node_bonus_score);
     result["node_bonus"] = round4(node_bonus);
     result["glyph_score"] = round4(glyph_score);
+    result["glyph_node_bonus_score"] = round4(glyph_node_bonus_score);
     result["penalties"] = round4(penalties);
     result["points_used"] = points_used;
     result["totals"] = totals_payload;
     result["bonus_totals"] = bonus_totals_payload;
+    result["glyph_node_bonus_totals"] = glyph_node_bonus_totals_payload;
     result["effective_totals"] = effective_totals_payload;
     result["glyphs"] = glyph_payload;
     result["activated_bonuses"] = activated;
