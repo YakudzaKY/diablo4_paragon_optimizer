@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nCleaver\nRadius Size: 3 \nFor every 5 Strength purchased within range, you deal +0.66% increased damage while wielding an Axe.\nAdditional Bonus: \nWhile wielding an Axe, you deal 12% [x] increased Critical Strike Damage.\nRequired (purchased in range): +40 Strength\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nТесак\nРадиус: 3 \nЗа каждые 5 ед. силы, открытых в радиусе действия, урон увеличивается на +0.66% при использовании топора.\nДополнительный бонус: \nПри использовании топоров вы наносите на 12% [x] больше критического урона.\nТребуется открыть в радиусе действия: +40 к силе\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:28:54Z",
+  "checked_at": "2026-06-06T17:06:30Z",
   "class": "barbarian",
   "class_mask": 4,
   "id": "cleaver",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 0.5
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 10.4
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 15.4
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase damage by 0.5% [x] .",
+    "value": 0.5
+  },
   "max_level": 100,
   "name": {
     "en": "Cleaver",
@@ -51,6 +76,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 0.66
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 5.56
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 8.04
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 0.66
   },
   "schema_version": 1,
   "skill_tags": [

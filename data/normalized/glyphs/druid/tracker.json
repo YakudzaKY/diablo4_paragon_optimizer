@@ -3,7 +3,7 @@
     "en": "Rare Glyph \nTracker\nRadius Size: 3 \nFor every 5 Dexterity purchased within range, you deal +1.0% increased damage to Poisoned targets.\nAdditional Bonus: \nPoisoning damage effects last 40% [x] longer.\nRequired (purchased in range): +25 Dexterity\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nСледопыт\nРадиус: 3 \nЗа каждые 5 ед. ловкости, открытых в радиусе действия, урон, наносимый отравленным целям, увеличивается на +1.0% .\nДополнительный бонус: \nЭффекты периодического урона от отравления действуют на 40% [x] дольше.\nТребуется открыть в радиусе действия: +25 к ловкости\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-06-06T16:26:31Z",
+  "checked_at": "2026-06-06T16:56:57Z",
   "class": "druid",
   "class_mask": 2,
   "id": "tracker",

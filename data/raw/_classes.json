@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-05-27T10:10:45Z",
+  "checked_at": "2026-06-06T16:45:51Z",
   "classes": {
     "barbarian": {
       "class_mask": 4,
@@ -82,7 +82,7 @@
       "slug": "warlock"
     }
   },
-  "paragon_data_url": "https://nether.wowhead.com/diablo-4/data/paragon-calc?dv=17&db=1778694731",
+  "paragon_data_url": "https://nether.wowhead.com/diablo-4/data/paragon-calc?dv=17&db=1779889483",
   "reuse_events": [],
   "schema_version": 1,
   "source": "wowhead",

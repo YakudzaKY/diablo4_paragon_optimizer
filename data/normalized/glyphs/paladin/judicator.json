@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nJudicator\nRadius Size: 3 \nFor every 5 Intelligence purchased within range, your Judicator skills deal 1.5% [+] increased damage.\nAdditional Bonus: \nDeal an additional 20% [x] Non-physical Damage to Elites.\nRequired (purchased in range): +25 Intelligence\nLegendary Bonus: \nIncrease Holy and Fire damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nВершитель\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, урон умений категории \"Вершитель\" увеличивается на 1.5% [+] .\nДополнительный бонус: \nОсобые противники получают на 20% [x] больше нефизического урона.\nТребуется открыть в радиусе действия: +25 к интеллекту\nЛегендарный бонус: \n+ 0.5% [x] к урону от огня и сил Света. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:56:38Z",
+  "checked_at": "2026-06-06T17:39:17Z",
   "class": "paladin",
   "class_mask": 64,
   "id": "judicator",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 0.5
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 10.4
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 15.4
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase Holy and Fire damage by 0.5% [x] .",
+    "value": 0.5
+  },
   "max_level": 100,
   "name": {
     "en": "Judicator",
@@ -53,6 +78,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 1.5
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 14.1
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 20.4
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 1.5
   },
   "schema_version": 1,
   "skill_tags": [

@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nEclipse\nRadius Size: 3 \nFor every 5 Intelligence purchased within range, Shade Skills deal +1.3% increased damage.\nAdditional Bonus: \nYou gain 20% [x] Cast Speed for 3 seconds after using a Shade Skill.\nRequired (purchased in range): +25 Intelligence\nLegendary Bonus: \nIncrease Shade Skill damage by 5.2% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nЗатмение\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, умения тени наносят на +1.3% больше урона.\nДополнительный бонус: \nВ течение 3 сек. после применения умения тени ваша скорость применения умений повышается на 20% [x] .\nТребуется открыть в радиусе действия: +25 к интеллекту\nЛегендарный бонус: \n+ 5.2% [x] к урону умений тени . \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:36:02Z",
+  "checked_at": "2026-06-06T17:14:15Z",
   "class": "rogue",
   "class_mask": 8,
   "id": "eclipse",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 5.2
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 18.0
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 24.5
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase Shade Skill damage by 5.2% [x] .",
+    "value": 5.2
+  },
   "max_level": 100,
   "name": {
     "en": "Eclipse",
@@ -51,6 +76,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 1.3
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 11.1
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 16.1
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 1.3
   },
   "schema_version": 1,
   "skill_tags": [

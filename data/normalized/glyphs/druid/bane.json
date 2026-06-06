@@ -3,7 +3,7 @@
     "en": "Rare Glyph \nBane\nRadius Size: 3 \nFor every 5 Intelligence purchased within range, you deal +1.0% increased Poison damage.\nAdditional Bonus: \nPoisoning damage effects have a 15% chance to deal double the amount of damage over their duration.\nRequired (purchased in range): +25 Intelligence\nLegendary Bonus: \nIncrease Poison damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nБич\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, урон от яда увеличивается на +1.0% .\nДополнительный бонус: \nЭффекты периодического урона от отравления с вероятностью 15% наносят удвоенный урон за все время действия.\nТребуется открыть в радиусе действия: +25 к интеллекту\nЛегендарный бонус: \n+ 0.5% [x] к урону от яда. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-06-06T16:26:31Z",
+  "checked_at": "2026-06-06T16:56:57Z",
   "class": "druid",
   "class_mask": 2,
   "id": "bane",

@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nPride\nRadius Size: 3 \nGrants +25.0% bonus to all Rare nodes within range.\nAdditional Bonus: \nYou deal 27% [x] increased Physical damage to both Healthy and Injured enemies.\nRequired (purchased in range): +25 Strength\nLegendary Bonus: \nIncrease damage to Elites by 2.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nГордыня\nРадиус: 3 \nУсиливает все редкие узлы в радиусе действия на +25.0% .\nДополнительный бонус: \nВы наносите на 27% [x] больше физического урона целям с высоким и низким уровнем здоровья.\nТребуется открыть в радиусе действия: +25 к силе\nЛегендарный бонус: \n+ 2.8% [x] к урону особым противникам. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:36:02Z",
+  "checked_at": "2026-06-06T17:14:15Z",
   "class": "rogue",
   "class_mask": 8,
   "id": "pride",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 2.8
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 14.2
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 20.0
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase damage to Elites by 2.8% [x] .",
+    "value": 2.8
+  },
   "max_level": 100,
   "name": {
     "en": "Pride",
@@ -14,6 +39,29 @@
   },
   "node_bonus": {
     "bonus_percent": 25.0,
+    "level_scaling": {
+      "samples": [
+        {
+          "bonus_percent": 25.0,
+          "level": 1,
+          "multiplier": 0.25,
+          "source": "bonus_text.en"
+        },
+        {
+          "bonus_percent": 272.5,
+          "level": 100,
+          "multiplier": 2.725,
+          "source": "bonus_text.en?level=100"
+        },
+        {
+          "bonus_percent": 397.5,
+          "level": 150,
+          "multiplier": 3.975,
+          "source": "bonus_text.en?level=150"
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
     "multiplier": 0.25,
     "node_type": "rare",
     "source": "bonus_text.en"
@@ -59,6 +107,7 @@
       50
     ]
   },
+  "scaling_value_per_5": null,
   "schema_version": 1,
   "skill_tags": [
     {

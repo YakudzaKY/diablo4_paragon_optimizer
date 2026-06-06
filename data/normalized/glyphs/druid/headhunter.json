@@ -3,7 +3,7 @@
     "en": "Rare Glyph \nHeadhunter\nRadius Size: 3 \nGrants +20.0% bonus to all Normal nodes within range.\nAdditional Bonus: \nYou deal 10% [x] increased damage to Elites.\nRequired (purchased in range): +40 Willpower\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nОхотник за головами\nРадиус: 3 \nУсиливает все стандартные узлы в радиусе действия на +20.0% .\nДополнительный бонус: \nВы наносите на 10% [x] больше урона особым противникам.\nТребуется открыть в радиусе действия: +40 к силе воли\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-06-06T16:26:31Z",
+  "checked_at": "2026-06-06T16:56:57Z",
   "class": "druid",
   "class_mask": 130,
   "id": "headhunter",

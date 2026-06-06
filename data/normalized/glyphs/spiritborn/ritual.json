@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nRitual\nRadius Size: 3 \nFor every 5 Intelligence purchased within range, you gain +0.20% increased Mystic Circle potency.\nAdditional Bonus: \nWhile standing in a Mystic Circle you deal 10% [x] increased damage and take 10% [x] reduced damage.\nRequired (purchased in range): +25 Intelligence\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nРитуал\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, мощь мистического круга увеличивается на +0.20% .\nДополнительный бонус: \nПока вы стоите в мистическом круге , вы наносите на 10% [x] больше и получаете на 10% [x] меньше урона.\nТребуется открыть в радиусе действия: +25 к интеллекту\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:50:24Z",
+  "checked_at": "2026-06-06T17:32:36Z",
   "class": "spiritborn",
   "class_mask": 32,
   "id": "ritual",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 0.5
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 10.4
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 15.4
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase damage by 0.5% [x] .",
+    "value": 0.5
+  },
   "max_level": 100,
   "name": {
     "en": "Ritual",
@@ -50,6 +75,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 0.2
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 1.18
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 1.67
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 0.2
   },
   "schema_version": 1,
   "skill_tags": [

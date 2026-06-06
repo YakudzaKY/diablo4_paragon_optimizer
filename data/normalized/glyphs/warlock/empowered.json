@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nEmpowered\nRadius Size: 3 \nFor every 5 Willpower purchased within range, you deal +0.10% increased Overpower damage per stack.\nAdditional Bonus: \nYour Occult Skills deal 15% [x] increased damage while you have any Overpower .\nRequired (purchased in range): +40 Willpower\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nУсиление\nРадиус: 3 \nЗа каждые 5 ед. силы воли, открытых в радиусе действия, подавляющий урон увеличивается на +0.10% за каждый эффект.\nДополнительный бонус: \nПока на вас действует эффект \"Подавления\" , ваши умения категории \"Оккультизм\" наносят на 15% [x] больше урона.\nТребуется открыть в радиусе действия: +40 к силе воли\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T11:02:00Z",
+  "checked_at": "2026-06-06T17:46:03Z",
   "class": "warlock",
   "class_mask": 128,
   "id": "empowered",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 0.5
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 10.4
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 15.4
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase damage by 0.5% [x] .",
+    "value": 0.5
+  },
   "max_level": 100,
   "name": {
     "en": "Empowered",
@@ -52,6 +77,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 0.1
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 0.65
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 0.93
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 0.1
   },
   "schema_version": 1,
   "skill_tags": [

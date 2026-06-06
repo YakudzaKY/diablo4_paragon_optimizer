@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nControl\nRadius Size: 3 \nFor every 5 Dexterity purchased within range, you deal +1.5% increased damage to Crowd Controlled targets.\nAdditional Bonus: \nYou deal 10% [x] increased damage to Slowed or Chilled enemies or, instead, 20% [x] increased damage to Stunned or Frozen enemies.\nRequired (purchased in range): +25 Dexterity\nLegendary Bonus: \nIncrease damage to Crowd Controlled targets by 2.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nКонтроль\nРадиус: 3 \nЗа каждые 5 ед. ловкости, открытых в радиусе действия, урон целям под действием эффектов контроля увеличивается на +1.5% .\nДополнительный бонус: \nВы наносите на 10% [x] больше урона замедленным или окоченевшим целям. Если цель оглушена или заморожена , урон вместо этого увеличивается на 20% [x] .\nТребуется открыть в радиусе действия: +25 к ловкости\nЛегендарный бонус: \n+ 2.8% [x] к урону целям под действием эффектов контроля. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:10:45Z",
+  "checked_at": "2026-06-06T16:45:51Z",
   "class": "sorcerer",
   "class_mask": 1,
   "id": "control",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 2.8
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 14.2
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 20.0
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase damage to Crowd Controlled targets by 2.8% [x] .",
+    "value": 2.8
+  },
   "max_level": 100,
   "name": {
     "en": "Control",
@@ -52,6 +77,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 1.5
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 12.5
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 18.1
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 1.5
   },
   "schema_version": 1,
   "skill_tags": [

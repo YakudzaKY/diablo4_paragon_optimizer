@@ -3,7 +3,7 @@
     "en": "Rare Glyph \nEarth and Sky\nRadius Size: 3 \nGrants +30.0% bonus to all Magic nodes within range.\nAdditional Bonus: \nNature Magic Skills deal 18% [x] increased damage to Crowd Controlled or Vulnerable enemies.\nRequired (purchased in range): +40 Willpower\nLegendary Bonus: \nIncrease Nature Magic skill damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nЗемля и небо\nРадиус: 3 \nУсиливает все магические узлы в радиусе действия на +30.0% .\nДополнительный бонус: \nУмения сил природы наносят на 18% [x] больше урона уязвимым целям или целям, находящимся под действием эффектов контроля.\nТребуется открыть в радиусе действия: +40 к силе воли\nЛегендарный бонус: \n+ 0.5% [x] к урону от умений сил природы . \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-06-06T16:26:31Z",
+  "checked_at": "2026-06-06T16:56:57Z",
   "class": "druid",
   "class_mask": 2,
   "id": "earth_and_sky",

@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nSpirit\nRadius Size: 3 \nFor every 5 Willpower purchased within range, you deal +2.0% increased Critical Strike Damage.\nAdditional Bonus: \nCritical Strikes increase the damage an enemy takes from you by 3% [x] for 20 seconds, up to 15% [x] .\nRequired (purchased in range): +25 Willpower\nLegendary Bonus: \nIncrease Critical Strike Damage by 2.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nДух\nРадиус: 3 \nЗа каждые 5 ед. силы воли, открытых в радиусе действия, наносимый критический урон увеличивается на +2.0% .\nДополнительный бонус: \nКритические удары увеличивают урон, получаемый целью от вас, на 3% [x] на 20 сек. Максимальный бонус – 15% [x] .\nТребуется открыть в радиусе действия: +25 к силе воли\nЛегендарный бонус: \n+ 2.8% [x] к критическому урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:56:38Z",
+  "checked_at": "2026-06-06T17:39:17Z",
   "class": "paladin",
   "class_mask": 64,
   "id": "spirit",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 2.8
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 14.2
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 20.0
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase Critical Strike Damage by 2.8% [x] .",
+    "value": 2.8
+  },
   "max_level": 100,
   "name": {
     "en": "Spirit",
@@ -50,6 +75,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 2.0
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 16.7
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 24.1
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 2.0
   },
   "schema_version": 1,
   "skill_tags": [

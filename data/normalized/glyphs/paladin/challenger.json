@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nChallenger\nRadius Size: 3 \nGrants +20.0% bonus to all Normal nodes within range.\nAdditional Bonus: \nYou deal 10% [x] increased damage to Elites.\nRequired (purchased in range): +40 Strength\nLegendary Bonus: \nIncrease damage to Elites by 2.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nПротивник\nРадиус: 3 \nУсиливает все стандартные узлы в радиусе действия на +20.0% .\nДополнительный бонус: \nВы наносите на 10% [x] больше урона особым противникам.\nТребуется открыть в радиусе действия: +40 к силе\nЛегендарный бонус: \n+ 2.8% [x] к урону особым противникам. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:56:38Z",
+  "checked_at": "2026-06-06T17:39:17Z",
   "class": "paladin",
   "class_mask": 68,
   "id": "challenger",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 2.8
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 14.2
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 20.0
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase damage to Elites by 2.8% [x] .",
+    "value": 2.8
+  },
   "max_level": 100,
   "name": {
     "en": "Challenger",
@@ -14,6 +39,29 @@
   },
   "node_bonus": {
     "bonus_percent": 20.0,
+    "level_scaling": {
+      "samples": [
+        {
+          "bonus_percent": 20.0,
+          "level": 1,
+          "multiplier": 0.2,
+          "source": "bonus_text.en"
+        },
+        {
+          "bonus_percent": 100.0,
+          "level": 100,
+          "multiplier": 1.0,
+          "source": "bonus_text.en?level=100"
+        },
+        {
+          "bonus_percent": 140.5,
+          "level": 150,
+          "multiplier": 1.405,
+          "source": "bonus_text.en?level=150"
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
     "multiplier": 0.2,
     "node_type": "normal",
     "source": "bonus_text.en"
@@ -56,6 +104,7 @@
       50
     ]
   },
+  "scaling_value_per_5": null,
   "schema_version": 1,
   "skill_tags": [
     {

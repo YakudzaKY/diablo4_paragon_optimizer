@@ -3,7 +3,7 @@
     "en": "Rare Glyph \nElectrocution\nRadius Size: 3 \nFor every 5 Willpower purchased within range, your Lightning Bolts and Dancing Bolts deal 6.6% [+] increased damage.\nAdditional Bonus: \nEnemies damaged by your Lightning Bolts or Dancing Bolts take 20% [x] increased damage from you for 5 seconds.\nRequired (purchased in range): +40 Willpower\nLegendary Bonus: \nIncrease Lightning damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nУдар током\nРадиус: 3 \nЗа каждые 5 ед. силы воли, открытых в радиусе действия, урон разрядов молнии и пляшущих молний увеличивается на 6.6% [+] .\nДополнительный бонус: \nПротивники, пораженные вашими разрядами молнии или пляшущими молниями , получают от вас на 20% [x] больше урона в течение 5 сек.\nТребуется открыть в радиусе действия: +40 к силе воли\nЛегендарный бонус: \n+ 0.5% [x] к урону от молнии. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-06-06T16:26:31Z",
+  "checked_at": "2026-06-06T16:56:57Z",
   "class": "druid",
   "class_mask": 2,
   "id": "electrocution",

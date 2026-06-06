@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nCryopathy\nRadius Size: 3 \nFor every 5 Willpower purchased within range, you deal +1.5% increased damage to Chilled targets.\nAdditional Bonus: \nEnemies deal 15% reduced damage to you for 5 seconds after they are no longer Frozen .\nRequired (purchased in range): +25 Willpower\nLegendary Bonus: \nIncrease Cold damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nКриопатия\nРадиус: 3 \nЗа каждые 5 ед. силы воли, открытых в радиусе действия, урон, наносимый окоченевшим целям, увеличивается на +1.5% .\nДополнительный бонус: \nПротивники наносят вам на 15% меньше урона в течение 5 сек. после снятия эффекта заморозки .\nТребуется открыть в радиусе действия: +25 к силе воли\nЛегендарный бонус: \n+ 0.5% [x] к урону от холода . \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:10:45Z",
+  "checked_at": "2026-06-06T16:45:51Z",
   "class": "sorcerer",
   "class_mask": 1,
   "id": "cryopathy",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 0.5
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 10.4
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 15.4
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase Cold damage by 0.5% [x] .",
+    "value": 0.5
+  },
   "max_level": 100,
   "name": {
     "en": "Cryopathy",
@@ -53,6 +78,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 1.5
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 12.5
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 18.1
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 1.5
   },
   "schema_version": 1,
   "skill_tags": [

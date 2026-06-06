@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nRetribution\nRadius Size: 3 \nGrants +20.0% bonus to all Rare nodes within range.\nAdditional Bonus: \nRetribution gains 10% [x] increased damage and 50% [+] increased Size.\nRequired (purchased in range): +40 Strength\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nВоздаяние\nРадиус: 3 \nУсиливает все редкие узлы в радиусе действия на +20.0% .\nДополнительный бонус: \n\"Воздаяние\" наносит на 10% [x] больше урона, и его область действия увеличивается на 50% [+] .\nТребуется открыть в радиусе действия: +40 к силе\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:56:38Z",
+  "checked_at": "2026-06-06T17:39:17Z",
   "class": "paladin",
   "class_mask": 64,
   "id": "retribution",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 0.5
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 10.4
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 15.4
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase damage by 0.5% [x] .",
+    "value": 0.5
+  },
   "max_level": 100,
   "name": {
     "en": "Retribution",
@@ -14,6 +39,29 @@
   },
   "node_bonus": {
     "bonus_percent": 20.0,
+    "level_scaling": {
+      "samples": [
+        {
+          "bonus_percent": 20.0,
+          "level": 1,
+          "multiplier": 0.2,
+          "source": "bonus_text.en"
+        },
+        {
+          "bonus_percent": 218.0,
+          "level": 100,
+          "multiplier": 2.18,
+          "source": "bonus_text.en?level=100"
+        },
+        {
+          "bonus_percent": 318.0,
+          "level": 150,
+          "multiplier": 3.18,
+          "source": "bonus_text.en?level=150"
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
     "multiplier": 0.2,
     "node_type": "rare",
     "source": "bonus_text.en"
@@ -56,6 +104,7 @@
       50
     ]
   },
+  "scaling_value_per_5": null,
   "schema_version": 1,
   "skill_tags": [
     {

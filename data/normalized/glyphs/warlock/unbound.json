@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nUnbound\nRadius Size: 3 \nGrants +30.0% bonus to all Magic nodes within range.\nAdditional Bonus: \nAfter spending 50 Wrath, you deal 10% [x] increased damage and gain 25% increased Wrath Regeneration for 3 seconds.\nRequired (purchased in range): +25 Intelligence\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nОсвобождение\nРадиус: 3 \nУсиливает все магические узлы в радиусе действия на +30.0% .\nДополнительный бонус: \nПотратив 50 ед. гнева, вы наносите на 10% [x] больше урона, а восстановление гнева ускоряется на 25% на 3 сек.\nТребуется открыть в радиусе действия: +25 к интеллекту\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T11:02:00Z",
+  "checked_at": "2026-06-06T17:46:03Z",
   "class": "warlock",
   "class_mask": 128,
   "id": "unbound",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 0.5
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 10.4
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 15.4
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase damage by 0.5% [x] .",
+    "value": 0.5
+  },
   "max_level": 100,
   "name": {
     "en": "Unbound",
@@ -14,6 +39,29 @@
   },
   "node_bonus": {
     "bonus_percent": 30.0,
+    "level_scaling": {
+      "samples": [
+        {
+          "bonus_percent": 30.0,
+          "level": 1,
+          "multiplier": 0.3,
+          "source": "bonus_text.en"
+        },
+        {
+          "bonus_percent": 327.0,
+          "level": 100,
+          "multiplier": 3.27,
+          "source": "bonus_text.en?level=100"
+        },
+        {
+          "bonus_percent": 477.0,
+          "level": 150,
+          "multiplier": 4.77,
+          "source": "bonus_text.en?level=150"
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
     "multiplier": 0.3,
     "node_type": "magic",
     "source": "bonus_text.en"
@@ -56,6 +104,7 @@
       50
     ]
   },
+  "scaling_value_per_5": null,
   "schema_version": 1,
   "skill_tags": [
     {

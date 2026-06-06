@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nWrath\nRadius Size: 3 \nFor every 5 Dexterity purchased within range, you deal +1.5% increased Critical Strike Damage.\nAdditional Bonus: \nSkills that Critically Strike generate 3 Fury.\nRequired (purchased in range): +25 Dexterity\nLegendary Bonus: \nIncrease Critical Strike Damage by 2.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nГнев\nРадиус: 3 \nЗа каждые 5 ед. ловкости, открытых в радиусе действия, наносимый критический урон увеличивается на 1.5% .\nДополнительный бонус: \nУмения, наносящие критический урон, позволяют накопить 3 ед. ярости.\nТребуется открыть в радиусе действия: +25 к ловкости\nЛегендарный бонус: \n+ 2.8% [x] к критическому урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:28:54Z",
+  "checked_at": "2026-06-06T17:06:30Z",
   "class": "barbarian",
   "class_mask": 4,
   "id": "wrath",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 2.8
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 14.2
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 20.0
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase Critical Strike Damage by 2.8% [x] .",
+    "value": 2.8
+  },
   "max_level": 100,
   "name": {
     "en": "Wrath",
@@ -51,6 +76,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 1.5
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 12.5
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 18.1
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 1.5
   },
   "schema_version": 1,
   "skill_tags": [

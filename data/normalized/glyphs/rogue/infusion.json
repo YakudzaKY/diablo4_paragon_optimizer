@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nInfusion\nRadius Size: 3 \nFor every 5 Intelligence purchased within range, Skills that are Imbued deal +1.5% increased damage.\nAdditional Bonus: \nCasting an Imbuement Skill reduces the active Cooldown of another random Imbuement Skill by 2.0 seconds.\nRequired (purchased in range): +25 Intelligence\nLegendary Bonus: \nIncrease Non-Physical damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nНасыщение\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, урон от умений с эффектом насыщения увеличивается на +1.5% .\nДополнительный бонус: \nКогда вы применяете умение категории \"Насыщение\" , время восстановления другого случайного умения этой категории сокращается на 2.0 сек.\nТребуется открыть в радиусе действия: +25 к интеллекту\nЛегендарный бонус: \n+ 0.5% [x] к нефизическому урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:36:02Z",
+  "checked_at": "2026-06-06T17:14:15Z",
   "class": "rogue",
   "class_mask": 8,
   "id": "infusion",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 0.5
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 10.4
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 15.4
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase Non-Physical damage by 0.5% [x] .",
+    "value": 0.5
+  },
   "max_level": 100,
   "name": {
     "en": "Infusion",
@@ -52,6 +77,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 1.5
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 12.5
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 18.1
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 1.5
   },
   "schema_version": 1,
   "skill_tags": [

@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nEfficacy\nRadius Size: 3 \nGrants +25.0% bonus to all Rare nodes within range.\nAdditional Bonus: \nImbuement Skill effects have 20% [x] increased potency.\nRequired (purchased in range): +25 Intelligence\nLegendary Bonus: \nIncrease Non-Physical damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nЭффективность\nРадиус: 3 \nУсиливает все редкие узлы в радиусе действия на +25.0% .\nДополнительный бонус: \nЭффекты умений категории \"Насыщение\" усиливаются на 20% [x] .\nТребуется открыть в радиусе действия: +25 к интеллекту\nЛегендарный бонус: \n+ 0.5% [x] к нефизическому урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:36:02Z",
+  "checked_at": "2026-06-06T17:14:15Z",
   "class": "rogue",
   "class_mask": 8,
   "id": "efficacy",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 0.5
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 10.4
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 15.4
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase Non-Physical damage by 0.5% [x] .",
+    "value": 0.5
+  },
   "max_level": 100,
   "name": {
     "en": "Efficacy",
@@ -14,6 +39,29 @@
   },
   "node_bonus": {
     "bonus_percent": 25.0,
+    "level_scaling": {
+      "samples": [
+        {
+          "bonus_percent": 25.0,
+          "level": 1,
+          "multiplier": 0.25,
+          "source": "bonus_text.en"
+        },
+        {
+          "bonus_percent": 272.5,
+          "level": 100,
+          "multiplier": 2.725,
+          "source": "bonus_text.en?level=100"
+        },
+        {
+          "bonus_percent": 397.5,
+          "level": 150,
+          "multiplier": 3.975,
+          "source": "bonus_text.en?level=150"
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
     "multiplier": 0.25,
     "node_type": "rare",
     "source": "bonus_text.en"
@@ -57,6 +105,7 @@
       50
     ]
   },
+  "scaling_value_per_5": null,
   "schema_version": 1,
   "skill_tags": [
     {

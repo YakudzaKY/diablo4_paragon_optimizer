@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nDominate\nRadius Size: 3 \nFor every 5 Willpower purchased within range, you deal +1.5% increased damage per Overpower charge.\nAdditional Bonus: \nEvery 12 seconds, you gain a charge of Overpower .\nRequired (purchased in range): +25 Willpower\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nПодчинение\nРадиус: 3 \nЗа каждые 5 ед. силы воли, открытых в радиусе действия, урон увеличивается на +1.5% за каждый накопленный эффект \"Подавления\" .\nДополнительный бонус: \nРаз в 12 сек. вы получаете эффект \"Подавления\" .\nТребуется открыть в радиусе действия: +25 к силе воли\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:28:54Z",
+  "checked_at": "2026-06-06T17:06:30Z",
   "class": "barbarian",
   "class_mask": 4,
   "id": "dominate",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 0.5
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 10.4
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 15.4
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase damage by 0.5% [x] .",
+    "value": 0.5
+  },
   "max_level": 100,
   "name": {
     "en": "Dominate",
@@ -50,6 +75,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 1.5
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 16.2
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 23.6
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 1.5
   },
   "schema_version": 1,
   "skill_tags": [

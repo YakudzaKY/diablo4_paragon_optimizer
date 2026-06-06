@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nExhumation\nRadius Size: 3 \nFor every 5 Intelligence purchased within range, your Corpse Skills deal 1.7% [+] increased damage.\nAdditional Bonus: \nConsuming a Corpse Fortifies you for 1% of your Maximum Life (8.6) and grants 6% Damage Reduction for 8 seconds.\nRequired (purchased in range): +40 Intelligence\nLegendary Bonus: \nIncrease damage while Healthy by 0.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nЭксгумация\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, урон умений категории \"Трупы\" увеличивается на 1.7% [+] .\nДополнительный бонус: \nПоглощая труп, вы получаете укрепление в объеме 1% максимального запаса здоровья (8.6) , а получаемый вами урон уменьшается на 6% на 8 сек.\nТребуется открыть в радиусе действия: +40 к интеллекту\nЛегендарный бонус: \n+ 0.8% [x] к урону при высоком уровне здоровья. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:42:26Z",
+  "checked_at": "2026-06-06T17:24:30Z",
   "class": "necromancer",
   "class_mask": 16,
   "id": "exhumation",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 0.8
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 12.2
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 18.0
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase damage while Healthy by 0.8% [x] .",
+    "value": 0.8
+  },
   "max_level": 100,
   "name": {
     "en": "Exhumation",
@@ -53,6 +78,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 1.7
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 11.5
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 16.4
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 1.7
   },
   "schema_version": 1,
   "skill_tags": [

@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nSeething\nRadius Size: 3 \nFor every 5 Strength purchased within range, you deal +0.7% increased damage while wielding a Sword.\nAdditional Bonus: \nWhile wielding a Sword, you gain 5 Fury when you kill an enemy.\nRequired (purchased in range): +40 Strength\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nВозмущение\nРадиус: 3 \nЗа каждые 5 ед. силы, открытых в радиусе действия, урон с мечом увеличивается на +0.7% .\nДополнительный бонус: \nПри использовании мечей вы накапливаете 5 ед. ярости за каждого убитого противника.\nТребуется открыть в радиусе действия: +40 к силе\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:28:54Z",
+  "checked_at": "2026-06-06T17:06:30Z",
   "class": "barbarian",
   "class_mask": 4,
   "id": "seething",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 0.5
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 10.4
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 15.4
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase damage by 0.5% [x] .",
+    "value": 0.5
+  },
   "max_level": 100,
   "name": {
     "en": "Seething",
@@ -51,6 +76,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 0.7
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 4.3
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 6.2
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 0.7
   },
   "schema_version": 1,
   "skill_tags": [

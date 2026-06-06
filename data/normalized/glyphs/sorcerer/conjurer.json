@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nConjurer\nRadius Size: 3 \nFor every 5 Intelligence within range, Conjuration Skills gain +1.5% increased damage.\nAdditional Bonus: \nConjuration Skills have 10% increased Critical Hit Chance.\nRequired (purchased in range): +40 Intelligence\nLegendary Bonus: \nIncrease Conjuration Skill damage by 2.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nЧаротворец\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, урон от умений категории \"Колдовство\" увеличивается на +1.5% .\nДополнительный бонус: \nВероятность критического удара умений категории \"Колдовство\" увеличивается на 10% .\nТребуется открыть в радиусе действия: +40 к интеллекту\nЛегендарный бонус: \n+ 2.8% [x] к урону от умений категории \"Колдовство\" . \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:10:45Z",
+  "checked_at": "2026-06-06T16:45:51Z",
   "class": "sorcerer",
   "class_mask": 1,
   "id": "conjurer",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 2.8
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 14.2
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 20.0
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase Conjuration Skill damage by 2.8% [x] .",
+    "value": 2.8
+  },
   "max_level": 100,
   "name": {
     "en": "Conjurer",
@@ -50,6 +75,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 1.5
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 12.6
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 18.2
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 1.5
   },
   "schema_version": 1,
   "skill_tags": [

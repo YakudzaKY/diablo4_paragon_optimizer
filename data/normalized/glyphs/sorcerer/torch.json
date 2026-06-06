@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nTorch\nRadius Size: 3 \nFor every 5 Willpower purchased within range, you deal +1.0% increased Burning damage.\nAdditional Bonus: \nYou deal 2.5% [x] increased damage per Nearby Burning enemy, up to 25.0% [x] .\nRequired (purchased in range): +25 Willpower\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nФакел\nРадиус: 3 \nЗа каждые 5 ед. силы воли, открытых в радиусе действия, урон от горения увеличивается на +1.0% .\nДополнительный бонус: \nНаносимый вами урон увеличивается на 2.5% [x] за каждого горящего противника рядом с вами вплоть до 25.0% [x] .\nТребуется открыть в радиусе действия: +25 к силе воли\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:10:45Z",
+  "checked_at": "2026-06-06T16:45:51Z",
   "class": "sorcerer",
   "class_mask": 1,
   "id": "torch",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 0.5
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 10.4
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 15.4
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase damage by 0.5% [x] .",
+    "value": 0.5
+  },
   "max_level": 100,
   "name": {
     "en": "Torch",
@@ -50,6 +75,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 1.0
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 8.3
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 12.1
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 1.0
   },
   "schema_version": 1,
   "skill_tags": [

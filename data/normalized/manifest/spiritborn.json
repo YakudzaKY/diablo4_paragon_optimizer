@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-05-27T10:50:24Z",
+  "checked_at": "2026-06-06T17:32:36Z",
   "class": "spiritborn",
   "counts": {
     "available_stats": 27,
@@ -43,7 +43,7 @@
       "ru": "https://www.wowhead.com/diablo-4/ru/paragon-nodes"
     },
     "paragon_calc": "https://www.wowhead.com/diablo-4/paragon-calc/spiritborn",
-    "paragon_data": "https://nether.wowhead.com/diablo-4/data/paragon-calc?dv=17&db=1778694731"
+    "paragon_data": "https://nether.wowhead.com/diablo-4/data/paragon-calc?dv=17&db=1779889483"
   },
   "warnings": []
 }

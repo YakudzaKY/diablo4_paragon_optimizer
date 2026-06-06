@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nGuzzler\nRadius Size: 3 \nFor every 5 Intelligence purchased within range, you deal +1.3% increased damage while Healthy .\nAdditional Bonus: \nYou gain 5% [x] increased damage and 5% [+] increased Potion Healing for each missing Healing Potion, up to 20% [x] each.\nRequired (purchased in range): +25 Intelligence\nLegendary Bonus: \nIncrease damage while Healthy by 0.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nОбжора\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, наносимый урон при высоком уровне здоровья увеличивается на +1.3% .\nДополнительный бонус: \nВы наносите на 5% [x] больше урона, и зелья восполняют на 5% [+] больше здоровья за каждое потраченное зелье здоровья вплоть до 20% [x] .\nТребуется открыть в радиусе действия: +25 к интеллекту\nЛегендарный бонус: \n+ 0.8% [x] к урону при высоком уровне здоровья. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T11:02:00Z",
+  "checked_at": "2026-06-06T17:46:03Z",
   "class": "warlock",
   "class_mask": 162,
   "id": "guzzler",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 0.8
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 12.2
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 18.0
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase damage while Healthy by 0.8% [x] .",
+    "value": 0.8
+  },
   "max_level": 100,
   "name": {
     "en": "Guzzler",
@@ -51,6 +76,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 1.3
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 8.1
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 11.5
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 1.3
   },
   "schema_version": 1,
   "skill_tags": [

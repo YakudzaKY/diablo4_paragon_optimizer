@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nEssence\nRadius Size: 3 \nFor every 5 Dexterity purchased within range, you deal 2.0% [+] increased Critical Strike Damage.\nAdditional Bonus: \nCritical Strikes deal 22% [x] increased damage to enemies that are not Healthy .\nRequired (purchased in range): +25 Dexterity\nLegendary Bonus: \nIncrease Critical Strike Damage by 2.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nЭссенция\nРадиус: 3 \nЗа каждые 5 ед. ловкости, открытых в радиусе действия, наносимый критический урон увеличивается на 2.0% [+] .\nДополнительный бонус: \nКритические удары наносят на 22% [x] больше урона целям, запас здоровья которых не высокий .\nТребуется открыть в радиусе действия: +25 к ловкости\nЛегендарный бонус: \n+ 2.8% [x] к критическому урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:42:26Z",
+  "checked_at": "2026-06-06T17:24:30Z",
   "class": "necromancer",
   "class_mask": 16,
   "id": "essence",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 2.8
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 14.2
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 20.0
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase Critical Strike Damage by 2.8% [x] .",
+    "value": 2.8
+  },
   "max_level": 100,
   "name": {
     "en": "Essence",
@@ -51,6 +76,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 2.0
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 16.7
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 24.1
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 2.0
   },
   "schema_version": 1,
   "skill_tags": [

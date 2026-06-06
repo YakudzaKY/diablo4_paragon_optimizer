@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nCharged\nRadius Size: 3 \nFor every 5 Intelligence purchased within range, Crackling Energy deals +1.32% increased damage.\nAdditional Bonus: \nPicking up Crackling Energy grants you 5% [x] increased damage for 5 seconds, up to 15% [x] .\nRequired (purchased in range): +40 Intelligence\nLegendary Bonus: \nIncrease Lightning damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nЗаряд\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, урон от искрящихся зарядов энергии увеличивается на +1.32% .\nДополнительный бонус: \nКогда вы подбираете искрящийся заряд энергии , наносимый урон увеличивается на 5% [x] на 5 сек. вплоть до 15% [x] .\nТребуется открыть в радиусе действия: +40 к интеллекту\nЛегендарный бонус: \n+ 0.5% [x] к урону от молнии. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:10:45Z",
+  "checked_at": "2026-06-06T16:45:51Z",
   "class": "sorcerer",
   "class_mask": 1,
   "id": "charged",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 0.5
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 10.4
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 15.4
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase Lightning damage by 0.5% [x] .",
+    "value": 0.5
+  },
   "max_level": 100,
   "name": {
     "en": "Charged",
@@ -51,6 +76,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 1.32
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 11.12
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 16.07
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 1.32
   },
   "schema_version": 1,
   "skill_tags": [

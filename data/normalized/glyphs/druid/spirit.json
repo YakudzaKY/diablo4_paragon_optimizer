@@ -3,7 +3,7 @@
     "en": "Rare Glyph \nSpirit\nRadius Size: 3 \nFor every 5 Dexterity purchased within range, you deal +2.0% increased Critical Strike Damage.\nAdditional Bonus: \nCritical Strikes increase the damage an enemy takes from you by 3% [x] for 20 seconds, up to 15% [x] .\nRequired (purchased in range): +25 Dexterity\nLegendary Bonus: \nIncrease Critical Strike Damage by 2.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nДух\nРадиус: 3 \nЗа каждые 5 ед. ловкости, открытых в радиусе действия, наносимый критический урон увеличивается на 2.0% .\nДополнительный бонус: \nКритические удары увеличивают урон, получаемый целью от вас, на 3% [x] на 20 сек. Максимальный бонус – 15% [x] .\nТребуется открыть в радиусе действия: +25 к ловкости\nЛегендарный бонус: \n+ 2.8% [x] к критическому урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-06-06T16:26:31Z",
+  "checked_at": "2026-06-06T16:56:57Z",
   "class": "druid",
   "class_mask": 2,
   "id": "spirit",

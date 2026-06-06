@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nConsumption\nRadius Size: 3 \nFor every 5 Intelligence purchased within range, your Pestilent Swarms deal +2.5% increased damage.\nAdditional Bonus: \nYou deal 2% [x] increased damage each active Pestilent Swarm and Touch of Death swarm.\nRequired (purchased in range): +25 Intelligence\nLegendary Bonus: \nIncrease Poison damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nПотребление\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, урон от тлетворных роев увеличивается на +2.5% .\nДополнительный бонус: \nВы наносите на 2% [x] больше урона за каждый тлетворный рой и рой \"Хватки смерти\" .\nТребуется открыть в радиусе действия: +25 к интеллекту\nЛегендарный бонус: \n+ 0.5% [x] к урону от яда. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:50:24Z",
+  "checked_at": "2026-06-06T17:32:36Z",
   "class": "spiritborn",
   "class_mask": 32,
   "id": "consumption",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 0.5
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 10.4
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 15.4
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase Poison damage by 0.5% [x] .",
+    "value": 0.5
+  },
   "max_level": 100,
   "name": {
     "en": "Consumption",
@@ -51,6 +76,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 2.5
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 17.2
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 24.6
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 2.5
   },
   "schema_version": 1,
   "skill_tags": [

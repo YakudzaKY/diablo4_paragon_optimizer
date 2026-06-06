@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nFeverous\nRadius Size: 3 \nFor every 5 Willpower purchased within range, your Zealot skills deal 1.5% [+] increased damage.\nAdditional Bonus: \nYou deal 5.0% [x] increased damage for each stack of Fervor you have. \nRequired (purchased in range): +25 Willpower\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nЛихорадка\nРадиус: 3 \nЗа каждые 5 ед. силы воли, открытых в радиусе действия, урон умений категории \"Ревнитель\" увеличивается на 1.5% [+] .\nДополнительный бонус: \nВы наносите на 5.0% [x] больше урона за каждый эффект \"Рвения\" . \nТребуется открыть в радиусе действия: +25 к силе воли\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:56:38Z",
+  "checked_at": "2026-06-06T17:39:17Z",
   "class": "paladin",
   "class_mask": 64,
   "id": "feverous",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 0.5
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 10.4
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 15.4
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase damage by 0.5% [x] .",
+    "value": 0.5
+  },
   "max_level": 100,
   "name": {
     "en": "Feverous",
@@ -51,6 +76,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 1.5
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 14.1
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 20.4
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 1.5
   },
   "schema_version": 1,
   "skill_tags": [

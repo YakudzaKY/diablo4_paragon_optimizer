@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nBane\nRadius Size: 3 \nFor every 5 Strength purchased within range, you deal +1.0% increased Poison damage.\nAdditional Bonus: \nPoisoning damage effects have a 15% chance to deal double the amount of damage over their duration.\nRequired (purchased in range): +25 Strength\nLegendary Bonus: \nIncrease Poison damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nБич\nРадиус: 3 \nЗа каждые 5 ед. силы, открытых в радиусе действия, урон от яда увеличивается на +1.0% .\nДополнительный бонус: \nЭффекты периодического урона от отравления с вероятностью 15% наносят удвоенный урон за все время действия.\nТребуется открыть в радиусе действия: +25 к силе\nЛегендарный бонус: \n+ 0.5% [x] к урону от яда. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:36:02Z",
+  "checked_at": "2026-06-06T17:14:15Z",
   "class": "rogue",
   "class_mask": 40,
   "id": "bane",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 0.5
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 10.4
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 15.4
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase Poison damage by 0.5% [x] .",
+    "value": 0.5
+  },
   "max_level": 100,
   "name": {
     "en": "Bane",
@@ -50,6 +75,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 1.0
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 8.3
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 12.1
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 1.0
   },
   "schema_version": 1,
   "skill_tags": [

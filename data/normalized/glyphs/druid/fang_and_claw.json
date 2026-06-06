@@ -3,7 +3,7 @@
     "en": "Rare Glyph \nFang and Claw\nRadius Size: 3 \nGrants +30.0% bonus to all Magic nodes within range.\nAdditional Bonus: \nWhile in Werewolf or Werebear form, Close enemies take 12% [x] increased damage from you.\nRequired (purchased in range): +40 Willpower\nLegendary Bonus: \nIncrease damage while Shapeshifted by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nКлыки и когти\nРадиус: 3 \nУсиливает все магические узлы в радиусе действия на +30.0% .\nДополнительный бонус: \nПока вы находитесь в облике волка или медведя, находящиеся рядом противники получают от вас на 12% [x] больше урона.\nТребуется открыть в радиусе действия: +40 к силе воли\nЛегендарный бонус: \n+ 0.5% [x] к урону после смены облика. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-06-06T16:26:31Z",
+  "checked_at": "2026-06-06T16:56:57Z",
   "class": "druid",
   "class_mask": 2,
   "id": "fang_and_claw",

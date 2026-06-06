@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nCrusher\nRadius Size: 3 \nFor every 5 Strength purchased within range, you deal +0.7% increased damage while wielding a Mace or Flail.\nAdditional Bonus: \nWhile wielding a Mace or Flail, attacks while having an Overpower charge deal 20% [x] increased damage.\nRequired (purchased in range): +40 Strength\nLegendary Bonus: \nIncrease damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nКрушитель\nРадиус: 3 \nЗа каждые 5 ед. силы, открытых в радиусе действия, урон увеличивается на +0.7% при использовании булавы или кистеня.\nДополнительный бонус: \nПока у вас есть эффект \"Подавления\" , ваши атаки булавой или кистенем наносят на 20% [x] больше урона.\nТребуется открыть в радиусе действия: +40 к силе\nЛегендарный бонус: \n+ 0.5% [x] к урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:28:54Z",
+  "checked_at": "2026-06-06T17:06:30Z",
   "class": "barbarian",
   "class_mask": 4,
   "id": "crusher",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 0.5
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 10.4
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 15.4
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase damage by 0.5% [x] .",
+    "value": 0.5
+  },
   "max_level": 100,
   "name": {
     "en": "Crusher",
@@ -51,6 +76,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 0.7
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 4.3
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 6.2
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 0.7
   },
   "schema_version": 1,
   "skill_tags": [

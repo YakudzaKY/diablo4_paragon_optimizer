@@ -3,7 +3,7 @@
     "en": "Rare Glyph \nWerewolf\nRadius Size: 3 \nFor every 5 Willpower purchased within range, you deal +1.0% increased damage while in Werewolf form.\nAdditional Bonus: \nYou gain 15% Damage Reduction while in Werewolf form.\nRequired (purchased in range): +40 Willpower\nLegendary Bonus: \nIncrease damage while in Werewolf form by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nОблик волка\nРадиус: 3 \nЗа каждые 5 ед. силы воли, открытых в радиусе действия, урон в облике волка увеличивается на +1.0% .\nДополнительный бонус: \nВ облике волка получаемый вами урон уменьшается на 15% .\nТребуется открыть в радиусе действия: +40 к силе воли\nЛегендарный бонус: \n+ 0.5% [x] к урону в облике волка. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-06-06T16:26:31Z",
+  "checked_at": "2026-06-06T16:56:57Z",
   "class": "druid",
   "class_mask": 2,
   "id": "werewolf",

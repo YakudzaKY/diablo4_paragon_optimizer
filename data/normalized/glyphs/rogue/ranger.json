@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nRanger\nRadius Size: 3 \nFor every 5 Dexterity purchased within range, Marksman Skills deal +0.7% increased damage.\nAdditional Bonus: \nWhile wielding a Ranged weapon, you take 10% reduced damage.\nRequired (purchased in range): +40 Dexterity\nLegendary Bonus: \nIncrease Marksman skills damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nСтранник\nРадиус: 3 \nЗа каждые 5 ед. ловкости, открытых в радиусе действия, урон от умений стрелка увеличивается на +0.7% .\nДополнительный бонус: \nПри использовании оружия дальнего боя вы получаете на 10% меньше урона.\nТребуется открыть в радиусе действия: +40 к ловкости\nЛегендарный бонус: \n+ 0.5% [x] к урону от умений стрелка. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:36:02Z",
+  "checked_at": "2026-06-06T17:14:15Z",
   "class": "rogue",
   "class_mask": 8,
   "id": "ranger",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 0.5
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 10.4
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 15.4
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase Marksman skills damage by 0.5% [x] .",
+    "value": 0.5
+  },
   "max_level": 100,
   "name": {
     "en": "Ranger",
@@ -51,6 +76,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 0.7
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 5.6
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 8.0
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 0.7
   },
   "schema_version": 1,
   "skill_tags": [

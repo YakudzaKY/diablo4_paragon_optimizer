@@ -3,7 +3,7 @@
     "en": "Rare Glyph \nWilds\nRadius Size: 3 \nFor every 5 Intelligence within range, Companion Skills deal +2.5% increased damage.\nAdditional Bonus: \nThe Passive portion of Companion Skills deal 130% [x] increased damage.\nRequired (purchased in range): +25 Intelligence\nLegendary Bonus: \nIncrease Critical Strike Damage by 2.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nДикая природа\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, урон питомцев увеличивается на +2.5% .\nДополнительный бонус: \nПассивные эффекты умений категории \"Питомец\" наносят на 130% [x] больше урона.\nТребуется открыть в радиусе действия: +25 к интеллекту\nЛегендарный бонус: \n+ 2.8% [x] к критическому урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-06-06T16:26:31Z",
+  "checked_at": "2026-06-06T16:56:57Z",
   "class": "druid",
   "class_mask": 2,
   "id": "wilds",

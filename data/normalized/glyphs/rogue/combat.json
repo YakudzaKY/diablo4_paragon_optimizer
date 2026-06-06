@@ -3,10 +3,35 @@
     "en": "Rare Glyph \nCombat\nRadius Size: 3 \nFor every 5 Intelligence purchased within range, you deal +2.0% increased Critical Strike Damage.\nAdditional Bonus: \nSkills that Critically Strike restore 12% of their Energy cost.\nRequired (purchased in range): +25 Intelligence\nLegendary Bonus: \nIncrease Critical Strike Damage by 2.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nБой\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, наносимый критический урон увеличивается на 2.0% .\nДополнительный бонус: \nКогда срабатывает критический эффект умения, вы восполняете 12% затраченной на него энергии.\nТребуется открыть в радиусе действия: +25 к интеллекту\nЛегендарный бонус: \n+ 2.8% [x] к критическому урону. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-05-27T10:36:02Z",
+  "checked_at": "2026-06-06T17:14:15Z",
   "class": "rogue",
   "class_mask": 8,
   "id": "combat",
+  "legendary_bonus": {
+    "level_scaling": {
+      "samples": [
+        {
+          "level": 1,
+          "source": "bonus_text.en",
+          "value": 2.8
+        },
+        {
+          "level": 100,
+          "source": "bonus_text.en?level=100",
+          "value": 14.2
+        },
+        {
+          "level": 150,
+          "source": "bonus_text.en?level=150",
+          "value": 20.0
+        }
+      ],
+      "source": "wowhead.detail.level_tooltips"
+    },
+    "source": "bonus_text.en",
+    "text": "Increase Critical Strike Damage by 2.8% [x] .",
+    "value": 2.8
+  },
   "max_level": 100,
   "name": {
     "en": "Combat",
@@ -51,6 +76,27 @@
       25,
       50
     ]
+  },
+  "scaling_value_per_5": {
+    "samples": [
+      {
+        "level": 1,
+        "source": "bonus_text.en",
+        "value": 2.0
+      },
+      {
+        "level": 100,
+        "source": "bonus_text.en?level=100",
+        "value": 16.7
+      },
+      {
+        "level": 150,
+        "source": "bonus_text.en?level=150",
+        "value": 24.1
+      }
+    ],
+    "source": "wowhead.detail.level_tooltips",
+    "value": 2.0
   },
   "schema_version": 1,
   "skill_tags": [

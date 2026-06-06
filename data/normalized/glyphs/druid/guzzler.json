@@ -3,7 +3,7 @@
     "en": "Rare Glyph \nGuzzler\nRadius Size: 3 \nFor every 5 Intelligence purchased within range, you deal +1.3% increased damage while Healthy .\nAdditional Bonus: \nYou gain 5% [x] increased damage and 5% [+] increased Potion Healing for each missing Healing Potion, up to 20% [x] each.\nRequired (purchased in range): +25 Intelligence\nLegendary Bonus: \nIncrease damage while Healthy by 0.8% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nОбжора\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, наносимый урон при высоком уровне здоровья увеличивается на +1.3% .\nДополнительный бонус: \nВы наносите на 5% [x] больше урона, и зелья восполняют на 5% [+] больше здоровья за каждое потраченное зелье здоровья вплоть до 20% [x] .\nТребуется открыть в радиусе действия: +25 к интеллекту\nЛегендарный бонус: \n+ 0.8% [x] к урону при высоком уровне здоровья. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-06-06T16:26:31Z",
+  "checked_at": "2026-06-06T16:56:57Z",
   "class": "druid",
   "class_mask": 162,
   "id": "guzzler",
