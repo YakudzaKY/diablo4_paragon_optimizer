@@ -3816,7 +3816,26 @@ std::string generate_html_visual(const json& payload, const std::map<std::string
     html << "</style>\n</head>\n<body>\n";
     html << "<h1>Маршрут парагона - " << html_escape(payload.value("class", "Unknown")) << "</h1>\n";
     html << "<p>Счет: " << format_value(best.value("score", 0.0)) << " | Очки: "
-         << best.value("points_used", 0) << "/" << payload.value("points_limit", 0) << "</p>\n";
+         << best.value("points_used", 0) << "/" << payload.value("points_limit", 0);
+    // Append final effective stats (the numbers actually used for rare node requirements, penalties, etc.)
+    // This is starting (profile) + raw node stats + glyph node % bonuses + activated rare/legendary bonuses.
+    {
+        const json& eff = best.value("effective_totals", json::object());
+        const char* prim[] = {"strength", "dexterity", "intelligence", "willpower"};
+        bool first_stat = true;
+        for (const char* k : prim) {
+            if (eff.contains(k)) {
+                if (first_stat) {
+                    html << " | ";
+                    first_stat = false;
+                } else {
+                    html << ", ";
+                }
+                html << k << " " << format_value(as_double(eff[k]));
+            }
+        }
+    }
+    html << "</p>\n";
     html << "<div class='svg-container'>\n";
     html << "<svg width='" << svg_width << "' height='" << svg_height << "'>\n";
 
@@ -4110,6 +4129,30 @@ std::string result_summary(const json& payload) {
             line << totals[i].first << "=" << format_value(totals[i].second);
         }
         lines.push_back(line.str());
+    }
+    // Effective final stats (starting + paragon nodes + glyph node bonuses + activated rare bonuses).
+    // These are the numbers used for rare node requirement checks and most scoring.
+    {
+        const json& eff = best.value("effective_totals", json::object());
+        std::vector<std::pair<std::string, double>> eff_list;
+        for (auto it = eff.begin(); it != eff.end(); ++it) {
+            eff_list.emplace_back(it.key(), as_double(it.value()));
+        }
+        if (!eff_list.empty()) {
+            std::sort(eff_list.begin(), eff_list.end(), [](const auto& left, const auto& right) {
+                if (std::abs(std::abs(left.second) - std::abs(right.second)) > 1e-12) {
+                    return std::abs(left.second) > std::abs(right.second);
+                }
+                return left.first < right.first;
+            });
+            std::ostringstream eline;
+            eline << "Effective totals (final): ";
+            for (size_t i = 0; i < std::min<size_t>(8, eff_list.size()); ++i) {
+                if (i) eline << ", ";
+                eline << eff_list[i].first << "=" << format_value(eff_list[i].second);
+            }
+            lines.push_back(eline.str());
+        }
     }
     std::vector<std::string> activated = best.value("activated_bonuses", std::vector<std::string>{});
     if (!activated.empty()) {
