@@ -6790,8 +6790,10 @@
       "y": 13
     },
     {
-      "bonus_stats": {},
-      "bonus_stats_source": null,
+      "bonus_stats": {
+        "lucky_hit_chance": 2.5
+      },
+      "bonus_stats_source": "tooltip_bonus",
       "cost": 1,
       "id": "revealing_14_13",
       "is_starting_node": false,
@@ -6830,7 +6832,9 @@
           }
         ]
       },
-      "requirements": {},
+      "requirements": {
+        "dexterity": 630.0
+      },
       "source_node_id": 2046045,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/sentinel-2046045",
       "stats": {

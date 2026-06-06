@@ -6430,8 +6430,7 @@
         ]
       },
       "requirements": {
-        "strength": 700.0,
-        "willpower": 190.0
+        "willpower": 760.0
       },
       "source_node_id": 680011,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/bulwark-680011",

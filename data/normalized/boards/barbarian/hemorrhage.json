@@ -8229,9 +8229,7 @@
         ]
       },
       "requirements": {
-        "dexterity": 185.0,
-        "strength": 210.0,
-        "willpower": 190.0
+        "dexterity": 190.0
       },
       "source_node_id": 679801,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/fleeting-679801",

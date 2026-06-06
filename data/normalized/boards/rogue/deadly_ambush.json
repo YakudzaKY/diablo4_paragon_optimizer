@@ -6055,7 +6055,6 @@
         ]
       },
       "requirements": {
-        "dexterity": 210.0,
         "strength": 190.0
       },
       "source_node_id": 680036,

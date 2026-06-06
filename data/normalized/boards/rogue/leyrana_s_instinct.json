@@ -2549,8 +2549,7 @@
         ]
       },
       "requirements": {
-        "intelligence": 700.0,
-        "willpower": 190.0
+        "intelligence": 190.0
       },
       "source_node_id": 679894,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/suffused-resilience-679894",
@@ -2664,7 +2663,6 @@
         ]
       },
       "requirements": {
-        "dexterity": 210.0,
         "strength": 190.0
       },
       "source_node_id": 680036,
@@ -4929,7 +4927,7 @@
         ]
       },
       "requirements": {
-        "dexterity": 230.0
+        "dexterity": 890.0
       },
       "source_node_id": 679782,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/nimble-679782",
@@ -6850,7 +6848,7 @@
         ]
       },
       "requirements": {
-        "willpower": 210.0
+        "intelligence": 210.0
       },
       "source_node_id": 680037,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/restorative-680037",

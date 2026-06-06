@@ -1986,8 +1986,8 @@
         ]
       },
       "requirements": {
-        "strength": 700.0,
-        "willpower": 190.0
+        "intelligence": 190.0,
+        "willpower": 700.0
       },
       "source_node_id": 993986,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/slayer-993986",
@@ -3796,7 +3796,7 @@
         ]
       },
       "requirements": {
-        "strength": 190.0
+        "willpower": 630.0
       },
       "source_node_id": 675186,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/tenacity-675186",

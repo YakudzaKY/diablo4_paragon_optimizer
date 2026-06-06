@@ -2103,8 +2103,7 @@
         ]
       },
       "requirements": {
-        "intelligence": 700.0,
-        "willpower": 190.0
+        "intelligence": 190.0
       },
       "source_node_id": 679894,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/suffused-resilience-679894",
@@ -6653,8 +6652,8 @@
         ]
       },
       "requirements": {
-        "strength": 700.0,
-        "willpower": 190.0
+        "intelligence": 190.0,
+        "willpower": 700.0
       },
       "source_node_id": 993986,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/slayer-993986",

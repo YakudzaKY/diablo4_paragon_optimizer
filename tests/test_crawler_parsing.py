@@ -6,6 +6,7 @@ from crawler.normalize import (
     node_type,
     parse_bonus_stats_from_tooltip,
     parse_node_bonus,
+    parse_requirements,
     parse_stats_from_attributes,
     parse_stats_from_search_text,
 )
@@ -104,6 +105,47 @@ Bonus: Another +15.0% Damage to Elites if requirements met:
 Barbarian, Paladin"""
 
         self.assertEqual(parse_bonus_stats_from_tooltip(tooltip), {"damage_to_elites": 15.0})
+
+    def test_parse_requirements_class_specific_from_tooltip(self) -> None:
+        slayer_tooltip = (
+            "Rare Node \nSlayer\n+3.0% Total Armor\n4.0% Maximum Life\n"
+            "Bonus: Another +3.0% Total Armor if requirements met:\n"
+            "210 Strength (Rogue, Spiritborn) \n700 Strength, 190 Willpower (Barbarian) \n"
+            "700 Willpower, 190 Intelligence (Druid) \nBarbarian, Druid, Rogue, Spiritborn"
+        )
+        self.assertEqual(
+            parse_requirements("", "druid", slayer_tooltip),
+            {"willpower": 700.0, "intelligence": 190.0},
+        )
+        self.assertEqual(
+            parse_requirements("", "barbarian", slayer_tooltip),
+            {"strength": 700.0, "willpower": 190.0},
+        )
+        self.assertEqual(parse_requirements("", "rogue", slayer_tooltip), {"strength": 210.0})
+        self.assertEqual(parse_requirements("", "spiritborn", slayer_tooltip), {"strength": 210.0})
+
+        # Single stat class-specific
+        single = "Bonus: Another +10% Damage if requirements met:\n210 Intelligence \nDruid"
+        self.assertEqual(parse_requirements("", "druid", single), {"intelligence": 210.0})
+
+        # Shared paren list + another class
+        shared = (
+            "Bonus: Another +X if requirements met:\n"
+            "190 Intelligence (Druid, Rogue, Spiritborn, Warlock) \n190 Willpower (Necromancer)"
+        )
+        self.assertEqual(parse_requirements("", "druid", shared), {"intelligence": 190.0})
+        self.assertEqual(parse_requirements("", "necromancer", shared), {"willpower": 190.0})
+
+        # Universal (no class tags) falls back to numbers found
+        uni = "bonus: another if requirements met: 700 willpower 190 intelligence"
+        self.assertEqual(parse_requirements(uni), {"willpower": 700.0, "intelligence": 190.0})
+
+        # Mangled searchText still works when tooltip is supplied
+        mangled = "healing ... bonus: another if requirements met: 210 strength (rogue, spiritborn) 700 strength, 190 willpower (barbarian) willpower, intelligence (druid) ..."
+        self.assertEqual(
+            parse_requirements(mangled, "druid", slayer_tooltip),
+            {"willpower": 700.0, "intelligence": 190.0},
+        )
 
     def test_parse_glyph_node_bonus_from_english_bonus_text(self) -> None:
         cases = [

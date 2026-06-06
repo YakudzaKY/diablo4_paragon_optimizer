@@ -6124,7 +6124,7 @@
         ]
       },
       "requirements": {
-        "dexterity": 190.0
+        "strength": 190.0
       },
       "source_node_id": 683633,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/denial-683633",
@@ -7367,8 +7367,7 @@
         ]
       },
       "requirements": {
-        "strength": 700.0,
-        "willpower": 190.0
+        "strength": 210.0
       },
       "source_node_id": 993986,
       "source_url": "https://www.wowhead.com/diablo-4/paragon-node/slayer-993986",

@@ -583,15 +583,85 @@ def parse_stats_from_search_text(search_text: str) -> dict[str, float]:
     return stats
 
 
-def parse_requirements(search_text: str) -> dict[str, float]:
-    lower = search_text.lower()
+def _extract_stat_requirements(text: str) -> dict[str, float]:
+    """Extract stat->value from a snippet containing 'NNN Stat' mentions (first occurrence per stat wins)."""
+    reqs: dict[str, float] = {}
+    for value, attr in re.findall(r"(\d+(?:\.\d+)?)\s+(strength|dexterity|intelligence|willpower)", text, flags=re.IGNORECASE):
+        key = ATTRIBUTE_KEYS[attr.lower()]
+        if key not in reqs:
+            reqs[key] = float(value)
+    return reqs
+
+
+def parse_requirements(search_text: str, class_slug: str | None = None, tooltip_text: str | None = None) -> dict[str, float]:
+    """Parse requirements, preferring class-specific ones from tooltip when available.
+
+    For nodes with per-class requirement variants (e.g. Slayer has different reqs for Barb/Druid/Rogue/Spiritborn),
+    select the line/block that mentions the current class_slug. If no per-class tagging is present
+    (universal reqs), fall back to collecting numbers as before.
+    """
+    # Prefer clean tooltip (has full "700 Willpower, 190 Intelligence (Druid)" lines) over mangled searchText.
+    if tooltip_text and "requirements met" in tooltip_text.lower():
+        source_text = tooltip_text
+    else:
+        source_text = search_text or ""
+    lower = source_text.lower()
     if "requirements met" not in lower:
         return {}
-    requirement_text = lower.split("requirements met", 1)[1]
-    requirements: dict[str, float] = {}
-    for value, attr in re.findall(r"(\d+(?:\.\d+)?)\s+(strength|dexterity|intelligence|willpower)", requirement_text):
-        requirements[ATTRIBUTE_KEYS[attr]] = float(value)
-    return requirements
+    after = lower.split("requirements met", 1)[1]
+
+    if not class_slug:
+        # Legacy / no class context: collect numbers (first per stat)
+        return _extract_stat_requirements(after)
+
+    target = class_slug.lower()
+
+    # Known classes that can appear in requirement class tags.
+    known_classes = ("barbarian", "druid", "necromancer", "rogue", "sorcerer", "spiritborn", "paladin", "warlock")
+    class_re = re.compile(r"\b(" + "|".join(known_classes) + r")\b")
+
+    # If there are no class tags at all in the req section, treat as universal.
+    if not class_re.search(after):
+        return _extract_stat_requirements(after)
+
+    # Prefer splitting by newlines (tooltip_text uses \n between per-class req lines).
+    # A line like "700 Willpower, 190 Intelligence (Druid)" or "210 Strength (Rogue, Spiritborn)"
+    # will contain the class name(s) that share that req prefix.
+    lines = re.split(r"[\n\r]+", after)
+    for line in lines:
+        if target in line:
+            reqs = _extract_stat_requirements(line)
+            if reqs:
+                return reqs
+
+    # Fallback for flat/minified texts (e.g. searchText): locate the mention and take a local segment
+    # around it, bounded by newlines if present, or by adjacent number+stat (to avoid cross-req bleed).
+    best_reqs: dict[str, float] = {}
+    for m in class_re.finditer(after):
+        if target not in m.group(1):
+            continue
+        # bound the segment by nearest newlines
+        last_nl = after.rfind("\n", 0, m.start())
+        next_nl = after.find("\n", m.end())
+        seg_start = last_nl + 1 if last_nl != -1 else 0
+        seg_end = next_nl if next_nl != -1 else len(after)
+        segment = after[seg_start:seg_end]
+        # As extra guard, if the segment contains more than one "block" of reqs (multiple numbers groups
+        # separated by other classes), trim from the right to just before the second num group after our mention.
+        # Simple: cut at the first num that appears after our class mention + some margin.
+        # For shared (Rogue, Spiritborn) the numbers are before the (, so segment from prev nl will include the line.
+        reqs = _extract_stat_requirements(segment)
+        if reqs:
+            # For flat text we may still have bleed; prefer the one where the class appears closer after its numbers.
+            # Heuristic: if current best empty or this segment has the class mention sooner after a number, take it.
+            if not best_reqs:
+                best_reqs = reqs
+            # else keep first reasonable
+    if best_reqs:
+        return best_reqs
+
+    # Last resort
+    return _extract_stat_requirements(after)
 
 
 def parse_bonus_stats_from_tooltip(tooltip_text: str | None) -> dict[str, float]:
@@ -862,7 +932,10 @@ def normalize_boards(raw: dict[str, Any], output_root: Path, overrides: dict[str
                     node_desc = names.get("en") or str(source_node_id)
                     bad_empty_nodes.append(f"{node_id}-{node_desc}")
 
-            node_requirements = parse_requirements(metadata.get("searchText") or "")
+            search_text = metadata.get("searchText") or ""
+            # Use tooltip for accurate per-class requirement lines (searchText is often mangled for shared nodes).
+            tt = detail_tooltip(raw, "nodes", source_node_id, "en")
+            node_requirements = parse_requirements(search_text, class_slug, tt)
 
             bonus_stats: dict[str, float] = {}
             bonus_stats_source: str | None = None
