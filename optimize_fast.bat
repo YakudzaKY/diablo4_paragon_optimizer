@@ -9,7 +9,7 @@ if not exist "%EXE%" (
   if errorlevel 1 exit /b 1
 )
 
-"%EXE%" optimize --profile "%ROOT%profiles\druid.json"
+"%EXE%" optimize --profile "%ROOT%profiles\spiritborn.json"
 pause
 
 endlocal

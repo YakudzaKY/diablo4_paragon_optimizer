@@ -219,6 +219,13 @@ class NativeGlyphScoringTests(unittest.TestCase):
         self.assertIsNone(glyphs["filler"]["node_bonus"])
         self.assertIn("glyph_levels", payload["profile_schema_example"])
         self.assertEqual(payload["profile_schema_example"]["glyph_levels"]["magic_bonus"], 51)
+        tuning_keys = {item["key"] for item in payload["weight_tuning_keys"]["weights"]}
+        self.assertEqual(tuning_keys, {"glyph_bonus", "glyph_socket"})
+        self.assertNotIn("glyph_bonus", payload["available_stats"])
+        self.assertNotIn("glyph_socket", payload["available_stats"])
+        example_weights = payload["weight_schema_example"]["weights"]
+        self.assertIn("glyph_bonus", example_weights)
+        self.assertIn("glyph_socket", example_weights)
 
     def test_glyph_radius_follows_level_upgrade_levels(self) -> None:
         expected_by_level = {

@@ -2628,6 +2628,25 @@ json glyph_route_tuning_json(const GlyphRouteTuning& tuning) {
     };
 }
 
+json weight_tuning_keys_json() {
+    return {
+        {"weights", json::array({
+            {
+                {"key", "glyph_bonus"},
+                {"in_available_stats", false},
+                {"default", 0.0},
+                {"description", "Flat bonus added to glyph_score once per activated glyph when its threshold is met. Also used by glyph_route activation heuristic."}
+            },
+            {
+                {"key", "glyph_socket"},
+                {"in_available_stats", false},
+                {"default", 0.0},
+                {"description", "Route heuristic bonus for glyph_socket nodes only. Encourages paths toward sockets; not added to final node stats."}
+            }
+        })}
+    };
+}
+
 json level_value_samples_json(
     const std::vector<Glyph::LevelValueSample>& samples,
     const std::string& value_key,
@@ -4571,6 +4590,8 @@ json class_schema(const Options& options) {
     for (size_t i = 0; i < std::min<size_t>(2, stats.size()); ++i) {
         example_weights[stats[i]] = 1.0;
     }
+    example_weights["glyph_bonus"] = 95.0;
+    example_weights["glyph_socket"] = 110.0;
     std::vector<Glyph> glyphs;
     std::vector<std::string> glyph_ids = read_string_array(raw.value("glyphs", json::array()));
     glyphs.reserve(glyph_ids.size());
@@ -4580,10 +4601,15 @@ json class_schema(const Options& options) {
         available_glyphs.push_back(glyph_schema_entry(glyph));
         glyphs.push_back(std::move(glyph));
     }
+    json example_glyph_weights = json::object();
+    if (!glyph_ids.empty()) {
+        example_glyph_weights[glyph_ids.front()] = 100.0;
+    }
     return {
         {"class", raw.value("class", options.class_slug)},
         {"name", object_or_empty(raw.value("name", json::object()))},
         {"available_stats", raw.value("available_stats", json::array())},
+        {"weight_tuning_keys", weight_tuning_keys_json()},
         {"available_boards", raw.value("boards", json::array())},
         {"available_glyphs", available_glyphs},
         {"primary_attributes", raw.value("primary_attributes", json::array())},
@@ -4596,6 +4622,7 @@ json class_schema(const Options& options) {
         }},
         {"weight_schema_example", {
             {"weights", example_weights},
+            {"glyphs", example_glyph_weights},
             {"glyph_route", glyph_route_tuning_json(GlyphRouteTuning{})},
             {"scheme", {{"starter", 10.0}}}
         }}
