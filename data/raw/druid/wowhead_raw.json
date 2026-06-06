@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-05-27T10:20:54Z",
+  "checked_at": "2026-06-06T16:26:31Z",
   "class": "druid",
   "class_discovery": {
     "discovery_source": "fallback"
@@ -32,6 +32,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/guzzler-1023194",
           "h1": "Guzzler",
           "html_sha256": "613561237eed492c82035ab6200a7372f9b9eb5c89bf22e35a7cab696c006e8f",
+          "level_details": {
+            "100": {
+              "h1": "Guzzler",
+              "html_sha256": "1535bea657c5adead9c69e581ecc42ddebce270a8d4437d7228b3266d408148c",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/guzzler-1023194?level=100",
+              "title": "Guzzler - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nGuzzler\nLevel 100 \nRadius Size: 5 \nFor every 5 Intelligence purchased within range, you deal +8.1% increased damage while Healthy .\nAdditional Bonus: \nYou gain 5% [x] increased damage and 5% [+] increased Potion Healing for each missing Healing Potion, up to 20% [x] each. \nRequired (purchased in range): 0 / +25 Intelligence\nLegendary Bonus: \nIncrease damage while Healthy by 12.2% [x] ."
+            },
+            "150": {
+              "h1": "Guzzler",
+              "html_sha256": "6bec287aa21cb3c11da5f5324163b84f215b19b5d878d262a827f8e951b32c16",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/guzzler-1023194?level=150",
+              "title": "Guzzler - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nGuzzler\nLevel 150 \nRadius Size: 5 \nFor every 5 Intelligence purchased within range, you deal +11.5% increased damage while Healthy .\nAdditional Bonus: \nYou gain 5% [x] increased damage and 5% [+] increased Potion Healing for each missing Healing Potion, up to 20% [x] each. \nRequired (purchased in range): 0 / +25 Intelligence\nLegendary Bonus: \nIncrease damage while Healthy by 18.0% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -316,6 +332,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/territorial-1023197",
           "h1": "Territorial",
           "html_sha256": "7ff3e4b64ddc854f688eae9a66a94a6a1dba77a9dcb10fa8299aa3936cea58e8",
+          "level_details": {
+            "100": {
+              "h1": "Territorial",
+              "html_sha256": "c40aeeb6aec9a04712f3152fe69d2ada457ded09fd74ed4251e65c5db9ed58b5",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/territorial-1023197?level=100",
+              "title": "Territorial - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nTerritorial\nLevel 100 \nRadius Size: 5 \nFor every 5 Dexterity purchased within range, you deal +8.3% increased damage to Close targets.\nAdditional Bonus: \nYou gain 15% Damage Reduction against Close enemies. \nRequired (purchased in range): 0 / +25 Dexterity\nLegendary Bonus: \nIncrease damage to Vulnerable targets by 10.4% [x] ."
+            },
+            "150": {
+              "h1": "Territorial",
+              "html_sha256": "afc50f1ec71e0439a3d0705fe041190ddfa790a8f926a08fdee5eae6de25c0c0",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/territorial-1023197?level=150",
+              "title": "Territorial - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nTerritorial\nLevel 150 \nRadius Size: 5 \nFor every 5 Dexterity purchased within range, you deal +12.1% increased damage to Close targets.\nAdditional Bonus: \nYou gain 15% Damage Reduction against Close enemies. \nRequired (purchased in range): 0 / +25 Dexterity\nLegendary Bonus: \nIncrease damage to Vulnerable targets by 15.4% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -602,6 +634,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/exploit-1023199",
           "h1": "Exploit",
           "html_sha256": "25f909e7b316113f925fb51bdd36bbe33e628b5f0572ee86bde07ccaafc10378",
+          "level_details": {
+            "100": {
+              "h1": "Exploit",
+              "html_sha256": "e8f39481098df3d6996f18aaf9d03cf6d52764487576099aa52d58c7cc613b7f",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/exploit-1023199?level=100",
+              "title": "Exploit - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nExploit\nLevel 100 \nRadius Size: 5 \nFor every 5 Dexterity purchased within range, you deal +6.5% increased damage to Vulnerable targets.\nAdditional Bonus: \nWhen an enemy is damaged by you, they become Vulnerable for 3 seconds. This cannot happen more than once every 5 seconds per enemy. \nRequired (purchased in range): 0 / +25 Dexterity\nLegendary Bonus: \nIncrease damage to Vulnerable targets by 10.4% [x] ."
+            },
+            "150": {
+              "h1": "Exploit",
+              "html_sha256": "337cb5d9bcecb68dcd06c61dcfe62de27fa1bf189146bda98d4ddbf95fb212a5",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/exploit-1023199?level=150",
+              "title": "Exploit - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nExploit\nLevel 150 \nRadius Size: 5 \nFor every 5 Dexterity purchased within range, you deal +9.3% increased damage to Vulnerable targets.\nAdditional Bonus: \nWhen an enemy is damaged by you, they become Vulnerable for 3 seconds. This cannot happen more than once every 5 seconds per enemy. \nRequired (purchased in range): 0 / +25 Dexterity\nLegendary Bonus: \nIncrease damage to Vulnerable targets by 15.4% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -886,6 +934,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/poise-1028219",
           "h1": "Poise",
           "html_sha256": "56d103498dd0cfcbcb7ed312512cc97bdc66eaccf42e2da12894641d6c207459",
+          "level_details": {
+            "100": {
+              "h1": "Poise",
+              "html_sha256": "6b135c8e1a29c2888387923bdb8b940ccc79aeb58003833392d29ab79443a724",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/poise-1028219?level=100",
+              "title": "Poise - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nPoise\nLevel 100 \nRadius Size: 5 \nGrants +272.5% bonus to all Rare nodes within range.\nAdditional Bonus: \nYou have a 30% chance when Shapeshifting to gain a Barrier that absorbs 15% of your Maximum Life (129) in damage for 6 seconds. \nRequired (purchased in range): 0 / +25 Dexterity\nLegendary Bonus: \nIncrease damage by 10.4% [x] ."
+            },
+            "150": {
+              "h1": "Poise",
+              "html_sha256": "d8b46c1400f25305dae65a0580aeaed72d003854404345d5ef6206b525295ad4",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/poise-1028219?level=150",
+              "title": "Poise - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nPoise\nLevel 150 \nRadius Size: 5 \nGrants +397.5% bonus to all Rare nodes within range.\nAdditional Bonus: \nYou have a 30% chance when Shapeshifting to gain a Barrier that absorbs 15% of your Maximum Life (129) in damage for 6 seconds. \nRequired (purchased in range): 0 / +25 Dexterity\nLegendary Bonus: \nIncrease damage by 15.4% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -1170,6 +1234,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/fang-and-claw-1028226",
           "h1": "Fang and Claw",
           "html_sha256": "a8f8bfef762a7868496fe7196e3113c7e4c69350f88e47b2863e7046fa96f44c",
+          "level_details": {
+            "100": {
+              "h1": "Fang and Claw",
+              "html_sha256": "39e5cbed4519ff14f07443fcc0b02e871105ac0a3230054274a5ec95f10be443",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/fang-and-claw-1028226?level=100",
+              "title": "Fang and Claw - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nFang and Claw\nLevel 100 \nRadius Size: 5 \nGrants +327.0% bonus to all Magic nodes within range.\nAdditional Bonus: \nWhile in Werewolf or Werebear form, Close enemies take 12% [x] increased damage from you. \nRequired (purchased in range): 0 / +40 Willpower\nLegendary Bonus: \nIncrease damage while Shapeshifted by 10.4% [x] ."
+            },
+            "150": {
+              "h1": "Fang and Claw",
+              "html_sha256": "3ec0d515117b1b16dc4d944be119425328c9771efe9a835029034e415b6f65ac",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/fang-and-claw-1028226?level=150",
+              "title": "Fang and Claw - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nFang and Claw\nLevel 150 \nRadius Size: 5 \nGrants +477.0% bonus to all Magic nodes within range.\nAdditional Bonus: \nWhile in Werewolf or Werebear form, Close enemies take 12% [x] increased damage from you. \nRequired (purchased in range): 0 / +40 Willpower\nLegendary Bonus: \nIncrease damage while Shapeshifted by 15.4% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -1454,6 +1534,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/earth-and-sky-1028227",
           "h1": "Earth and Sky",
           "html_sha256": "f4dca486eebdcbf02afc743bba6f5ec48315c938e38b257a630bebe2f5da3bcd",
+          "level_details": {
+            "100": {
+              "h1": "Earth and Sky",
+              "html_sha256": "c43381c4581cf0be2e4d80cc6b7603ca25898ee36b1eaf022bc19297c35e2f92",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/earth-and-sky-1028227?level=100",
+              "title": "Earth and Sky - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nEarth and Sky\nLevel 100 \nRadius Size: 5 \nGrants +327.0% bonus to all Magic nodes within range.\nAdditional Bonus: \nNature Magic Skills deal 18% [x] increased damage to Crowd Controlled or Vulnerable enemies. \nRequired (purchased in range): 0 / +40 Willpower\nLegendary Bonus: \nIncrease Nature Magic skill damage by 10.4% [x] ."
+            },
+            "150": {
+              "h1": "Earth and Sky",
+              "html_sha256": "c1857e6f99ea54a27ee3933ba072702b25b940201c9bc2b61858ca6c3f98e848",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/earth-and-sky-1028227?level=150",
+              "title": "Earth and Sky - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nEarth and Sky\nLevel 150 \nRadius Size: 5 \nGrants +477.0% bonus to all Magic nodes within range.\nAdditional Bonus: \nNature Magic Skills deal 18% [x] increased damage to Crowd Controlled or Vulnerable enemies. \nRequired (purchased in range): 0 / +40 Willpower\nLegendary Bonus: \nIncrease Nature Magic skill damage by 15.4% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -1738,6 +1834,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/wilds-1028228",
           "h1": "Wilds",
           "html_sha256": "8184550157d1af6f89897b5cfc80a111243ed9e08bc117c60586673f299a83e3",
+          "level_details": {
+            "100": {
+              "h1": "Wilds",
+              "html_sha256": "b55b72bda896389c828b7b8f22c8bfcc263be3067a9706ce19de4fdddc87499a",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/wilds-1028228?level=100",
+              "title": "Wilds - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nWilds\nLevel 100 \nRadius Size: 5 \nFor every 5 Intelligence within range, Companion Skills deal +20.9% increased damage.\nAdditional Bonus: \nThe Passive portion of Companion Skills deal 130% [x] increased damage. \nRequired (purchased in range): 0 / +25 Intelligence\nLegendary Bonus: \nIncrease Critical Strike Damage by 14.2% [x] ."
+            },
+            "150": {
+              "h1": "Wilds",
+              "html_sha256": "a740caa69394c64e1d082ff7aa4cfd57b8bccd615c1469e03aceb2872675aec5",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/wilds-1028228?level=150",
+              "title": "Wilds - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nWilds\nLevel 150 \nRadius Size: 5 \nFor every 5 Intelligence within range, Companion Skills deal +30.1% increased damage.\nAdditional Bonus: \nThe Passive portion of Companion Skills deal 130% [x] increased damage. \nRequired (purchased in range): 0 / +25 Intelligence\nLegendary Bonus: \nIncrease Critical Strike Damage by 20.0% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -2022,6 +2134,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/werebear-1028229",
           "h1": "Werebear",
           "html_sha256": "b4612f26604082b4447244700af36b4b475d97f171025847344588ce71c3a915",
+          "level_details": {
+            "100": {
+              "h1": "Werebear",
+              "html_sha256": "2dc22f0339acd2c3b6bb49bc40d4a43389cae0687c17086c6609a1836e4459df",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/werebear-1028229?level=100",
+              "title": "Werebear - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nWerebear\nLevel 100 \nRadius Size: 5 \nFor every 5 Willpower purchased within range, you deal +8.3% increased damage while in Werebear form.\nAdditional Bonus: \nYou gain 15% Damage Reduction while in Werebear form. \nRequired (purchased in range): 0 / +40 Willpower\nLegendary Bonus: \nIncrease damage while in Werebear form by 10.4% [x] ."
+            },
+            "150": {
+              "h1": "Werebear",
+              "html_sha256": "203febc317be60ccd9998e4995dcaa1ca88f1220b3904512cd77092cce08ac52",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/werebear-1028229?level=150",
+              "title": "Werebear - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nWerebear\nLevel 150 \nRadius Size: 5 \nFor every 5 Willpower purchased within range, you deal +12.1% increased damage while in Werebear form.\nAdditional Bonus: \nYou gain 15% Damage Reduction while in Werebear form. \nRequired (purchased in range): 0 / +40 Willpower\nLegendary Bonus: \nIncrease damage while in Werebear form by 15.4% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -2306,6 +2434,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/werewolf-1028230",
           "h1": "Werewolf",
           "html_sha256": "e5d57dde98587150c785c2175029de5cfa5b06b8ea36516d896c81c340f73bfe",
+          "level_details": {
+            "100": {
+              "h1": "Werewolf",
+              "html_sha256": "b2d62da6c66f358f477a3234ee6bf360a42715f01f529756bfe6be011a86f7ee",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/werewolf-1028230?level=100",
+              "title": "Werewolf - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nWerewolf\nLevel 100 \nRadius Size: 5 \nFor every 5 Willpower purchased within range, you deal +8.3% increased damage while in Werewolf form.\nAdditional Bonus: \nYou gain 15% Damage Reduction while in Werewolf form. \nRequired (purchased in range): 0 / +40 Willpower\nLegendary Bonus: \nIncrease damage while in Werewolf form by 10.4% [x] ."
+            },
+            "150": {
+              "h1": "Werewolf",
+              "html_sha256": "a198aacda0c72f3e3cafa6e743bd2fa1eb2a59e77400ba87a7e4220910d90a8d",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/werewolf-1028230?level=150",
+              "title": "Werewolf - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nWerewolf\nLevel 150 \nRadius Size: 5 \nFor every 5 Willpower purchased within range, you deal +12.1% increased damage while in Werewolf form.\nAdditional Bonus: \nYou gain 15% Damage Reduction while in Werewolf form. \nRequired (purchased in range): 0 / +40 Willpower\nLegendary Bonus: \nIncrease damage while in Werewolf form by 15.4% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -2590,6 +2734,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/human-1028231",
           "h1": "Human",
           "html_sha256": "c843495cdd27901f794ae35a4b282c2c33248300a1e2378c2b50058b598ae558",
+          "level_details": {
+            "100": {
+              "h1": "Human",
+              "html_sha256": "349e3b2623ded9fe3ceda84915395c24f1079ef437c3093be24018861d3d066a",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/human-1028231?level=100",
+              "title": "Human - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nHuman\nLevel 100 \nRadius Size: 5 \nFor every 5 Willpower purchased within range, you deal +8.3% increased damage while in Human form.\nAdditional Bonus: \nYou gain 12% increased damage and Damage Reduction while in Human form. \nRequired (purchased in range): 0 / +40 Willpower\nLegendary Bonus: \nIncrease Nature Magic skill damage by 10.4% [x] ."
+            },
+            "150": {
+              "h1": "Human",
+              "html_sha256": "96ffdc27939b8940b56829141836f90e5bad97e2db9afb1dbad9d0238878dcd4",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/human-1028231?level=150",
+              "title": "Human - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nHuman\nLevel 150 \nRadius Size: 5 \nFor every 5 Willpower purchased within range, you deal +12.1% increased damage while in Human form.\nAdditional Bonus: \nYou gain 12% increased damage and Damage Reduction while in Human form. \nRequired (purchased in range): 0 / +40 Willpower\nLegendary Bonus: \nIncrease Nature Magic skill damage by 15.4% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -2874,6 +3034,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/bane-1028232",
           "h1": "Bane",
           "html_sha256": "e3a89bfee4f36481a79680d83869bd31719b371fd476e5fa912d72b1c70fbfcf",
+          "level_details": {
+            "100": {
+              "h1": "Bane",
+              "html_sha256": "6170f7f0d86820e44b165c2089e11885255afbd066579b3c60645fb40bf246fb",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/bane-1028232?level=100",
+              "title": "Bane - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nBane\nLevel 100 \nRadius Size: 5 \nFor every 5 Intelligence purchased within range, you deal +8.3% increased Poison damage.\nAdditional Bonus: \nPoisoning damage effects have a 15% chance to deal double the amount of damage over their duration. \nRequired (purchased in range): 0 / +25 Intelligence\nLegendary Bonus: \nIncrease Poison damage by 10.4% [x] ."
+            },
+            "150": {
+              "h1": "Bane",
+              "html_sha256": "2a84fa3eab3894046ae2384c31f1f326734eabda4cb494845ce1fce794035460",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/bane-1028232?level=150",
+              "title": "Bane - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nBane\nLevel 150 \nRadius Size: 5 \nFor every 5 Intelligence purchased within range, you deal +12.1% increased Poison damage.\nAdditional Bonus: \nPoisoning damage effects have a 15% chance to deal double the amount of damage over their duration. \nRequired (purchased in range): 0 / +25 Intelligence\nLegendary Bonus: \nIncrease Poison damage by 15.4% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -3158,6 +3334,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/keeper-1028233",
           "h1": "Keeper",
           "html_sha256": "7807cefce9345d3be22399c0267a156d5d38da8665deac584f93145dda4191a1",
+          "level_details": {
+            "100": {
+              "h1": "Keeper",
+              "html_sha256": "f6cbc5af8f95e3ecadeffb40dc478a56638aa3c86151c785496ff5e0a7191d37",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/keeper-1028233?level=100",
+              "title": "Keeper - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nKeeper\nLevel 100 \nRadius Size: 5 \nGrants +272.5% bonus to all Rare nodes within range.\nAdditional Bonus: \nYou and your Companions deal 15% [x] increased Non-Physical damage. \nRequired (purchased in range): 0 / +25 Intelligence\nLegendary Bonus: \nIncrease Non-Physical damage by 10.4% [x] ."
+            },
+            "150": {
+              "h1": "Keeper",
+              "html_sha256": "657416b435003b221a7cf1a2d0744472088e4c4e2a1639da211905ea80724a95",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/keeper-1028233?level=150",
+              "title": "Keeper - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nKeeper\nLevel 150 \nRadius Size: 5 \nGrants +397.5% bonus to all Rare nodes within range.\nAdditional Bonus: \nYou and your Companions deal 15% [x] increased Non-Physical damage. \nRequired (purchased in range): 0 / +25 Intelligence\nLegendary Bonus: \nIncrease Non-Physical damage by 15.4% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -3442,6 +3634,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/fulminate-1028234",
           "h1": "Fulminate",
           "html_sha256": "b87971d0a6ceffcda97da8f54d6ecc69d1f9f5721c3733a751a7c17d4694e9c1",
+          "level_details": {
+            "100": {
+              "h1": "Fulminate",
+              "html_sha256": "7852b6ee947315dabc7bf9306547f9b37968ba3036c7d64599d1141e7e6b193e",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/fulminate-1028234?level=100",
+              "title": "Fulminate - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nFulminate\nLevel 100 \nRadius Size: 5 \nFor every 5 Dexterity purchased within range, you deal +8.3% increased Lightning damage.\nAdditional Bonus: \nYou deal 12% [x] increased Lightning damage to both Healthy and Injured enemies. \nRequired (purchased in range): 0 / +25 Dexterity\nLegendary Bonus: \nIncrease Lightning damage by 10.4% [x] ."
+            },
+            "150": {
+              "h1": "Fulminate",
+              "html_sha256": "77a444542b938114cd54f232fc9e885753208d0862f3f2d376db2e176cb993d6",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/fulminate-1028234?level=150",
+              "title": "Fulminate - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nFulminate\nLevel 150 \nRadius Size: 5 \nFor every 5 Dexterity purchased within range, you deal +12.1% increased Lightning damage.\nAdditional Bonus: \nYou deal 12% [x] increased Lightning damage to both Healthy and Injured enemies. \nRequired (purchased in range): 0 / +25 Dexterity\nLegendary Bonus: \nIncrease Lightning damage by 15.4% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -3726,6 +3934,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/tracker-1028235",
           "h1": "Tracker",
           "html_sha256": "4158e84c8f54d4b24de52c725753a7fb3ee92895951666697baa8a8c0a5b937a",
+          "level_details": {
+            "100": {
+              "h1": "Tracker",
+              "html_sha256": "08e128ef92c422589ae1973d70853e591d0310a29653d0821aa15bb440ea03b9",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/tracker-1028235?level=100",
+              "title": "Tracker - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nTracker\nLevel 100 \nRadius Size: 5 \nFor every 5 Dexterity purchased within range, you deal +8.3% increased damage to Poisoned targets.\nAdditional Bonus: \nPoisoning damage effects last 40% [x] longer. \nRequired (purchased in range): 0 / +25 Dexterity\nLegendary Bonus: \nIncrease damage by 10.4% [x] ."
+            },
+            "150": {
+              "h1": "Tracker",
+              "html_sha256": "4eaa8b5e5c82e945c72704a8354d83c681fcffd8ba95a855a68d4cc647c41911",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/tracker-1028235?level=150",
+              "title": "Tracker - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nTracker\nLevel 150 \nRadius Size: 5 \nFor every 5 Dexterity purchased within range, you deal +12.1% increased damage to Poisoned targets.\nAdditional Bonus: \nPoisoning damage effects last 40% [x] longer. \nRequired (purchased in range): 0 / +25 Dexterity\nLegendary Bonus: \nIncrease damage by 15.4% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -4010,6 +4234,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/outmatch-1028236",
           "h1": "Outmatch",
           "html_sha256": "287b8b4c0e75c65967f58be5363b08f11e5547dcc45f030920962cf937c84c6d",
+          "level_details": {
+            "100": {
+              "h1": "Outmatch",
+              "html_sha256": "0fbdbd6654c488cfa62fb7d779d962090af4280796efc8c49f64fec3d6f54d33",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/outmatch-1028236?level=100",
+              "title": "Outmatch - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nOutmatch\nLevel 100 \nRadius Size: 5 \nGrants +272.5% bonus to all Rare nodes within range.\nAdditional Bonus: \nYou deal 20% [x] increased Physical damage to Non-Elites and Bosses. \nRequired (purchased in range): 0 / +25 Dexterity\nLegendary Bonus: \nIncrease damage by 10.4% [x] ."
+            },
+            "150": {
+              "h1": "Outmatch",
+              "html_sha256": "d9884d76c3f76a01a39659b34cab2c8aeedc9d1a39c35deadb81b17e97e7d59d",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/outmatch-1028236?level=150",
+              "title": "Outmatch - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nOutmatch\nLevel 150 \nRadius Size: 5 \nGrants +397.5% bonus to all Rare nodes within range.\nAdditional Bonus: \nYou deal 20% [x] increased Physical damage to Non-Elites and Bosses. \nRequired (purchased in range): 0 / +25 Dexterity\nLegendary Bonus: \nIncrease damage by 15.4% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -4294,6 +4534,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/spirit-1028237",
           "h1": "Spirit",
           "html_sha256": "abbc6a79fc9f648123b80e56770dbe471147d8a81d85f893738cc9ba5b6dcbf5",
+          "level_details": {
+            "100": {
+              "h1": "Spirit",
+              "html_sha256": "11b4669cb8b7198b9ebf50e3943a02e75d80ca654a4a3d7bd12b7e5dc59328c7",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/spirit-1028237?level=100",
+              "title": "Spirit - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nSpirit\nLevel 100 \nRadius Size: 5 \nFor every 5 Dexterity purchased within range, you deal +16.7% increased Critical Strike Damage.\nAdditional Bonus: \nCritical Strikes increase the damage an enemy takes from you by 3% [x] for 20 seconds, up to 15% [x] . \nRequired (purchased in range): 0 / +25 Dexterity\nLegendary Bonus: \nIncrease Critical Strike Damage by 14.2% [x] ."
+            },
+            "150": {
+              "h1": "Spirit",
+              "html_sha256": "769c8606c321915dbb478c0413f77b54759b33c3ebb2aac710b583ccd163c496",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/spirit-1028237?level=150",
+              "title": "Spirit - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nSpirit\nLevel 150 \nRadius Size: 5 \nFor every 5 Dexterity purchased within range, you deal +24.1% increased Critical Strike Damage.\nAdditional Bonus: \nCritical Strikes increase the damage an enemy takes from you by 3% [x] for 20 seconds, up to 15% [x] . \nRequired (purchased in range): 0 / +25 Dexterity\nLegendary Bonus: \nIncrease Critical Strike Damage by 20.0% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -4578,6 +4834,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/shapeshifter-1028238",
           "h1": "Shapeshifter",
           "html_sha256": "0802dbbace3093364cc2abba78bdd04065952aae2d46f218a9eba2827926d233",
+          "level_details": {
+            "100": {
+              "h1": "Shapeshifter",
+              "html_sha256": "ec5e42d202091dde5b6904e24858fb158ce16764aab575e01007cb3e11cb0584",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/shapeshifter-1028238?level=100",
+              "title": "Shapeshifter - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nShapeshifter\nLevel 100 \nRadius Size: 5 \nGrants +272.5% bonus to all Rare nodes within range.\nAdditional Bonus: \nShapeshifting increases Critical Strike Chance and Critical Strike Damage by 5% for 4 seconds. \nRequired (purchased in range): 0 / +25 Dexterity\nLegendary Bonus: \nIncrease Critical Strike Damage by 14.2% [x] ."
+            },
+            "150": {
+              "h1": "Shapeshifter",
+              "html_sha256": "a7b328a854e9074c6960c52fe446ca86f090093e64dd348726a7563d34c76141",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/shapeshifter-1028238?level=150",
+              "title": "Shapeshifter - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nShapeshifter\nLevel 150 \nRadius Size: 5 \nGrants +397.5% bonus to all Rare nodes within range.\nAdditional Bonus: \nShapeshifting increases Critical Strike Chance and Critical Strike Damage by 5% for 4 seconds. \nRequired (purchased in range): 0 / +25 Dexterity\nLegendary Bonus: \nIncrease Critical Strike Damage by 20.0% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -4862,6 +5134,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/protector-1068816",
           "h1": "Protector",
           "html_sha256": "c5eabb2bb24782a76e089e8b745dfecd5bb03886553f6e8160ed56d2381a8b3e",
+          "level_details": {
+            "100": {
+              "h1": "Protector",
+              "html_sha256": "ca6d65841061def5e23bcc4fe484ba5e917ac0b5ea57961a8aabe75a324e2345",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/protector-1068816?level=100",
+              "title": "Protector - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nProtector\nLevel 100 \nRadius Size: 5 \nGrants +272.5% bonus to all Rare nodes within range.\nAdditional Bonus: \nYou gain 15% Damage Reduction while you have an active Barrier . \nRequired (purchased in range): 0 / +25 Intelligence\nLegendary Bonus: \nIncrease damage by 10.4% [x] ."
+            },
+            "150": {
+              "h1": "Protector",
+              "html_sha256": "34bf27fefcccfeef4277e98b3d0bb88d280ff33add03348d0f46d08cc18490af",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/protector-1068816?level=150",
+              "title": "Protector - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nProtector\nLevel 150 \nRadius Size: 5 \nGrants +397.5% bonus to all Rare nodes within range.\nAdditional Bonus: \nYou gain 15% Damage Reduction while you have an active Barrier . \nRequired (purchased in range): 0 / +25 Intelligence\nLegendary Bonus: \nIncrease damage by 15.4% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -5146,6 +5434,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/undaunted-1068821",
           "h1": "Undaunted",
           "html_sha256": "00252659ddfda35524f1178d78abd2e2965d0f79eb7a7b67756bdc1928e651f5",
+          "level_details": {
+            "100": {
+              "h1": "Undaunted",
+              "html_sha256": "5cffb8d2cc085042881b168cb0ed60207e6a2362eb32a4d11ffeb02415452471",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/undaunted-1068821?level=100",
+              "title": "Undaunted - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nUndaunted\nLevel 100 \nRadius Size: 5 \nFor every 5 Intelligence purchased within range, you deal +8.3% increased damage while Fortified .\nAdditional Bonus: \nYou gain up to 15% Damage Reduction the more Fortify you have. \nRequired (purchased in range): 0 / +25 Intelligence\nLegendary Bonus: \nIncrease damage by 10.4% [x] ."
+            },
+            "150": {
+              "h1": "Undaunted",
+              "html_sha256": "11ff6aec4c03e76da383286b0203a748579fbc57d9514e48e15ffa36f9fb1386",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/undaunted-1068821?level=150",
+              "title": "Undaunted - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nUndaunted\nLevel 150 \nRadius Size: 5 \nFor every 5 Intelligence purchased within range, you deal +12.1% increased damage while Fortified .\nAdditional Bonus: \nYou gain up to 15% Damage Reduction the more Fortify you have. \nRequired (purchased in range): 0 / +25 Intelligence\nLegendary Bonus: \nIncrease damage by 15.4% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -5430,6 +5734,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/dominate-1068833",
           "h1": "Dominate",
           "html_sha256": "ea9779f70f9316615de9a97a7f52147996524fd6bec958fcd37d83b08c951974",
+          "level_details": {
+            "100": {
+              "h1": "Dominate",
+              "html_sha256": "44f929c896cbbd774348dfca16ac169c888470aaa92336bafa18286df10cb907",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/dominate-1068833?level=100",
+              "title": "Dominate - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nDominate\nLevel 100 \nRadius Size: 5 \nGrants +272.5% bonus to all Rare nodes within range.\nAdditional Bonus: \nGain 15% [x] increased damage while you have Overpower . \nRequired (purchased in range): 0 / +25 Intelligence\nLegendary Bonus: \nIncrease damage by 10.4% [x] ."
+            },
+            "150": {
+              "h1": "Dominate",
+              "html_sha256": "ae6b6d179e357b083c747cf8c43f5bf4035bd70bb407956d75da004721611225",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/dominate-1068833?level=150",
+              "title": "Dominate - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nDominate\nLevel 150 \nRadius Size: 5 \nGrants +397.5% bonus to all Rare nodes within range.\nAdditional Bonus: \nGain 15% [x] increased damage while you have Overpower . \nRequired (purchased in range): 0 / +25 Intelligence\nLegendary Bonus: \nIncrease damage by 15.4% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -5714,6 +6034,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/tectonic-1624740",
           "h1": "Tectonic",
           "html_sha256": "eba1e2846143c0a8b1607e64b322c878f18b58616f9e8ca07d4b68624e3dce46",
+          "level_details": {
+            "100": {
+              "h1": "Tectonic",
+              "html_sha256": "12ced76bb417eb239b9656a56693b5ebc4540254b8466193332209e67f9146d8",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/tectonic-1624740?level=100",
+              "title": "Tectonic - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nTectonic\nLevel 100 \nRadius Size: 5 \nFor every 5 Dexterity purchased within range, your Earth Skills gain 12.5% [+] Critical Strike Damage.\nAdditional Bonus: \nYou gain 15% [x] Damage to Crowd Controlled enemies. \nRequired (purchased in range): 0 / +25 Dexterity\nLegendary Bonus: \nIncrease Earth Skill damage by 10.4% [x] ."
+            },
+            "150": {
+              "h1": "Tectonic",
+              "html_sha256": "c674f2afaca0bb2982854278789c911c81ce51bc549cde5ac7bbe9a95c129eb7",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/tectonic-1624740?level=150",
+              "title": "Tectonic - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nTectonic\nLevel 150 \nRadius Size: 5 \nFor every 5 Dexterity purchased within range, your Earth Skills gain 18.1% [+] Critical Strike Damage.\nAdditional Bonus: \nYou gain 15% [x] Damage to Crowd Controlled enemies. \nRequired (purchased in range): 0 / +25 Dexterity\nLegendary Bonus: \nIncrease Earth Skill damage by 15.4% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -5998,6 +6334,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/electrocution-1627925",
           "h1": "Electrocution",
           "html_sha256": "2694c668a85d2a126b0f6ad335d729cfdb28f0abd3bbeb70257e16a747925145",
+          "level_details": {
+            "100": {
+              "h1": "Electrocution",
+              "html_sha256": "52c41a344315db701cd72c10a66b5a3d6c11108a2ac54c27dd64f7eabb2f6f0a",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/electrocution-1627925?level=100",
+              "title": "Electrocution - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nElectrocution\nLevel 100 \nRadius Size: 5 \nFor every 5 Willpower purchased within range, your Lightning Bolts and Dancing Bolts deal 31.1% [+] increased damage.\nAdditional Bonus: \nEnemies damaged by your Lightning Bolts or Dancing Bolts take 20% [x] increased damage from you for 5 seconds. \nRequired (purchased in range): 0 / +40 Willpower\nLegendary Bonus: \nIncrease Lightning damage by 10.4% [x] ."
+            },
+            "150": {
+              "h1": "Electrocution",
+              "html_sha256": "fc8d91a58b12540b79bdcd1cc0e87bd4725a838096e2adf2729305e0d2d174a1",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/electrocution-1627925?level=150",
+              "title": "Electrocution - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nElectrocution\nLevel 150 \nRadius Size: 5 \nFor every 5 Willpower purchased within range, your Lightning Bolts and Dancing Bolts deal 43.5% [+] increased damage.\nAdditional Bonus: \nEnemies damaged by your Lightning Bolts or Dancing Bolts take 20% [x] increased damage from you for 5 seconds. \nRequired (purchased in range): 0 / +40 Willpower\nLegendary Bonus: \nIncrease Lightning damage by 15.4% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,
@@ -6282,6 +6634,22 @@
           "canonical_url": "https://www.wowhead.com/diablo-4/paragon-glyph/headhunter-2117207",
           "h1": "Headhunter",
           "html_sha256": "531c688b68b72dc872365de680b2f8c79cc8658369513516f8405a7c8958d316",
+          "level_details": {
+            "100": {
+              "h1": "Headhunter",
+              "html_sha256": "7e959b692ae8bed493bc9609451ef468f42ce9ab12d50ae55332a81572fcfcf3",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/headhunter-2117207?level=100",
+              "title": "Headhunter - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nHeadhunter\nLevel 100 \nRadius Size: 5 \nGrants +100.0% bonus to all Normal nodes within range.\nAdditional Bonus: \nYou deal 10% [x] increased damage to Elites. \nRequired (purchased in range): 0 / +40 Willpower\nLegendary Bonus: \nIncrease damage by 10.4% [x] ."
+            },
+            "150": {
+              "h1": "Headhunter",
+              "html_sha256": "d2a41c461fb17779d38e5bbe11921871adb4a7a58b82fd1b2b5a5ab22cb999a2",
+              "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/headhunter-2117207?level=150",
+              "title": "Headhunter - Paragon Glyph - Diablo 4",
+              "tooltip_text": "Legendary Glyph \nHeadhunter\nLevel 150 \nRadius Size: 5 \nGrants +140.5% bonus to all Normal nodes within range.\nAdditional Bonus: \nYou deal 10% [x] increased damage to Elites. \nRequired (purchased in range): 0 / +40 Willpower\nLegendary Bonus: \nIncrease damage by 15.4% [x] ."
+            }
+          },
           "page_meta": {
             "activeDbChanged": {
               "1": 1778245576,

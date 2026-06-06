@@ -5,8 +5,10 @@ from crawler.normalize import (
     infer_edges,
     node_type,
     parse_bonus_stats_from_tooltip,
+    parse_legendary_bonus,
     parse_node_bonus,
     parse_requirements,
+    parse_scaling_value_per_5,
     parse_stats_from_attributes,
     parse_stats_from_search_text,
 )
@@ -166,6 +168,70 @@ Barbarian, Paladin"""
         for text, expected in cases:
             with self.subTest(text=text):
                 self.assertEqual(parse_node_bonus({"en": text, "ru": None}), expected)
+
+    def test_parse_glyph_node_bonus_level_scaling_samples(self) -> None:
+        parsed = parse_node_bonus(
+            {"en": "Grants +30.0% bonus to all Magic nodes within range.", "ru": None},
+            {
+                74: "Grants +249.0% bonus to all Magic nodes within range.",
+                150: "Grants +477.0% bonus to all Magic nodes within range.",
+            },
+        )
+
+        self.assertIsNotNone(parsed)
+        samples = parsed["level_scaling"]["samples"]
+        self.assertEqual([sample["level"] for sample in samples], [1, 74, 150])
+        self.assertEqual([sample["bonus_percent"] for sample in samples], [30.0, 249.0, 477.0])
+        self.assertEqual([sample["multiplier"] for sample in samples], [0.3, 2.49, 4.77])
+
+    def test_parse_scaling_value_per_5_level_samples(self) -> None:
+        parsed = parse_scaling_value_per_5(
+            {
+                "en": (
+                    "For every 5 Willpower purchased within range, you deal +0.5% increased Nature Damage."
+                    "Additional Bonus: You deal 18% increased Nature Damage."
+                ),
+                "ru": None,
+            },
+            {
+                74: "For every 5 Willpower purchased within range, you deal +7.8% increased Nature Damage.",
+                150: "For every 5 Willpower purchased within range, you deal +15.4% increased Nature Damage.",
+            },
+        )
+
+        self.assertIsNotNone(parsed)
+        self.assertEqual(parsed["value"], 0.5)
+        self.assertEqual([sample["level"] for sample in parsed["samples"]], [1, 74, 150])
+        self.assertEqual([sample["value"] for sample in parsed["samples"]], [0.5, 7.8, 15.4])
+
+    def test_parse_scaling_value_per_5_without_plus_sign(self) -> None:
+        parsed = parse_scaling_value_per_5(
+            {"en": "For every 5 Dexterity purchased within range, your Earth Skills gain 1.5% Critical Strike Damage.", "ru": None},
+            {100: "For every 5 Dexterity purchased within range, your Earth Skills gain 13.0% Critical Strike Damage."},
+        )
+
+        self.assertIsNotNone(parsed)
+        self.assertEqual([sample["value"] for sample in parsed["samples"]], [1.5, 13.0])
+
+    def test_parse_legendary_bonus_level_samples(self) -> None:
+        parsed = parse_legendary_bonus(
+            {
+                "en": (
+                    "Legendary Bonus: Increase Nature Magic skill damage by 0.5% [x] . "
+                    "Required: Legendary Upgrade (unlocks at Level 50)"
+                ),
+                "ru": None,
+            },
+            {
+                100: "Legendary Bonus: Increase Nature Magic skill damage by 10.4% [x] .",
+                150: "Legendary Bonus: Increase Nature Magic skill damage by 15.4% [x] .",
+            },
+        )
+
+        self.assertIsNotNone(parsed)
+        self.assertEqual(parsed["value"], 0.5)
+        self.assertEqual([sample["level"] for sample in parsed["level_scaling"]["samples"]], [1, 100, 150])
+        self.assertEqual([sample["value"] for sample in parsed["level_scaling"]["samples"]], [0.5, 10.4, 15.4])
 
     def test_parse_glyph_node_bonus_returns_none_without_matching_effect(self) -> None:
         bonus_text = {

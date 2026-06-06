@@ -95,6 +95,11 @@ struct Board {
 };
 
 struct Glyph {
+    struct LevelValueSample {
+        int level = 1;
+        double value = 0.0;
+    };
+
     std::string id;
     std::string class_slug;
     json name = json::object();
@@ -107,12 +112,15 @@ struct Glyph {
     std::string bonus_text_en;
     std::string bonus_text_ru;
     std::vector<std::string> skill_tag_names;
+    json legendary_bonus = nullptr;
     struct {
         bool active = false;
         std::string node_type;
         double bonus_percent = 0.0;
         double multiplier = 0.0;
+        std::vector<LevelValueSample> multiplier_samples;
     } node_bonus;
+    std::vector<LevelValueSample> scaling_value_per_5_samples;
 };
 
 struct ClassRef {
@@ -235,6 +243,8 @@ struct GlyphInfo {
     bool legendary_unlocked = false;
     std::string bonus_stat;
     double scaling_value_per_5 = 0.0;
+    double node_bonus_percent = 0.0;
+    double node_bonus_multiplier = 0.0;
 };
 
 struct GlyphAffectedNode {
@@ -255,6 +265,8 @@ struct GlyphEvaluation {
     bool legendary_unlocked = false;
     std::string bonus_stat;
     double scaling_value_per_5 = 0.0;
+    double node_bonus_percent = 0.0;
+    double node_bonus_multiplier = 0.0;
     double node_bonus_score = 0.0;
     std::vector<GlyphAffectedNode> affected_nodes;
     std::vector<std::string> warnings;
@@ -460,6 +472,112 @@ std::vector<int> read_int_array(const json& value) {
     return result;
 }
 
+std::vector<Glyph::LevelValueSample> read_level_value_samples(
+    const json& value,
+    const std::vector<std::string>& value_keys
+) {
+    std::vector<Glyph::LevelValueSample> samples;
+    if (!value.is_array()) {
+        return samples;
+    }
+    for (const auto& item : value) {
+        if (!item.is_object() || !item.contains("level")) {
+            continue;
+        }
+        int level = static_cast<int>(as_double(item.value("level", 0)));
+        if (level <= 0) {
+            continue;
+        }
+        bool found = false;
+        double sample_value = 0.0;
+        for (const std::string& key : value_keys) {
+            if (item.contains(key)) {
+                sample_value = as_double(item.value(key, 0.0));
+                found = true;
+                break;
+            }
+        }
+        if (found) {
+            samples.push_back({level, sample_value});
+        }
+    }
+    std::sort(samples.begin(), samples.end(), [](const auto& left, const auto& right) {
+        return left.level < right.level;
+    });
+    samples.erase(
+        std::unique(samples.begin(), samples.end(), [](const auto& left, const auto& right) {
+            return left.level == right.level;
+        }),
+        samples.end()
+    );
+    return samples;
+}
+
+double level_scaled_value_for_level(
+    const std::vector<Glyph::LevelValueSample>& samples,
+    double fallback,
+    int level
+) {
+    if (samples.empty()) {
+        return fallback;
+    }
+    if (samples.front().level > 1) {
+        if (level <= 1) {
+            return fallback;
+        }
+        if (level < samples.front().level) {
+            const auto& right = samples.front();
+            double span = static_cast<double>(right.level - 1);
+            if (span <= 0.0) {
+                return right.value;
+            }
+            double t = static_cast<double>(level - 1) / span;
+            return fallback + (right.value - fallback) * t;
+        }
+    }
+    if (level <= samples.front().level) {
+        return samples.front().value;
+    }
+    for (size_t index = 0; index < samples.size(); ++index) {
+        if (samples[index].level == level) {
+            return samples[index].value;
+        }
+        if (index + 1 < samples.size() && level < samples[index + 1].level) {
+            const auto& left = samples[index];
+            const auto& right = samples[index + 1];
+            double span = static_cast<double>(right.level - left.level);
+            if (span <= 0.0) {
+                return left.value;
+            }
+            double t = static_cast<double>(level - left.level) / span;
+            return left.value + (right.value - left.value) * t;
+        }
+    }
+    if (samples.size() == 1) {
+        return samples.back().value;
+    }
+    const auto& left = samples[samples.size() - 2];
+    const auto& right = samples.back();
+    double span = static_cast<double>(right.level - left.level);
+    if (span <= 0.0) {
+        return right.value;
+    }
+    double t = static_cast<double>(level - left.level) / span;
+    return left.value + (right.value - left.value) * t;
+}
+
+int glyph_max_level(const Glyph& glyph) {
+    int max_level = std::max(glyph.max_level, 1);
+    auto include_samples = [&](const std::vector<Glyph::LevelValueSample>& samples) {
+        for (const auto& sample : samples) {
+            max_level = std::max(max_level, sample.level);
+        }
+    };
+    include_samples(glyph.node_bonus.multiplier_samples);
+    include_samples(glyph.scaling_value_per_5_samples);
+    return max_level;
+}
+
 std::map<std::string, int> read_int_map(const json& value, const std::string& field_name) {
     if (!value.is_object()) {
         throw std::runtime_error("profile field must be an object: " + field_name);
@@ -662,10 +780,32 @@ Glyph load_glyph(const fs::path& data_root, const std::string& class_slug, const
         glyph.node_bonus.node_type = node_bonus.value("node_type", "");
         glyph.node_bonus.bonus_percent = as_double(node_bonus.value("bonus_percent", 0.0));
         glyph.node_bonus.multiplier = as_double(node_bonus.value("multiplier", 0.0));
+        json level_scaling = node_bonus.value("level_scaling", json::object());
+        glyph.node_bonus.multiplier_samples = read_level_value_samples(
+            level_scaling.value("samples", json::array()),
+            {"multiplier"}
+        );
+        if (glyph.node_bonus.multiplier_samples.empty()) {
+            auto percent_samples = read_level_value_samples(
+                level_scaling.value("samples", json::array()),
+                {"bonus_percent"}
+            );
+            for (const auto& sample : percent_samples) {
+                glyph.node_bonus.multiplier_samples.push_back({sample.level, sample.value / 100.0});
+            }
+        }
+    }
+    json scaling_value_per_5 = raw.value("scaling_value_per_5", json(nullptr));
+    if (scaling_value_per_5.is_object()) {
+        glyph.scaling_value_per_5_samples = read_level_value_samples(
+            scaling_value_per_5.value("samples", json::array()),
+            {"value", "value_per_5"}
+        );
     }
     json bonus = raw.value("bonus_text", json::object());
     glyph.bonus_text_en = bonus.value("en", "");
     glyph.bonus_text_ru = bonus.value("ru", "");
+    glyph.legendary_bonus = raw.value("legendary_bonus", json(nullptr));
     for (const auto& item : raw.value("threshold_attributes", json::array())) {
         if (item.contains("stat_key") && item["stat_key"].is_string()) {
             glyph.threshold_stats.push_back(item["stat_key"].get<std::string>());
@@ -734,7 +874,7 @@ std::map<std::string, int> validated_glyph_levels(
     std::map<std::string, int> max_level_by_id;
     for (const Glyph& glyph : glyphs) {
         resolved[glyph.id] = 1;
-        max_level_by_id[glyph.id] = std::max(glyph.max_level, 1);
+        max_level_by_id[glyph.id] = glyph_max_level(glyph);
     }
 
     for (const auto& [glyph_id, level] : options.glyph_levels) {
@@ -809,7 +949,6 @@ void add_scaled_stats(
 
 bool glyph_node_bonus_applies_to(const Glyph& glyph, const GraphNode& node) {
     return glyph.node_bonus.active &&
-        glyph.node_bonus.multiplier != 0.0 &&
         !glyph.node_bonus.node_type.empty() &&
         node.type == glyph.node_bonus.node_type;
 }
@@ -1245,7 +1384,7 @@ double parse_glyph_requirement(const Glyph& glyph) {
     return 25.0;
 }
 
-double parse_scaling_value_per_5(const Glyph& glyph) {
+double parse_scaling_value_per_5_from_text(const Glyph& glyph) {
     std::string marker = "For every 5";
     size_t start = glyph.bonus_text_en.find(marker);
     if (start == std::string::npos) {
@@ -1267,6 +1406,25 @@ double parse_scaling_value_per_5(const Glyph& glyph) {
         return std::stod(last_number);
     }
     return 0.0;
+}
+
+double glyph_scaling_value_per_5_for_level(const Glyph& glyph, int level) {
+    return level_scaled_value_for_level(
+        glyph.scaling_value_per_5_samples,
+        parse_scaling_value_per_5_from_text(glyph),
+        level
+    );
+}
+
+double glyph_node_bonus_multiplier_for_level(const Glyph& glyph, int level) {
+    if (!glyph.node_bonus.active) {
+        return 0.0;
+    }
+    return level_scaled_value_for_level(glyph.node_bonus.multiplier_samples, glyph.node_bonus.multiplier, level);
+}
+
+double glyph_node_bonus_percent_for_level(const Glyph& glyph, int level) {
+    return glyph_node_bonus_multiplier_for_level(glyph, level) * 100.0;
 }
 
 std::string glyph_threshold_stat(const Glyph& glyph) {
@@ -1376,7 +1534,9 @@ ScoringContext build_scoring_context(
         info.level = level;
         info.legendary_unlocked = glyph_legendary_unlocked_for_level(glyph, level);
         info.bonus_stat = infer_glyph_bonus_stat(glyph, weights);
-        info.scaling_value_per_5 = parse_scaling_value_per_5(glyph);
+        info.scaling_value_per_5 = glyph_scaling_value_per_5_for_level(glyph, level);
+        info.node_bonus_multiplier = glyph_node_bonus_multiplier_for_level(glyph, level);
+        info.node_bonus_percent = info.node_bonus_multiplier * 100.0;
         context.glyph_info.push_back(std::move(info));
     }
     for (int socket_index : graph.glyph_sockets) {
@@ -1643,7 +1803,7 @@ std::vector<GlyphValueMatrix> build_glyph_value_matrices(
                 }
             }
 
-            if (weights.glyph_route.node_bonus > 0.0 && glyph.node_bonus.active && glyph.node_bonus.multiplier != 0.0) {
+            if (weights.glyph_route.node_bonus > 0.0 && glyph.node_bonus.active && info.node_bonus_multiplier != 0.0) {
                 for (int node_index : radius_nodes_for(context, socket_index, glyph_index)) {
                     if (node_index == socket_index) {
                         continue;
@@ -1654,10 +1814,10 @@ std::vector<GlyphValueMatrix> build_glyph_value_matrices(
                     }
 
                     double raw_score = weighted_stats_score(node.stats, weights);
-                    double direct = raw_score * glyph.node_bonus.multiplier * weights.glyph_route.node_bonus;
+                    double direct = raw_score * info.node_bonus_multiplier * weights.glyph_route.node_bonus;
                     if (node.type == "rare" && !node.bonus_stats.empty()) {
                         direct += weighted_stats_score(node.bonus_stats, weights) *
-                            glyph.node_bonus.multiplier *
+                            info.node_bonus_multiplier *
                             RARE_BONUS_ROUTE_HINT_FACTOR *
                             weights.glyph_route.node_bonus;
                     }
@@ -2142,7 +2302,8 @@ std::vector<double> build_node_bonus_multipliers(
             continue;
         }
         const Glyph& glyph = glyphs[evaluation.glyph_index];
-        if (!glyph.node_bonus.active || glyph.node_bonus.multiplier == 0.0) {
+        const GlyphInfo& info = context.glyph_info[evaluation.glyph_index];
+        if (!glyph.node_bonus.active || info.node_bonus_multiplier == 0.0) {
             continue;
         }
         for (int node_index : radius_nodes_for(context, evaluation.socket_index, evaluation.glyph_index)) {
@@ -2151,7 +2312,7 @@ std::vector<double> build_node_bonus_multipliers(
             }
             const GraphNode& node = graph.nodes[node_index];
             if (glyph_node_bonus_applies_to(glyph, node)) {
-                multipliers[node_index] += glyph.node_bonus.multiplier;
+                multipliers[node_index] += info.node_bonus_multiplier;
             }
         }
     }
@@ -2242,7 +2403,7 @@ GlyphEvaluation evaluate_glyph(
                     double value = weight_for(node.stats, info.threshold_stat);
                     double node_bonus_multiplier = effective_state
                         ? effective_state->node_bonus_multipliers[node_index]
-                        : (glyph_node_bonus_applies_to(glyph, node) ? glyph.node_bonus.multiplier : 0.0);
+                        : (glyph_node_bonus_applies_to(glyph, node) ? info.node_bonus_multiplier : 0.0);
                     value *= 1.0 + node_bonus_multiplier;
                     if (active_bonus_state && active_bonus_state->active_gated_bonus[node_index]) {
                         double bonus_value = weight_for(node.bonus_stats, info.threshold_stat);
@@ -2254,7 +2415,7 @@ GlyphEvaluation evaluate_glyph(
             }
         }
     }
-    if (glyph.node_bonus.active && glyph.node_bonus.multiplier != 0.0) {
+    if (glyph.node_bonus.active && info.node_bonus_multiplier != 0.0) {
         for (int node_index : radius_nodes_for(context, socket_index, glyph_index)) {
             if (!selected[node_index]) {
                 continue;
@@ -2267,7 +2428,7 @@ GlyphEvaluation evaluate_glyph(
             if (active_bonus_state && active_bonus_state->active_gated_bonus[node_index] && node.type == "rare") {
                 raw_score += weighted_stats_score(node.bonus_stats, weights);
             }
-            double bonus_score = raw_score * glyph.node_bonus.multiplier;
+            double bonus_score = raw_score * info.node_bonus_multiplier;
             node_bonus_score += bonus_score;
             affected_nodes.push_back({node_index, raw_score, bonus_score});
         }
@@ -2303,6 +2464,8 @@ GlyphEvaluation evaluate_glyph(
     evaluation.legendary_unlocked = info.legendary_unlocked;
     evaluation.bonus_stat = info.bonus_stat;
     evaluation.scaling_value_per_5 = info.scaling_value_per_5;
+    evaluation.node_bonus_percent = info.node_bonus_percent;
+    evaluation.node_bonus_multiplier = info.node_bonus_multiplier;
     evaluation.node_bonus_score = node_bonus_score;
     evaluation.affected_nodes = std::move(affected_nodes);
     if (!info.threshold_stat.empty() && !requirement_met) {
@@ -2465,6 +2628,21 @@ json glyph_route_tuning_json(const GlyphRouteTuning& tuning) {
     };
 }
 
+json level_value_samples_json(
+    const std::vector<Glyph::LevelValueSample>& samples,
+    const std::string& value_key,
+    double value_multiplier = 1.0
+) {
+    json payload = json::array();
+    for (const auto& sample : samples) {
+        payload.push_back({
+            {"level", sample.level},
+            {value_key, round4(sample.value * value_multiplier)}
+        });
+    }
+    return payload;
+}
+
 json glyph_schema_entry(const Glyph& glyph) {
     json radius = json::object();
     radius["starting"] = glyph_starting_radius(glyph);
@@ -2472,19 +2650,42 @@ json glyph_schema_entry(const Glyph& glyph) {
 
     json node_bonus = nullptr;
     if (glyph.node_bonus.active) {
+        double base_bonus_percent = glyph.node_bonus.bonus_percent != 0.0
+            ? glyph.node_bonus.bonus_percent
+            : glyph.node_bonus.multiplier * 100.0;
         node_bonus = {
             {"node_type", glyph.node_bonus.node_type},
-            {"bonus_percent", round4(glyph.node_bonus.bonus_percent)},
+            {"bonus_percent", round4(base_bonus_percent)},
             {"multiplier", round4(glyph.node_bonus.multiplier)}
+        };
+        if (!glyph.node_bonus.multiplier_samples.empty()) {
+            json samples = json::array();
+            for (const auto& sample : glyph.node_bonus.multiplier_samples) {
+                samples.push_back({
+                    {"level", sample.level},
+                    {"bonus_percent", round4(sample.value * 100.0)},
+                    {"multiplier", round4(sample.value)}
+                });
+            }
+            node_bonus["level_scaling"] = {{"samples", std::move(samples)}};
+        }
+    }
+
+    json scaling_value_per_5 = nullptr;
+    if (!glyph.scaling_value_per_5_samples.empty()) {
+        scaling_value_per_5 = {
+            {"samples", level_value_samples_json(glyph.scaling_value_per_5_samples, "value")}
         };
     }
 
     return {
         {"id", glyph.id},
         {"name", glyph.name},
-        {"max_level", std::max(glyph.max_level, 1)},
+        {"max_level", glyph_max_level(glyph)},
         {"radius", radius},
-        {"node_bonus", node_bonus}
+        {"node_bonus", node_bonus},
+        {"scaling_value_per_5", scaling_value_per_5},
+        {"legendary_bonus", glyph.legendary_bonus}
     };
 }
 
@@ -2493,7 +2694,7 @@ json example_glyph_levels_for_schema(const std::vector<Glyph>& glyphs) {
     size_t count = std::min<size_t>(5, glyphs.size());
     for (size_t index = 0; index < count; ++index) {
         const Glyph& glyph = glyphs[index];
-        int max_level = std::max(glyph.max_level, 1);
+        int max_level = glyph_max_level(glyph);
         levels[glyph.id] = std::min(51, max_level);
     }
     return levels;
@@ -2716,9 +2917,14 @@ ScoredRoute score_route(
         item["bonus_stat"] = evaluation.bonus_stat.empty() ? json(nullptr) : json(evaluation.bonus_stat);
         item["scaling_value_per_5"] = evaluation.scaling_value_per_5;
         if (glyph.node_bonus.active) {
+            double base_bonus_percent = glyph.node_bonus.bonus_percent != 0.0
+                ? glyph.node_bonus.bonus_percent
+                : glyph.node_bonus.multiplier * 100.0;
             item["node_bonus"] = {
                 {"node_type", glyph.node_bonus.node_type},
-                {"bonus_percent", round4(glyph.node_bonus.bonus_percent)}
+                {"bonus_percent", round4(evaluation.node_bonus_percent)},
+                {"multiplier", round4(evaluation.node_bonus_multiplier)},
+                {"base_bonus_percent", round4(base_bonus_percent)}
             };
         } else {
             item["node_bonus"] = nullptr;

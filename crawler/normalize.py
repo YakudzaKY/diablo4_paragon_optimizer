@@ -291,6 +291,23 @@ def detail_tooltip(raw: dict[str, Any], section: str, item_id: int, locale: str)
     )
 
 
+def detail_level_tooltips(raw: dict[str, Any], section: str, item_id: int, locale: str = "en") -> dict[int, str]:
+    detail = (
+        (((raw.get("details") or {}).get(section) or {}).get(str(item_id)) or {})
+        .get(locale, {})
+    )
+    result: dict[int, str] = {}
+    for level_key, level_detail in (detail.get("level_details") or {}).items():
+        try:
+            level = int(level_key)
+        except (TypeError, ValueError):
+            continue
+        tooltip = (level_detail or {}).get("tooltip_text")
+        if tooltip:
+            result[level] = tooltip
+    return dict(sorted(result.items()))
+
+
 def stat_key_from_phrase(phrase: str) -> str | None:
     text = phrase.lower()
     text = re.sub(r"\[[^\]]+\]", "", text)
@@ -726,11 +743,162 @@ def parse_node_bonus_from_tooltip(tooltip_text: str | None, source: str = "bonus
     }
 
 
-def parse_node_bonus(bonus_text: dict[str, str | None]) -> dict[str, Any] | None:
-    return (
+def parse_scaling_value_per_5_from_tooltip(tooltip_text: str | None) -> float | None:
+    if not tooltip_text:
+        return None
+
+    text = re.sub(r"<[^>]+>", " ", tooltip_text)
+    text = re.sub(r"\s+", " ", text).strip()
+    match = re.search(
+        r"\bFor\s+every\s+5\b(.+?)%",
+        text,
+        flags=re.IGNORECASE,
+    )
+    if not match:
+        return None
+    numbers = re.findall(r"\d+(?:\.\d+)?", match.group(1))
+    if not numbers:
+        return None
+    return float(numbers[-1])
+
+
+def level_sample(level: int, value_key: str, value: float, source: str) -> dict[str, Any]:
+    return {
+        "level": level,
+        value_key: value,
+        "source": source,
+    }
+
+
+def unique_level_samples(samples: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    by_level: dict[int, dict[str, Any]] = {}
+    for sample in samples:
+        level = int(sample["level"])
+        by_level[level] = sample
+    return [by_level[level] for level in sorted(by_level)]
+
+
+def parse_node_bonus(
+    bonus_text: dict[str, str | None],
+    level_tooltips: dict[int, str] | None = None,
+) -> dict[str, Any] | None:
+    parsed = (
         parse_node_bonus_from_tooltip(bonus_text.get("en"), "bonus_text.en")
         or parse_node_bonus_from_tooltip(bonus_text.get("ru"), "bonus_text.ru")
     )
+    if not parsed:
+        return None
+
+    samples = [
+        {
+            "level": 1,
+            "bonus_percent": parsed["bonus_percent"],
+            "multiplier": parsed["multiplier"],
+            "source": parsed["source"],
+        }
+    ]
+    for level, tooltip in (level_tooltips or {}).items():
+        level_parsed = parse_node_bonus_from_tooltip(tooltip, f"bonus_text.en?level={level}")
+        if not level_parsed or level_parsed["node_type"] != parsed["node_type"]:
+            continue
+        samples.append(
+            {
+                "level": level,
+                "bonus_percent": level_parsed["bonus_percent"],
+                "multiplier": level_parsed["multiplier"],
+                "source": level_parsed["source"],
+            }
+        )
+    samples = unique_level_samples(samples)
+    if len(samples) > 1:
+        parsed["level_scaling"] = {
+            "source": "wowhead.detail.level_tooltips",
+            "samples": samples,
+        }
+    return parsed
+
+
+def parse_scaling_value_per_5(
+    bonus_text: dict[str, str | None],
+    level_tooltips: dict[int, str] | None = None,
+) -> dict[str, Any] | None:
+    base_value = parse_scaling_value_per_5_from_tooltip(bonus_text.get("en"))
+    if base_value is None:
+        return None
+
+    samples = [level_sample(1, "value", base_value, "bonus_text.en")]
+    for level, tooltip in (level_tooltips or {}).items():
+        level_value = parse_scaling_value_per_5_from_tooltip(tooltip)
+        if level_value is None:
+            continue
+        samples.append(level_sample(level, "value", level_value, f"bonus_text.en?level={level}"))
+
+    payload: dict[str, Any] = {
+        "value": base_value,
+        "source": "bonus_text.en",
+    }
+    samples = unique_level_samples(samples)
+    if len(samples) > 1:
+        payload["samples"] = samples
+        payload["source"] = "wowhead.detail.level_tooltips"
+    return payload
+
+
+def parse_legendary_bonus_from_tooltip(
+    tooltip_text: str | None,
+    source: str = "bonus_text.en",
+) -> dict[str, Any] | None:
+    if not tooltip_text:
+        return None
+
+    text = re.sub(r"<[^>]+>", " ", tooltip_text)
+    text = re.sub(r"\s+", " ", text).strip()
+    match = re.search(
+        r"\bLegendary\s+Bonus\s*:\s*(.+?)(?:\bRequired\s*:|$)",
+        text,
+        flags=re.IGNORECASE,
+    )
+    if not match:
+        return None
+
+    bonus_text_segment = match.group(1).strip()
+    value_match = re.search(r"\+?\s*(\d+(?:\.\d+)?)\s*%", bonus_text_segment)
+    if not value_match:
+        return None
+
+    return {
+        "value": float(value_match.group(1)),
+        "text": bonus_text_segment,
+        "source": source,
+    }
+
+
+def parse_legendary_bonus(
+    bonus_text: dict[str, str | None],
+    level_tooltips: dict[int, str] | None = None,
+) -> dict[str, Any] | None:
+    parsed = (
+        parse_legendary_bonus_from_tooltip(bonus_text.get("en"), "bonus_text.en")
+        or parse_legendary_bonus_from_tooltip(bonus_text.get("ru"), "bonus_text.ru")
+    )
+    if not parsed:
+        return None
+
+    samples = [level_sample(1, "value", parsed["value"], parsed["source"])]
+    for level, tooltip in (level_tooltips or {}).items():
+        level_parsed = parse_legendary_bonus_from_tooltip(tooltip, f"bonus_text.en?level={level}")
+        if not level_parsed:
+            continue
+        samples.append(level_sample(level, "value", level_parsed["value"], level_parsed["source"]))
+
+    payload: dict[str, Any] = dict(parsed)
+    samples = unique_level_samples(samples)
+    if len(samples) > 1:
+        payload["level_scaling"] = {
+            "source": "wowhead.detail.level_tooltips",
+            "samples": samples,
+        }
+    return payload
 
 
 def deep_merge(base: Any, override: Any) -> Any:
@@ -1057,6 +1225,7 @@ def normalize_glyphs(raw: dict[str, Any], output_root: Path, overrides: dict[str
             "en": detail_tooltip(raw, "glyphs", glyph_sno, "en"),
             "ru": detail_tooltip(raw, "glyphs", glyph_sno, "ru"),
         }
+        level_tooltips = detail_level_tooltips(raw, "glyphs", glyph_sno, "en")
         glyph = {
             "schema_version": 1,
             "id": glyph_slug,
@@ -1076,7 +1245,9 @@ def normalize_glyphs(raw: dict[str, Any], output_root: Path, overrides: dict[str
             "threshold_attributes": threshold_attrs,
             "skill_tags": normalize_skill_tags(glyph_meta.get("skillTags") or [], tag_lookup),
             "bonus_text": bonus_text,
-            "node_bonus": parse_node_bonus(bonus_text),
+            "scaling_value_per_5": parse_scaling_value_per_5(bonus_text, level_tooltips),
+            "legendary_bonus": parse_legendary_bonus(bonus_text, level_tooltips),
+            "node_bonus": parse_node_bonus(bonus_text, level_tooltips),
             "source_url": detail_source_url(raw, "glyphs", glyph_sno) or raw["sources"]["paragon_data"],
             "checked_at": checked_at,
             "patch_version": patch_version,

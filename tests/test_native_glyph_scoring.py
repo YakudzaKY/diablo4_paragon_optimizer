@@ -27,6 +27,9 @@ def glyph_payload(
     threshold_stat: str | None = None,
     requirement: float = 999,
     node_bonus: dict[str, object] | None = None,
+    scaling_value_per_5: dict[str, object] | None = None,
+    skill_tags: list[dict[str, object]] | None = None,
+    bonus_text_en: str | None = None,
     radius: dict[str, object] | None = None,
     max_level: int = 100,
 ) -> dict[str, object]:
@@ -44,15 +47,16 @@ def glyph_payload(
             "upgrade_levels": [25, 50],
         },
         "threshold_attributes": threshold_attributes,
-        "skill_tags": [],
+        "skill_tags": skill_tags or [],
         "bonus_text": {
-            "en": (
+            "en": bonus_text_en or (
                 f"Rare Glyph\n{glyph_id}\nRadius Size: 3\n"
                 "Additional Bonus:\nSynthetic bonus.\n"
                 f"Required (purchased in range): +{requirement:g} {threshold_stat or 'Willpower'}"
             ),
             "ru": "",
         },
+        "scaling_value_per_5": scaling_value_per_5,
         "node_bonus": node_bonus,
     }
 
@@ -333,6 +337,79 @@ class NativeGlyphScoringTests(unittest.TestCase):
         self.assertEqual(glyph["radius"], 4)
         self.assertIn("node_bonus_score", glyph)
         self.assertAlmostEqual(glyph["node_bonus_score"], 3.0)
+
+    def test_node_bonus_uses_level_scaling_samples(self) -> None:
+        magic_bonus = glyph_payload(
+            "magic_bonus",
+            node_bonus={
+                "node_type": "magic",
+                "bonus_percent": 30.0,
+                "multiplier": 0.3,
+                "level_scaling": {
+                    "samples": [
+                        {"level": 1, "bonus_percent": 30.0, "multiplier": 0.3},
+                        {"level": 100, "bonus_percent": 327.0, "multiplier": 3.27},
+                    ]
+                },
+            },
+        )
+        payload = self.run_optimizer(
+            nodes=[
+                {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
+                {"id": "socket_a", "x": 0, "y": 1, "type": "glyph_socket", "cost": 1, "stats": {}},
+                {"id": "damage_magic", "x": 0, "y": 2, "type": "magic", "cost": 1, "stats": {"damage": 10}},
+            ],
+            edges=[["start", "socket_a"], ["socket_a", "damage_magic"]],
+            glyph_sockets=["socket_a"],
+            glyphs=[magic_bonus],
+            weights={"weights": {"damage": 1.0, "glyph_socket": 5.0}},
+            points=2,
+            glyph_levels={"magic_bonus": 74},
+        )
+
+        glyph = payload["results"][0]["glyphs"][0]
+        self.assertAlmostEqual(glyph["node_bonus"]["bonus_percent"], 249.0)
+        self.assertAlmostEqual(glyph["node_bonus"]["multiplier"], 2.49)
+        self.assertAlmostEqual(glyph["node_bonus_score"], 24.9)
+        self.assertAlmostEqual(payload["results"][0]["glyph_node_bonus_totals"]["damage"], 24.9)
+
+    def test_scaling_value_per_5_uses_level_samples(self) -> None:
+        scaled = glyph_payload(
+            "scaled",
+            threshold_stat="willpower",
+            requirement=999,
+            skill_tags=[{"name": "Damage"}],
+            bonus_text_en=(
+                "Rare Glyph\nscaled\nRadius Size: 3\n"
+                "For every 5 Willpower purchased within range, you deal +1.0% increased Damage.\n"
+                "Additional Bonus:\nSynthetic bonus.\n"
+                "Required (purchased in range): +999 Willpower"
+            ),
+            scaling_value_per_5={
+                "value": 1.0,
+                "samples": [
+                    {"level": 1, "value": 1.0},
+                    {"level": 100, "value": 6.5},
+                ],
+            },
+        )
+        payload = self.run_optimizer(
+            nodes=[
+                {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
+                {"id": "socket_a", "x": 0, "y": 1, "type": "glyph_socket", "cost": 1, "stats": {}},
+                {"id": "willpower_node", "x": 0, "y": 2, "type": "normal", "cost": 1, "stats": {"willpower": 10}},
+            ],
+            edges=[["start", "socket_a"], ["socket_a", "willpower_node"]],
+            glyph_sockets=["socket_a"],
+            glyphs=[scaled],
+            weights={"weights": {"damage": 1.0, "willpower": 0.0, "glyph_socket": 5.0}},
+            points=2,
+            glyph_levels={"scaled": 100},
+        )
+
+        glyph = payload["results"][0]["glyphs"][0]
+        self.assertAlmostEqual(glyph["scaling_value_per_5"], 6.5)
+        self.assertAlmostEqual(glyph["score"], 13.0)
 
     def test_missing_profile_glyph_level_defaults_to_one(self) -> None:
         payload = self.run_optimizer(

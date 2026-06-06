@@ -492,8 +492,9 @@ def discover_classes(args: argparse.Namespace, config: FetchConfig) -> dict[str,
     }
 
 
-def detail_cache_key(kind: str, item_id: int, locale: str) -> str:
-    return f"{kind}:{item_id}:{locale}"
+def detail_cache_key(kind: str, item_id: int, locale: str, level: int | None = None) -> str:
+    suffix = f":level:{level}" if level is not None else ""
+    return f"{kind}:{item_id}:{locale}{suffix}"
 
 
 def load_detail_cache(path: Path | None, raw_root: Path | None = None) -> dict[str, Any]:
@@ -514,6 +515,16 @@ def load_detail_cache(path: Path | None, raw_root: Path | None = None) -> dict[s
                             continue
                         key = detail_cache_key(kind, int(item_id), locale)
                         cache["details"].setdefault(key, cacheable_detail(detail))
+                        if kind == "glyph":
+                            for level_key, level_detail in (detail.get("level_details") or {}).items():
+                                if not level_detail or level_detail.get("fetch_error"):
+                                    continue
+                                try:
+                                    level = int(level_key)
+                                except (TypeError, ValueError):
+                                    continue
+                                level_cache_key = detail_cache_key(kind, int(item_id), locale, level)
+                                cache["details"].setdefault(level_cache_key, cacheable_detail(level_detail))
     return cache
 
 
@@ -530,14 +541,29 @@ def cacheable_detail(detail: dict[str, Any]) -> dict[str, Any]:
     return cached
 
 
-def item_detail_url(kind: str, item_id: int, name: str, locale: str) -> str:
+def compact_glyph_level_detail(detail: dict[str, Any]) -> dict[str, Any]:
+    keys = ("source_url", "html_sha256", "tooltip_text", "title", "h1", "fetch_error")
+    return {key: deepcopy(detail[key]) for key in keys if key in detail}
+
+
+def item_detail_url(kind: str, item_id: int, name: str, locale: str, level: int | None = None) -> str:
     locale_part = f"/{locale}" if locale != "en" else ""
     item_kind = "paragon-glyph" if kind == "glyph" else "paragon-node"
-    return f"{WOWHEAD_BASE}{locale_part}/{item_kind}/{slugify(name)}-{item_id}"
+    url = f"{WOWHEAD_BASE}{locale_part}/{item_kind}/{slugify(name)}-{item_id}"
+    if level is not None:
+        url = f"{url}?level={level}"
+    return url
 
 
-def fetch_detail_page(kind: str, item_id: int, name: str, locale: str, config: FetchConfig) -> dict[str, Any]:
-    url = item_detail_url(kind, item_id, name, locale)
+def fetch_detail_page(
+    kind: str,
+    item_id: int,
+    name: str,
+    locale: str,
+    config: FetchConfig,
+    level: int | None = None,
+) -> dict[str, Any]:
+    url = item_detail_url(kind, item_id, name, locale, level)
     html_text = fetch_text(url, config)
     fields = extract_simple_page_fields(html_text)
     fields.update(
@@ -559,6 +585,89 @@ def listview_items(list_page: dict[str, Any] | None) -> list[dict[str, Any]]:
     return listviews[0].get("data") or []
 
 
+def parse_level_samples(value: str) -> list[int]:
+    levels: list[int] = []
+    if not value.strip():
+        return levels
+    for raw_part in value.split(","):
+        part = raw_part.strip()
+        if not part:
+            continue
+        level = int(part)
+        if level > 1 and level not in levels:
+            levels.append(level)
+    return sorted(levels)
+
+
+def collect_glyph_level_details(
+    detail: dict[str, Any],
+    item_id: int,
+    name: str,
+    locale: str,
+    levels: list[int],
+    config: FetchConfig,
+    existing_detail: dict[str, Any],
+    prefer_existing_details: bool,
+    detail_cache: dict[str, Any] | None,
+) -> list[str]:
+    errors: list[str] = []
+    if locale != "en" or not levels:
+        return errors
+
+    level_details = deepcopy(detail.get("level_details") or {})
+    existing_level_details = existing_detail.get("level_details") or {}
+    for level in levels:
+        if level <= 1:
+            continue
+        level_key = str(level)
+        cache_key = detail_cache_key("glyph", item_id, locale, level)
+        cached_detail = ((detail_cache or {}).get("details") or {}).get(cache_key)
+        if cached_detail and not cached_detail.get("fetch_error"):
+            level_details[level_key] = compact_glyph_level_detail(cached_detail)
+            level_details[level_key]["reused_from_detail_cache"] = True
+            continue
+
+        existing_level_detail = existing_level_details.get(level_key) or {}
+        if prefer_existing_details and existing_level_detail and not existing_level_detail.get("fetch_error"):
+            level_details[level_key] = compact_glyph_level_detail(existing_level_detail)
+            level_details[level_key]["reused_from_previous_raw"] = True
+            if detail_cache is not None:
+                detail_cache.setdefault("details", {})[cache_key] = cacheable_detail(level_details[level_key])
+            continue
+
+        try:
+            level_details[level_key] = compact_glyph_level_detail(
+                fetch_detail_page("glyph", item_id, name, locale, config, level)
+            )
+            if detail_cache is not None:
+                detail_cache.setdefault("details", {})[cache_key] = cacheable_detail(level_details[level_key])
+            if config.sleep:
+                time.sleep(config.sleep)
+        except Exception as exc:  # noqa: BLE001 - crawler must preserve partial progress.
+            if existing_level_detail and not existing_level_detail.get("fetch_error"):
+                level_details[level_key] = compact_glyph_level_detail(existing_level_detail)
+                level_details[level_key]["reused_from_previous_raw"] = True
+                if detail_cache is not None:
+                    detail_cache.setdefault("details", {})[cache_key] = cacheable_detail(level_details[level_key])
+                continue
+
+            level_details[level_key] = {
+                "source_url": item_detail_url("glyph", item_id, name, locale, level),
+                "fetch_error": str(exc),
+                "title": name,
+                "h1": name,
+                "canonical_url": None,
+                "alternate_urls": {},
+                "tooltip_text": None,
+                "page_meta": None,
+            }
+            errors.append(f"glyph {item_id} {locale} level {level}: {exc}")
+
+    if level_details:
+        detail["level_details"] = level_details
+    return errors
+
+
 def collect_detail_pages(
     kind: str,
     en_items: list[dict[str, Any]],
@@ -568,6 +677,7 @@ def collect_detail_pages(
     existing_details: dict[str, Any] | None = None,
     prefer_existing_details: bool = False,
     detail_cache: dict[str, Any] | None = None,
+    glyph_level_samples: list[int] | None = None,
 ) -> tuple[dict[str, Any], list[str]]:
     details: dict[str, Any] = {}
     detail_errors: list[str] = []
@@ -582,6 +692,20 @@ def collect_detail_pages(
             if cached_detail and not cached_detail.get("fetch_error"):
                 details[str(item_id)][locale] = deepcopy(cached_detail)
                 details[str(item_id)][locale]["reused_from_detail_cache"] = True
+                if kind == "glyph":
+                    detail_errors.extend(
+                        collect_glyph_level_details(
+                            details[str(item_id)][locale],
+                            item_id,
+                            name,
+                            locale,
+                            glyph_level_samples or [],
+                            config,
+                            (((existing_details or {}).get(str(item_id)) or {}).get(locale) or {}),
+                            prefer_existing_details,
+                            detail_cache,
+                        )
+                    )
                 continue
 
             existing_detail = (((existing_details or {}).get(str(item_id)) or {}).get(locale) or {})
@@ -590,6 +714,20 @@ def collect_detail_pages(
                 details[str(item_id)][locale]["reused_from_previous_raw"] = True
                 if detail_cache is not None:
                     detail_cache.setdefault("details", {})[cache_key] = cacheable_detail(existing_detail)
+                if kind == "glyph":
+                    detail_errors.extend(
+                        collect_glyph_level_details(
+                            details[str(item_id)][locale],
+                            item_id,
+                            name,
+                            locale,
+                            glyph_level_samples or [],
+                            config,
+                            existing_detail,
+                            prefer_existing_details,
+                            detail_cache,
+                        )
+                    )
                 continue
             try:
                 details[str(item_id)][locale] = fetch_detail_page(kind, item_id, name, locale, config)
@@ -597,12 +735,40 @@ def collect_detail_pages(
                     detail_cache.setdefault("details", {})[cache_key] = cacheable_detail(details[str(item_id)][locale])
                 if config.sleep:
                     time.sleep(config.sleep)
+                if kind == "glyph":
+                    detail_errors.extend(
+                        collect_glyph_level_details(
+                            details[str(item_id)][locale],
+                            item_id,
+                            name,
+                            locale,
+                            glyph_level_samples or [],
+                            config,
+                            existing_detail,
+                            prefer_existing_details,
+                            detail_cache,
+                        )
+                    )
             except Exception as exc:  # noqa: BLE001 - crawler must preserve partial progress.
                 if existing_detail and not existing_detail.get("fetch_error"):
                     details[str(item_id)][locale] = deepcopy(existing_detail)
                     details[str(item_id)][locale]["reused_from_previous_raw"] = True
                     if detail_cache is not None:
                         detail_cache.setdefault("details", {})[cache_key] = cacheable_detail(existing_detail)
+                    if kind == "glyph":
+                        detail_errors.extend(
+                            collect_glyph_level_details(
+                                details[str(item_id)][locale],
+                                item_id,
+                                name,
+                                locale,
+                                glyph_level_samples or [],
+                                config,
+                                existing_detail,
+                                prefer_existing_details,
+                                detail_cache,
+                            )
+                        )
                     continue
                 else:
                     details[str(item_id)][locale] = {
@@ -696,6 +862,7 @@ def crawl(args: argparse.Namespace) -> Path:
             ((existing_raw or {}).get("details") or {}).get("glyphs"),
             args.prefer_existing_details,
             detail_cache,
+            args.glyph_level_samples,
         )
         node_details, node_detail_errors = collect_detail_pages(
             "node",
@@ -860,6 +1027,12 @@ def build_parser() -> argparse.ArgumentParser:
         type=int,
         default=None,
         help="Debug limit for glyph/node detail pages. Omit for full class crawl.",
+    )
+    crawl_parser.add_argument(
+        "--glyph-level-samples",
+        type=parse_level_samples,
+        default=parse_level_samples("100,150"),
+        help="Comma-separated glyph levels to fetch as Wowhead ?level=N tooltip samples. Empty disables this.",
     )
     crawl_parser.add_argument(
         "--strict-detail-pages",
