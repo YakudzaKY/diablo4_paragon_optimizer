@@ -2188,10 +2188,12 @@ GlyphEvaluation evaluate_glyph(
     const std::vector<unsigned char>& selected,
     int socket_index,
     int glyph_index,
-    const EffectiveStatsState* effective_state = nullptr
+    const EffectiveStatsState* effective_state = nullptr,
+    const EffectiveStatsState* candidate_active_bonus_state = nullptr
 ) {
     const Glyph& glyph = glyphs[glyph_index];
     const GlyphInfo& info = context.glyph_info[glyph_index];
+    const EffectiveStatsState* active_bonus_state = effective_state ? effective_state : candidate_active_bonus_state;
     double stat_in_radius = 0.0;
     double node_bonus_score = 0.0;
     std::vector<GlyphAffectedNode> affected_nodes;
@@ -2202,17 +2204,14 @@ GlyphEvaluation evaluate_glyph(
                 if (selected[node_index]) {
                     const GraphNode& node = graph.nodes[node_index];
                     double value = weight_for(node.stats, info.threshold_stat);
-                    if (effective_state) {
-                        value *= 1.0 + effective_state->node_bonus_multipliers[node_index];
-                        if (effective_state->active_gated_bonus[node_index]) {
-                            double bonus_value = weight_for(node.bonus_stats, info.threshold_stat);
-                            double bonus_multiplier = node.type == "rare"
-                                ? effective_state->node_bonus_multipliers[node_index]
-                                : 0.0;
-                            value += bonus_value * (1.0 + bonus_multiplier);
-                        }
-                    } else if (glyph_node_bonus_applies_to(glyph, node)) {
-                        value *= 1.0 + glyph.node_bonus.multiplier;
+                    double node_bonus_multiplier = effective_state
+                        ? effective_state->node_bonus_multipliers[node_index]
+                        : (glyph_node_bonus_applies_to(glyph, node) ? glyph.node_bonus.multiplier : 0.0);
+                    value *= 1.0 + node_bonus_multiplier;
+                    if (active_bonus_state && active_bonus_state->active_gated_bonus[node_index]) {
+                        double bonus_value = weight_for(node.bonus_stats, info.threshold_stat);
+                        double bonus_multiplier = node.type == "rare" ? node_bonus_multiplier : 0.0;
+                        value += bonus_value * (1.0 + bonus_multiplier);
                     }
                     stat_in_radius += value;
                 }
@@ -2229,7 +2228,7 @@ GlyphEvaluation evaluate_glyph(
                 continue;
             }
             double raw_score = weighted_stats_score(node.stats, weights);
-            if (effective_state && effective_state->active_gated_bonus[node_index] && node.type == "rare") {
+            if (active_bonus_state && active_bonus_state->active_gated_bonus[node_index] && node.type == "rare") {
                 raw_score += weighted_stats_score(node.bonus_stats, weights);
             }
             double bonus_score = raw_score * glyph.node_bonus.multiplier;
@@ -2299,7 +2298,8 @@ std::vector<GlyphEvaluation> assign_glyphs(
     const std::vector<Glyph>& glyphs,
     const WeightModel& weights,
     const ScoringContext& context,
-    const std::vector<unsigned char>& selected
+    const std::vector<unsigned char>& selected,
+    const std::map<std::string, double>& starting_stats
 ) {
     std::vector<int> sockets;
     for (int socket_index : graph.glyph_sockets) {
@@ -2309,6 +2309,9 @@ std::vector<GlyphEvaluation> assign_glyphs(
         return {};
     }
 
+    EffectiveStatsState candidate_active_bonus_state =
+        compute_effective_stats(graph, starting_stats, glyphs, context, selected, {});
+
     std::vector<std::vector<GlyphEvaluation>> candidates_by_socket;
     std::unordered_set<std::string> preferred;
     for (const auto& [glyph_id, _] : weights.glyph_weights) {
@@ -2317,7 +2320,17 @@ std::vector<GlyphEvaluation> assign_glyphs(
     for (int socket_index : sockets) {
         std::vector<GlyphEvaluation> evaluations;
         for (int glyph_index = 0; glyph_index < static_cast<int>(glyphs.size()); ++glyph_index) {
-            evaluations.push_back(evaluate_glyph(graph, glyphs, weights, context, selected, socket_index, glyph_index));
+            evaluations.push_back(evaluate_glyph(
+                graph,
+                glyphs,
+                weights,
+                context,
+                selected,
+                socket_index,
+                glyph_index,
+                nullptr,
+                &candidate_active_bonus_state
+            ));
         }
         std::sort(evaluations.begin(), evaluations.end(), [&](const GlyphEvaluation& left, const GlyphEvaluation& right) {
             if (std::abs(left.score - right.score) > 1e-12) return left.score > right.score;
@@ -2455,7 +2468,14 @@ double route_score_value(
     const std::vector<unsigned char>& selected,
     int points_limit
 ) {
-    std::vector<GlyphEvaluation> assigned_glyphs = assign_glyphs(graph, glyphs, weights, context, selected);
+    std::vector<GlyphEvaluation> assigned_glyphs = assign_glyphs(
+        graph,
+        glyphs,
+        weights,
+        context,
+        selected,
+        starting_stats
+    );
     EffectiveStatsState effective_state =
         compute_effective_stats(graph, starting_stats, glyphs, context, selected, assigned_glyphs);
 
@@ -2510,7 +2530,14 @@ ScoredRoute score_route(
     int points_limit,
     bool include_route_steps
 ) {
-    std::vector<GlyphEvaluation> assigned_glyphs = assign_glyphs(graph, glyphs, weights, context, route.selected);
+    std::vector<GlyphEvaluation> assigned_glyphs = assign_glyphs(
+        graph,
+        glyphs,
+        weights,
+        context,
+        route.selected,
+        starting_stats
+    );
     EffectiveStatsState effective_state =
         compute_effective_stats(graph, starting_stats, glyphs, context, route.selected, assigned_glyphs);
     const std::vector<int>& selected_indices = effective_state.selected_indices;
@@ -3217,7 +3244,14 @@ void improve_route_glyph_relocations(
     int worker_count
 ) {
     for (int pass = 0; pass < GLYPH_RELOCATION_MAX_PASSES; ++pass) {
-        std::vector<GlyphEvaluation> assigned = assign_glyphs(graph, glyphs, weights, context, route.selected);
+        std::vector<GlyphEvaluation> assigned = assign_glyphs(
+            graph,
+            glyphs,
+            weights,
+            context,
+            route.selected,
+            starting_stats
+        );
         if (assigned.empty()) {
             break;
         }
