@@ -1809,8 +1809,7 @@
       },
       "requirements": {},
       "stats": {
-        "non_physical_damage": 5.0,
-        "physical_damage": 5.0
+        "non_physical_damage": 5.0
       },
       "type": "magic",
       "x": 17,
@@ -1847,8 +1846,7 @@
       },
       "requirements": {},
       "stats": {
-        "non_physical_damage": 5.0,
-        "physical_damage": 5.0
+        "non_physical_damage": 5.0
       },
       "type": "magic",
       "x": 19,
@@ -2040,8 +2038,7 @@
       },
       "requirements": {},
       "stats": {
-        "non_physical_damage": 5.0,
-        "physical_damage": 5.0
+        "non_physical_damage": 5.0
       },
       "type": "magic",
       "x": 18,
@@ -2414,8 +2411,7 @@
       },
       "requirements": {},
       "stats": {
-        "non_physical_damage": 5.0,
-        "physical_damage": 5.0
+        "non_physical_damage": 5.0
       },
       "type": "magic",
       "x": 11,
@@ -2676,8 +2672,7 @@
       },
       "requirements": {},
       "stats": {
-        "non_physical_damage": 5.0,
-        "physical_damage": 5.0
+        "non_physical_damage": 5.0
       },
       "type": "magic",
       "x": 12,
@@ -2808,8 +2803,7 @@
       },
       "requirements": {},
       "stats": {
-        "non_physical_damage": 5.0,
-        "physical_damage": 5.0
+        "non_physical_damage": 5.0
       },
       "type": "magic",
       "x": 11,

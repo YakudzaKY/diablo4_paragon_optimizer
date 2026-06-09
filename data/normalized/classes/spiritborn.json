@@ -20,7 +20,6 @@
     "max_resource",
     "movement_speed",
     "non_physical_damage",
-    "physical_damage",
     "resistance_all",
     "resource_generation",
     "strength",

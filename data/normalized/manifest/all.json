@@ -54,7 +54,7 @@
     {
       "class": "rogue",
       "counts": {
-        "available_stats": 29,
+        "available_stats": 28,
         "boards": 10,
         "glyphs": 26
       },
@@ -63,7 +63,7 @@
     {
       "class": "sorcerer",
       "counts": {
-        "available_stats": 30,
+        "available_stats": 29,
         "boards": 10,
         "glyphs": 23
       },
@@ -72,7 +72,7 @@
     {
       "class": "spiritborn",
       "counts": {
-        "available_stats": 27,
+        "available_stats": 26,
         "boards": 9,
         "glyphs": 22
       },

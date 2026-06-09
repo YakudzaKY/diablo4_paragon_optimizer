@@ -1,7 +1,7 @@
 {
   "class": "sorcerer",
   "counts": {
-    "available_stats": 30,
+    "available_stats": 29,
     "boards": 10,
     "glyphs": 23
   },

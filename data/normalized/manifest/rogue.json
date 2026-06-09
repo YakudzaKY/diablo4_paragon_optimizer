@@ -1,7 +1,7 @@
 {
   "class": "rogue",
   "counts": {
-    "available_stats": 29,
+    "available_stats": 28,
     "boards": 10,
     "glyphs": 26
   },

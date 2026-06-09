@@ -92,6 +92,7 @@ class WowheadCrawlerParsingTests(unittest.TestCase):
             ("lightning damage magic node +5% sorcerer", {"lightning_damage": 5}),
             ("shadow damage magic node +5% necromancer", {"shadow_damage": 5}),
             ("shadow damage over time magic node +7.5% necromancer", {"shadow_damage": 7.5}),
+            ("non-physical damage magic node +5.0% rogue, sorcerer, spiritborn", {"non_physical_damage": 5.0}),
         ]
 
         for search_text, expected in cases:

@@ -493,12 +493,12 @@ def parse_stats_from_search_text(search_text: str) -> dict[str, float]:
 
     simple_patterns = [
         (r"^damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "damage"),
-        (r"\bphysical damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "physical_damage"),
+        (r"\bnon.physical damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "non_physical_damage"),
+        (r"(?<!non[.-])\bphysical damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "physical_damage"),
         (r"\bfire damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "fire_damage"),
         (r"\bcold damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "cold_damage"),
         (r"\blightning damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "lightning_damage"),
         (r"\bshadow damage.*magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "shadow_damage"),
-        (r"\bnon.physical damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "non_physical_damage"),
         (r"\bvulnerable damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "vulnerable_damage"),
         (r"bleed damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "bleed_damage"),
         (r"bleed damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%.*to bleeding", "damage_to_bleeding"),

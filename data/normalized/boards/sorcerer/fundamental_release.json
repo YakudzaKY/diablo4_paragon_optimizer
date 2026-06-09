@@ -1410,8 +1410,7 @@
       },
       "requirements": {},
       "stats": {
-        "non_physical_damage": 5.0,
-        "physical_damage": 5.0
+        "non_physical_damage": 5.0
       },
       "type": "magic",
       "x": 12,
@@ -1544,8 +1543,7 @@
       },
       "requirements": {},
       "stats": {
-        "non_physical_damage": 5.0,
-        "physical_damage": 5.0
+        "non_physical_damage": 5.0
       },
       "type": "magic",
       "x": 12,
@@ -1724,8 +1722,7 @@
       },
       "requirements": {},
       "stats": {
-        "non_physical_damage": 5.0,
-        "physical_damage": 5.0
+        "non_physical_damage": 5.0
       },
       "type": "magic",
       "x": 13,
