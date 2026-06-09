@@ -47,16 +47,17 @@ constexpr double GLYPH_SCALING_STEP = 5.0;
 constexpr double GLYPH_SCALING_PARTIAL_CREDIT = 0.35;
 constexpr int MAX_GLYPH_CANDIDATES_PER_SOCKET = 8;
 constexpr double UNMET_PREFERRED_GLYPH_WEIGHT_FACTOR = 0.25;
-constexpr int DEFAULT_MAX_ROUTES = 3000;
-constexpr int DEFAULT_CANDIDATE_TARGETS = 320;
+constexpr int DEFAULT_MAX_ROUTES = 30000;
+constexpr int DEFAULT_CANDIDATE_TARGETS = 1000;
 constexpr double RARE_REQUIREMENT_REGULAR_STEP = 75.0;
 constexpr double RARE_REQUIREMENT_SECONDARY_STEP = 70.0;
 constexpr double RARE_REQUIREMENT_PRIMARY_STEP = 455.0;
 constexpr double RARE_REQUIREMENT_PRIMARY_MINIMUM = 600.0;
 constexpr double RARE_BONUS_ROUTE_HINT_FACTOR = 0.6;
-constexpr int LOCAL_IMPROVEMENT_MAX_PASSES = 8;
+constexpr double LOCAL_RARE_FEEDER_BONUS_FACTOR = 0.85;
+constexpr int LOCAL_IMPROVEMENT_MAX_PASSES = 10;
 constexpr int LOCAL_IMPROVEMENT_REMOVE_CANDIDATES = 36;
-constexpr int LOCAL_IMPROVEMENT_ADD_CANDIDATES = 48;
+constexpr int LOCAL_IMPROVEMENT_ADD_CANDIDATES = 64;
 constexpr int GLYPH_RELOCATION_MAX_PASSES = 12;
 constexpr int GLYPH_RELOCATION_REMOVE_CANDIDATES = 120;
 constexpr int GLYPH_RELOCATION_ADD_CANDIDATES = 120;
@@ -996,6 +997,35 @@ double route_node_score(
         score += glyph_socket_route_bonus(weights);
     }
     return score;
+}
+
+// Boosts priority for nodes that are direct feeders (or access points) to
+// unselected rare/legendary nodes with bonus_stats. This makes local improvement
+// "hungry" for high-value yellow nodes: it will prefer adding cheap magic/normal
+// connectors that unlock big bonus_stats (e.g. extra attack speed) even if the
+// feeder itself looks mediocre in raw stats. The full scorer still validates
+// everything (gated bonuses, glyph interactions, total score). Factor is higher
+// than the main-search hint (0.6) to reflect local "here and now" greed for
+// reachable bonus value after the main route has already paid to reach the board.
+double rare_feeder_unlock_bonus(
+    const Graph& graph,
+    int node_index,
+    const std::vector<unsigned char>& selected,
+    const WeightModel& weights
+) {
+    double extra = 0.0;
+    for (int nei : graph.adjacency[node_index]) {
+        if (selected[nei]) {
+            continue;
+        }
+        const GraphNode& nei_node = graph.nodes[nei];
+        if (!nei_node.bonus_stats.empty() &&
+            (nei_node.type == "rare" || nei_node.type == "legendary")) {
+            extra += weighted_stats_score(nei_node.bonus_stats, weights) *
+                     LOCAL_RARE_FEEDER_BONUS_FACTOR;
+        }
+    }
+    return extra;
 }
 
 double board_potential(const Board& board, const WeightModel& weights) {
@@ -3333,21 +3363,40 @@ std::vector<int> adjacent_add_nodes(
     const std::unordered_map<int, double>& route_bonuses,
     int max_cost
 ) {
-    std::set<int> unique;
+    // Use priority map so we can boost "strategic" boundary nodes that unlock
+    // high-bonus rares (yellow nodes). Direct unselected neighbors of the
+    // current selected set are always considered (standard boundary growth).
+    // Additionally, any such boundary node that is adjacent to an unselected
+    // rare/legendary with bonus_stats gets a significant priority bump
+    // (rare_feeder_unlock_bonus). This makes local swaps consider the profit
+    // of "reaching" the yellow node (the feeder becomes very attractive to
+    // spend a low-value remove on, so that on the next pass the rare itself
+    // becomes a direct adjacent candidate and can be evaluated with its full
+    // bonus in the complete score).
+    std::map<int, double> priorities;
     for (int index = 0; index < static_cast<int>(selected.size()); ++index) {
         if (!selected[index]) {
             continue;
         }
         for (int neighbor : graph.adjacency[index]) {
             if (!selected[neighbor] && graph.nodes[neighbor].cost > 0 && graph.nodes[neighbor].cost <= max_cost) {
-                unique.insert(neighbor);
+                double s = route_node_score(graph.nodes[neighbor], weights, &route_bonuses, neighbor);
+                s += rare_feeder_unlock_bonus(graph, neighbor, selected, weights);
+                auto it = priorities.find(neighbor);
+                if (it == priorities.end() || s > it->second) {
+                    priorities[neighbor] = s;
+                }
             }
         }
     }
-    std::vector<int> candidates(unique.begin(), unique.end());
+    std::vector<int> candidates;
+    candidates.reserve(priorities.size());
+    for (const auto& kv : priorities) {
+        candidates.push_back(kv.first);
+    }
     std::sort(candidates.begin(), candidates.end(), [&](int left, int right) {
-        double left_score = route_node_score(graph.nodes[left], weights, &route_bonuses, left);
-        double right_score = route_node_score(graph.nodes[right], weights, &route_bonuses, right);
+        double left_score = priorities[left];
+        double right_score = priorities[right];
         if (std::abs(left_score - right_score) > 1e-12) return left_score > right_score;
         return graph.nodes[left].id < graph.nodes[right].id;
     });
@@ -3421,6 +3470,11 @@ std::unordered_map<int, double> glyph_relocation_add_priorities(
                 score += bonus_it->second * 0.25;
             }
             score += node_base_score(node, weights) * 0.05;
+            // Also consider profit of unlocking nearby high-bonus rares (yellow nodes)
+            // even during glyph relocation passes. Rare hunger is secondary to glyph
+            // threshold pressure but helps the overall local logic be rational about
+            // reachable bonus value.
+            score += rare_feeder_unlock_bonus(graph, node_index, selected, weights) * 0.5;
             priorities[node_index] += score;
         }
     }
@@ -3659,13 +3713,75 @@ RouteOutput improve_route_locally(
                 if (!has_selected_neighbor_after_remove(graph, route.selected, add_index, remove_index)) {
                     continue;
                 }
-                double quick_delta =
-                    route_node_score(graph.nodes[add_index], weights, &route_bonuses, add_index) -
-                    node_base_score(graph.nodes[remove_index], weights);
+                // Use enhanced score for quick pre-filter too: feeders that unlock
+                // high-bonus rares get an optimistic but rational bump. The expensive
+                // full route_score_value (which correctly computes all gated bonuses,
+                // glyph scalings, interactions etc.) will still decide if the swap
+                // is truly better. This helps "hunger" for yellow nodes without
+                // changing the single-add connected model.
+                double add_sc = route_node_score(graph.nodes[add_index], weights, &route_bonuses, add_index);
+                add_sc += rare_feeder_unlock_bonus(graph, add_index, route.selected, weights);
+                double quick_delta = add_sc - node_base_score(graph.nodes[remove_index], weights);
                 if (quick_delta <= 1e-9) {
                     continue;
                 }
                 swap_candidates.push_back({remove_index, add_index});
+            }
+        }
+
+        // === Explicit "hunger for high-bonus yellow nodes" in local replacements ===
+        // Even if a feeder to a bonus rare didn't rank in the top-N add_candidates
+        // (because other boundary nodes had higher glyph/cluster heuristic),
+        // we explicitly hunt for unselected rares with bonus_stats that are
+        // "one cheap feeder away" from the current selected set (i.e. a direct
+        // unselected neighbor of the rare is adjacent to some already selected node).
+        // We inject swap proposals that sacrifice one of the worst (lowest-ranked)
+        // removable nodes to add that feeder. This makes the local phase rationally
+        // evaluate the profit of reaching/detouring to yellow nodes "here and now",
+        // while the expensive full scorer (with correct iterative gated bonus
+        // activation, glyph scaling, node bonuses etc.) still makes the final call
+        // on whether the total score improves. The sequential passes then allow
+        // taking the rare itself on the next iteration once the feeder is in.
+        // This is the distance-1 "reach the rare" logic + greed for high-bonus rares.
+        if (!remove_candidates.empty()) {
+            // Try the unlock hunter against several of the worst removables (not just the single worst).
+            // This gives high-bonus yellow nodes more opportunities to be evaluated against
+            // "cheap to remove" nodes whose stat loss is minimal in the current full state.
+            // Combined with the priority boost in adjacent_add_nodes and the optimistic
+            // quick filter, this makes local replacements actively consider the profit
+            // of extending to / "detouring" for reachable high-bonus rares.
+            size_t hunt_limit = std::min<size_t>(5, remove_candidates.size());
+            for (size_t h = 0; h < hunt_limit; ++h) {
+                int rem = remove_candidates[h];
+                int rcost = graph.nodes[rem].cost;
+                if (current_points - rcost < 0) continue;
+                for (int ri = 0; ri < static_cast<int>(graph.nodes.size()); ++ri) {
+                    const GraphNode& rn = graph.nodes[ri];
+                    if (route.selected[ri] || rn.bonus_stats.empty() ||
+                        (rn.type != "rare" && rn.type != "legendary")) {
+                        continue;
+                    }
+                    for (int feeder : graph.adjacency[ri]) {
+                        if (route.selected[feeder] || graph.nodes[feeder].cost <= 0) continue;
+                        bool on_frontier = false;
+                        for (int sn : graph.adjacency[feeder]) {
+                            if (sn != ri && route.selected[sn]) {
+                                on_frontier = true;
+                                break;
+                            }
+                        }
+                        if (on_frontier) {
+                            bool already = false;
+                            for (const auto& sc : swap_candidates) {
+                                if (sc.remove_index == rem && sc.add_index == feeder) { already = true; break; }
+                            }
+                            if (!already) {
+                                swap_candidates.push_back({rem, feeder});
+                            }
+                            break;
+                        }
+                    }
+                }
             }
         }
 

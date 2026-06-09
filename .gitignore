@@ -25,3 +25,4 @@ __pycache__/
 !/profiles/*.example.json
 /weights/*.json
 !/weights/*.example.json
+/optimize_fast_spiritborn.bat

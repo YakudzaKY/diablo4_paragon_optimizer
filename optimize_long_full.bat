@@ -9,7 +9,7 @@ if not exist "%EXE%" (
   if errorlevel 1 exit /b 1
 )
 
-"%EXE%" optimize --profile "%ROOT%profiles\paladin_juggernaut_shield_bash.json"  --candidate-targets 0 --max-routes 0
+"%EXE%" optimize --profile "%ROOT%profiles\druid.example.json" --max-routes 0 --candidate-targets 0
 pause
 
 endlocal
