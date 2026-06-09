@@ -19,10 +19,10 @@ update_data.bat
 get_schema.bat
 ```
 
-По умолчанию пример смотрит `paladin`; для другого класса поменяйте `--class` внутри батника или запустите CLI напрямую:
+По умолчанию пример смотрит `druid`; для другого класса поменяйте `--class` внутри батника или запустите CLI напрямую:
 
 ```bat
-bin\paragon_optimize.exe schema --class paladin
+bin\paragon_optimize.exe schema --class druid
 ```
 
 Дальше создайте или поправьте профиль в `profiles/*.json` и файл весов в `weights/*.json`, затем запускайте оптимизацию. В корне уже есть готовые примеры:
@@ -38,7 +38,7 @@ optimize_long_full.bat
 ## Crawler
 
 ```bash
-python -m paragon_optimizer.crawler.wowhead_crawler crawl --class paladin --out paragon_optimizer/data/raw
+python -m paragon_optimizer.crawler.wowhead_crawler crawl --class druid --out paragon_optimizer/data/raw
 ```
 
 Все классы можно скачать одним запуском:
@@ -63,19 +63,19 @@ paragon_optimizer/data/raw/<class>/wowhead_raw.json
 Для быстрой отладки можно ограничить детальные страницы:
 
 ```bash
-python -m paragon_optimizer.crawler.wowhead_crawler crawl --class paladin --out paragon_optimizer/data/raw --max-detail-pages 3
+python -m paragon_optimizer.crawler.wowhead_crawler crawl --class druid --out paragon_optimizer/data/raw --max-detail-pages 3
 ```
 
 Если Wowhead временно отдает 403 на публичные страницы, но известен актуальный `nether` data-script, его можно передать напрямую:
 
 ```bash
-python -m paragon_optimizer.crawler.wowhead_crawler crawl --class paladin --out paragon_optimizer/data/raw --paragon-data-url "https://nether.wowhead.com/diablo-4/data/paragon-calc?dv=17&db=1778694731"
+python -m paragon_optimizer.crawler.wowhead_crawler crawl --class druid --out paragon_optimizer/data/raw --paragon-data-url "https://nether.wowhead.com/diablo-4/data/paragon-calc?dv=17&db=1778694731"
 ```
 
 Для повторного запуска поверх уже скачанного raw можно не дергать успешные detail-страницы заново:
 
 ```bash
-python -m paragon_optimizer.crawler.wowhead_crawler crawl --class paladin --out paragon_optimizer/data/raw --prefer-existing-details
+python -m paragon_optimizer.crawler.wowhead_crawler crawl --class druid --out paragon_optimizer/data/raw --prefer-existing-details
 ```
 
 Для длинных прогонов используются задержки и backoff на `403/429`:
@@ -87,7 +87,7 @@ python -m paragon_optimizer.crawler.wowhead_crawler crawl --class all --out para
 ## Normalize
 
 ```bash
-python -m paragon_optimizer.crawler.normalize normalize --in paragon_optimizer/data/raw --out paragon_optimizer/data/normalized --class paladin
+python -m paragon_optimizer.crawler.normalize normalize --in paragon_optimizer/data/raw --out paragon_optimizer/data/normalized --class druid
 ```
 
 Нормализация всех скачанных классов:
@@ -110,10 +110,10 @@ paragon_optimizer/data/normalized/manifest/<class>.json
 Для полуавтоматической правки можно передать файл или директорию overrides:
 
 ```bash
-python -m paragon_optimizer.crawler.normalize normalize --in paragon_optimizer/data/raw --out paragon_optimizer/data/normalized --class paladin --manual-overrides paragon_optimizer/crawler/manual_overrides
+python -m paragon_optimizer.crawler.normalize normalize --in paragon_optimizer/data/raw --out paragon_optimizer/data/normalized --class druid --manual-overrides paragon_optimizer/crawler/manual_overrides
 ```
 
-Ожидаемый файл для класса: `paragon_optimizer/crawler/manual_overrides/paladin.json`.
+Ожидаемый файл для класса: `paragon_optimizer/crawler/manual_overrides/druid.json`.
 
 ## Tests
 
@@ -137,7 +137,7 @@ paragon_optimizer/build_native.bat
 Справка по доступным статам, доскам и глифам класса:
 
 ```bash
-paragon_optimizer/bin/paragon_optimize.exe schema --class paladin
+paragon_optimizer/bin/paragon_optimize.exe schema --class druid
 ```
 
 В `schema` поле `available_glyphs` выводится объектами, а не только id: для каждого глифа доступны `id`, `name`, `max_level`, `radius.starting`, `radius.upgrade_levels` и структурированный `node_bonus` или `null`. В `profile_schema_example` есть пример блока `glyph_levels` с уровнем `51`, чтобы было видно, где задается прокачка глифов.
@@ -145,28 +145,28 @@ paragon_optimizer/bin/paragon_optimize.exe schema --class paladin
 Запуск эвристического оптимизатора:
 
 ```bash
-paragon_optimizer/bin/paragon_optimize.exe optimize --profile paragon_optimizer/profiles/paladin_juggernaut_shield_bash.json
+paragon_optimizer/bin/paragon_optimize.exe optimize --profile paragon_optimizer/profiles/druid.json
 ```
 
 Профиль запуска хранит конкретного персонажа и параметры расчета:
 
 ```json
 {
-  "class": "paladin",
-  "points": 252,
-  "weights": "../weights/paladin_juggernaut_shield_bash.json",
+  "class": "druid",
+  "points": 276,
+  "weights": "../weights/druid.json",
   "glyph_levels": {
-    "sentinel": 51,
-    "exploit": 51,
-    "turf": 51,
-    "spirit": 51,
-    "honed": 51
+    "tectonic": 83,
+    "spirit": 82,
+    "earth_and_sky": 74,
+    "fang_and_claw": 73,
+    "outmatch": 72
   },
   "starting_stats": {
-    "strength": 2124.0,
-    "intelligence": 254.0,
-    "willpower": 254.0,
-    "dexterity": 255.0
+    "strength": 302.0,
+    "intelligence": 303.0,
+    "willpower": 2286.0,
+    "dexterity": 302.0
   }
 }
 ```
@@ -286,7 +286,7 @@ glyph_score =
 Явные аргументы CLI переопределяют профиль:
 
 ```bash
-paragon_optimizer/bin/paragon_optimize.exe optimize --profile paragon_optimizer/profiles/paladin_juggernaut_shield_bash.json --points 220
+paragon_optimizer/bin/paragon_optimize.exe optimize --profile paragon_optimizer/profiles/druid.json --points 220
 ```
 
 Практичный профиль запуска по умолчанию:
@@ -301,7 +301,7 @@ paragon_optimizer/bin/paragon_optimize.exe optimize --profile paragon_optimizer/
 
 ```bash
 paragon_optimizer/bin/paragon_optimize.exe optimize \
-  --profile paragon_optimizer/profiles/paladin_juggernaut_shield_bash.json \
+  --profile paragon_optimizer/profiles/druid.json \
   --max-routes 3000 \
   --candidate-targets 320
 ```
@@ -313,7 +313,7 @@ paragon_optimizer/bin/paragon_optimize.exe optimize \
 По умолчанию JSON не содержит полные `route_steps`, чтобы вывод оставался компактнее. Для отладки маршрута:
 
 ```bash
-paragon_optimizer/bin/paragon_optimize.exe optimize --profile paragon_optimizer/profiles/paladin_juggernaut_shield_bash.json --include-route-steps
+paragon_optimizer/bin/paragon_optimize.exe optimize --profile paragon_optimizer/profiles/druid.json --include-route-steps
 ```
 
 Если маршрут не был переписан локальными заменами, в `route_steps` для каждого greedy-шага выводятся `gain_estimate`, `adjusted_gain_estimate`, `cluster_gain_estimate`, `detour_cost_estimate` и `path_efficiency`; это помогает увидеть, где эвристика делает крюк ради плотного кластера.
@@ -337,9 +337,9 @@ CLI всегда пишет в stdout чистый JSON. HTML создаётся
 ### Параметры команды `optimize`
 
 * `--profile`: Путь к JSON профилю запуска из `profiles/*.json`. Профиль может задавать `class`, `points`, `weights`, `glyph_levels`, `starting_stats`, `max_routes`, `candidate_targets`, `workers`, `scheme`, `include_route_steps`, `no_html` и `data`.
-* `--class`: Класс персонажа (например, `paladin`, `barbarian`, `sorcerer`). Обязателен, если не задан в профиле.
+* `--class`: Класс персонажа (например, `druid`, `barbarian`, `sorcerer`). Обязателен, если не задан в профиле.
 * `--points`: Доступное количество очков парагона для распределения. Обязательно, если не задано в профиле.
-* `--weights`: Путь к JSON файлу с весами характеристик, узлов и глифов, определяющими приоритеты для оптимизации (например, `paragon_optimizer/weights/paladin_balanced.json`). Обязателен, если не задан в профиле. Файл весов может содержать опциональные поля `scheme` для перебора досок и `glyph_route` для настройки агрессивности глиф-ориентированной маршрутной эвристики.
+* `--weights`: Путь к JSON файлу с весами характеристик, узлов и глифов, определяющими приоритеты для оптимизации (например, `paragon_optimizer/weights/druid.json`). Обязателен, если не задан в профиле. Файл весов может содержать опциональные поля `scheme` для перебора досок и `glyph_route` для настройки агрессивности глиф-ориентированной маршрутной эвристики.
 * `--scheme`: Опциональный список досок, которые алгоритм должен использовать, исключая другие доски. Например: `--scheme castle shield_bearer fervent divinity`. Если передано, алгоритм перебирает только стартовую доску и указанные в `scheme`.
 * `--legendary-glyphs`: Устаревший параметр переходного периода. Принимается для совместимости, но игнорируется; используйте `glyph_levels` в профиле.
 * `--max-routes`: Лимит на максимальное количество полных маршрутов, которые будут детально оценены после предварительного отбора. По умолчанию `30000`; `0` отключает лимит.
