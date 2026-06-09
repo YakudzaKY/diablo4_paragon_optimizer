@@ -58,8 +58,9 @@ class WowheadCrawlerParsingTests(unittest.TestCase):
         self.assertEqual(node_type(123, {"quality": 5}, None), "legendary")
 
     def test_parse_stats_from_class_board_attributes(self) -> None:
-        stats = parse_stats_from_attributes(["+10 Strength", "4.0% Maximum Life", "+3.0% Total Armor"])
+        stats, lost = parse_stats_from_attributes(["+10 Strength", "4.0% Maximum Life", "+3.0% Total Armor"])
 
+        self.assertEqual(lost, [])
         self.assertEqual(stats["strength"], 10)
         self.assertEqual(stats["max_life"], 4)
         self.assertEqual(stats["armor"], 3)
@@ -106,7 +107,9 @@ Bonus: Another +15.0% Damage to Elites if requirements met:
 190 Willpower
 Barbarian, Paladin"""
 
-        self.assertEqual(parse_bonus_stats_from_tooltip(tooltip), {"damage_to_elites": 15.0})
+        bonus, lost = parse_bonus_stats_from_tooltip(tooltip)
+        self.assertEqual(lost, [])
+        self.assertEqual(bonus, {"damage_to_elites": 15.0})
 
     def test_parse_requirements_class_specific_from_tooltip(self) -> None:
         slayer_tooltip = (

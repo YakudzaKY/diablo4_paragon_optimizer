@@ -20,7 +20,7 @@
     "damage_to_healthy_enemies": 1.25,
     "attack_speed": 2.35,
     "cooldown_reduction": 3.55,
-    "max_spirit": 3.10,
+    "max_resource": 3.10,
     "resource_generation": 2.80,
     "spirit_on_kill": 0.80,
     "max_life": 2.85,

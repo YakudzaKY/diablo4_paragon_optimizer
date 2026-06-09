@@ -4056,6 +4056,7 @@ std::string generate_html_visual(const json& payload, const std::map<std::string
     }
     const json& best = results[0];
     const json& boards_info = best.value("boards", json::array());
+    const json& local_swap_report = best.value("local_swap_report", json::array());
     std::map<std::string, json> board_info_by_id;
     std::vector<std::string> board_order;
     std::map<std::string, int> rotations;
@@ -4139,6 +4140,27 @@ std::string generate_html_visual(const json& payload, const std::map<std::string
         return "<html><body><h1>No route found</h1></body></html>";
     }
 
+    json node_data_js = json::object();
+    for (const auto& [nid, vnode] : global_nodes) {
+        json info;
+        info["id"] = nid;
+        info["board"] = vnode.board_id;
+        info["type"] = vnode.type;
+        auto bit = boards.find(vnode.board_id);
+        if (bit != boards.end()) {
+            const Board& brd = bit->second;
+            auto nit = brd.node_by_id.find(nid);
+            if (nit != brd.node_by_id.end()) {
+                const Node& fn = brd.nodes[nit->second];
+                info["name"] = localized_name(fn.name, nid);
+                info["stats"] = map_to_json_object(fn.stats);
+                info["bonus_stats"] = map_to_json_object(fn.bonus_stats);
+                info["requirements"] = map_to_json_object(fn.requirements);
+            }
+        }
+        node_data_js[nid] = std::move(info);
+    }
+
     int svg_width = static_cast<int>((max_x - min_x + 2) * NODE_SPACING);
     int svg_height = static_cast<int>((max_y - min_y + 3) * NODE_SPACING);
     auto to_svg_coord = [&](double gx, double gy) {
@@ -4154,7 +4176,13 @@ std::string generate_html_visual(const json& payload, const std::map<std::string
     html << ".req-ok { color: #9be28f; }\n.req-miss { color: #ff8f8f; }\n";
     html << ".legend-title { font-weight: bold; margin-bottom: 10px; color: #fff; }\n";
     html << ".svg-container { overflow-x: auto; background: #222; border: 1px solid #444; border-radius: 8px; padding: 20px; margin-top: 20px; }\n";
+    html << "#node-panel { position:fixed; top:8px; left:8px; z-index:1000; background:#252525; color:#ddd; border:1px solid #555; border-radius:6px; padding:6px 8px; font:12px/1.35 sans-serif; max-width:340px; box-shadow:0 3px 10px rgba(0,0,0,0.7); display:none; }\n";
+    html << "#node-panel .np-close { float:right; margin-left:6px; cursor:pointer; color:#888; font-weight:bold; }\n";
+    html << "#node-panel .np-id { font-family:monospace; font-size:11px; color:#8f8; background:#1a1a1a; padding:1px 4px; border-radius:3px; }\n";
+    html << "#node-panel .np-label { color:#888; font-size:10px; }\n";
+    html << "#node-panel .np-stats { font-family:monospace; white-space:pre-wrap; }\n";
     html << "</style>\n</head>\n<body>\n";
+    html << "<div id='node-panel'><span class='np-close' onclick=\"document.getElementById('node-panel').style.display='none'\">✕</span><div><span class='np-id' id='np-id'></span> <span id='np-type' style='font-size:10px;color:#777'></span> <span id='np-board' style='font-size:10px;color:#777'></span></div><div id='np-name' style='color:#9cf;font-weight:500;margin:2px 0;'></div><div class='np-label'>gives (from normalized)</div><div id='np-stats' class='np-stats'></div><div id='np-bonus' style='margin-top:2px;'></div><div id='np-req' style='margin-top:2px;font-size:10px;color:#fa8;'></div></div>\n";
     html << "<h1>Маршрут парагона - " << html_escape(payload.value("class", "Unknown")) << "</h1>\n";
     html << "<p>Счет: " << format_value(best.value("score", 0.0)) << " | Очки: "
          << best.value("points_used", 0) << "/" << payload.value("points_limit", 0);
@@ -4179,6 +4207,7 @@ std::string generate_html_visual(const json& payload, const std::map<std::string
     html << "</p>\n";
     html << "<div class='svg-container'>\n";
     html << "<svg width='" << svg_width << "' height='" << svg_height << "'>\n";
+    html << "<defs>\n<marker id='swap-arrow' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M 0 1 L 9 5 L 0 9 Z' fill='#0c0'/></marker>\n</defs>\n";
 
     for (const auto& glyph_info : best.value("glyphs", json::array())) {
         std::string socket_id = get_json_string(glyph_info, "socket");
@@ -4240,6 +4269,27 @@ std::string generate_html_visual(const json& payload, const std::map<std::string
              << (selected ? "" : "stroke-dasharray='4'") << " />\n";
     }
 
+    // Draw arrows for local replacements (post-route improvements): removed -> added
+    for (const auto& item : local_swap_report) {
+        std::string rem_id = get_json_string(item, "removed");
+        std::string add_id = get_json_string(item, "added");
+        auto rem_it = global_nodes.find(rem_id);
+        auto add_it = global_nodes.find(add_id);
+        if (rem_it == global_nodes.end() || add_it == global_nodes.end()) continue;
+        auto [rx, ry] = to_svg_coord(rem_it->second.gx, rem_it->second.gy);
+        auto [ax, ay] = to_svg_coord(add_it->second.gx, add_it->second.gy);
+        double mx = (rx + ax) / 2.0;
+        double my = (ry + ay) / 2.0;
+        html << "<line x1='" << rx << "' y1='" << ry << "' x2='" << ax << "' y2='" << ay
+             << "' stroke='#0c0' stroke-width='2.5' stroke-dasharray='4,3' marker-end='url(#swap-arrow)' opacity='0.9' />\n";
+        double delta = as_double(item.value("score_delta", 0.0));
+        if (std::abs(delta) > 1e-9) {
+            std::string dstr = (delta >= 0 ? "+" : "") + format_value(delta);
+            html << "<text x='" << (mx + 3) << "' y='" << (my - 3)
+                 << "' font-size='9' fill='#0c0' font-family='monospace' pointer-events='none'>" << html_escape(dstr) << "</text>\n";
+        }
+    }
+
     struct Bounds {
         int min_x = std::numeric_limits<int>::max();
         int max_x = std::numeric_limits<int>::min();
@@ -4293,7 +4343,7 @@ std::string generate_html_visual(const json& payload, const std::map<std::string
         if (node.selected) stroke_color = "#fff";
         html << "<circle cx='" << cx << "' cy='" << cy << "' r='" << radius << "' fill='" << fill_color
              << "' stroke='" << stroke_color << "' stroke-width='" << stroke_width << "' opacity='" << opacity
-             << "'><title>" << html_escape(node_id + " (" + node.type + ")") << "</title></circle>\n";
+             << "' class='paragon-node' data-id='" << node_id << "'><title>" << html_escape(node_id + " (" + node.type + ")") << "</title></circle>\n";
         if (node.type == "glyph_socket") {
             auto glyph_it = board_glyphs.find(node.board_id);
             if (glyph_it != board_glyphs.end() && glyph_legend.count(glyph_it->second)) {
@@ -4355,7 +4405,6 @@ std::string generate_html_visual(const json& payload, const std::map<std::string
         }
         html << "</div>\n";
     }
-    const json& local_swap_report = best.value("local_swap_report", json::array());
     if (!local_swap_report.empty()) {
         auto stats_text = [](const json& stats) {
             std::ostringstream text;
@@ -4397,7 +4446,37 @@ std::string generate_html_visual(const json& payload, const std::map<std::string
     } else {
         html << "<div>Глифы не вставлены.</div>\n";
     }
-    html << "</div>\n</body>\n</html>";
+    html << "</div>\n";
+    html << "<script>\n";
+    html << "const NODE_DATA = " << node_data_js.dump() << ";\n";
+    html << "function fmtMap(m){ if(!m||typeof m!=='object')return ''; return Object.entries(m).map(([k,v])=>k+' '+v).join(', '); }\n";
+    html << "function showNodeInfo(id){\n";
+    html << "  const d = NODE_DATA[id] || {};\n";
+    html << "  const p = document.getElementById('node-panel');\n";
+    html << "  if(!p) return;\n";
+    html << "  document.getElementById('np-id').textContent = d.id || id;\n";
+    html << "  document.getElementById('np-type').textContent = d.type ? '('+d.type+')' : '';\n";
+    html << "  document.getElementById('np-board').textContent = d.board ? '@'+d.board : '';\n";
+    html << "  document.getElementById('np-name').textContent = d.name || '';\n";
+    html << "  const st = document.getElementById('np-stats');\n";
+    html << "  const s = fmtMap(d.stats);\n";
+    html << "  st.textContent = s || '(no direct stats)';\n";
+    html << "  const bn = document.getElementById('np-bonus');\n";
+    html << "  const b = fmtMap(d.bonus_stats);\n";
+    html << "  bn.innerHTML = b ? \"<span class='np-label'>bonus (if reqs met):</span> \"+b : '';\n";
+    html << "  const rq = document.getElementById('np-req');\n";
+    html << "  const r = fmtMap(d.requirements);\n";
+    html << "  rq.innerHTML = r ? \"<span style='color:#c80'>reqs:</span> \"+r : '';\n";
+    html << "  p.style.display='block';\n";
+    html << "}\n";
+    html << "document.addEventListener('DOMContentLoaded', function(){\n";
+    html << "  document.querySelectorAll('circle.paragon-node').forEach(function(el){\n";
+    html << "    el.style.cursor='pointer';\n";
+    html << "    el.addEventListener('click', function(){ var nid=el.getAttribute('data-id'); if(nid) showNodeInfo(nid); });\n";
+    html << "  });\n";
+    html << "});\n";
+    html << "</script>\n";
+    html << "</body>\n</html>";
     return html.str();
 }
 

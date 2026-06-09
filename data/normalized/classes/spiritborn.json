@@ -17,7 +17,7 @@
     "intelligence",
     "lucky_hit_chance",
     "max_life",
-    "max_spirit",
+    "max_resource",
     "movement_speed",
     "non_physical_damage",
     "physical_damage",
@@ -53,10 +53,7 @@
     "convergence",
     "prodigy_s_tempo"
   ],
-  "checked_at": "2026-06-06T17:32:36Z",
   "class": "spiritborn",
-  "class_id": 5,
-  "class_mask": 32,
   "glyphs": [
     "bane",
     "canny",
@@ -88,9 +85,5 @@
   "patch_version": "3.0.2",
   "primary_attributes": [
     "dexterity"
-  ],
-  "raw_data_file": "data\\raw\\spiritborn\\wowhead_raw.json",
-  "resource": null,
-  "schema_version": 1,
-  "source_url": "https://www.wowhead.com/diablo-4/paragon-calc/spiritborn"
+  ]
 }

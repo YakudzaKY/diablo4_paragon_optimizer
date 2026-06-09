@@ -152,6 +152,8 @@ ATTRIBUTE_KEYS = {
     "resource generation": "resource_generation",
     "maximum spirit": "max_spirit",
     "spirit": "max_spirit",
+    "maximum resource": "max_resource",
+    "max resource": "max_resource",
     "spirit on kill": "spirit_on_kill",
     "maximum essence": "max_essence",
     "essence": "max_essence",
@@ -170,6 +172,10 @@ ATTRIBUTE_KEYS = {
     "faith": "max_faith",
     "fury": "max_fury",
     "wrath": "max_wrath",
+    "trap arm time reduction": "trap_arm_time_reduction",
+    "traps arm": "trap_arm_time_reduction",
+    "arm seconds faster": "trap_arm_time_reduction",
+    "seconds faster": "trap_arm_time_reduction",
 }
 
 RU_STAT_HINTS = {
@@ -188,6 +194,7 @@ RU_STAT_HINTS = {
     "damage_while_healthy": "урон при высоком здоровье",
     "damage_to_healthy_enemies": "урон по целям с высоким здоровьем",
     "damage_to_elites": "урон по элитным противникам",
+    "trap_arm_time_reduction": "скорость установки ловушек",
 }
 
 
@@ -343,6 +350,8 @@ def stat_key_from_phrase(phrase: str) -> str | None:
         return "fury_on_kill"
     if "maximum spirit" in text or "max spirit" in text:
         return "max_spirit"
+    if "maximum resource" in text or "max resource" in text:
+        return "max_resource"
     if "spirit" in text and "on kill" in text:
         return "spirit_on_kill"
     if "resource generation" in text:
@@ -423,6 +432,8 @@ def stat_key_from_phrase(phrase: str) -> str | None:
         return "abyss_damage"
     if "recast" in text and "damage" in text:
         return "damage_recast"
+    if "arm" in text and ("second" in text or "faster" in text or "trap" in text):
+        return "trap_arm_time_reduction"
 
     cleaned = re.sub(r"\b(to|while|from|of|your|all|another|bonus|if|requirements|met)\b", " ", text)
     cleaned = re.sub(r"[^a-z0-9 -]+", " ", cleaned)
@@ -447,15 +458,20 @@ def parse_attribute_line(line: str) -> tuple[str, float] | None:
     return key, value
 
 
-def parse_stats_from_attributes(attributes: list[str]) -> dict[str, float]:
+def parse_stats_from_attributes(attributes: list[str]) -> tuple[dict[str, float], list[str]]:
+    """Parse list of raw attribute strings. Returns (stats_dict, list_of_unparsed_original_lines).
+    Unparsed lines are ones that looked numeric but had no known stat key.
+    """
     stats: dict[str, float] = {}
+    lost: list[str] = []
     for attribute in attributes:
         parsed = parse_attribute_line(attribute)
         if not parsed:
+            lost.append(attribute)
             continue
         key, value = parsed
         stats[key] = stats.get(key, 0.0) + value
-    return stats
+    return stats, lost
 
 
 def parse_stats_from_search_text(search_text: str) -> dict[str, float]:
@@ -509,6 +525,8 @@ def parse_stats_from_search_text(search_text: str) -> dict[str, float]:
         (r"imbuement damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "imbuement_damage"),
         (r"trap damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "trap_damage"),
         (r"trap damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%.*to enemies affected", "damage_to_trapped"),
+        (r"traps?\s+arm\s+(\d+(?:\.\d+)?)\s+seconds?\s+faster", "trap_arm_time_reduction"),
+        (r"arm\s+(\d+(?:\.\d+)?)\s+seconds?\s+faster", "trap_arm_time_reduction"),
         (r"ultimate damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "ultimate_damage"),
         (r"burning damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "burning_damage"),
         (r"burning damage\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%.*to enemies", "damage_to_burning"),
@@ -537,6 +555,8 @@ def parse_stats_from_search_text(search_text: str) -> dict[str, float]:
         (r"magic\s+node\s+\+?(\d+(?:\.\d+)?)%.*\bto healthy enemies\b", "damage_to_healthy_enemies"),
         (r"\battack speed\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%", "attack_speed"),
         (r"\bcooldown\s+.*magic\s+node\s+(\d+(?:\.\d+)?)%\s+.*reduction", "cooldown_reduction"),
+        (r"trap\s+cooldown.*(?:rare node|reduction|reduce)", "cooldown_reduction"),
+        (r"cooldown.*(?:reduction|reduce).*trap", "cooldown_reduction"),
         (r"\bmovement\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+speed", "movement_speed"),
         (r"\barmor\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+total", "armor"),
         (r"\bresistance\b.*magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+to all elements", "resistance_all"),
@@ -560,7 +580,7 @@ def parse_stats_from_search_text(search_text: str) -> dict[str, float]:
         (r"\bdust devils?\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+size", "dust_devil_size"),
         (r"\bcrowd control\s+magic\s+node\s+(\d+(?:\.\d+)?)%\s+impairment reduction", "crowd_control_duration_reduction"),
         (r"\b(?:mana|resource)\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+resource generation", "resource_generation"),
-        (r"\bspirit\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)\s+maximum", "max_spirit"),
+        (r"\bspirit\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)\s+maximum", "max_resource"),
         (r"\bspirit\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)\s+on kill", "spirit_on_kill"),
         (r"\bessence\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)\s+maximum", "max_essence"),
         (r"\bessence\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)\s+on kill", "essence_on_kill"),
@@ -569,6 +589,8 @@ def parse_stats_from_search_text(search_text: str) -> dict[str, float]:
         (r"magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+resource cost reduction", "resource_cost_reduction"),
         (r"magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+attack speed", "attack_speed"),
         (r"\bcooldown\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)%\s+companion reduction", "cooldown_reduction"),
+        (r"(\d+(?:\.\d+)?)%.*cooldown reduction", "cooldown_reduction"),
+        (r"cooldown reduction.*(\d+(?:\.\d+)?)%", "cooldown_reduction"),
         (r"\blife\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)\s+maximum", "max_life"),
         (r"\bthorns\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)", "thorns"),
         (r"\bfaith\s+magic\s+node\s+\+?(\d+(?:\.\d+)?)\s+maximum", "max_faith"),
@@ -681,22 +703,28 @@ def parse_requirements(search_text: str, class_slug: str | None = None, tooltip_
     return _extract_stat_requirements(after)
 
 
-def parse_bonus_stats_from_tooltip(tooltip_text: str | None) -> dict[str, float]:
+def parse_bonus_stats_from_tooltip(tooltip_text: str | None) -> tuple[dict[str, float], list[str]]:
+    """Returns (bonus_stats, list_of_unparsed_bonus_phrases).
+    Unparsed phrases after 'bonus: another ...' that had no recognized stat key.
+    """
     if not tooltip_text:
-        return {}
+        return {}, []
     stats: dict[str, float] = {}
+    lost: list[str] = []
     for raw_line in tooltip_text.splitlines():
         line = re.sub(r"<[^>]+>", " ", raw_line)
         line = re.sub(r"\s+", " ", line).strip()
         match = re.search(r"bonus:\s*another\s+(.+?)\s+if requirements met:?", line, flags=re.IGNORECASE)
         if not match:
             continue
-        parsed = parse_attribute_line(match.group(1))
+        phrase = match.group(1)
+        parsed = parse_attribute_line(phrase)
         if not parsed:
+            lost.append(phrase)
             continue
         key, value = parsed
         stats[key] = stats.get(key, 0.0) + value
-    return stats
+    return stats, lost
 
 
 def parse_node_bonus_from_tooltip(tooltip_text: str | None, source: str = "bonus_text.en") -> dict[str, Any] | None:
@@ -776,6 +804,15 @@ def unique_level_samples(samples: list[dict[str, Any]]) -> list[dict[str, Any]]:
         level = int(sample["level"])
         by_level[level] = sample
     return [by_level[level] for level in sorted(by_level)]
+
+
+def _strip_debug_sources(obj: Any) -> Any:
+    """Recursively drop 'source' keys from bonus structures (they are normalize-time provenance, not used by optimizer)."""
+    if isinstance(obj, dict):
+        return {k: _strip_debug_sources(v) for k, v in obj.items() if k != "source"}
+    if isinstance(obj, list):
+        return [_strip_debug_sources(v) for v in obj]
+    return obj
 
 
 def parse_node_bonus(
@@ -921,34 +958,6 @@ def load_manual_overrides(path: Path | None, class_slug: str) -> dict[str, Any]:
     return {}
 
 
-def detail_coverage(raw: dict[str, Any]) -> dict[str, Any]:
-    coverage: dict[str, Any] = {}
-    locales = ["en"]
-    if raw.get("locale") and raw["locale"] != "en":
-        locales.append(raw["locale"])
-    for section in ("glyphs", "nodes"):
-        expected = len(list_items(raw, section, "en")) * len(locales)
-        ok = 0
-        errors = 0
-        reused = 0
-        for locale_map in ((raw.get("details") or {}).get(section) or {}).values():
-            for detail in (locale_map or {}).values():
-                if detail.get("fetch_error"):
-                    errors += 1
-                else:
-                    ok += 1
-                if detail.get("reused_from_detail_cache") or detail.get("reused_from_previous_raw"):
-                    reused += 1
-        coverage[section] = {
-            "expected": expected,
-            "ok": ok,
-            "errors": errors,
-            "missing": max(expected - ok - errors, 0),
-            "reused": reused,
-        }
-    return coverage
-
-
 def node_type(source_node_id: int, metadata: dict[str, Any], list_item: dict[str, Any] | None) -> str:
     if source_node_id in SPECIAL_NODE_IDS:
         return SPECIAL_NODE_IDS[source_node_id]
@@ -1003,7 +1012,7 @@ def normalize_skill_tags(ids: list[Any], tag_lookup: dict[str, Any]) -> list[dic
     for tag_id in ids or []:
         raw = tag_lookup.get(str(tag_id))
         if isinstance(raw, dict):
-            tags.append({"id": tag_id, "name": raw.get("name"), "raw": raw})
+            tags.append({"id": tag_id, "name": raw.get("name")})
         else:
             tags.append({"id": tag_id, "name": raw if isinstance(raw, str) else None})
     return tags
@@ -1028,12 +1037,11 @@ def normalize_boards(raw: dict[str, Any], output_root: Path, overrides: dict[str
     en_list = list_items(raw, "nodes", "en")
     ru_list = list_items(raw, "nodes", "ru")
     list_maps = {"en": en_list, "ru": ru_list}
-    patch_version = extract_patch_version(raw)
-    checked_at = raw.get("checked_at")
 
     board_ids: list[str] = []
     available_stats: set[str] = set()
     bad_empty_nodes: list[str] = []
+    lost_attribute_reports: list[str] = []
     boards_to_write: list[tuple[str, dict[str, Any], Path]] = []
     for board_sno, class_board in class_boards.items():
         raw_nodes = board_nodes.get(board_sno)
@@ -1064,7 +1072,6 @@ def normalize_boards(raw: dict[str, Any], output_root: Path, overrides: dict[str
         gates: list[dict[str, Any]] = []
         glyph_sockets: list[str] = []
         start_node_id = None
-        type_counts: Counter[str] = Counter()
 
         for item in sorted(raw_nodes, key=lambda value: (int(value["y"]), int(value["x"]), int(value["node"]))):
             x = int(item["x"])
@@ -1074,7 +1081,6 @@ def normalize_boards(raw: dict[str, Any], output_root: Path, overrides: dict[str
             metadata = nodes_meta.get(source_key) or {}
             list_item = en_list.get(source_key)
             current_type = node_type(source_node_id, metadata, list_item)
-            type_counts[current_type] += 1
             node_id = f"{board_slug}_{x}_{y}"
             names = localized_name(raw, list_maps, "nodes", source_node_id)
 
@@ -1089,11 +1095,20 @@ def normalize_boards(raw: dict[str, Any], output_root: Path, overrides: dict[str
 
             name_key = to_identifier(names.get("en"), "")
             raw_attributes = rares_by_name.get(name_key, [])
-            stats = parse_stats_from_attributes(raw_attributes) if raw_attributes else {}
-            stats_source = "class_board_attributes" if stats else None
+            lost_from_raw_attrs: list[str] = []
+            if raw_attributes:
+                stats, lost_from_raw_attrs = parse_stats_from_attributes(raw_attributes)
+                stats_source = "class_board_attributes" if stats else None
+            else:
+                stats = {}
+                stats_source = None
             if not stats:
                 stats = parse_stats_from_search_text(metadata.get("searchText") or "")
                 stats_source = "search_text" if stats else "empty"
+
+            if lost_from_raw_attrs:
+                # Record for hard failure later — we had raw numeric attributes but they produced no known stat.
+                lost_attribute_reports.append(f"{node_id} (from class_board raw_attributes): {lost_from_raw_attrs}")
 
             if stats_source == "empty":
                 if current_type not in ("glyph_socket", "legendary", "board_gate") and not bool(metadata.get("isStarter")):
@@ -1109,7 +1124,9 @@ def normalize_boards(raw: dict[str, Any], output_root: Path, overrides: dict[str
             bonus_stats_source: str | None = None
             if stats and current_type in ("rare", "legendary") and node_requirements:
                 tooltip = detail_tooltip(raw, "nodes", source_node_id, "en")
-                bonus_stats = parse_bonus_stats_from_tooltip(tooltip)
+                bonus_stats, lost_from_bonus = parse_bonus_stats_from_tooltip(tooltip)
+                if lost_from_bonus:
+                    lost_attribute_reports.append(f"{node_id} (bonus from tooltip): {lost_from_bonus}")
                 bonus_stats_source = "tooltip_bonus" if bonus_stats else None
 
             available_stats.update(stats)
@@ -1117,30 +1134,14 @@ def normalize_boards(raw: dict[str, Any], output_root: Path, overrides: dict[str
 
             node = {
                 "id": node_id,
-                "source_node_id": source_node_id,
                 "x": x,
                 "y": y,
                 "type": current_type,
                 "cost": 0 if bool(metadata.get("isStarter")) else 1,
                 "name": names,
                 "stats": stats,
-                "stats_source": stats_source,
                 "bonus_stats": bonus_stats,
-                "bonus_stats_source": bonus_stats_source,
                 "requirements": node_requirements,
-                "is_starting_node": bool(metadata.get("isStarter")),
-                "raw": {
-                    "quality": metadata.get("quality"),
-                    "rarity": metadata.get("rarity"),
-                    "icon": metadata.get("icon") or (list_item or {}).get("icon"),
-                    "skill_tags": normalize_skill_tags(metadata.get("skillTags") or [], tag_lookup),
-                    "glyph_attributes": metadata.get("glyphAttrs") or [],
-                    "search_text": metadata.get("searchText"),
-                    "list_tags": (list_item or {}).get("tags"),
-                    "popularity": (list_item or {}).get("popularity"),
-                    "attributes": raw_attributes,
-                },
-                "source_url": detail_source_url(raw, "nodes", source_node_id) or raw["sources"]["paragon_data"],
             }
             nodes.append(node)
 
@@ -1148,9 +1149,7 @@ def normalize_boards(raw: dict[str, Any], output_root: Path, overrides: dict[str
                 gates.append({"id": node_id, "side": gate_side(x, y, max_x, max_y), "x": x, "y": y})
 
         board = {
-            "schema_version": 1,
             "id": board_slug,
-            "source_board_id": int(board_sno),
             "name": {"en": board_name_en, "ru": board_name_ru},
             "class": class_slug,
             "width": max_x + 1,
@@ -1158,14 +1157,9 @@ def normalize_boards(raw: dict[str, Any], output_root: Path, overrides: dict[str
             "start_node": start_node_id,
             "nodes": nodes,
             "edges": infer_edges(nodes),
-            "edge_source": "inferred_grid_adjacency",
             "gates": gates,
             "glyph_sockets": glyph_sockets,
             "legendary_nodes": [node["id"] for node in nodes if node["type"] == "legendary"],
-            "node_type_counts": dict(type_counts),
-            "source_url": raw["sources"]["paragon_data"],
-            "checked_at": checked_at,
-            "patch_version": patch_version,
         }
         board_override = ((overrides.get("boards") or {}).get(board_slug) or {})
         board = deep_merge(board, board_override)
@@ -1177,6 +1171,13 @@ def normalize_boards(raw: dict[str, Any], output_root: Path, overrides: dict[str
         raise SystemExit(
             "Nodes with empty stats (not glyph socket, legendary or in/exit node): "
             + ", ".join(bad_empty_nodes)
+        )
+
+    if lost_attribute_reports:
+        raise SystemExit(
+            "Normalizer found numeric attributes / bonus phrases that produced NO known stat key "
+            "(stat went into nowhere / silent drop). Fix ATTRIBUTE_KEYS or stat_key_from_phrase.\n"
+            + "\n".join(lost_attribute_reports)
         )
 
     for _slug, bdata, bpath in boards_to_write:
@@ -1193,8 +1194,6 @@ def normalize_glyphs(raw: dict[str, Any], output_root: Path, overrides: dict[str
     en_list = list_items(raw, "glyphs", "en")
     ru_list = list_items(raw, "glyphs", "ru")
     list_maps = {"en": en_list, "ru": ru_list}
-    patch_version = extract_patch_version(raw)
-    checked_at = raw.get("checked_at")
 
     glyph_ids: list[str] = []
     available_stats: set[str] = set()
@@ -1226,32 +1225,24 @@ def normalize_glyphs(raw: dict[str, Any], output_root: Path, overrides: dict[str
             "ru": detail_tooltip(raw, "glyphs", glyph_sno, "ru"),
         }
         level_tooltips = detail_level_tooltips(raw, "glyphs", glyph_sno, "en")
+        # slim threshold_attributes to only what the optimizer uses
+        lean_threshold = [{"stat_key": a.get("stat_key")} for a in threshold_attrs]
         glyph = {
-            "schema_version": 1,
             "id": glyph_slug,
-            "source_glyph_id": glyph_sno,
             "name": names,
             "class": class_slug,
-            "class_mask": glyph_meta.get("classMask"),
-            "quality": glyph_meta.get("quality"),
-            "rarity": glyph_meta.get("rarity"),
             "max_level": glyph_meta.get("maxLevel"),
             "radius": {
                 "starting": radius_starting,
                 "legendary": radius_legendary,
                 "upgrade_levels": upgrade_levels,
-                "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
             },
-            "threshold_attributes": threshold_attrs,
+            "threshold_attributes": lean_threshold,
             "skill_tags": normalize_skill_tags(glyph_meta.get("skillTags") or [], tag_lookup),
             "bonus_text": bonus_text,
-            "scaling_value_per_5": parse_scaling_value_per_5(bonus_text, level_tooltips),
-            "legendary_bonus": parse_legendary_bonus(bonus_text, level_tooltips),
-            "node_bonus": parse_node_bonus(bonus_text, level_tooltips),
-            "source_url": detail_source_url(raw, "glyphs", glyph_sno) or raw["sources"]["paragon_data"],
-            "checked_at": checked_at,
-            "patch_version": patch_version,
-            "raw": glyph_meta,
+            "scaling_value_per_5": _strip_debug_sources(parse_scaling_value_per_5(bonus_text, level_tooltips)),
+            "legendary_bonus": _strip_debug_sources(parse_legendary_bonus(bonus_text, level_tooltips)),
+            "node_bonus": _strip_debug_sources(parse_node_bonus(bonus_text, level_tooltips)),
         }
         glyph_override = ((overrides.get("glyphs") or {}).get(glyph_slug) or {})
         glyph = deep_merge(glyph, glyph_override)
@@ -1283,31 +1274,21 @@ def normalize(args: argparse.Namespace) -> Path:
 
     primary_attributes = [stat for stat, _ in threshold_counter.most_common(1)]
     class_data = {
-        "schema_version": 1,
         "class": class_slug,
-        "class_id": raw.get("class_id"),
-        "class_mask": raw.get("class_mask"),
         "name": raw.get("class_name"),
-        "resource": None,
         "primary_attributes": primary_attributes,
         "boards": board_ids,
         "glyphs": glyph_ids,
         "available_stats": available_stats,
         "available_stats_ru_hints": {stat: RU_STAT_HINTS.get(stat) for stat in available_stats if stat in RU_STAT_HINTS},
-        "source_url": raw["sources"]["paragon_calc"],
-        "checked_at": raw.get("checked_at"),
         "patch_version": extract_patch_version(raw),
-        "raw_data_file": str(raw_path),
     }
     class_override = ((overrides.get("classes") or {}).get(class_slug) or {})
     class_data = deep_merge(class_data, class_override)
     write_json(output_root / "classes" / f"{class_slug}.json", class_data)
 
     manifest = {
-        "schema_version": 1,
         "class": class_slug,
-        "checked_at": raw.get("checked_at"),
-        "patch_version": extract_patch_version(raw),
         "counts": {
             "boards": len(board_ids),
             "glyphs": len(glyph_ids),
@@ -1318,13 +1299,6 @@ def normalize(args: argparse.Namespace) -> Path:
             "boards_dir": str(output_root / "boards" / class_slug),
             "glyphs_dir": str(output_root / "glyphs" / class_slug),
         },
-        "source_urls": raw.get("sources"),
-        "warnings": raw.get("warnings") or [],
-        "detail_coverage": detail_coverage(raw),
-        "detail_errors_count": len(raw.get("detail_errors") or []),
-        "detail_errors": raw.get("detail_errors") or [],
-        "reuse_events_count": len(raw.get("reuse_events") or []),
-        "reuse_events": raw.get("reuse_events") or [],
     }
     write_json(output_root / "manifest" / f"{class_slug}.json", manifest)
     return output_root / "manifest" / f"{class_slug}.json"
@@ -1354,14 +1328,11 @@ def normalize_all(args: argparse.Namespace) -> Path:
                 "class": raw.get("class"),
                 "manifest": str(manifest_path),
                 "counts": manifest.get("counts"),
-                "warnings": manifest.get("warnings") or [],
-                "detail_errors_count": manifest.get("detail_errors_count", 0),
             }
         )
 
     output_root = Path(args.out)
     summary = {
-        "schema_version": 1,
         "classes": [item["class"] for item in results],
         "counts": {
             "classes": len(results),

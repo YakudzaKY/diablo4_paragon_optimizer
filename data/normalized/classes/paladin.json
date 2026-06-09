@@ -56,10 +56,7 @@
     "endure",
     "beacon"
   ],
-  "checked_at": "2026-06-06T17:39:17Z",
   "class": "paladin",
-  "class_id": 6,
-  "class_mask": 64,
   "glyphs": [
     "apostle",
     "arbiter",
@@ -90,9 +87,5 @@
   "patch_version": "3.0.2",
   "primary_attributes": [
     "strength"
-  ],
-  "raw_data_file": "data\\raw\\paladin\\wowhead_raw.json",
-  "resource": null,
-  "schema_version": 1,
-  "source_url": "https://www.wowhead.com/diablo-4/paragon-calc/paladin"
+  ]
 }

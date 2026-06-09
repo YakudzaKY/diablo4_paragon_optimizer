@@ -3,32 +3,25 @@
     "en": "Rare Glyph \nDemonologist\nRadius Size: 3 \nFor every 5 Willpower purchased within range, you deal +1.0% increased damage with Demonology Skills.\nAdditional Bonus: \nYou gain 17% [x] increased damage while you have a Greater Demon summoned.\nRequired (purchased in range): +40 Willpower\nLegendary Bonus: \nIncrease Demonology skill damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nДемонолог\nРадиус: 3 \nЗа каждые 5 ед. силы воли, открытых в радиусе действия, урон умений категории \"Демонология\" увеличивается на +1.0% .\nДополнительный бонус: \nПока призванный великий демон находится на поле боя, вы наносите на 17% [x] больше урона.\nТребуется открыть в радиусе действия: +40 к силе воли\nЛегендарный бонус: \n+ 0.5% [x] к урону от умений категории \"Демонология\" . \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-06-06T17:46:03Z",
   "class": "warlock",
-  "class_mask": 128,
   "id": "demonologist",
   "legendary_bonus": {
     "level_scaling": {
       "samples": [
         {
           "level": 1,
-          "source": "bonus_text.en",
           "value": 0.5
         },
         {
           "level": 100,
-          "source": "bonus_text.en?level=100",
           "value": 10.4
         },
         {
           "level": 150,
-          "source": "bonus_text.en?level=150",
           "value": 15.4
         }
-      ],
-      "source": "wowhead.detail.level_tooltips"
+      ]
     },
-    "source": "bonus_text.en",
     "text": "Increase Demonology skill damage by 0.5% [x] .",
     "value": 0.5
   },
@@ -38,42 +31,10 @@
     "ru": "Демонолог"
   },
   "node_bonus": null,
-  "patch_version": "3.0.2",
-  "quality": 3,
   "radius": {
     "legendary": 5,
-    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
     "starting": 3,
     "upgrade_levels": [
-      25,
-      50
-    ]
-  },
-  "rarity": 1,
-  "raw": {
-    "classMask": 128,
-    "icon": 2519972743,
-    "maxLevel": 100,
-    "name": "Demonologist",
-    "quality": 3,
-    "rarity": 1,
-    "skillTags": [
-      3639228442,
-      850110203,
-      3567369300,
-      510015620,
-      1107205818
-    ],
-    "sno": 2533449,
-    "startingSize": 3,
-    "thresholdAttrs": [
-      {
-        "attribute": 11,
-        "attributeName": "Willpower",
-        "classMask": 130
-      }
-    ],
-    "upgradeLevels": [
       25,
       50
     ]
@@ -82,73 +43,43 @@
     "samples": [
       {
         "level": 1,
-        "source": "bonus_text.en",
         "value": 1.0
       },
       {
         "level": 100,
-        "source": "bonus_text.en?level=100",
         "value": 8.3
       },
       {
         "level": 150,
-        "source": "bonus_text.en?level=150",
         "value": 12.1
       }
     ],
-    "source": "wowhead.detail.level_tooltips",
     "value": 1.0
   },
-  "schema_version": 1,
   "skill_tags": [
     {
       "id": 3639228442,
-      "name": "Willpower",
-      "raw": {
-        "id": 3639228442,
-        "name": "Willpower"
-      }
+      "name": "Willpower"
     },
     {
       "id": 850110203,
-      "name": "Demonology",
-      "raw": {
-        "id": 850110203,
-        "name": "Demonology"
-      }
+      "name": "Demonology"
     },
     {
       "id": 3567369300,
-      "name": "Damage",
-      "raw": {
-        "id": 3567369300,
-        "name": "Damage"
-      }
+      "name": "Damage"
     },
     {
       "id": 510015620,
-      "name": "Strength",
-      "raw": {
-        "id": 510015620,
-        "name": "Strength"
-      }
+      "name": "Strength"
     },
     {
       "id": 1107205818,
-      "name": "Greater Demon",
-      "raw": {
-        "id": 1107205818,
-        "name": "Greater Demon"
-      }
+      "name": "Greater Demon"
     }
   ],
-  "source_glyph_id": 2533449,
-  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/demonologist-2533449",
   "threshold_attributes": [
     {
-      "attribute": 11,
-      "attribute_name": "Willpower",
-      "class_mask": 130,
       "stat_key": "willpower"
     }
   ]

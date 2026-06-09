@@ -22,20 +22,16 @@
         "boards": 10,
         "glyphs": 23
       },
-      "detail_errors_count": 0,
-      "manifest": "data\\normalized\\manifest\\barbarian.json",
-      "warnings": []
+      "manifest": "data\\normalized\\manifest\\barbarian.json"
     },
     {
       "class": "druid",
       "counts": {
-        "available_stats": 35,
+        "available_stats": 36,
         "boards": 10,
         "glyphs": 23
       },
-      "detail_errors_count": 0,
-      "manifest": "data\\normalized\\manifest\\druid.json",
-      "warnings": []
+      "manifest": "data\\normalized\\manifest\\druid.json"
     },
     {
       "class": "necromancer",
@@ -44,9 +40,7 @@
         "boards": 10,
         "glyphs": 23
       },
-      "detail_errors_count": 0,
-      "manifest": "data\\normalized\\manifest\\necromancer.json",
-      "warnings": []
+      "manifest": "data\\normalized\\manifest\\necromancer.json"
     },
     {
       "class": "paladin",
@@ -55,20 +49,16 @@
         "boards": 10,
         "glyphs": 21
       },
-      "detail_errors_count": 0,
-      "manifest": "data\\normalized\\manifest\\paladin.json",
-      "warnings": []
+      "manifest": "data\\normalized\\manifest\\paladin.json"
     },
     {
       "class": "rogue",
       "counts": {
-        "available_stats": 28,
+        "available_stats": 29,
         "boards": 10,
         "glyphs": 26
       },
-      "detail_errors_count": 0,
-      "manifest": "data\\normalized\\manifest\\rogue.json",
-      "warnings": []
+      "manifest": "data\\normalized\\manifest\\rogue.json"
     },
     {
       "class": "sorcerer",
@@ -77,9 +67,7 @@
         "boards": 10,
         "glyphs": 23
       },
-      "detail_errors_count": 0,
-      "manifest": "data\\normalized\\manifest\\sorcerer.json",
-      "warnings": []
+      "manifest": "data\\normalized\\manifest\\sorcerer.json"
     },
     {
       "class": "spiritborn",
@@ -88,9 +76,7 @@
         "boards": 9,
         "glyphs": 22
       },
-      "detail_errors_count": 0,
-      "manifest": "data\\normalized\\manifest\\spiritborn.json",
-      "warnings": []
+      "manifest": "data\\normalized\\manifest\\spiritborn.json"
     },
     {
       "class": "warlock",
@@ -99,10 +85,7 @@
         "boards": 10,
         "glyphs": 21
       },
-      "detail_errors_count": 0,
-      "manifest": "data\\normalized\\manifest\\warlock.json",
-      "warnings": []
+      "manifest": "data\\normalized\\manifest\\warlock.json"
     }
-  ],
-  "schema_version": 1
+  ]
 }

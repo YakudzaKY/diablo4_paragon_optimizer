@@ -3,32 +3,25 @@
     "en": "Rare Glyph \nGravekeeper\nRadius Size: 3 \nGrants +25.0% bonus to all Rare nodes within range.\nAdditional Bonus: \nYou deal 3% [x] increased damage, up to 18% [x] , for every Close Corpse.\nRequired (purchased in range): +25 Dexterity\nLegendary Bonus: \nYou deal 3.2% [x] increased damage to Healthy and Injured enemies. \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nМогильщик\nРадиус: 3 \nУсиливает все редкие узлы в радиусе действия на +25.0% .\nДополнительный бонус: \nНаносимый вами урон увеличивается на 3% [x] , вплоть до 18% [x] , за каждый находящийся рядом труп.\nТребуется открыть в радиусе действия: +25 к ловкости\nЛегендарный бонус: \nВы наносите на 3.2% [x] больше урона противникам с высоким и низким уровнями здоровья. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-06-06T17:24:30Z",
   "class": "necromancer",
-  "class_mask": 16,
   "id": "gravekeeper",
   "legendary_bonus": {
     "level_scaling": {
       "samples": [
         {
           "level": 1,
-          "source": "bonus_text.en",
           "value": 3.2
         },
         {
           "level": 100,
-          "source": "bonus_text.en?level=100",
           "value": 20.0
         },
         {
           "level": 150,
-          "source": "bonus_text.en?level=150",
           "value": 28.5
         }
-      ],
-      "source": "wowhead.detail.level_tooltips"
+      ]
     },
-    "source": "bonus_text.en",
     "text": "You deal 3.2% [x] increased damage to Healthy and Injured enemies.",
     "value": 3.2
   },
@@ -44,110 +37,52 @@
         {
           "bonus_percent": 25.0,
           "level": 1,
-          "multiplier": 0.25,
-          "source": "bonus_text.en"
+          "multiplier": 0.25
         },
         {
           "bonus_percent": 272.5,
           "level": 100,
-          "multiplier": 2.725,
-          "source": "bonus_text.en?level=100"
+          "multiplier": 2.725
         },
         {
           "bonus_percent": 397.5,
           "level": 150,
-          "multiplier": 3.975,
-          "source": "bonus_text.en?level=150"
+          "multiplier": 3.975
         }
-      ],
-      "source": "wowhead.detail.level_tooltips"
+      ]
     },
     "multiplier": 0.25,
-    "node_type": "rare",
-    "source": "bonus_text.en"
+    "node_type": "rare"
   },
-  "patch_version": "3.0.2",
-  "quality": 3,
   "radius": {
     "legendary": 5,
-    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
     "starting": 3,
     "upgrade_levels": [
       25,
       50
     ]
   },
-  "rarity": 1,
-  "raw": {
-    "classMask": 16,
-    "icon": 1236117199,
-    "maxLevel": 100,
-    "name": "Gravekeeper",
-    "quality": 3,
-    "rarity": 1,
-    "skillTags": [
-      809827735,
-      3567369300,
-      25029371,
-      3918074131
-    ],
-    "sno": 1031012,
-    "startingSize": 3,
-    "thresholdAttrs": [
-      {
-        "attribute": 12,
-        "attributeName": "Dexterity",
-        "classMask": 119
-      }
-    ],
-    "upgradeLevels": [
-      25,
-      50
-    ]
-  },
   "scaling_value_per_5": null,
-  "schema_version": 1,
   "skill_tags": [
     {
       "id": 809827735,
-      "name": "Dexterity",
-      "raw": {
-        "id": 809827735,
-        "name": "Dexterity"
-      }
+      "name": "Dexterity"
     },
     {
       "id": 3567369300,
-      "name": "Damage",
-      "raw": {
-        "id": 3567369300,
-        "name": "Damage"
-      }
+      "name": "Damage"
     },
     {
       "id": 25029371,
-      "name": "Corpse",
-      "raw": {
-        "id": 25029371,
-        "name": "Corpse"
-      }
+      "name": "Corpse"
     },
     {
       "id": 3918074131,
-      "name": "Healthy",
-      "raw": {
-        "id": 3918074131,
-        "name": "Healthy"
-      }
+      "name": "Healthy"
     }
   ],
-  "source_glyph_id": 1031012,
-  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/gravekeeper-1031012",
   "threshold_attributes": [
     {
-      "attribute": 12,
-      "attribute_name": "Dexterity",
-      "class_mask": 119,
       "stat_key": "dexterity"
     }
   ]

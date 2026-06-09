@@ -24,6 +24,7 @@
     "physical_damage",
     "resistance_all",
     "strength",
+    "trap_arm_time_reduction",
     "trap_damage",
     "ultimate_damage",
     "vulnerable_damage",
@@ -41,6 +42,7 @@
     "max_life": "максимальный запас здоровья",
     "resistance_all": "сопротивление всем стихиям",
     "strength": "сила",
+    "trap_arm_time_reduction": "скорость установки ловушек",
     "vulnerable_damage": "урон уязвимым целям",
     "willpower": "сила воли"
   },
@@ -56,10 +58,7 @@
     "cunning_stratagem",
     "danse_macabre"
   ],
-  "checked_at": "2026-06-06T17:14:15Z",
   "class": "rogue",
-  "class_id": 3,
-  "class_mask": 8,
   "glyphs": [
     "ambush",
     "assassin",
@@ -95,9 +94,5 @@
   "patch_version": "3.0.2",
   "primary_attributes": [
     "dexterity"
-  ],
-  "raw_data_file": "data\\raw\\rogue\\wowhead_raw.json",
-  "resource": null,
-  "schema_version": 1,
-  "source_url": "https://www.wowhead.com/diablo-4/paragon-calc/rogue"
+  ]
 }

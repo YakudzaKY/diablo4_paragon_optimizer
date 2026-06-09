@@ -3,32 +3,25 @@
     "en": "Rare Glyph \nDesecration\nRadius Size: 3 \nFor every 5 Willpower purchased within range, your Desecrated Ground deals 9.9% [+] increased damage.\nAdditional Bonus: \nWhile standing in your Desecrated Ground , you deal 20% [x] increased Shadow damage.\nRequired (purchased in range): +25 Willpower\nLegendary Bonus: \nIncrease Desecrated Ground damage by 5.2% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nОсквернение\nРадиус: 3 \nЗа каждые 5 ед. силы воли, открытых в радиусе действия, урон оскверненной земли увеличивается на 9.9% [+] .\nДополнительный бонус: \nНаходясь в области оскверненной земли , вы наносите на 20% [x] больше урона от темной магии.\nТребуется открыть в радиусе действия: +25 к силе воли\nЛегендарный бонус: \nУрон от \"Оскверненной земли\" увеличивается на 5.2% [x] . \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-06-06T17:24:30Z",
   "class": "necromancer",
-  "class_mask": 16,
   "id": "desecration",
   "legendary_bonus": {
     "level_scaling": {
       "samples": [
         {
           "level": 1,
-          "source": "bonus_text.en",
           "value": 5.2
         },
         {
           "level": 100,
-          "source": "bonus_text.en?level=100",
           "value": 18.0
         },
         {
           "level": 150,
-          "source": "bonus_text.en?level=150",
           "value": 24.5
         }
-      ],
-      "source": "wowhead.detail.level_tooltips"
+      ]
     },
-    "source": "bonus_text.en",
     "text": "Increase Desecrated Ground damage by 5.2% [x] .",
     "value": 5.2
   },
@@ -38,41 +31,10 @@
     "ru": "Осквернение"
   },
   "node_bonus": null,
-  "patch_version": "3.0.2",
-  "quality": 3,
   "radius": {
     "legendary": 5,
-    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
     "starting": 3,
     "upgrade_levels": [
-      25,
-      50
-    ]
-  },
-  "rarity": 1,
-  "raw": {
-    "classMask": 16,
-    "icon": 3933961978,
-    "maxLevel": 100,
-    "name": "Desecration",
-    "quality": 3,
-    "rarity": 1,
-    "skillTags": [
-      3639228442,
-      3567369300,
-      4162273947,
-      510015620
-    ],
-    "sno": 1631011,
-    "startingSize": 3,
-    "thresholdAttrs": [
-      {
-        "attribute": 11,
-        "attributeName": "Willpower",
-        "classMask": 117
-      }
-    ],
-    "upgradeLevels": [
       25,
       50
     ]
@@ -81,65 +43,39 @@
     "samples": [
       {
         "level": 1,
-        "source": "bonus_text.en",
         "value": 9.9
       },
       {
         "level": 100,
-        "source": "bonus_text.en?level=100",
         "value": 46.7
       },
       {
         "level": 150,
-        "source": "bonus_text.en?level=150",
         "value": 65.2
       }
     ],
-    "source": "wowhead.detail.level_tooltips",
     "value": 9.9
   },
-  "schema_version": 1,
   "skill_tags": [
     {
       "id": 3639228442,
-      "name": "Willpower",
-      "raw": {
-        "id": 3639228442,
-        "name": "Willpower"
-      }
+      "name": "Willpower"
     },
     {
       "id": 3567369300,
-      "name": "Damage",
-      "raw": {
-        "id": 3567369300,
-        "name": "Damage"
-      }
+      "name": "Damage"
     },
     {
       "id": 4162273947,
-      "name": "Shadow",
-      "raw": {
-        "id": 4162273947,
-        "name": "Shadow"
-      }
+      "name": "Shadow"
     },
     {
       "id": 510015620,
-      "name": "Strength",
-      "raw": {
-        "id": 510015620,
-        "name": "Strength"
-      }
+      "name": "Strength"
     }
   ],
-  "source_glyph_id": 1631011,
-  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/desecration-1631011",
   "threshold_attributes": [
     {
-      "attribute": 11,
-      "attribute_name": "Willpower",
-      "class_mask": 117,
       "stat_key": "willpower"
     }
   ]

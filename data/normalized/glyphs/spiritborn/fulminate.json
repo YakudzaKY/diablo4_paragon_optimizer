@@ -3,32 +3,25 @@
     "en": "Rare Glyph \nFulminate\nRadius Size: 3 \nFor every 5 Intelligence purchased within range, you deal +1.0% increased Lightning damage.\nAdditional Bonus: \nYou deal 12% [x] increased Lightning damage to both Healthy and Injured enemies.\nRequired (purchased in range): +25 Dexterity\nLegendary Bonus: \nIncrease Lightning damage by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nСверкание\nРадиус: 3 \nЗа каждые 5 ед. интеллекта, открытых в радиусе действия, урон от молнии увеличивается на 1.0% .\nДополнительный бонус: \nВы наносите на 12% [x] больше урона от молнии целям с высоким и низким уровнем здоровья.\nТребуется открыть в радиусе действия: +25 к ловкости\nЛегендарный бонус: \n+ 0.5% [x] к урону от молнии. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-06-06T17:32:36Z",
   "class": "spiritborn",
-  "class_mask": 32,
   "id": "fulminate",
   "legendary_bonus": {
     "level_scaling": {
       "samples": [
         {
           "level": 1,
-          "source": "bonus_text.en",
           "value": 0.5
         },
         {
           "level": 100,
-          "source": "bonus_text.en?level=100",
           "value": 10.4
         },
         {
           "level": 150,
-          "source": "bonus_text.en?level=150",
           "value": 15.4
         }
-      ],
-      "source": "wowhead.detail.level_tooltips"
+      ]
     },
-    "source": "bonus_text.en",
     "text": "Increase Lightning damage by 0.5% [x] .",
     "value": 0.5
   },
@@ -38,43 +31,10 @@
     "ru": "Сверкание"
   },
   "node_bonus": null,
-  "patch_version": "3.0.2",
-  "quality": 3,
   "radius": {
     "legendary": 5,
-    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
     "starting": 3,
     "upgrade_levels": [
-      25,
-      50
-    ]
-  },
-  "rarity": 1,
-  "raw": {
-    "classMask": 32,
-    "icon": 2456702841,
-    "maxLevel": 100,
-    "name": "Fulminate",
-    "quality": 3,
-    "rarity": 1,
-    "skillTags": [
-      1834748264,
-      1302406649,
-      3567369300,
-      809827735,
-      3918074131,
-      1277787765
-    ],
-    "sno": 2077016,
-    "startingSize": 3,
-    "thresholdAttrs": [
-      {
-        "attribute": 12,
-        "attributeName": "Dexterity",
-        "classMask": 119
-      }
-    ],
-    "upgradeLevels": [
       25,
       50
     ]
@@ -83,81 +43,47 @@
     "samples": [
       {
         "level": 1,
-        "source": "bonus_text.en",
         "value": 1.0
       },
       {
         "level": 100,
-        "source": "bonus_text.en?level=100",
         "value": 8.3
       },
       {
         "level": 150,
-        "source": "bonus_text.en?level=150",
         "value": 12.1
       }
     ],
-    "source": "wowhead.detail.level_tooltips",
     "value": 1.0
   },
-  "schema_version": 1,
   "skill_tags": [
     {
       "id": 1834748264,
-      "name": "Intelligence",
-      "raw": {
-        "id": 1834748264,
-        "name": "Intelligence"
-      }
+      "name": "Intelligence"
     },
     {
       "id": 1302406649,
-      "name": "Lightning",
-      "raw": {
-        "id": 1302406649,
-        "name": "Lightning"
-      }
+      "name": "Lightning"
     },
     {
       "id": 3567369300,
-      "name": "Damage",
-      "raw": {
-        "id": 3567369300,
-        "name": "Damage"
-      }
+      "name": "Damage"
     },
     {
       "id": 809827735,
-      "name": "Dexterity",
-      "raw": {
-        "id": 809827735,
-        "name": "Dexterity"
-      }
+      "name": "Dexterity"
     },
     {
       "id": 3918074131,
-      "name": "Healthy",
-      "raw": {
-        "id": 3918074131,
-        "name": "Healthy"
-      }
+      "name": "Healthy"
     },
     {
       "id": 1277787765,
-      "name": "Injured",
-      "raw": {
-        "id": 1277787765,
-        "name": "Injured"
-      }
+      "name": "Injured"
     }
   ],
-  "source_glyph_id": 2077016,
-  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/fulminate-2077016",
   "threshold_attributes": [
     {
-      "attribute": 12,
-      "attribute_name": "Dexterity",
-      "class_mask": 119,
       "stat_key": "dexterity"
     }
   ]

@@ -53,10 +53,7 @@
     "chaos",
     "dominion"
   ],
-  "checked_at": "2026-06-06T17:46:03Z",
   "class": "warlock",
-  "class_id": 7,
-  "class_mask": 128,
   "glyphs": [
     "abyssal",
     "archfiend",
@@ -87,9 +84,5 @@
   "patch_version": "3.0.2",
   "primary_attributes": [
     "willpower"
-  ],
-  "raw_data_file": "data\\raw\\warlock\\wowhead_raw.json",
-  "resource": null,
-  "schema_version": 1,
-  "source_url": "https://www.wowhead.com/diablo-4/paragon-calc/warlock"
+  ]
 }

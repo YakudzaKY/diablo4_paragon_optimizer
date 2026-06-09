@@ -3,32 +3,25 @@
     "en": "Rare Glyph \nWerewolf\nRadius Size: 3 \nFor every 5 Willpower purchased within range, you deal +1.0% increased damage while in Werewolf form.\nAdditional Bonus: \nYou gain 15% Damage Reduction while in Werewolf form.\nRequired (purchased in range): +40 Willpower\nLegendary Bonus: \nIncrease damage while in Werewolf form by 0.5% [x] . \nRequired: Legendary Upgrade (unlocks at Level 50)",
     "ru": "Редкий символ \nОблик волка\nРадиус: 3 \nЗа каждые 5 ед. силы воли, открытых в радиусе действия, урон в облике волка увеличивается на +1.0% .\nДополнительный бонус: \nВ облике волка получаемый вами урон уменьшается на 15% .\nТребуется открыть в радиусе действия: +40 к силе воли\nЛегендарный бонус: \n+ 0.5% [x] к урону в облике волка. \nТребуется: улучшение \"Легендарный\" (открывается на 50-м уровне)"
   },
-  "checked_at": "2026-06-06T16:56:57Z",
   "class": "druid",
-  "class_mask": 2,
   "id": "werewolf",
   "legendary_bonus": {
     "level_scaling": {
       "samples": [
         {
           "level": 1,
-          "source": "bonus_text.en",
           "value": 0.5
         },
         {
           "level": 100,
-          "source": "bonus_text.en?level=100",
           "value": 10.4
         },
         {
           "level": 150,
-          "source": "bonus_text.en?level=150",
           "value": 15.4
         }
-      ],
-      "source": "wowhead.detail.level_tooltips"
+      ]
     },
-    "source": "bonus_text.en",
     "text": "Increase damage while in Werewolf form by 0.5% [x] .",
     "value": 0.5
   },
@@ -38,42 +31,10 @@
     "ru": "Облик волка"
   },
   "node_bonus": null,
-  "patch_version": "3.0.2",
-  "quality": 3,
   "radius": {
     "legendary": 5,
-    "source": "wowhead.paragonCalc.glyphs.startingSize+upgradeLevels",
     "starting": 3,
     "upgrade_levels": [
-      25,
-      50
-    ]
-  },
-  "rarity": 1,
-  "raw": {
-    "classMask": 2,
-    "icon": 3933737818,
-    "maxLevel": 100,
-    "name": "Werewolf",
-    "quality": 3,
-    "rarity": 1,
-    "skillTags": [
-      3639228442,
-      3829121622,
-      3567369300,
-      4011612737,
-      1713745003
-    ],
-    "sno": 1028230,
-    "startingSize": 3,
-    "thresholdAttrs": [
-      {
-        "attribute": 11,
-        "attributeName": "Willpower",
-        "classMask": 130
-      }
-    ],
-    "upgradeLevels": [
       25,
       50
     ]
@@ -82,73 +43,43 @@
     "samples": [
       {
         "level": 1,
-        "source": "bonus_text.en",
         "value": 1.0
       },
       {
         "level": 100,
-        "source": "bonus_text.en?level=100",
         "value": 8.3
       },
       {
         "level": 150,
-        "source": "bonus_text.en?level=150",
         "value": 12.1
       }
     ],
-    "source": "wowhead.detail.level_tooltips",
     "value": 1.0
   },
-  "schema_version": 1,
   "skill_tags": [
     {
       "id": 3639228442,
-      "name": "Willpower",
-      "raw": {
-        "id": 3639228442,
-        "name": "Willpower"
-      }
+      "name": "Willpower"
     },
     {
       "id": 3829121622,
-      "name": "Werewolf",
-      "raw": {
-        "id": 3829121622,
-        "name": "Werewolf"
-      }
+      "name": "Werewolf"
     },
     {
       "id": 3567369300,
-      "name": "Damage",
-      "raw": {
-        "id": 3567369300,
-        "name": "Damage"
-      }
+      "name": "Damage"
     },
     {
       "id": 4011612737,
-      "name": "Damage Reduction",
-      "raw": {
-        "id": 4011612737,
-        "name": "Damage Reduction"
-      }
+      "name": "Damage Reduction"
     },
     {
       "id": 1713745003,
-      "name": "Shapeshifting",
-      "raw": {
-        "id": 1713745003,
-        "name": "Shapeshifting"
-      }
+      "name": "Shapeshifting"
     }
   ],
-  "source_glyph_id": 1028230,
-  "source_url": "https://www.wowhead.com/diablo-4/paragon-glyph/werewolf-1028230",
   "threshold_attributes": [
     {
-      "attribute": 11,
-      "attribute_name": "Willpower",
-      "class_mask": 130,
       "stat_key": "willpower"
     }
   ]
