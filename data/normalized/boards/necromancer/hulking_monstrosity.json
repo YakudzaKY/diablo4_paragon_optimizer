@@ -1190,8 +1190,7 @@
       },
       "requirements": {},
       "stats": {
-        "golem_damage": 12.5,
-        "minion_damage": 12.5
+        "golem_damage": 12.5
       },
       "type": "magic",
       "x": 13,
@@ -1229,8 +1228,7 @@
       },
       "requirements": {},
       "stats": {
-        "golem_damage": 12.5,
-        "minion_damage": 12.5
+        "golem_damage": 12.5
       },
       "type": "magic",
       "x": 15,
@@ -1310,8 +1308,7 @@
       },
       "requirements": {},
       "stats": {
-        "golem_damage": 12.5,
-        "minion_damage": 12.5
+        "golem_damage": 12.5
       },
       "type": "magic",
       "x": 13,
@@ -2317,8 +2314,7 @@
       },
       "requirements": {},
       "stats": {
-        "golem_damage": 12.5,
-        "minion_damage": 12.5
+        "golem_damage": 12.5
       },
       "type": "magic",
       "x": 9,
@@ -2574,8 +2570,7 @@
       },
       "requirements": {},
       "stats": {
-        "golem_damage": 12.5,
-        "minion_damage": 12.5
+        "golem_damage": 12.5
       },
       "type": "magic",
       "x": 8,
@@ -2612,8 +2607,7 @@
       },
       "requirements": {},
       "stats": {
-        "golem_damage": 12.5,
-        "minion_damage": 12.5
+        "golem_damage": 12.5
       },
       "type": "magic",
       "x": 10,
@@ -3273,8 +3267,7 @@
       },
       "requirements": {},
       "stats": {
-        "golem_damage": 12.5,
-        "minion_damage": 12.5
+        "golem_damage": 12.5
       },
       "type": "magic",
       "x": 17,
@@ -3370,8 +3363,7 @@
       },
       "requirements": {},
       "stats": {
-        "golem_damage": 12.5,
-        "minion_damage": 12.5
+        "golem_damage": 12.5
       },
       "type": "magic",
       "x": 16,
@@ -3467,8 +3459,7 @@
       },
       "requirements": {},
       "stats": {
-        "golem_damage": 12.5,
-        "minion_damage": 12.5
+        "golem_damage": 12.5
       },
       "type": "magic",
       "x": 15,

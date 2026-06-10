@@ -2313,7 +2313,6 @@
       },
       "requirements": {},
       "stats": {
-        "bleed_damage": 5.0,
         "damage_to_bleeding": 5.0
       },
       "type": "magic",
@@ -2570,7 +2569,6 @@
       },
       "requirements": {},
       "stats": {
-        "bleed_damage": 5.0,
         "damage_to_bleeding": 5.0
       },
       "type": "magic",
@@ -2608,7 +2606,6 @@
       },
       "requirements": {},
       "stats": {
-        "bleed_damage": 5.0,
         "damage_to_bleeding": 5.0
       },
       "type": "magic",
@@ -3268,7 +3265,6 @@
       },
       "requirements": {},
       "stats": {
-        "bleed_damage": 5.0,
         "damage_to_bleeding": 5.0
       },
       "type": "magic",
@@ -3365,7 +3361,6 @@
       },
       "requirements": {},
       "stats": {
-        "bleed_damage": 5.0,
         "damage_to_bleeding": 5.0
       },
       "type": "magic",
@@ -3462,7 +3457,6 @@
       },
       "requirements": {},
       "stats": {
-        "bleed_damage": 5.0,
         "damage_to_bleeding": 5.0
       },
       "type": "magic",

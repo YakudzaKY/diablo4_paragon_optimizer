@@ -1878,7 +1878,6 @@
       },
       "requirements": {},
       "stats": {
-        "minion_damage": 12.5,
         "skeleton_mage_damage": 12.5
       },
       "type": "magic",
@@ -2119,7 +2118,6 @@
       },
       "requirements": {},
       "stats": {
-        "minion_damage": 12.5,
         "skeleton_mage_damage": 12.5
       },
       "type": "magic",
@@ -2350,7 +2348,6 @@
       },
       "requirements": {},
       "stats": {
-        "minion_damage": 12.5,
         "skeleton_mage_damage": 12.5
       },
       "type": "magic",
@@ -3530,7 +3527,6 @@
       },
       "requirements": {},
       "stats": {
-        "minion_damage": 12.5,
         "skeleton_warrior_damage": 12.5
       },
       "type": "magic",
@@ -3563,7 +3559,6 @@
       },
       "requirements": {},
       "stats": {
-        "minion_damage": 12.5,
         "skeleton_warrior_damage": 12.5
       },
       "type": "magic",
@@ -3776,7 +3771,6 @@
       },
       "requirements": {},
       "stats": {
-        "minion_damage": 12.5,
         "skeleton_warrior_damage": 12.5
       },
       "type": "magic",

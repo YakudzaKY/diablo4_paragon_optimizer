@@ -93,6 +93,14 @@ class WowheadCrawlerParsingTests(unittest.TestCase):
             ("shadow damage magic node +5% necromancer", {"shadow_damage": 5}),
             ("shadow damage over time magic node +7.5% necromancer", {"shadow_damage": 7.5}),
             ("non-physical damage magic node +5.0% rogue, sorcerer, spiritborn", {"non_physical_damage": 5.0}),
+            # Qualified "damage to" / subtype nodes should set only the specific stat, not double with base
+            ("bleed damage magic node +5.0% to bleeding enemies barbarian", {"damage_to_bleeding": 5.0}),
+            ("bleed damage magic node +7.5% over time barbarian", {"bleed_damage": 7.5}),
+            ("burning damage magic node +5.0% to enemies sorcerer", {"damage_to_burning": 5.0}),
+            ("burning damage magic node +5.0% sorcerer", {"burning_damage": 5.0}),
+            ("trap damage magic node +5% to enemies affected rogue", {"damage_to_trapped": 5.0}),
+            ("minion damage magic node +5% skeleton mage necromancer", {"skeleton_mage_damage": 5.0}),
+            ("minion damage magic node +5% necromancer", {"minion_damage": 5.0}),
         ]
 
         for search_text, expected in cases:

@@ -3240,7 +3240,6 @@
       },
       "requirements": {},
       "stats": {
-        "burning_damage": 5.0,
         "damage_to_burning": 5.0
       },
       "type": "magic",
@@ -3337,7 +3336,6 @@
       },
       "requirements": {},
       "stats": {
-        "burning_damage": 5.0,
         "damage_to_burning": 5.0
       },
       "type": "magic",
@@ -3509,7 +3507,6 @@
       },
       "requirements": {},
       "stats": {
-        "burning_damage": 5.0,
         "damage_to_burning": 5.0
       },
       "type": "magic",

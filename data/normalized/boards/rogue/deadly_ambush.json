@@ -1486,8 +1486,7 @@
       },
       "requirements": {},
       "stats": {
-        "damage_to_trapped": 5.0,
-        "trap_damage": 5.0
+        "damage_to_trapped": 5.0
       },
       "type": "magic",
       "x": 6,
@@ -1524,8 +1523,7 @@
       },
       "requirements": {},
       "stats": {
-        "damage_to_trapped": 5.0,
-        "trap_damage": 5.0
+        "damage_to_trapped": 5.0
       },
       "type": "magic",
       "x": 8,
@@ -1704,8 +1702,7 @@
       },
       "requirements": {},
       "stats": {
-        "damage_to_trapped": 5.0,
-        "trap_damage": 5.0
+        "damage_to_trapped": 5.0
       },
       "type": "magic",
       "x": 7,
