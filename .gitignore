@@ -26,3 +26,4 @@ __pycache__/
 /weights/*.json
 !/weights/*.example.json
 /optimize_fast_spiritborn.bat
+/optimize_fast_paladin.bat
