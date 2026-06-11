@@ -463,7 +463,7 @@ bin\paragon_optimize.exe optimize --profile "profiles\spiritborn.json" ...
 
 Ветка фикса: `fix/bug-3-threshold-excess-prune`.
 
-Open. Требует реализации, тестов и проверки на spiritborn (и других профилях/классах с threshold-глифами). Сильно связан с Багами #1 и #2 — общая корневая причина в том, что эвристика (и локальный ремонт) недостаточно точно балансирует "стоимость доступа/фидеров" против реальной маргинальной ценности после достижения ключевых порогов (gated rare, amplified magic, glyph activation).
+Fixed in `fix/bug-3-threshold-excess-prune`: добавлен excess-aware pressure для threshold-глифов и ограниченный prune-pass, который пробует заменить лишние threshold-feeder ноды без потери выполненного requirement. Покрыто синтетической регрессией в `tests/test_native_glyph_scoring.py`; требуется отдельная тяжёлая проверка на реальных spiritborn/paladin профилях.
 
 ---
 
@@ -557,4 +557,4 @@ RouteOutput improved_route = improve_route_locally(best_graph, ... best.route ..
 
 Ветка фикса: `fix/bug-4-top-k-local-improve`.
 
-Open. Требует реализации top-K локального ремонта pre-local маршрутов, проверки стоимости и регресс-тестов на paladin default vs reduced limits.
+Fixed in `fix/bug-4-top-k-local-improve`: локальный ремонт применяется к top-K pre-local кандидатам, после чего выбирается лучший post-local результат. В payload добавлена сводка `search.local_repair` и поля кандидата; покрыто синтетической регрессией в `tests/test_native_glyph_scoring.py`. Требуется отдельная тяжёлая проверка на paladin default vs reduced limits.
