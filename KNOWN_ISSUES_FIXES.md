@@ -161,6 +161,8 @@ bin\paragon_optimize.exe optimize --profile "profiles\spiritborn.json" ...
 
 ### Статус
 
+Ветка фикса: `fix/bug-1-prize-potential-field`.
+
 Open. Требует реализации, тестов и проверки на нескольких профилях/досках (включая кейсы с высоковесовыми bonus_stats на редких и ситуации с длинными access chain'ами).
 
 ---
@@ -546,4 +548,3 @@ RouteOutput improved_route = improve_route_locally(best_graph, ... best.route ..
 ```
 
 От меня: если для каждого маршрута делать локальный ремонт?Дорого выйдет? ну то есть не `Среди всех таких pre-local результатов выбирается один лучший`, а берем все pre-local, и понеслась для каждого делать local ремонт?
-
