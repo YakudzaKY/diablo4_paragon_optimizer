@@ -850,6 +850,35 @@ class NativeGlyphScoringTests(unittest.TestCase):
         self.assertNotIn("plain_value_b", result["selected_nodes"])
         self.assertGreater(result["local_swaps"], 0)
 
+    def test_local_repair_is_bounded_and_reported(self) -> None:
+        payload = self.run_optimizer(
+            nodes=[
+                {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
+                {"id": "weak_path", "x": 0, "y": 1, "type": "normal", "cost": 1, "stats": {"damage": 1}},
+                {"id": "best_path", "x": 1, "y": 0, "type": "normal", "cost": 1, "stats": {"damage": 3}},
+                {"id": "spare_path", "x": 0, "y": 2, "type": "normal", "cost": 1, "stats": {"damage": 2}},
+            ],
+            edges=[
+                ["start", "weak_path"],
+                ["start", "best_path"],
+                ["weak_path", "spare_path"],
+            ],
+            glyph_sockets=[],
+            glyphs=[],
+            weights={"weights": {"damage": 1.0}},
+            points=1,
+            profile_extra={"max_routes": 4, "candidate_targets": 4},
+        )
+
+        repair = payload["search"]["local_repair"]
+        result = payload["results"][0]
+        self.assertEqual(repair["top_k"], 3)
+        self.assertGreaterEqual(repair["attempts"], 1)
+        self.assertLessEqual(repair["attempts"], 3)
+        self.assertEqual(result["local_repair_candidates"], repair["candidates_considered"])
+        self.assertEqual(result["local_repair_attempts"], repair["attempts"])
+        self.assertEqual(len(result["local_repair_summary"]), repair["attempts"])
+
 
 if __name__ == "__main__":
     unittest.main()

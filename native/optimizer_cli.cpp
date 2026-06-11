@@ -74,6 +74,7 @@ constexpr int GLYPH_RELOCATION_REMOVE_CANDIDATES = 120;
 constexpr int GLYPH_RELOCATION_ADD_CANDIDATES = 120;
 constexpr int GLYPH_EXCESS_PRUNE_MAX_PASSES = 4;
 constexpr int GLYPH_EXCESS_PRUNE_REMOVE_CANDIDATES = 72;
+constexpr int LOCAL_REPAIR_TOP_CANDIDATES = 3;
 
 struct Gate {
     std::string id;
@@ -345,6 +346,15 @@ struct ScoredRoute {
     int points_used = 0;
     int selected_node_count = 0;
     int local_swaps = 0;
+};
+
+struct RepairCandidate {
+    ScoredRoute scored;
+    Graph graph;
+    std::vector<std::string> sequence;
+    ScoringContext scoring_context;
+    std::unordered_map<int, double> route_bonuses;
+    std::string signature;
 };
 
 struct LocalSwap {
@@ -3375,6 +3385,92 @@ bool better_scored_route(const ScoredRoute& candidate, const ScoredRoute& best) 
     return candidate.selected_node_count < best.selected_node_count;
 }
 
+std::string route_repair_signature(
+    const Graph& graph,
+    const std::vector<std::string>& sequence,
+    const RouteOutput& route
+) {
+    std::ostringstream out;
+    out << "seq:";
+    for (const std::string& board_id : sequence) {
+        out << board_id << ",";
+    }
+    out << "|rot:";
+    for (const auto& [board_id, rotation] : graph.rotations) {
+        out << board_id << "=" << rotation << ",";
+    }
+    out << "|att:";
+    std::vector<std::pair<std::string, std::string>> attachments;
+    attachments.reserve(graph.attachments.size());
+    for (const Attachment& attachment : graph.attachments) {
+        attachments.push_back({attachment.from, attachment.to});
+    }
+    std::sort(attachments.begin(), attachments.end());
+    for (const auto& [from, to] : attachments) {
+        out << from << ">" << to << ",";
+    }
+    out << "|nodes:";
+    for (int index = 0; index < static_cast<int>(route.selected.size()); ++index) {
+        if (route.selected[index]) {
+            out << graph.nodes[index].id << ",";
+        }
+    }
+    return out.str();
+}
+
+void sort_repair_candidates(std::vector<RepairCandidate>& candidates) {
+    std::sort(candidates.begin(), candidates.end(), [](const RepairCandidate& left, const RepairCandidate& right) {
+        return better_scored_route(left.scored, right.scored);
+    });
+}
+
+void consider_repair_candidate(
+    std::vector<RepairCandidate>& candidates,
+    ScoredRoute&& scored,
+    const Graph& graph,
+    const std::vector<std::string>& sequence,
+    const ScoringContext& scoring_context,
+    const std::unordered_map<int, double>& route_bonuses
+) {
+    if (scored.payload.is_null() || LOCAL_REPAIR_TOP_CANDIDATES <= 0) {
+        return;
+    }
+    if (static_cast<int>(candidates.size()) >= LOCAL_REPAIR_TOP_CANDIDATES &&
+        !better_scored_route(scored, candidates.back().scored)) {
+        return;
+    }
+
+    std::string signature = route_repair_signature(graph, sequence, scored.route);
+    for (RepairCandidate& existing : candidates) {
+        if (existing.signature != signature) {
+            continue;
+        }
+        if (better_scored_route(scored, existing.scored)) {
+            existing.scored = std::move(scored);
+            existing.graph = graph;
+            existing.sequence = sequence;
+            existing.scoring_context = scoring_context;
+            existing.route_bonuses = route_bonuses;
+            existing.signature = std::move(signature);
+            sort_repair_candidates(candidates);
+        }
+        return;
+    }
+
+    RepairCandidate candidate;
+    candidate.scored = std::move(scored);
+    candidate.graph = graph;
+    candidate.sequence = sequence;
+    candidate.scoring_context = scoring_context;
+    candidate.route_bonuses = route_bonuses;
+    candidate.signature = std::move(signature);
+    candidates.push_back(std::move(candidate));
+    sort_repair_candidates(candidates);
+    if (static_cast<int>(candidates.size()) > LOCAL_REPAIR_TOP_CANDIDATES) {
+        candidates.resize(LOCAL_REPAIR_TOP_CANDIDATES);
+    }
+}
+
 bool route_connected_without_node(const Graph& graph, const std::vector<unsigned char>& selected, int removed_index) {
     if (removed_index == graph.start_index || !selected[graph.start_index]) {
         return false;
@@ -5640,11 +5736,9 @@ json optimize(const Options& options) {
     auto sequences = board_sequences(class_ref, boards, weights, scheme);
 
     ScoredRoute best;
-    Graph best_graph;
-    std::vector<std::string> best_sequence;
-    ScoringContext best_scoring_context;
-    std::unordered_map<int, double> best_route_bonuses;
-    bool have_best_context = false;
+    std::vector<RepairCandidate> repair_candidates;
+    int local_repair_attempts = 0;
+    int local_repair_candidates_considered = 0;
     int variants_checked = 0;
     int routes_checked = 0;
     bool stopped_by_limit = false;
@@ -5719,16 +5813,14 @@ json optimize(const Options& options) {
                 std::rethrow_exception(error);
             }
             for (ScoredRoute& item : scored) {
-                if (better_scored_route(item, best)) {
-                    best = std::move(item);
-                    best.payload["class"] = class_ref.class_slug;
-                    best.payload["points_limit"] = options.points;
-                    best_graph = graph;
-                    best_sequence = sequence;
-                    best_scoring_context = scoring_context;
-                    best_route_bonuses = route_bonuses;
-                    have_best_context = true;
-                }
+                consider_repair_candidate(
+                    repair_candidates,
+                    std::move(item),
+                    graph,
+                    sequence,
+                    scoring_context,
+                    route_bonuses
+                );
                 routes_checked += 1;
             }
             if (options.max_routes > 0 && routes_checked >= options.max_routes) {
@@ -5738,43 +5830,74 @@ json optimize(const Options& options) {
         });
     }
 
-    if (!best.payload.is_null() && have_best_context) {
-        std::vector<LocalSwap> swap_log;
-        RouteOutput improved_route = improve_route_locally(
-            best_graph,
-            glyphs,
-            weights,
-            options.starting_stats,
-            best_scoring_context,
-            best_route_bonuses,
-            best.route,
-            options.points,
-            swap_log,
-            worker_count
-        );
-        if (!swap_log.empty()) {
-            ScoredRoute improved = score_route(
-                best_graph,
-                boards,
-                best_sequence,
+    if (!repair_candidates.empty()) {
+        local_repair_candidates_considered = static_cast<int>(repair_candidates.size());
+        json repair_summary = json::array();
+        for (int rank = 0; rank < static_cast<int>(repair_candidates.size()); ++rank) {
+            RepairCandidate& candidate = repair_candidates[rank];
+            ScoredRoute candidate_result = candidate.scored;
+            candidate_result.payload["class"] = class_ref.class_slug;
+            candidate_result.payload["points_limit"] = options.points;
+            candidate_result.payload["local_repair_rank"] = rank + 1;
+            candidate_result.payload["local_repair_pre_score"] = candidate.scored.score;
+
+            std::vector<LocalSwap> swap_log;
+            RouteOutput improved_route = improve_route_locally(
+                candidate.graph,
                 glyphs,
                 weights,
                 options.starting_stats,
-                best_scoring_context,
-                improved_route,
+                candidate.scoring_context,
+                candidate.route_bonuses,
+                candidate.scored.route,
                 options.points,
-                options.include_route_steps
+                swap_log,
+                worker_count
             );
-            improved.route = std::move(improved_route);
-            improved.local_swaps = best.local_swaps + static_cast<int>(swap_log.size());
-            improved.payload["local_swaps"] = improved.local_swaps;
-            improved.payload["local_swap_report"] = local_swap_report_json(best_graph, swap_log);
-            improved.payload["local_score_before"] = best.score;
-            improved.payload["class"] = class_ref.class_slug;
-            improved.payload["points_limit"] = options.points;
-            if (better_scored_route(improved, best)) {
-                best = std::move(improved);
+            local_repair_attempts += 1;
+            if (!swap_log.empty()) {
+                ScoredRoute improved = score_route(
+                    candidate.graph,
+                    boards,
+                    candidate.sequence,
+                    glyphs,
+                    weights,
+                    options.starting_stats,
+                    candidate.scoring_context,
+                    improved_route,
+                    options.points,
+                    options.include_route_steps
+                );
+                improved.route = std::move(improved_route);
+                improved.local_swaps = candidate.scored.local_swaps + static_cast<int>(swap_log.size());
+                improved.payload["local_swaps"] = improved.local_swaps;
+                improved.payload["local_swap_report"] = local_swap_report_json(candidate.graph, swap_log);
+                improved.payload["local_score_before"] = candidate.scored.score;
+                improved.payload["class"] = class_ref.class_slug;
+                improved.payload["points_limit"] = options.points;
+                improved.payload["local_repair_rank"] = rank + 1;
+                improved.payload["local_repair_pre_score"] = candidate.scored.score;
+                if (better_scored_route(improved, candidate_result)) {
+                    candidate_result = std::move(improved);
+                }
             }
+
+            repair_summary.push_back({
+                {"rank", rank + 1},
+                {"pre_score", round4(candidate.scored.score)},
+                {"post_score", round4(candidate_result.score)},
+                {"local_swaps", candidate_result.local_swaps},
+                {"points_used", candidate_result.points_used},
+                {"selected_node_count", candidate_result.selected_node_count}
+            });
+            if (better_scored_route(candidate_result, best)) {
+                best = std::move(candidate_result);
+            }
+        }
+        if (!best.payload.is_null()) {
+            best.payload["local_repair_candidates"] = local_repair_candidates_considered;
+            best.payload["local_repair_attempts"] = local_repair_attempts;
+            best.payload["local_repair_summary"] = std::move(repair_summary);
         }
     }
 
@@ -5798,6 +5921,11 @@ json optimize(const Options& options) {
         {"workers", worker_count},
         {"stopped_by_limit", stopped_by_limit},
         {"elapsed_seconds", round4(elapsed)},
+        {"local_repair", {
+            {"top_k", LOCAL_REPAIR_TOP_CANDIDATES},
+            {"candidates_considered", local_repair_candidates_considered},
+            {"attempts", local_repair_attempts}
+        }},
         {"limits", {
             {"max_routes", options.max_routes > 0 ? json(options.max_routes) : json(nullptr)},
             {"candidate_targets", options.candidate_targets > 0 ? json(options.candidate_targets) : json(nullptr)}
