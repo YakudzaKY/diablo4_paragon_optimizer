@@ -867,14 +867,14 @@ class NativeGlyphScoringTests(unittest.TestCase):
             glyphs=[],
             weights={"weights": {"damage": 1.0}},
             points=1,
-            profile_extra={"max_routes": 4, "candidate_targets": 4},
+            profile_extra={"max_routes": 4, "candidate_targets": 4, "local_repair_top_k": 2},
         )
 
         repair = payload["search"]["local_repair"]
         result = payload["results"][0]
-        self.assertEqual(repair["top_k"], 3)
+        self.assertEqual(repair["top_k"], 2)
         self.assertGreaterEqual(repair["attempts"], 1)
-        self.assertLessEqual(repair["attempts"], 3)
+        self.assertLessEqual(repair["attempts"], 2)
         self.assertEqual(result["local_repair_candidates"], repair["candidates_considered"])
         self.assertEqual(result["local_repair_attempts"], repair["attempts"])
         self.assertEqual(len(result["local_repair_summary"]), repair["attempts"])

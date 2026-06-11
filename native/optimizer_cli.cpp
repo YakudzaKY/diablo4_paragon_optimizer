@@ -74,7 +74,7 @@ constexpr int GLYPH_RELOCATION_REMOVE_CANDIDATES = 120;
 constexpr int GLYPH_RELOCATION_ADD_CANDIDATES = 120;
 constexpr int GLYPH_EXCESS_PRUNE_MAX_PASSES = 4;
 constexpr int GLYPH_EXCESS_PRUNE_REMOVE_CANDIDATES = 72;
-constexpr int LOCAL_REPAIR_TOP_CANDIDATES = 3;
+constexpr int DEFAULT_LOCAL_REPAIR_TOP_CANDIDATES = 3;
 
 struct Gate {
     std::string id;
@@ -397,6 +397,7 @@ struct Options {
     fs::path data_root;
     int max_routes = DEFAULT_MAX_ROUTES;
     int candidate_targets = DEFAULT_CANDIDATE_TARGETS;
+    int local_repair_top_k = DEFAULT_LOCAL_REPAIR_TOP_CANDIDATES;
     int workers = 0;
     bool include_route_steps = false;
     bool no_html = false;
@@ -3430,12 +3431,13 @@ void consider_repair_candidate(
     const Graph& graph,
     const std::vector<std::string>& sequence,
     const ScoringContext& scoring_context,
-    const std::unordered_map<int, double>& route_bonuses
+    const std::unordered_map<int, double>& route_bonuses,
+    int repair_top_k
 ) {
-    if (scored.payload.is_null() || LOCAL_REPAIR_TOP_CANDIDATES <= 0) {
+    if (scored.payload.is_null() || repair_top_k <= 0) {
         return;
     }
-    if (static_cast<int>(candidates.size()) >= LOCAL_REPAIR_TOP_CANDIDATES &&
+    if (static_cast<int>(candidates.size()) >= repair_top_k &&
         !better_scored_route(scored, candidates.back().scored)) {
         return;
     }
@@ -3466,8 +3468,8 @@ void consider_repair_candidate(
     candidate.signature = std::move(signature);
     candidates.push_back(std::move(candidate));
     sort_repair_candidates(candidates);
-    if (static_cast<int>(candidates.size()) > LOCAL_REPAIR_TOP_CANDIDATES) {
-        candidates.resize(LOCAL_REPAIR_TOP_CANDIDATES);
+    if (static_cast<int>(candidates.size()) > repair_top_k) {
+        candidates.resize(repair_top_k);
     }
 }
 
@@ -4733,24 +4735,41 @@ RouteOutput improve_route_locally(
 json local_swap_report_json(const Graph& graph, const std::vector<LocalSwap>& swap_log) {
     json report = json::array();
     for (const LocalSwap& swap : swap_log) {
-        if (swap.removed < 0 || swap.added < 0 ||
-            swap.removed >= static_cast<int>(graph.nodes.size()) ||
-            swap.added >= static_cast<int>(graph.nodes.size())) {
+        bool has_removed = swap.removed >= 0 && swap.removed < static_cast<int>(graph.nodes.size());
+        bool has_added = swap.added >= 0 && swap.added < static_cast<int>(graph.nodes.size());
+        if (!has_removed && !has_added) {
             continue;
         }
-        const GraphNode& removed = graph.nodes[swap.removed];
-        const GraphNode& added = graph.nodes[swap.added];
         json item;
-        item["removed"] = removed.id;
-        item["removed_name"] = removed.name;
-        item["removed_type"] = removed.type;
-        item["removed_board"] = removed.board_id;
-        item["removed_stats"] = map_to_json_object(removed.stats);
-        item["added"] = added.id;
-        item["added_name"] = added.name;
-        item["added_type"] = added.type;
-        item["added_board"] = added.board_id;
-        item["added_stats"] = map_to_json_object(added.stats);
+        item["action"] = has_removed && has_added ? "swap" : (has_added ? "add" : "remove");
+        if (has_removed) {
+            const GraphNode& removed = graph.nodes[swap.removed];
+            item["removed"] = removed.id;
+            item["removed_name"] = removed.name;
+            item["removed_type"] = removed.type;
+            item["removed_board"] = removed.board_id;
+            item["removed_stats"] = map_to_json_object(removed.stats);
+        } else {
+            item["removed"] = nullptr;
+            item["removed_name"] = nullptr;
+            item["removed_type"] = nullptr;
+            item["removed_board"] = nullptr;
+            item["removed_stats"] = json::object();
+        }
+        if (has_added) {
+            const GraphNode& added = graph.nodes[swap.added];
+            item["added"] = added.id;
+            item["added_name"] = added.name;
+            item["added_type"] = added.type;
+            item["added_board"] = added.board_id;
+            item["added_stats"] = map_to_json_object(added.stats);
+        } else {
+            item["added"] = nullptr;
+            item["added_name"] = nullptr;
+            item["added_type"] = nullptr;
+            item["added_board"] = nullptr;
+            item["added_stats"] = json::object();
+        }
         item["score_before"] = round4(swap.score_before);
         item["score_after"] = round4(swap.score_after);
         item["score_delta"] = round4(swap.score_after - swap.score_before);
@@ -5597,6 +5616,9 @@ void apply_profile(Options& options) {
     if (raw.contains("candidate_targets")) {
         options.candidate_targets = static_cast<int>(as_double(raw["candidate_targets"]));
     }
+    if (raw.contains("local_repair_top_k")) {
+        options.local_repair_top_k = std::clamp(static_cast<int>(as_double(raw["local_repair_top_k"])), 1, 32);
+    }
     if (raw.contains("workers")) {
         options.workers = static_cast<int>(as_double(raw["workers"]));
     }
@@ -5652,6 +5674,7 @@ Options parse_args(int argc, char** argv) {
         else if (arg == "--data") options.data_root = require_value(arg);
         else if (arg == "--max-routes") options.max_routes = std::stoi(require_value(arg));
         else if (arg == "--candidate-targets") options.candidate_targets = std::stoi(require_value(arg));
+        else if (arg == "--local-repair-top-k") options.local_repair_top_k = std::clamp(std::stoi(require_value(arg)), 1, 32);
         else if (arg == "--workers") options.workers = std::stoi(require_value(arg));
         else if (arg == "--include-route-steps") options.include_route_steps = true;
         else if (arg == "--no-html") options.no_html = true;
@@ -5712,7 +5735,8 @@ json class_schema(const Options& options) {
             {"class", raw.value("class", options.class_slug)},
             {"points", 225},
             {"weights", "../weights/" + options.class_slug + ".json"},
-            {"glyph_levels", example_glyph_levels_for_schema(glyphs)}
+            {"glyph_levels", example_glyph_levels_for_schema(glyphs)},
+            {"local_repair_top_k", DEFAULT_LOCAL_REPAIR_TOP_CANDIDATES}
         }},
         {"weight_schema_example", {
             {"weights", example_weights},
@@ -5819,7 +5843,8 @@ json optimize(const Options& options) {
                     graph,
                     sequence,
                     scoring_context,
-                    route_bonuses
+                    route_bonuses,
+                    options.local_repair_top_k
                 );
                 routes_checked += 1;
             }
@@ -5922,7 +5947,7 @@ json optimize(const Options& options) {
         {"stopped_by_limit", stopped_by_limit},
         {"elapsed_seconds", round4(elapsed)},
         {"local_repair", {
-            {"top_k", LOCAL_REPAIR_TOP_CANDIDATES},
+            {"top_k", options.local_repair_top_k},
             {"candidates_considered", local_repair_candidates_considered},
             {"attempts", local_repair_attempts}
         }},
