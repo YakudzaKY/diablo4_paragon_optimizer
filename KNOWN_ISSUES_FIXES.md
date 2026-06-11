@@ -459,6 +459,8 @@ bin\paragon_optimize.exe optimize --profile "profiles\spiritborn.json" ...
 
 ### Статус
 
+Ветка фикса: `fix/bug-3-threshold-excess-prune`.
+
 Open. Требует реализации, тестов и проверки на spiritborn (и других профилях/классах с threshold-глифами). Сильно связан с Багами #1 и #2 — общая корневая причина в том, что эвристика (и локальный ремонт) недостаточно точно балансирует "стоимость доступа/фидеров" против реальной маргинальной ценности после достижения ключевых порогов (gated rare, amplified magic, glyph activation).
 
 ---
