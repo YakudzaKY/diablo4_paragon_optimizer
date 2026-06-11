@@ -61,6 +61,8 @@ constexpr int LOCAL_IMPROVEMENT_ADD_CANDIDATES = 64;
 constexpr int GLYPH_RELOCATION_MAX_PASSES = 12;
 constexpr int GLYPH_RELOCATION_REMOVE_CANDIDATES = 120;
 constexpr int GLYPH_RELOCATION_ADD_CANDIDATES = 120;
+constexpr int GLYPH_EXCESS_PRUNE_MAX_PASSES = 4;
+constexpr int GLYPH_EXCESS_PRUNE_REMOVE_CANDIDATES = 72;
 
 struct Gate {
     std::string id;
@@ -143,6 +145,8 @@ struct GlyphRouteTuning {
     double detour = 0.25;
     double path_efficiency = 0.50;
     double fill_target = 1.20;
+    double threshold_buffer = 0.0;
+    double excess_factor = 0.02;
     double max_bonus_multiplier = 1.60;
 };
 
@@ -429,6 +433,8 @@ void read_glyph_route_tuning(const json& value, GlyphRouteTuning& tuning) {
     read_optional_tuning_double(value, "detour", tuning.detour, 0.0, 10.0);
     read_optional_tuning_double(value, "path_efficiency", tuning.path_efficiency, 0.0, 10.0);
     read_optional_tuning_double(value, "fill_target", tuning.fill_target, 1.0, 4.0);
+    read_optional_tuning_double(value, "threshold_buffer", tuning.threshold_buffer, 0.0, 1000.0);
+    read_optional_tuning_double(value, "excess_factor", tuning.excess_factor, 0.0, 1.0);
     read_optional_tuning_double(value, "max_bonus_multiplier", tuning.max_bonus_multiplier, 0.10, 20.0);
 }
 
@@ -1627,6 +1633,39 @@ double glyph_scaling_value_between(
     return units * scaling_value_per_5 * scaling_weight;
 }
 
+bool glyph_has_useful_threshold_scaling(const GlyphInfo& info, double scaling_weight) {
+    return info.scaling_value_per_5 > 0.0 && scaling_weight > 0.0;
+}
+
+double glyph_threshold_hint_fill_target(
+    const GlyphInfo& info,
+    const WeightModel& weights,
+    double available_stat,
+    double scaling_weight
+) {
+    double target = info.requirement;
+    if (glyph_has_useful_threshold_scaling(info, scaling_weight)) {
+        target = std::max(target, info.requirement * weights.glyph_route.fill_target);
+    } else if (weights.glyph_route.threshold_buffer > 0.0) {
+        target = std::max(target, info.requirement + weights.glyph_route.threshold_buffer);
+    }
+    return std::min(available_stat, target);
+}
+
+double glyph_threshold_hint_fill_target(
+    const GlyphInfo& info,
+    const WeightModel& weights,
+    double scaling_weight
+) {
+    double target = info.requirement;
+    if (glyph_has_useful_threshold_scaling(info, scaling_weight)) {
+        target = std::max(target, info.requirement * weights.glyph_route.fill_target);
+    } else if (weights.glyph_route.threshold_buffer > 0.0) {
+        target = std::max(target, info.requirement + weights.glyph_route.threshold_buffer);
+    }
+    return target;
+}
+
 std::map<std::string, GlyphRouteStatPressure> glyph_route_stat_pressures(
     const Graph& graph,
     const std::vector<Glyph>& glyphs,
@@ -1653,7 +1692,8 @@ std::map<std::string, GlyphRouteStatPressure> glyph_route_stat_pressures(
             if (supply <= 0.0) {
                 continue;
             }
-            double target = std::min(supply, std::max(info.requirement, info.requirement * weights.glyph_route.fill_target));
+            double scaling_weight = info.bonus_stat.empty() ? 0.0 : std::max(weight_for(weights.weights, info.bonus_stat), 0.0);
+            double target = glyph_threshold_hint_fill_target(info, weights, supply, scaling_weight);
             GlyphRouteStatPressure& pressure = pressures[info.threshold_stat];
             pressure.demand += target;
             pressure.supply += supply;
@@ -1778,10 +1818,7 @@ std::vector<GlyphValueMatrix> build_glyph_value_matrices(
                     double scaling_weight = info.bonus_stat.empty() ? 0.0 : std::max(weight_for(weights.weights, info.bonus_stat), 0.0);
                     if (activation_pool > 0.0 || (info.scaling_value_per_5 > 0.0 && scaling_weight > 0.0)) {
                         matrix.available_stat = available_stat;
-                        matrix.expected_fill = std::min(
-                            available_stat,
-                            std::max(info.requirement, info.requirement * weights.glyph_route.fill_target)
-                        );
+                        matrix.expected_fill = glyph_threshold_hint_fill_target(info, weights, available_stat, scaling_weight);
                         matrix.scarcity_multiplier = glyph_scarcity_multiplier(pressures, weights, info.threshold_stat);
 
                         double accumulated_stat = 0.0;
@@ -2654,6 +2691,8 @@ json glyph_route_tuning_json(const GlyphRouteTuning& tuning) {
         {"detour", round4(tuning.detour)},
         {"path_efficiency", round4(tuning.path_efficiency)},
         {"fill_target", round4(tuning.fill_target)},
+        {"threshold_buffer", round4(tuning.threshold_buffer)},
+        {"excess_factor", round4(tuning.excess_factor)},
         {"max_bonus_multiplier", round4(tuning.max_bonus_multiplier)}
     };
 }
@@ -3438,7 +3477,8 @@ std::unordered_map<int, double> glyph_relocation_add_priorities(
             }
         }
 
-        double desired_fill = std::max(info.requirement, info.requirement * weights.glyph_route.fill_target);
+        double desired_fill = glyph_threshold_hint_fill_target(info, weights, scaling_weight);
+        bool useful_scaling = glyph_has_useful_threshold_scaling(info, scaling_weight);
         for (int node_index : radius_nodes_for(context, evaluation.socket_index, evaluation.glyph_index)) {
             if (selected[node_index]) {
                 continue;
@@ -3462,8 +3502,10 @@ std::unordered_map<int, double> glyph_relocation_add_priorities(
             if (before < desired_fill) {
                 score += std::min(stat_value, desired_fill - before) *
                     std::max(weight_for(weights.weights, info.threshold_stat), 0.0) * 0.10;
-            } else {
-                score += stat_value * std::max(weight_for(weights.weights, info.threshold_stat), 0.0) * 0.03;
+            } else if (useful_scaling && weights.glyph_route.excess_factor > 0.0) {
+                score += stat_value *
+                    std::max(weight_for(weights.weights, info.threshold_stat), 0.0) *
+                    weights.glyph_route.excess_factor;
             }
             auto bonus_it = route_bonuses.find(node_index);
             if (bonus_it != route_bonuses.end()) {
@@ -3525,12 +3567,16 @@ std::vector<int> glyph_relocation_add_nodes(
 
 std::vector<double> selected_glyph_stat_pressure(
     const Graph& graph,
+    const WeightModel& weights,
     const ScoringContext& context,
     const std::vector<unsigned char>& selected,
     const std::vector<GlyphEvaluation>& assigned_glyphs
 ) {
     std::vector<double> pressure(graph.nodes.size(), 0.0);
     for (const GlyphEvaluation& evaluation : assigned_glyphs) {
+        if (evaluation.glyph_index < 0 || evaluation.glyph_index >= static_cast<int>(context.glyph_info.size())) {
+            continue;
+        }
         const GlyphInfo& info = context.glyph_info[evaluation.glyph_index];
         if (info.threshold_stat.empty()) {
             continue;
@@ -3541,7 +3587,10 @@ std::vector<double> selected_glyph_stat_pressure(
             }
             double stat_value = weight_for(graph.nodes[node_index].stats, info.threshold_stat);
             if (stat_value > 0.0) {
-                pressure[node_index] += stat_value;
+                double after_remove = evaluation.stat_in_radius - stat_value;
+                double protected_stat = std::clamp(info.requirement - after_remove, 0.0, stat_value);
+                double excess_stat = std::max(stat_value - protected_stat, 0.0);
+                pressure[node_index] += protected_stat + excess_stat * weights.glyph_route.excess_factor;
             }
         }
     }
@@ -3606,7 +3655,7 @@ void improve_route_glyph_relocations(
             break;
         }
         int max_add_cost = 0;
-        std::vector<double> glyph_pressure = selected_glyph_stat_pressure(graph, context, route.selected, assigned);
+        std::vector<double> glyph_pressure = selected_glyph_stat_pressure(graph, weights, context, route.selected, assigned);
         std::vector<int> remove_candidates = glyph_relocation_remove_nodes(graph, route.selected, weights, glyph_pressure);
         for (int remove_index : remove_candidates) {
             max_add_cost = std::max(max_add_cost, graph.nodes[remove_index].cost + points_limit - current_points);
@@ -3645,6 +3694,169 @@ void improve_route_glyph_relocations(
         if (swap_candidates.empty()) {
             break;
         }
+        std::vector<double> swap_scores = score_swap_candidates_parallel(
+            graph,
+            glyphs,
+            weights,
+            starting_stats,
+            context,
+            route.selected,
+            swap_candidates,
+            points_limit,
+            worker_count
+        );
+        BestSwapCandidate best = best_scored_swap(swap_candidates, swap_scores, current_score);
+        if (best.remove_index < 0 || best.add_index < 0) {
+            break;
+        }
+        swap_log.push_back({best.remove_index, best.add_index, current_score, best.score});
+        route.selected[best.remove_index] = 0;
+        route.selected[best.add_index] = 1;
+        current_points = current_points - graph.nodes[best.remove_index].cost + graph.nodes[best.add_index].cost;
+        current_score = best.score;
+    }
+}
+
+std::vector<int> threshold_excess_remove_nodes(
+    const Graph& graph,
+    const WeightModel& weights,
+    const ScoringContext& context,
+    const std::vector<unsigned char>& selected,
+    const std::vector<GlyphEvaluation>& assigned_glyphs
+) {
+    std::vector<double> glyph_pressure = selected_glyph_stat_pressure(graph, weights, context, selected, assigned_glyphs);
+    std::vector<int> candidates;
+    for (int node_index = 0; node_index < static_cast<int>(selected.size()); ++node_index) {
+        if (!selected[node_index] || node_index == graph.start_index || graph.nodes[node_index].cost <= 0) {
+            continue;
+        }
+        const std::string& type = graph.nodes[node_index].type;
+        if (type != "normal" && type != "magic") {
+            continue;
+        }
+        if (!route_connected_without_node(graph, selected, node_index)) {
+            continue;
+        }
+
+        bool threshold_contributor = false;
+        bool removable_without_breaking_requirement = true;
+        for (const GlyphEvaluation& evaluation : assigned_glyphs) {
+            if (evaluation.glyph_index < 0 || evaluation.glyph_index >= static_cast<int>(context.glyph_info.size())) {
+                continue;
+            }
+            const GlyphInfo& info = context.glyph_info[evaluation.glyph_index];
+            if (info.threshold_stat.empty() || info.requirement <= 0.0 || !evaluation.requirement_met) {
+                continue;
+            }
+            double stat_value = weight_for(graph.nodes[node_index].stats, info.threshold_stat);
+            if (stat_value <= 0.0) {
+                continue;
+            }
+            bool in_radius = false;
+            for (int radius_node : radius_nodes_for(context, evaluation.socket_index, evaluation.glyph_index)) {
+                if (radius_node == node_index) {
+                    in_radius = true;
+                    break;
+                }
+            }
+            if (!in_radius) {
+                continue;
+            }
+            threshold_contributor = true;
+            if (evaluation.stat_in_radius - stat_value < info.requirement - 1e-9) {
+                removable_without_breaking_requirement = false;
+                break;
+            }
+        }
+        if (threshold_contributor && removable_without_breaking_requirement) {
+            candidates.push_back(node_index);
+        }
+    }
+
+    std::sort(candidates.begin(), candidates.end(), [&](int left, int right) {
+        double left_score = node_base_score(graph.nodes[left], weights) + glyph_pressure[left] * 3.0;
+        double right_score = node_base_score(graph.nodes[right], weights) + glyph_pressure[right] * 3.0;
+        if (std::abs(left_score - right_score) > 1e-12) return left_score < right_score;
+        return graph.nodes[left].id < graph.nodes[right].id;
+    });
+    if (static_cast<int>(candidates.size()) > GLYPH_EXCESS_PRUNE_REMOVE_CANDIDATES) {
+        candidates.resize(GLYPH_EXCESS_PRUNE_REMOVE_CANDIDATES);
+    }
+    return candidates;
+}
+
+void improve_route_threshold_excess_prune(
+    const Graph& graph,
+    const std::vector<Glyph>& glyphs,
+    const WeightModel& weights,
+    const std::map<std::string, double>& starting_stats,
+    const ScoringContext& context,
+    const std::unordered_map<int, double>& route_bonuses,
+    RouteOutput& route,
+    int points_limit,
+    int& current_points,
+    double& current_score,
+    std::vector<LocalSwap>& swap_log,
+    int worker_count
+) {
+    for (int pass = 0; pass < GLYPH_EXCESS_PRUNE_MAX_PASSES; ++pass) {
+        std::vector<GlyphEvaluation> assigned = assign_glyphs(
+            graph,
+            glyphs,
+            weights,
+            context,
+            route.selected,
+            starting_stats
+        );
+        if (assigned.empty()) {
+            break;
+        }
+
+        std::vector<int> remove_candidates = threshold_excess_remove_nodes(
+            graph,
+            weights,
+            context,
+            route.selected,
+            assigned
+        );
+        if (remove_candidates.empty()) {
+            break;
+        }
+
+        int max_add_cost = 0;
+        for (int remove_index : remove_candidates) {
+            max_add_cost = std::max(max_add_cost, graph.nodes[remove_index].cost + points_limit - current_points);
+        }
+        if (max_add_cost <= 0) {
+            break;
+        }
+
+        std::vector<int> add_candidates = adjacent_add_nodes(graph, route.selected, weights, route_bonuses, max_add_cost);
+        if (add_candidates.empty()) {
+            break;
+        }
+
+        std::vector<SwapCandidate> swap_candidates;
+        for (int remove_index : remove_candidates) {
+            int remove_cost = graph.nodes[remove_index].cost;
+            for (int add_index : add_candidates) {
+                if (route.selected[add_index] || add_index == remove_index) {
+                    continue;
+                }
+                int add_cost = graph.nodes[add_index].cost;
+                if (current_points - remove_cost + add_cost > points_limit) {
+                    continue;
+                }
+                if (!has_selected_neighbor_after_remove(graph, route.selected, add_index, remove_index)) {
+                    continue;
+                }
+                swap_candidates.push_back({remove_index, add_index});
+            }
+        }
+        if (swap_candidates.empty()) {
+            break;
+        }
+
         std::vector<double> swap_scores = score_swap_candidates_parallel(
             graph,
             glyphs,
@@ -3811,6 +4023,21 @@ RouteOutput improve_route_locally(
     }
 
     improve_route_glyph_relocations(
+        graph,
+        glyphs,
+        weights,
+        starting_stats,
+        context,
+        route_bonuses,
+        route,
+        points_limit,
+        current_points,
+        current_score,
+        swap_log,
+        worker_count
+    );
+
+    improve_route_threshold_excess_prune(
         graph,
         glyphs,
         weights,

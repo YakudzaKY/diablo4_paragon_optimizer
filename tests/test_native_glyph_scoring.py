@@ -569,6 +569,47 @@ class NativeGlyphScoringTests(unittest.TestCase):
         self.assertAlmostEqual(glyph["node_bonus_score"], 10.5)
         self.assertIn("willpower_magic", payload["results"][0]["selected_nodes"])
 
+    def test_threshold_excess_prune_replaces_unneeded_feeder_with_better_full_score_candidate(self) -> None:
+        threshold_bonus = glyph_payload(
+            "threshold_bonus",
+            threshold_stat="willpower",
+            requirement=10,
+            node_bonus={"node_type": "magic", "bonus_percent": 200.0, "multiplier": 2.0},
+        )
+        payload = self.run_optimizer(
+            nodes=[
+                {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
+                {"id": "socket", "x": 0, "y": 1, "type": "glyph_socket", "cost": 1, "stats": {}},
+                {"id": "will_a", "x": -1, "y": 1, "type": "normal", "cost": 1, "stats": {"willpower": 5}},
+                {"id": "will_b", "x": 1, "y": 1, "type": "normal", "cost": 1, "stats": {"willpower": 5}},
+                {"id": "will_excess", "x": 0, "y": 2, "type": "normal", "cost": 1, "stats": {"willpower": 5}},
+                {"id": "bonus_magic", "x": 0, "y": 3, "type": "magic", "cost": 1, "stats": {"damage": 4}},
+            ],
+            edges=[
+                ["start", "socket"],
+                ["socket", "will_a"],
+                ["socket", "will_b"],
+                ["socket", "will_excess"],
+                ["socket", "bonus_magic"],
+            ],
+            glyph_sockets=["socket"],
+            glyphs=[threshold_bonus],
+            weights={
+                "weights": {"willpower": 1.0, "damage": 1.0, "glyph_socket": 10.0, "glyph_bonus": 20.0},
+                "glyph_route": {"node_bonus": 0.0, "cluster": 0.0, "detour": 0.0, "fill_target": 1.2},
+            },
+            points=4,
+        )
+
+        result = payload["results"][0]
+        selected = set(result["selected_nodes"])
+        self.assertIn("bonus_magic", selected)
+        self.assertEqual(len({"will_a", "will_b", "will_excess"} & selected), 2)
+        glyph = result["glyphs"][0]
+        self.assertTrue(glyph["requirement_met"])
+        self.assertAlmostEqual(glyph["stat_in_radius"], 10.0)
+        self.assertAlmostEqual(glyph["node_bonus_score"], 8.0)
+
     def test_route_node_bonus_hint_prefers_strengthened_nodes_in_radius(self) -> None:
         magic_bonus = glyph_payload(
             "magic_bonus",
