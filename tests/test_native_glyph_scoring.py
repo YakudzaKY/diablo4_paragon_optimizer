@@ -625,7 +625,7 @@ class NativeGlyphScoringTests(unittest.TestCase):
                 nodes=[
                     {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
                     {"id": "socket_a", "x": 0, "y": 1, "type": "glyph_socket", "cost": 1, "stats": {}},
-                    {"id": "plain_value", "x": 1, "y": 1, "type": "normal", "cost": 2, "stats": {"damage": 8}},
+                    {"id": "plain_value", "x": 1, "y": 1, "type": "normal", "cost": 2, "stats": {"damage": 10.5}},
                     {"id": "path_to_rare", "x": 0, "y": 2, "type": "normal", "cost": 1, "stats": {}},
                     {
                         "id": "bonus_rare",
@@ -665,6 +665,100 @@ class NativeGlyphScoringTests(unittest.TestCase):
         self.assertNotIn("bonus_rare", without_hint["selected_nodes"])
         self.assertIn("bonus_rare", with_hint["selected_nodes"])
         self.assertNotIn("plain_value", with_hint["selected_nodes"])
+
+    def test_route_prize_access_potential_reaches_rare_through_low_value_connector(self) -> None:
+        payload = self.run_optimizer(
+            nodes=[
+                {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
+                {"id": "plain_dex_a", "x": 1, "y": 0, "type": "normal", "cost": 1, "stats": {"dexterity": 5}},
+                {"id": "plain_dex_b", "x": 0, "y": 1, "type": "normal", "cost": 1, "stats": {"dexterity": 5}},
+                {"id": "resource_connector", "x": 1, "y": 1, "type": "magic", "cost": 1, "stats": {"max_resource": 2}},
+                {
+                    "id": "eager_prey",
+                    "x": 2,
+                    "y": 1,
+                    "type": "rare",
+                    "cost": 1,
+                    "stats": {"dexterity": 10, "max_resource": 2},
+                    "requirements": {"strength": 210},
+                    "bonus_stats": {"max_resource": 2},
+                },
+            ],
+            edges=[
+                ["start", "plain_dex_a"],
+                ["start", "plain_dex_b"],
+                ["start", "resource_connector"],
+                ["resource_connector", "eager_prey"],
+            ],
+            glyph_sockets=[],
+            glyphs=[],
+            weights={
+                "weights": {"dexterity": 1.45, "max_resource": 0.01},
+                "glyph_route": {
+                    "cluster": 0.0,
+                    "detour": 0.25,
+                    "path_efficiency": 0.0,
+                },
+            },
+            starting_stats={"strength": 368},
+            points=2,
+            include_route_steps=True,
+            profile_extra={"max_routes": 1, "candidate_targets": 10},
+        )
+
+        result = payload["results"][0]
+        self.assertIn("resource_connector", result["selected_nodes"])
+        self.assertIn("eager_prey", result["selected_nodes"])
+        self.assertNotIn("plain_dex_a", result["selected_nodes"])
+        self.assertNotIn("plain_dex_b", result["selected_nodes"])
+        self.assertEqual(result["route_steps"][0]["target"], "eager_prey")
+
+    def test_local_prize_access_rescue_swaps_multiple_nodes_for_gated_rare(self) -> None:
+        payload = self.run_optimizer(
+            nodes=[
+                {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
+                {"id": "plain_value_a", "x": 1, "y": 0, "type": "normal", "cost": 1, "stats": {"damage": 10}},
+                {"id": "plain_value_b", "x": 0, "y": 1, "type": "normal", "cost": 1, "stats": {"damage": 10}},
+                {"id": "access_connector", "x": 1, "y": 1, "type": "normal", "cost": 1, "stats": {}},
+                {
+                    "id": "gated_rare",
+                    "x": 2,
+                    "y": 1,
+                    "type": "rare",
+                    "cost": 1,
+                    "stats": {"damage": 5},
+                    "requirements": {"strength": 50},
+                    "bonus_stats": {"damage": 16},
+                },
+            ],
+            edges=[
+                ["start", "plain_value_a"],
+                ["start", "plain_value_b"],
+                ["start", "access_connector"],
+                ["access_connector", "gated_rare"],
+            ],
+            glyph_sockets=[],
+            glyphs=[],
+            weights={
+                "weights": {"damage": 1.0},
+                "glyph_route": {
+                    "cluster": 0.0,
+                    "detour": 0.25,
+                    "path_efficiency": 0.0,
+                },
+            },
+            starting_stats={"strength": 100},
+            points=2,
+            include_route_steps=True,
+            profile_extra={"max_routes": 1, "candidate_targets": 10},
+        )
+
+        result = payload["results"][0]
+        self.assertIn("access_connector", result["selected_nodes"])
+        self.assertIn("gated_rare", result["selected_nodes"])
+        self.assertNotIn("plain_value_a", result["selected_nodes"])
+        self.assertNotIn("plain_value_b", result["selected_nodes"])
+        self.assertGreater(result["local_swaps"], 0)
 
 
 if __name__ == "__main__":

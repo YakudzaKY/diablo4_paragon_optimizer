@@ -54,10 +54,19 @@ constexpr double RARE_REQUIREMENT_SECONDARY_STEP = 70.0;
 constexpr double RARE_REQUIREMENT_PRIMARY_STEP = 455.0;
 constexpr double RARE_REQUIREMENT_PRIMARY_MINIMUM = 600.0;
 constexpr double RARE_BONUS_ROUTE_HINT_FACTOR = 0.6;
+constexpr double RARE_ACCESS_PULL_FACTOR = 0.40;
+constexpr double RARE_ACCESS_PULL_DECAY = 0.80;
+constexpr int RARE_ACCESS_PULL_RADIUS = 5;
 constexpr double LOCAL_RARE_FEEDER_BONUS_FACTOR = 0.85;
 constexpr int LOCAL_IMPROVEMENT_MAX_PASSES = 10;
 constexpr int LOCAL_IMPROVEMENT_REMOVE_CANDIDATES = 36;
 constexpr int LOCAL_IMPROVEMENT_ADD_CANDIDATES = 64;
+constexpr int LOCAL_PRIZE_ACCESS_RESCUE_MAX_NEW_NODES = 3;
+constexpr int LOCAL_PRIZE_ACCESS_RESCUE_REMOVE_CANDIDATES = LOCAL_IMPROVEMENT_REMOVE_CANDIDATES;
+constexpr int LOCAL_PRIZE_ACCESS_RESCUE_MAX_REMOVES = 3;
+constexpr int LOCAL_PRIZE_ACCESS_RESCUE_MAX_PATHS = 96;
+constexpr int LOCAL_PRIZE_ACCESS_RESCUE_MAX_REMOVE_COMBINATIONS_PER_PATH = 128;
+constexpr int LOCAL_PRIZE_ACCESS_RESCUE_MAX_CANDIDATES = 8192;
 constexpr int GLYPH_RELOCATION_MAX_PASSES = 12;
 constexpr int GLYPH_RELOCATION_REMOVE_CANDIDATES = 120;
 constexpr int GLYPH_RELOCATION_ADD_CANDIDATES = 120;
@@ -340,6 +349,17 @@ struct LocalSwap {
 struct SwapCandidate {
     int remove_index = -1;
     int add_index = -1;
+};
+
+struct RoutePatchCandidate {
+    std::vector<int> remove_indices;
+    std::vector<int> add_indices;
+};
+
+struct PrizeAccessPath {
+    std::vector<int> add_indices;
+    double heuristic_gain = 0.0;
+    int cost = 0;
 };
 
 struct BestSwapCandidate {
@@ -1930,6 +1950,69 @@ double bonus_for_node(const std::unordered_map<int, double>& bonuses, int index)
     return it == bonuses.end() ? 0.0 : it->second;
 }
 
+bool is_prize_route_node(const GraphNode& node) {
+    return node.type == "rare" || node.type == "legendary";
+}
+
+std::vector<double> rare_access_route_potentials(
+    const Graph& graph,
+    const std::vector<double>& base_scores,
+    double low_value_threshold
+) {
+    std::vector<double> potentials(graph.nodes.size(), 0.0);
+    if (graph.nodes.empty() || low_value_threshold <= 0.0) {
+        return potentials;
+    }
+
+    for (int source : reachable_nodes(graph)) {
+        const GraphNode& prize = graph.nodes[source];
+        if (!is_prize_route_node(prize)) {
+            continue;
+        }
+        double prize_value = std::max(base_scores[source], 0.0);
+        if (prize_value <= 1e-12) {
+            continue;
+        }
+
+        std::vector<unsigned char> seen(graph.nodes.size(), 0);
+        std::queue<std::pair<int, int>> queue;
+        seen[source] = 1;
+        queue.push({source, 0});
+
+        while (!queue.empty()) {
+            auto [current, distance] = queue.front();
+            queue.pop();
+            if (distance >= RARE_ACCESS_PULL_RADIUS) {
+                continue;
+            }
+
+            for (int neighbor : graph.adjacency[current]) {
+                if (seen[neighbor]) {
+                    continue;
+                }
+                int next_distance = distance + 1;
+                if (next_distance > RARE_ACCESS_PULL_RADIUS) {
+                    continue;
+                }
+                seen[neighbor] = 1;
+                queue.push({neighbor, next_distance});
+
+                const GraphNode& access_node = graph.nodes[neighbor];
+                if (access_node.cost <= 0) {
+                    continue;
+                }
+                if (base_scores[neighbor] >= low_value_threshold) {
+                    continue;
+                }
+                double decay = std::pow(RARE_ACCESS_PULL_DECAY, static_cast<double>(next_distance));
+                potentials[neighbor] += prize_value * RARE_ACCESS_PULL_FACTOR * decay;
+            }
+        }
+    }
+
+    return potentials;
+}
+
 std::unordered_map<int, double> glyph_cluster_route_bonuses(
     const Graph& graph,
     const WeightModel& weights,
@@ -2295,16 +2378,28 @@ RouteInput build_route_input(
     input.cluster_scores.reserve(size);
     input.types.reserve(size);
     input.adjacency = graph.adjacency;
+    std::vector<double> base_scores;
+    base_scores.reserve(size);
+    for (int index = 0; index < size; ++index) {
+        const GraphNode& node = graph.nodes[index];
+        double base_score = route_node_score(node, weights, &route_bonuses, index);
+        base_scores.push_back(base_score);
+    }
+    double score_reference = route_score_reference(base_scores);
+    input.low_value_threshold = score_reference * 0.35;
+    std::vector<double> access_potentials = rare_access_route_potentials(
+        graph,
+        base_scores,
+        input.low_value_threshold
+    );
     for (int index = 0; index < size; ++index) {
         const GraphNode& node = graph.nodes[index];
         input.node_ids.push_back(node.id);
         input.costs.push_back(node.cost);
-        input.scores.push_back(route_node_score(node, weights, &route_bonuses, index));
+        input.scores.push_back(base_scores[index] + access_potentials[index]);
         input.cluster_scores.push_back(bonus_for_node(cluster_bonuses, index));
         input.types.push_back(node_type_code(node.type));
     }
-    double score_reference = route_score_reference(input.scores);
-    input.low_value_threshold = score_reference * 0.35;
     input.detour_penalty = score_reference * weights.glyph_route.detour;
     input.cluster_gain_factor = weights.glyph_route.path_efficiency;
     return input;
@@ -3241,6 +3336,266 @@ bool has_selected_neighbor_after_remove(
     return false;
 }
 
+bool route_connected_selection(const Graph& graph, const std::vector<unsigned char>& selected) {
+    if (graph.start_index < 0 || static_cast<size_t>(graph.start_index) >= selected.size() || !selected[graph.start_index]) {
+        return false;
+    }
+    int expected = 0;
+    for (unsigned char value : selected) {
+        if (value) {
+            ++expected;
+        }
+    }
+    if (expected <= 0) {
+        return false;
+    }
+
+    std::vector<unsigned char> visited(selected.size(), 0);
+    std::queue<int> queue;
+    queue.push(graph.start_index);
+    visited[graph.start_index] = 1;
+    int reached = 0;
+    while (!queue.empty()) {
+        int current = queue.front();
+        queue.pop();
+        ++reached;
+        for (int neighbor : graph.adjacency[current]) {
+            if (visited[neighbor] || !selected[neighbor]) {
+                continue;
+            }
+            visited[neighbor] = 1;
+            queue.push(neighbor);
+        }
+    }
+    return reached == expected;
+}
+
+std::vector<int> shortest_unselected_path_from_route(
+    const Graph& graph,
+    const std::vector<unsigned char>& selected,
+    int target,
+    int max_new_nodes
+) {
+    std::vector<int> previous(graph.nodes.size(), -2);
+    std::vector<int> new_count(graph.nodes.size(), 0);
+    std::queue<int> queue;
+    for (int index = 0; index < static_cast<int>(selected.size()); ++index) {
+        if (selected[index]) {
+            previous[index] = -1;
+            queue.push(index);
+        }
+    }
+
+    while (!queue.empty()) {
+        int current = queue.front();
+        queue.pop();
+        if (current == target) {
+            break;
+        }
+        for (int neighbor : graph.adjacency[current]) {
+            if (previous[neighbor] != -2 || selected[neighbor]) {
+                continue;
+            }
+            int next_new_count = new_count[current] + 1;
+            if (next_new_count > max_new_nodes) {
+                continue;
+            }
+            previous[neighbor] = current;
+            new_count[neighbor] = next_new_count;
+            queue.push(neighbor);
+        }
+    }
+
+    if (target < 0 || static_cast<size_t>(target) >= previous.size() || previous[target] == -2) {
+        return {};
+    }
+    std::vector<int> path;
+    int current = target;
+    while (current != -1) {
+        if (!selected[current]) {
+            path.push_back(current);
+        }
+        current = previous[current];
+    }
+    std::reverse(path.begin(), path.end());
+    return path;
+}
+
+std::vector<PrizeAccessPath> prize_access_paths(
+    const Graph& graph,
+    const std::vector<unsigned char>& selected,
+    const WeightModel& weights,
+    const std::unordered_map<int, double>& route_bonuses
+) {
+    std::vector<PrizeAccessPath> paths;
+    for (int index = 0; index < static_cast<int>(graph.nodes.size()); ++index) {
+        const GraphNode& node = graph.nodes[index];
+        if (selected[index] || !is_prize_route_node(node)) {
+            continue;
+        }
+        double prize_value = route_node_score(node, weights, &route_bonuses, index);
+        if (prize_value <= 1e-9) {
+            continue;
+        }
+        std::vector<int> add_indices = shortest_unselected_path_from_route(
+            graph,
+            selected,
+            index,
+            LOCAL_PRIZE_ACCESS_RESCUE_MAX_NEW_NODES
+        );
+        if (add_indices.empty() || add_indices.back() != index) {
+            continue;
+        }
+
+        int cost = 0;
+        double gain = 0.0;
+        for (int add_index : add_indices) {
+            cost += graph.nodes[add_index].cost;
+            gain += route_node_score(graph.nodes[add_index], weights, &route_bonuses, add_index);
+        }
+        if (cost <= 0) {
+            continue;
+        }
+        paths.push_back({std::move(add_indices), gain, cost});
+    }
+
+    std::sort(paths.begin(), paths.end(), [](const PrizeAccessPath& left, const PrizeAccessPath& right) {
+        double left_ratio = left.heuristic_gain / static_cast<double>(std::max(left.cost, 1));
+        double right_ratio = right.heuristic_gain / static_cast<double>(std::max(right.cost, 1));
+        if (std::abs(left_ratio - right_ratio) > 1e-12) return left_ratio > right_ratio;
+        if (std::abs(left.heuristic_gain - right.heuristic_gain) > 1e-12) return left.heuristic_gain > right.heuristic_gain;
+        return left.cost < right.cost;
+    });
+    if (static_cast<int>(paths.size()) > LOCAL_PRIZE_ACCESS_RESCUE_MAX_PATHS) {
+        paths.resize(LOCAL_PRIZE_ACCESS_RESCUE_MAX_PATHS);
+    }
+    return paths;
+}
+
+void collect_remove_combinations(
+    const Graph& graph,
+    const std::vector<int>& remove_candidates,
+    int start,
+    int needed_cost,
+    std::vector<int>& current,
+    int current_cost,
+    std::vector<std::vector<int>>& combinations,
+    int max_combinations
+) {
+    if (static_cast<int>(combinations.size()) >= max_combinations) {
+        return;
+    }
+    if (current_cost >= needed_cost) {
+        combinations.push_back(current);
+        return;
+    }
+    if (static_cast<int>(current.size()) >= LOCAL_PRIZE_ACCESS_RESCUE_MAX_REMOVES) {
+        return;
+    }
+    for (int index = start; index < static_cast<int>(remove_candidates.size()); ++index) {
+        int remove_index = remove_candidates[index];
+        current.push_back(remove_index);
+        collect_remove_combinations(
+            graph,
+            remove_candidates,
+            index + 1,
+            needed_cost,
+            current,
+            current_cost + graph.nodes[remove_index].cost,
+            combinations,
+            max_combinations
+        );
+        current.pop_back();
+        if (static_cast<int>(combinations.size()) >= max_combinations) {
+            return;
+        }
+    }
+}
+
+std::vector<double> score_patch_candidates_parallel(
+    const Graph& graph,
+    const std::vector<Glyph>& glyphs,
+    const WeightModel& weights,
+    const std::map<std::string, double>& starting_stats,
+    const ScoringContext& context,
+    const std::vector<unsigned char>& selected,
+    const std::vector<RoutePatchCandidate>& candidates,
+    int points_limit,
+    int worker_count
+) {
+    std::vector<double> scores(candidates.size(), -std::numeric_limits<double>::infinity());
+    if (candidates.empty()) {
+        return scores;
+    }
+    int active_workers = std::max(1, std::min(worker_count, static_cast<int>(candidates.size())));
+    auto score_one = [&](size_t index) {
+        std::vector<unsigned char> trial = selected;
+        for (int remove_index : candidates[index].remove_indices) {
+            trial[remove_index] = 0;
+        }
+        for (int add_index : candidates[index].add_indices) {
+            trial[add_index] = 1;
+        }
+        if (!route_connected_selection(graph, trial)) {
+            return -std::numeric_limits<double>::infinity();
+        }
+        return route_score_value(graph, glyphs, weights, starting_stats, context, trial, points_limit);
+    };
+
+    if (active_workers == 1) {
+        for (size_t index = 0; index < candidates.size(); ++index) {
+            scores[index] = score_one(index);
+        }
+        return scores;
+    }
+
+    std::atomic<size_t> next_index(0);
+    std::exception_ptr error = nullptr;
+    std::mutex error_mutex;
+    std::vector<std::thread> threads;
+    threads.reserve(active_workers);
+    for (int worker = 0; worker < active_workers; ++worker) {
+        threads.emplace_back([&]() {
+            try {
+                while (true) {
+                    size_t index = next_index.fetch_add(1);
+                    if (index >= candidates.size()) {
+                        break;
+                    }
+                    scores[index] = score_one(index);
+                }
+            } catch (...) {
+                std::lock_guard<std::mutex> lock(error_mutex);
+                if (!error) {
+                    error = std::current_exception();
+                }
+            }
+        });
+    }
+    for (std::thread& thread : threads) {
+        thread.join();
+    }
+    if (error) {
+        std::rethrow_exception(error);
+    }
+    return scores;
+}
+
+int best_scored_patch_index(
+    const std::vector<double>& scores,
+    double current_score
+) {
+    int best_index = -1;
+    double best_score = current_score;
+    for (int index = 0; index < static_cast<int>(scores.size()); ++index) {
+        if (scores[index] > best_score + 1e-9) {
+            best_index = index;
+            best_score = scores[index];
+        }
+    }
+    return best_index;
+}
+
 std::vector<double> score_swap_candidates_parallel(
     const Graph& graph,
     const std::vector<Glyph>& glyphs,
@@ -3668,6 +4023,116 @@ void improve_route_glyph_relocations(
     }
 }
 
+bool apply_best_prize_access_rescue(
+    const Graph& graph,
+    const std::vector<Glyph>& glyphs,
+    const WeightModel& weights,
+    const std::map<std::string, double>& starting_stats,
+    const ScoringContext& context,
+    const std::unordered_map<int, double>& route_bonuses,
+    RouteOutput& route,
+    int points_limit,
+    int& current_points,
+    double& current_score,
+    std::vector<LocalSwap>& swap_log,
+    int worker_count
+) {
+    std::vector<PrizeAccessPath> access_paths = prize_access_paths(graph, route.selected, weights, route_bonuses);
+    if (access_paths.empty()) {
+        return false;
+    }
+
+    std::vector<int> remove_candidates = removable_route_nodes(graph, route.selected, weights);
+    if (static_cast<int>(remove_candidates.size()) > LOCAL_PRIZE_ACCESS_RESCUE_REMOVE_CANDIDATES) {
+        remove_candidates.resize(LOCAL_PRIZE_ACCESS_RESCUE_REMOVE_CANDIDATES);
+    }
+
+    int spare_points = points_limit - current_points;
+    std::vector<RoutePatchCandidate> patch_candidates;
+    patch_candidates.reserve(LOCAL_PRIZE_ACCESS_RESCUE_MAX_CANDIDATES);
+    for (const PrizeAccessPath& path : access_paths) {
+        int needed_remove_cost = std::max(0, path.cost - spare_points);
+        std::vector<std::vector<int>> remove_combinations;
+        std::vector<int> current;
+        collect_remove_combinations(
+            graph,
+            remove_candidates,
+            0,
+            needed_remove_cost,
+            current,
+            0,
+            remove_combinations,
+            LOCAL_PRIZE_ACCESS_RESCUE_MAX_REMOVE_COMBINATIONS_PER_PATH
+        );
+        for (const std::vector<int>& remove_indices : remove_combinations) {
+            int remove_cost = 0;
+            for (int remove_index : remove_indices) {
+                remove_cost += graph.nodes[remove_index].cost;
+            }
+            if (current_points - remove_cost + path.cost > points_limit) {
+                continue;
+            }
+            RoutePatchCandidate candidate;
+            candidate.remove_indices = remove_indices;
+            candidate.add_indices = path.add_indices;
+            patch_candidates.push_back(std::move(candidate));
+            if (static_cast<int>(patch_candidates.size()) >= LOCAL_PRIZE_ACCESS_RESCUE_MAX_CANDIDATES) {
+                break;
+            }
+        }
+        if (static_cast<int>(patch_candidates.size()) >= LOCAL_PRIZE_ACCESS_RESCUE_MAX_CANDIDATES) {
+            break;
+        }
+    }
+
+    if (patch_candidates.empty()) {
+        return false;
+    }
+
+    std::vector<double> scores = score_patch_candidates_parallel(
+        graph,
+        glyphs,
+        weights,
+        starting_stats,
+        context,
+        route.selected,
+        patch_candidates,
+        points_limit,
+        worker_count
+    );
+    int best_index = best_scored_patch_index(scores, current_score);
+    if (best_index < 0) {
+        return false;
+    }
+
+    const RoutePatchCandidate& best = patch_candidates[best_index];
+    double score_before = current_score;
+    for (int remove_index : best.remove_indices) {
+        route.selected[remove_index] = 0;
+    }
+    for (int add_index : best.add_indices) {
+        route.selected[add_index] = 1;
+    }
+    int remove_cost = 0;
+    for (int remove_index : best.remove_indices) {
+        remove_cost += graph.nodes[remove_index].cost;
+    }
+    int add_cost = 0;
+    for (int add_index : best.add_indices) {
+        add_cost += graph.nodes[add_index].cost;
+    }
+    current_points = current_points - remove_cost + add_cost;
+    current_score = scores[best_index];
+
+    size_t log_count = std::max(best.remove_indices.size(), best.add_indices.size());
+    for (size_t index = 0; index < log_count; ++index) {
+        int remove_index = index < best.remove_indices.size() ? best.remove_indices[index] : -1;
+        int add_index = index < best.add_indices.size() ? best.add_indices[index] : -1;
+        swap_log.push_back({remove_index, add_index, score_before, current_score});
+    }
+    return true;
+}
+
 RouteOutput improve_route_locally(
     const Graph& graph,
     const std::vector<Glyph>& glyphs,
@@ -3696,6 +4161,21 @@ RouteOutput improve_route_locally(
         }
         std::vector<int> add_candidates = adjacent_add_nodes(graph, route.selected, weights, route_bonuses, max_add_cost);
         if (add_candidates.empty()) {
+            if (apply_best_prize_access_rescue(
+                    graph,
+                    glyphs,
+                    weights,
+                    starting_stats,
+                    context,
+                    route_bonuses,
+                    route,
+                    points_limit,
+                    current_points,
+                    current_score,
+                    swap_log,
+                    worker_count)) {
+                continue;
+            }
             break;
         }
 
@@ -3786,6 +4266,21 @@ RouteOutput improve_route_locally(
         }
 
         if (swap_candidates.empty()) {
+            if (apply_best_prize_access_rescue(
+                    graph,
+                    glyphs,
+                    weights,
+                    starting_stats,
+                    context,
+                    route_bonuses,
+                    route,
+                    points_limit,
+                    current_points,
+                    current_score,
+                    swap_log,
+                    worker_count)) {
+                continue;
+            }
             break;
         }
         std::vector<double> swap_scores = score_swap_candidates_parallel(
@@ -3801,6 +4296,21 @@ RouteOutput improve_route_locally(
         );
         BestSwapCandidate best = best_scored_swap(swap_candidates, swap_scores, current_score);
         if (best.remove_index < 0 || best.add_index < 0) {
+            if (apply_best_prize_access_rescue(
+                    graph,
+                    glyphs,
+                    weights,
+                    starting_stats,
+                    context,
+                    route_bonuses,
+                    route,
+                    points_limit,
+                    current_points,
+                    current_score,
+                    swap_log,
+                    worker_count)) {
+                continue;
+            }
             break;
         }
         swap_log.push_back({best.remove_index, best.add_index, current_score, best.score});
@@ -3808,6 +4318,24 @@ RouteOutput improve_route_locally(
         route.selected[best.add_index] = 1;
         current_points = current_points - graph.nodes[best.remove_index].cost + graph.nodes[best.add_index].cost;
         current_score = best.score;
+    }
+
+    for (int pass = 0; pass < LOCAL_IMPROVEMENT_MAX_PASSES; ++pass) {
+        if (!apply_best_prize_access_rescue(
+                graph,
+                glyphs,
+                weights,
+                starting_stats,
+                context,
+                route_bonuses,
+                route,
+                points_limit,
+                current_points,
+                current_score,
+                swap_log,
+                worker_count)) {
+            break;
+        }
     }
 
     improve_route_glyph_relocations(

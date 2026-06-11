@@ -163,7 +163,7 @@ bin\paragon_optimize.exe optimize --profile "profiles\spiritborn.json" ...
 
 Ветка фикса: `fix/bug-1-prize-potential-field`.
 
-Open. Требует реализации, тестов и проверки на нескольких профилях/досках (включая кейсы с высоковесовыми bonus_stats на редких и ситуации с длинными access chain'ами).
+Fixed in `fix/bug-1-prize-potential-field`: добавлен rare/legendary access potential для greedy route scores и bounded local prize-access rescue для multi-node access path'ов. Проверено синтетическими регрессиями и профилем `profiles\spiritborn.json`: `prodigy_s_tempo_3_6` + `prodigy_s_tempo_3_7` попадают в итоговый selected set.
 
 ---
 
