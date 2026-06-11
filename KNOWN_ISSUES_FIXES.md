@@ -550,3 +550,9 @@ RouteOutput improved_route = improve_route_locally(best_graph, ... best.route ..
 ```
 
 От меня: если для каждого маршрута делать локальный ремонт?Дорого выйдет? ну то есть не `Среди всех таких pre-local результатов выбирается один лучший`, а берем все pre-local, и понеслась для каждого делать local ремонт?
+
+### Статус
+
+Ветка фикса: `fix/bug-4-top-k-local-improve`.
+
+Open. Требует реализации top-K локального ремонта pre-local маршрутов, проверки стоимости и регресс-тестов на paladin default vs reduced limits.
