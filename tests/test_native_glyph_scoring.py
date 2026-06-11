@@ -614,6 +614,55 @@ class NativeGlyphScoringTests(unittest.TestCase):
         self.assertNotIn("plain_value", with_hint["selected_nodes"])
         self.assertAlmostEqual(with_hint["glyphs"][0]["node_bonus_score"], 3.0)
 
+    def test_magic_amp_potential_guides_route_through_connector_to_node_bonus_magic(self) -> None:
+        magic_bonus = glyph_payload(
+            "magic_bonus",
+            node_bonus={"node_type": "magic", "bonus_percent": 100.0, "multiplier": 1.0},
+        )
+
+        def run(magic_amp: float) -> dict[str, object]:
+            return self.run_optimizer(
+                nodes=[
+                    {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
+                    {"id": "socket_a", "x": 0, "y": 1, "type": "glyph_socket", "cost": 1, "stats": {}},
+                    {"id": "plain_value", "x": 1, "y": 1, "type": "normal", "cost": 1, "stats": {"damage": 7}},
+                    {"id": "path_to_bonus", "x": 0, "y": 2, "type": "normal", "cost": 1, "stats": {}},
+                    {"id": "bonus_magic", "x": 0, "y": 3, "type": "magic", "cost": 1, "stats": {"damage": 6}},
+                ],
+                edges=[
+                    ["start", "socket_a"],
+                    ["socket_a", "plain_value"],
+                    ["socket_a", "path_to_bonus"],
+                    ["path_to_bonus", "bonus_magic"],
+                ],
+                glyph_sockets=["socket_a"],
+                glyphs=[magic_bonus],
+                weights={
+                    "weights": {"damage": 1.0, "glyph_socket": 5.0},
+                    "glyph_route": {
+                        "node_bonus": 1.0,
+                        "magic_amp": magic_amp,
+                        "cluster": 0.0,
+                        "detour": 0.0,
+                        "max_bonus_multiplier": 1.60,
+                    },
+                },
+                points=3,
+                include_route_steps=True,
+            )
+
+        without_amp = run(0.0)["results"][0]
+        with_amp = run(1.0)["results"][0]
+
+        self.assertEqual(without_amp["local_swaps"], 1)
+        self.assertLess(without_amp["local_score_before"], without_amp["score"])
+        self.assertEqual(with_amp.get("local_swaps", 0), 0)
+        self.assertEqual(with_amp["route_steps"][0]["target"], "bonus_magic")
+        self.assertIn("path_to_bonus", with_amp["selected_nodes"])
+        self.assertIn("bonus_magic", with_amp["selected_nodes"])
+        self.assertNotIn("plain_value", with_amp["selected_nodes"])
+        self.assertAlmostEqual(with_amp["glyphs"][0]["node_bonus_score"], 6.0)
+
     def test_route_node_bonus_hint_includes_potential_rare_bonus_stats(self) -> None:
         rare_bonus = glyph_payload(
             "rare_bonus",
