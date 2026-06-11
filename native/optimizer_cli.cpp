@@ -42,6 +42,8 @@ constexpr int TYPE_LEGENDARY = 3;
 constexpr int TYPE_GLYPH_SOCKET = 4;
 constexpr double GLYPH_ROUTE_BONUS_FACTOR = 0.5;
 constexpr double GLYPH_ROUTE_FUTURE_STAT_FACTOR = 0.15;
+constexpr int GLYPH_ROUTE_MAGIC_AMP_RADIUS = 2;
+constexpr double GLYPH_ROUTE_MAGIC_AMP_DECAY = 0.70;
 constexpr int GLYPH_ROUTE_CLUSTER_RADIUS = 2;
 constexpr double GLYPH_SCALING_STEP = 5.0;
 constexpr double GLYPH_SCALING_PARTIAL_CREDIT = 0.35;
@@ -145,6 +147,7 @@ struct GlyphRouteTuning {
     double activation = 1.0;
     double scaling = 1.0;
     double node_bonus = 1.0;
+    double magic_amp = 0.45;
     double future = 0.35;
     double synergy = 0.25;
     double scarcity = 0.30;
@@ -296,6 +299,7 @@ struct GlyphThresholdCandidate {
 struct GlyphNodeValueContribution {
     int node_index = -1;
     double direct = 0.0;
+    double node_bonus_direct = 0.0;
     double activation_value = 0.0;
     double scaling_value = 0.0;
     double future_value = 0.0;
@@ -442,6 +446,7 @@ void read_glyph_route_tuning(const json& value, GlyphRouteTuning& tuning) {
     read_optional_tuning_double(value, "activation", tuning.activation, 0.0, 10.0);
     read_optional_tuning_double(value, "scaling", tuning.scaling, 0.0, 10.0);
     read_optional_tuning_double(value, "node_bonus", tuning.node_bonus, 0.0, 10.0);
+    read_optional_tuning_double(value, "magic_amp", tuning.magic_amp, 0.0, 10.0);
     read_optional_tuning_double(value, "future", tuning.future, 0.0, 10.0);
     read_optional_tuning_double(value, "synergy", tuning.synergy, 0.0, 10.0);
     read_optional_tuning_double(value, "scarcity", tuning.scarcity, 0.0, 10.0);
@@ -1727,6 +1732,7 @@ void add_glyph_matrix_node_value(GlyphValueMatrix& matrix, const GlyphNodeValueC
     for (GlyphNodeValueContribution& existing : matrix.node_values) {
         if (existing.node_index == contribution.node_index) {
             existing.direct += contribution.direct;
+            existing.node_bonus_direct += contribution.node_bonus_direct;
             existing.activation_value += contribution.activation_value;
             existing.scaling_value += contribution.scaling_value;
             existing.future_value += contribution.future_value;
@@ -1874,6 +1880,7 @@ std::vector<GlyphValueMatrix> build_glyph_value_matrices(
                     GlyphNodeValueContribution contribution;
                     contribution.node_index = node_index;
                     contribution.direct = direct;
+                    contribution.node_bonus_direct = direct;
                     add_glyph_matrix_node_value(matrix, contribution);
                 }
             }
@@ -1895,6 +1902,7 @@ std::unordered_map<int, double> glyph_route_node_bonuses(
     struct NodeAccumulator {
         double best_direct = 0.0;
         double total_direct = 0.0;
+        double best_node_bonus_direct = 0.0;
         int hits = 0;
         std::set<std::string> glyph_ids;
         std::set<int> socket_indices;
@@ -1913,15 +1921,53 @@ std::unordered_map<int, double> glyph_route_node_bonuses(
             NodeAccumulator& accumulator = accumulators[contribution.node_index];
             accumulator.best_direct = std::max(accumulator.best_direct, contribution.direct);
             accumulator.total_direct += contribution.direct;
+            accumulator.best_node_bonus_direct =
+                std::max(accumulator.best_node_bonus_direct, contribution.node_bonus_direct);
             accumulator.hits += 1;
             accumulator.glyph_ids.insert(glyph.id);
             accumulator.socket_indices.insert(matrix.socket_index);
         }
     }
 
+    // Let access nodes inherit a small amount of value from nearby magic nodes
+    // that can be amplified by a node-bonus glyph. The full scorer still decides.
+    std::vector<double> magic_amp_potential(graph.nodes.size(), 0.0);
+    if (weights.glyph_route.magic_amp > 0.0) {
+        for (int source = 0; source < static_cast<int>(accumulators.size()); ++source) {
+            const GraphNode& source_node = graph.nodes[source];
+            double source_value = accumulators[source].best_node_bonus_direct;
+            if (source_node.type != "magic" || source_value <= 0.0) {
+                continue;
+            }
+
+            std::vector<unsigned char> seen(graph.nodes.size(), 0);
+            std::queue<std::pair<int, int>> queue;
+            seen[source] = 1;
+            queue.push({source, 0});
+            while (!queue.empty()) {
+                auto [current, distance] = queue.front();
+                queue.pop();
+                if (distance > 0) {
+                    double distance_scale = std::pow(GLYPH_ROUTE_MAGIC_AMP_DECAY, distance);
+                    magic_amp_potential[current] += source_value * weights.glyph_route.magic_amp * distance_scale;
+                }
+                if (distance >= GLYPH_ROUTE_MAGIC_AMP_RADIUS) {
+                    continue;
+                }
+                for (int neighbor : graph.adjacency[current]) {
+                    if (!seen[neighbor]) {
+                        seen[neighbor] = 1;
+                        queue.push({neighbor, distance + 1});
+                    }
+                }
+            }
+        }
+    }
+
     for (int node_index = 0; node_index < static_cast<int>(accumulators.size()); ++node_index) {
         const NodeAccumulator& accumulator = accumulators[node_index];
-        if (accumulator.total_direct <= 0.0) {
+        double propagated_magic_amp = magic_amp_potential[node_index];
+        if (accumulator.total_direct <= 0.0 && propagated_magic_amp <= 0.0) {
             continue;
         }
         double shared_value = std::max(accumulator.total_direct - accumulator.best_direct, 0.0);
@@ -1930,14 +1976,15 @@ std::unordered_map<int, double> glyph_route_node_bonuses(
         double future_bonus = shared_value * weights.glyph_route.future;
         double synergy_scale = std::min(shared_glyphs + shared_sockets * 0.5, 4.0) / 4.0;
         double synergy_bonus = shared_value * weights.glyph_route.synergy * synergy_scale;
-        double candidate_bonus = accumulator.best_direct + future_bonus + synergy_bonus;
+        double candidate_bonus = accumulator.best_direct + future_bonus + synergy_bonus + propagated_magic_amp;
         if (accumulator.hits > 1 && weights.glyph_route.synergy > 0.0) {
             candidate_bonus *= 1.0 + std::min(accumulator.hits - 1, 6) * weights.glyph_route.synergy * 0.02;
         }
 
         const GraphNode& node = graph.nodes[node_index];
         double base_limit = std::max(node_base_score(node, weights), 1.0);
-        double expected_limit = std::max(base_limit, accumulator.best_direct * 0.35);
+        double node_bonus_limit = node.type == "magic" ? accumulator.best_node_bonus_direct : 0.0;
+        double expected_limit = std::max({base_limit, accumulator.best_direct * 0.35, node_bonus_limit, propagated_magic_amp});
         double route_hint_limit = expected_limit * weights.glyph_route.max_bonus_multiplier;
         bonuses[node_index] = std::min(candidate_bonus, route_hint_limit);
     }
@@ -2742,6 +2789,7 @@ json glyph_route_tuning_json(const GlyphRouteTuning& tuning) {
         {"activation", round4(tuning.activation)},
         {"scaling", round4(tuning.scaling)},
         {"node_bonus", round4(tuning.node_bonus)},
+        {"magic_amp", round4(tuning.magic_amp)},
         {"future", round4(tuning.future)},
         {"synergy", round4(tuning.synergy)},
         {"scarcity", round4(tuning.scarcity)},

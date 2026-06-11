@@ -316,7 +316,9 @@ bin\paragon_optimize.exe optimize --profile "profiles\spiritborn.json" ...
 
 ### Статус
 
-Open. Требует реализации, тестов и проверки на spiritborn (и других классах, где есть node-bonus glyphs). Связан с Багом #1 — общая корневая причина в том, что эвристика поиска и локального ремонта недостаточно "видит" будущую/условную ценность за пределами немедленного node_base_score.
+Ветка фикса: `fix/bug-2-magic-node-bonus-uplift`.
+
+Fixed in branch. Реализован route-hint `magic_amp` для magic-нод под glyph `node_bonus` и короткий access-potential на ближайшие коннекторы. Требует проверки на spiritborn (и других классах, где есть node-bonus glyphs). Связан с Багом #1 — общая корневая причина в том, что эвристика поиска и локального ремонта недостаточно "видит" будущую/условную ценность за пределами немедленного node_base_score.
 
 ---
 
