@@ -704,6 +704,94 @@ class NativeGlyphScoringTests(unittest.TestCase):
         self.assertNotIn("plain_value", with_amp["selected_nodes"])
         self.assertAlmostEqual(with_amp["glyphs"][0]["node_bonus_score"], 6.0)
 
+    def test_route_equal_cost_paths_prefer_higher_gain_connector_without_local_cleanup(self) -> None:
+        payload = self.run_optimizer(
+            nodes=[
+                {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
+                {"id": "weak_connector", "x": -1, "y": 0, "type": "normal", "cost": 1, "stats": {"willpower": 1}},
+                {"id": "strong_connector", "x": 1, "y": 0, "type": "normal", "cost": 1, "stats": {"damage": 10}},
+                {"id": "prize", "x": 0, "y": 1, "type": "normal", "cost": 1, "stats": {"damage": 100}},
+            ],
+            edges=[
+                ["start", "weak_connector"],
+                ["start", "strong_connector"],
+                ["weak_connector", "prize"],
+                ["strong_connector", "prize"],
+            ],
+            glyph_sockets=[],
+            glyphs=[],
+            weights={
+                "weights": {"damage": 1.0, "willpower": 0.1},
+                "glyph_route": {"cluster": 0.0, "detour": 0.0, "path_efficiency": 0.0},
+            },
+            points=2,
+            include_route_steps=True,
+            profile_extra={"max_routes": 1, "candidate_targets": 4},
+        )
+
+        result = payload["results"][0]
+        selected = set(result["selected_nodes"])
+        self.assertIn("strong_connector", selected)
+        self.assertNotIn("weak_connector", selected)
+        self.assertEqual(result.get("local_swaps", 0), 0)
+        self.assertIn("strong_connector", result["route_steps"][0]["path"])
+        self.assertNotIn("weak_connector", result["route_steps"][0]["path"])
+
+    def test_route_scaling_glyph_values_stat_nodes_beyond_activation_without_local_cleanup(self) -> None:
+        scaler = glyph_payload(
+            "scaler",
+            threshold_stat="intelligence",
+            requirement=5,
+            skill_tags=[{"name": "Damage"}],
+            bonus_text_en=(
+                "Rare Glyph\nscaler\nRadius Size: 3\n"
+                "For every 5 Intelligence purchased within range, you deal +20.0% increased Damage.\n"
+                "Additional Bonus:\nSynthetic bonus.\n"
+                "Required (purchased in range): +5 Intelligence"
+            ),
+            scaling_value_per_5={"samples": [{"level": 1, "value": 20.0}]},
+        )
+        payload = self.run_optimizer(
+            nodes=[
+                {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
+                {"id": "socket", "x": 0, "y": 1, "type": "glyph_socket", "cost": 1, "stats": {}},
+                {"id": "int_a", "x": -1, "y": 1, "type": "normal", "cost": 1, "stats": {"intelligence": 5}},
+                {"id": "int_b", "x": 1, "y": 1, "type": "normal", "cost": 1, "stats": {"intelligence": 5}},
+                {"id": "int_c", "x": 0, "y": 2, "type": "normal", "cost": 1, "stats": {"intelligence": 5}},
+                {"id": "plain_damage", "x": 0, "y": 3, "type": "normal", "cost": 1, "stats": {"damage": 5}},
+            ],
+            edges=[
+                ["start", "socket"],
+                ["socket", "int_a"],
+                ["socket", "int_b"],
+                ["socket", "int_c"],
+                ["socket", "plain_damage"],
+            ],
+            glyph_sockets=["socket"],
+            glyphs=[scaler],
+            weights={
+                "weights": {"damage": 1.0, "intelligence": 0.0, "glyph_socket": 5.0},
+                "glyph_route": {
+                    "cluster": 0.0,
+                    "detour": 0.0,
+                    "fill_target": 1.2,
+                },
+            },
+            points=4,
+            include_route_steps=True,
+            glyph_levels={"scaler": 1},
+            profile_extra={"max_routes": 1, "candidate_targets": 8},
+        )
+
+        result = payload["results"][0]
+        selected = set(result["selected_nodes"])
+        self.assertEqual({"int_a", "int_b", "int_c"} - selected, set())
+        self.assertNotIn("plain_damage", selected)
+        self.assertEqual(result.get("local_swaps", 0), 0)
+        glyph = result["glyphs"][0]
+        self.assertAlmostEqual(glyph["stat_in_radius"], 15.0)
+        self.assertAlmostEqual(glyph["score"], 60.0)
+
     def test_route_node_bonus_hint_includes_potential_rare_bonus_stats(self) -> None:
         rare_bonus = glyph_payload(
             "rare_bonus",
