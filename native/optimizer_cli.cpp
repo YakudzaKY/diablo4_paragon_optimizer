@@ -5165,7 +5165,6 @@ std::string generate_html_visual(const json& payload, const std::map<std::string
     }
     const json& best = results[0];
     const json& boards_info = best.value("boards", json::array());
-    const json& local_swap_report = best.value("local_swap_report", json::array());
     std::map<std::string, json> board_info_by_id;
     std::vector<std::string> board_order;
     std::map<std::string, int> rotations;
@@ -5182,29 +5181,24 @@ std::string generate_html_visual(const json& payload, const std::map<std::string
         selected_nodes.insert(node_id);
     }
 
-    std::map<std::string, std::string> board_glyphs;
     std::map<std::string, std::string> glyph_names;
-    for (const auto& board_info : boards_info) {
-        std::string board_id = get_json_string(board_info, "id");
-        std::string glyph = get_json_string(board_info, "glyph");
-        if (!board_id.empty() && !glyph.empty()) {
-            board_glyphs[board_id] = glyph;
-        }
-    }
     for (const auto& glyph_info : best.value("glyphs", json::array())) {
         std::string glyph = get_json_string(glyph_info, "glyph");
         if (!glyph.empty()) {
             glyph_names[glyph] = localized_name(glyph_info.value("name", json::object()), glyph);
         }
     }
-
-    std::map<std::string, int> glyph_legend;
-    int glyph_counter = 1;
+    std::map<std::string, std::string> board_glyph_names;
     for (const auto& board_info : boards_info) {
         std::string board_id = get_json_string(board_info, "id");
-        auto glyph_it = board_glyphs.find(board_id);
-        if (glyph_it != board_glyphs.end() && !glyph_legend.count(glyph_it->second)) {
-            glyph_legend[glyph_it->second] = glyph_counter++;
+        std::string glyph = get_json_string(board_info, "glyph");
+        if (!board_id.empty() && !glyph.empty()) {
+            std::string glyph_name = localized_name(board_info.value("glyph_name", json::object()), glyph);
+            auto glyph_name_it = glyph_names.find(glyph);
+            if (glyph_name == glyph && glyph_name_it != glyph_names.end()) {
+                glyph_name = glyph_name_it->second;
+            }
+            board_glyph_names[board_id] = glyph_name;
         }
     }
 
@@ -5316,7 +5310,6 @@ std::string generate_html_visual(const json& payload, const std::map<std::string
     html << "</p>\n";
     html << "<div class='svg-container'>\n";
     html << "<svg width='" << svg_width << "' height='" << svg_height << "'>\n";
-    html << "<defs>\n<marker id='swap-arrow' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M 0 1 L 9 5 L 0 9 Z' fill='#0c0'/></marker>\n</defs>\n";
 
     for (const auto& glyph_info : best.value("glyphs", json::array())) {
         std::string socket_id = get_json_string(glyph_info, "socket");
@@ -5378,27 +5371,6 @@ std::string generate_html_visual(const json& payload, const std::map<std::string
              << (selected ? "" : "stroke-dasharray='4'") << " />\n";
     }
 
-    // Draw arrows for local replacements (post-route improvements): removed -> added
-    for (const auto& item : local_swap_report) {
-        std::string rem_id = get_json_string(item, "removed");
-        std::string add_id = get_json_string(item, "added");
-        auto rem_it = global_nodes.find(rem_id);
-        auto add_it = global_nodes.find(add_id);
-        if (rem_it == global_nodes.end() || add_it == global_nodes.end()) continue;
-        auto [rx, ry] = to_svg_coord(rem_it->second.gx, rem_it->second.gy);
-        auto [ax, ay] = to_svg_coord(add_it->second.gx, add_it->second.gy);
-        double mx = (rx + ax) / 2.0;
-        double my = (ry + ay) / 2.0;
-        html << "<line x1='" << rx << "' y1='" << ry << "' x2='" << ax << "' y2='" << ay
-             << "' stroke='#0c0' stroke-width='2.5' stroke-dasharray='4,3' marker-end='url(#swap-arrow)' opacity='0.9' />\n";
-        double delta = as_double(item.value("score_delta", 0.0));
-        if (std::abs(delta) > 1e-9) {
-            std::string dstr = (delta >= 0 ? "+" : "") + format_value(delta);
-            html << "<text x='" << (mx + 3) << "' y='" << (my - 3)
-                 << "' font-size='9' fill='#0c0' font-family='monospace' pointer-events='none'>" << html_escape(dstr) << "</text>\n";
-        }
-    }
-
     struct Bounds {
         int min_x = std::numeric_limits<int>::max();
         int max_x = std::numeric_limits<int>::min();
@@ -5425,6 +5397,10 @@ std::string generate_html_visual(const json& payload, const std::map<std::string
         std::string title = board_name + " (поворот " + std::to_string(turns);
         if (points_remaining >= 0) {
             title += ", вход: " + std::to_string(points_remaining) + " очк.";
+        }
+        auto glyph_name_it = board_glyph_names.find(board_id);
+        if (glyph_name_it != board_glyph_names.end()) {
+            title += ", глиф: " + glyph_name_it->second;
         }
         title += ")";
         html << "<text x='" << cx << "' y='" << (cy - 20)
@@ -5453,40 +5429,9 @@ std::string generate_html_visual(const json& payload, const std::map<std::string
         html << "<circle cx='" << cx << "' cy='" << cy << "' r='" << radius << "' fill='" << fill_color
              << "' stroke='" << stroke_color << "' stroke-width='" << stroke_width << "' opacity='" << opacity
              << "' class='paragon-node' data-id='" << node_id << "'><title>" << html_escape(node_id + " (" + node.type + ")") << "</title></circle>\n";
-        if (node.type == "glyph_socket") {
-            auto glyph_it = board_glyphs.find(node.board_id);
-            if (glyph_it != board_glyphs.end() && glyph_legend.count(glyph_it->second)) {
-                html << "<text x='" << cx << "' y='" << cy
-                     << "' font-size='14' font-weight='bold' font-family='sans-serif' fill='#000' text-anchor='middle' dominant-baseline='central' opacity='"
-                     << opacity << "'>" << glyph_legend[glyph_it->second] << "</text>\n";
-            }
-        }
     }
 
     html << "</svg>\n</div>\n";
-    html << "<div class='legend'>\n<div class='legend-title'>Вход в доски</div>\n";
-    for (const auto& board_info : boards_info) {
-        std::string board_id = get_json_string(board_info, "id");
-        json board_name_json = board_info.value("name", json::object());
-        std::string board_name = localized_name(board_name_json, board_id);
-        int before = get_json_int(board_info, "points_remaining_before_board", -1);
-        int after_first = get_json_int(board_info, "points_remaining_after_first_board_node", -1);
-        std::string first_node = get_json_string(board_info, "first_selected_node");
-        html << "<div><strong>" << html_escape(board_name) << "</strong>: ";
-        if (before >= 0) {
-            html << "на входе " << before << " очк.";
-            if (after_first >= 0) {
-                html << ", после первой клетки " << after_first << " очк.";
-            }
-            if (!first_node.empty()) {
-                html << " (" << html_escape(first_node) << ")";
-            }
-        } else {
-            html << "нет данных";
-        }
-        html << "</div>\n";
-    }
-    html << "</div>\n";
     const json& node_requirements = best.value("node_requirements", json::array());
     if (!node_requirements.empty()) {
         auto requirement_text = [](const json& item) {
@@ -5514,48 +5459,6 @@ std::string generate_html_visual(const json& payload, const std::map<std::string
         }
         html << "</div>\n";
     }
-    if (!local_swap_report.empty()) {
-        auto stats_text = [](const json& stats) {
-            std::ostringstream text;
-            if (!stats.is_object()) {
-                return std::string("");
-            }
-            bool first = true;
-            for (auto it = stats.begin(); it != stats.end(); ++it) {
-                if (!first) text << ", ";
-                first = false;
-                text << it.key() << "=" << format_value(as_double(it.value()));
-            }
-            return text.str();
-        };
-        html << "<div class='legend requirements'>\n<div class='legend-title'>Локальные замены</div>\n";
-        for (const auto& item : local_swap_report) {
-            std::string removed_id = get_json_string(item, "removed");
-            std::string added_id = get_json_string(item, "added");
-            std::string removed_name = localized_name(item.value("removed_name", json::object()), removed_id);
-            std::string added_name = localized_name(item.value("added_name", json::object()), added_id);
-            html << "<div><strong>" << html_escape(removed_name) << "</strong> ["
-                 << html_escape(stats_text(item.value("removed_stats", json::object()))) << "] -> <strong>"
-                 << html_escape(added_name) << "</strong> ["
-                 << html_escape(stats_text(item.value("added_stats", json::object()))) << "], +"
-                 << html_escape(format_value(as_double(item.value("score_delta", 0.0)))) << "</div>\n";
-        }
-        html << "</div>\n";
-    }
-    html << "<div class='legend'>\n<div class='legend-title'>Глифы</div>\n";
-    if (!glyph_legend.empty()) {
-        std::vector<std::pair<std::string, int>> items(glyph_legend.begin(), glyph_legend.end());
-        std::sort(items.begin(), items.end(), [](const auto& left, const auto& right) {
-            return left.second < right.second;
-        });
-        for (const auto& [glyph, index] : items) {
-            std::string display_name = glyph_names.count(glyph) ? glyph_names[glyph] : glyph;
-            html << "<div><strong>[" << index << "]</strong> — " << html_escape(display_name) << "</div>\n";
-        }
-    } else {
-        html << "<div>Глифы не вставлены.</div>\n";
-    }
-    html << "</div>\n";
     html << "<script>\n";
     html << "const NODE_DATA = " << node_data_js.dump() << ";\n";
     html << "function fmtMap(m){ if(!m||typeof m!=='object')return ''; return Object.entries(m).map(([k,v])=>k+' '+v).join(', '); }\n";

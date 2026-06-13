@@ -704,6 +704,66 @@ class NativeGlyphScoringTests(unittest.TestCase):
         self.assertNotIn("plain_value", with_amp["selected_nodes"])
         self.assertAlmostEqual(with_amp["glyphs"][0]["node_bonus_score"], 6.0)
 
+    def test_html_visual_omits_debug_sections_and_labels_board_glyph(self) -> None:
+        visible_glyph = glyph_payload(
+            "visible_glyph",
+            node_bonus={"node_type": "magic", "bonus_percent": 100.0, "multiplier": 1.0},
+        )
+        visible_glyph["name"] = {"en": "Visible Glyph"}
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            profile_path, _ = self.write_optimizer_fixture(
+                root=root,
+                nodes=[
+                    {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
+                    {"id": "socket_a", "x": 0, "y": 1, "type": "glyph_socket", "cost": 1, "stats": {}},
+                    {"id": "plain_value", "x": 1, "y": 1, "type": "normal", "cost": 1, "stats": {"damage": 7}},
+                    {"id": "path_to_bonus", "x": 0, "y": 2, "type": "normal", "cost": 1, "stats": {}},
+                    {"id": "bonus_magic", "x": 0, "y": 3, "type": "magic", "cost": 1, "stats": {"damage": 6}},
+                ],
+                edges=[
+                    ["start", "socket_a"],
+                    ["socket_a", "plain_value"],
+                    ["socket_a", "path_to_bonus"],
+                    ["path_to_bonus", "bonus_magic"],
+                ],
+                glyph_sockets=["socket_a"],
+                glyphs=[visible_glyph],
+                weights={
+                    "weights": {"damage": 1.0, "glyph_socket": 5.0},
+                    "glyph_route": {
+                        "node_bonus": 1.0,
+                        "magic_amp": 0.0,
+                        "cluster": 0.0,
+                        "detour": 0.0,
+                        "max_bonus_multiplier": 1.60,
+                    },
+                },
+                points=3,
+                profile_extra={"max_routes": 1, "candidate_targets": 8, "no_html": False},
+            )
+
+            completed = subprocess.run(
+                [str(self.binary), "optimize", "--profile", str(profile_path)],
+                cwd=root,
+                check=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+                encoding="utf-8",
+            )
+            payload = json.loads(completed.stdout)
+            self.assertGreater(payload["results"][0].get("local_swaps", 0), 0)
+            html = (root / payload["html_file"]).read_text(encoding="utf-8")
+
+        self.assertIn(", \u0433\u043b\u0438\u0444: Visible Glyph", html)
+        self.assertNotIn("\u0412\u0445\u043e\u0434 \u0432 \u0434\u043e\u0441\u043a\u0438", html)
+        self.assertNotIn("\u041b\u043e\u043a\u0430\u043b\u044c\u043d\u044b\u0435 \u0437\u0430\u043c\u0435\u043d\u044b", html)
+        self.assertNotIn("\u0413\u043b\u0438\u0444\u044b", html)
+        self.assertNotIn("swap-arrow", html)
+        self.assertNotIn("stroke='#0c0'", html)
+
     def test_route_equal_cost_paths_prefer_higher_gain_connector_without_local_cleanup(self) -> None:
         payload = self.run_optimizer(
             nodes=[
