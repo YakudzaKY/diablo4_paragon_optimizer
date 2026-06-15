@@ -998,6 +998,63 @@ class NativeGlyphScoringTests(unittest.TestCase):
         self.assertNotIn("plain_value_b", result["selected_nodes"])
         self.assertGreater(result["local_swaps"], 0)
 
+    def test_rare_requirement_repair_packages_stat_nodes_to_activate_selected_rare(self) -> None:
+        payload = self.run_optimizer(
+            nodes=[
+                {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
+                {
+                    "id": "sleeping_rare",
+                    "x": 0,
+                    "y": 1,
+                    "type": "rare",
+                    "cost": 1,
+                    "stats": {"damage": 1},
+                    "requirements": {"willpower": 20},
+                    "bonus_stats": {"damage": 50},
+                },
+                {"id": "damage_a", "x": 1, "y": 0, "type": "normal", "cost": 1, "stats": {"damage": 9}},
+                {"id": "damage_b", "x": 2, "y": 0, "type": "normal", "cost": 1, "stats": {"damage": 9}},
+                {"id": "damage_c", "x": 3, "y": 0, "type": "normal", "cost": 1, "stats": {"damage": 9}},
+                {"id": "damage_d", "x": 4, "y": 0, "type": "normal", "cost": 1, "stats": {"damage": 9}},
+                {"id": "will_a", "x": -1, "y": 0, "type": "normal", "cost": 1, "stats": {"willpower": 5}},
+                {"id": "will_b", "x": -2, "y": 0, "type": "normal", "cost": 1, "stats": {"willpower": 5}},
+                {"id": "will_c", "x": -3, "y": 0, "type": "normal", "cost": 1, "stats": {"willpower": 5}},
+                {"id": "will_d", "x": -4, "y": 0, "type": "normal", "cost": 1, "stats": {"willpower": 5}},
+            ],
+            edges=[
+                ["start", "sleeping_rare"],
+                ["start", "damage_a"],
+                ["start", "damage_b"],
+                ["start", "damage_c"],
+                ["start", "damage_d"],
+                ["start", "will_a"],
+                ["start", "will_b"],
+                ["start", "will_c"],
+                ["start", "will_d"],
+            ],
+            glyph_sockets=[],
+            glyphs=[],
+            weights={
+                "weights": {"damage": 1.0, "willpower": 0.0},
+                "glyph_route": {
+                    "cluster": 0.0,
+                    "detour": 0.0,
+                    "path_efficiency": 0.0,
+                },
+            },
+            points=5,
+            profile_extra={"max_routes": 1, "candidate_targets": 10},
+        )
+
+        result = payload["results"][0]
+        selected = set(result["selected_nodes"])
+        self.assertIn("sleeping_rare", selected)
+        self.assertEqual({"will_a", "will_b", "will_c", "will_d"} - selected, set())
+        rare_requirement = next(item for item in result["node_requirements"] if item["node"] == "sleeping_rare")
+        self.assertTrue(rare_requirement["met"])
+        self.assertAlmostEqual(result["bonus_totals"]["damage"], 50.0)
+        self.assertGreater(result.get("local_swaps", 0), 0)
+
     def test_local_repair_is_bounded_and_reported(self) -> None:
         payload = self.run_optimizer(
             nodes=[

@@ -69,6 +69,16 @@ constexpr int LOCAL_PRIZE_ACCESS_RESCUE_MAX_REMOVES = 3;
 constexpr int LOCAL_PRIZE_ACCESS_RESCUE_MAX_PATHS = 96;
 constexpr int LOCAL_PRIZE_ACCESS_RESCUE_MAX_REMOVE_COMBINATIONS_PER_PATH = 128;
 constexpr int LOCAL_PRIZE_ACCESS_RESCUE_MAX_CANDIDATES = 8192;
+constexpr int RARE_REQUIREMENT_REPAIR_MAX_PASSES = 3;
+constexpr int RARE_REQUIREMENT_REPAIR_MAX_TARGETS = 18;
+constexpr int RARE_REQUIREMENT_REPAIR_MAX_ACCESS_NEW_NODES = 4;
+constexpr int RARE_REQUIREMENT_REPAIR_MAX_PATH_NEW_NODES = 5;
+constexpr int RARE_REQUIREMENT_REPAIR_MAX_PACKAGE_NEW_NODES = 36;
+constexpr int RARE_REQUIREMENT_REPAIR_PATH_CANDIDATES = 48;
+constexpr int RARE_REQUIREMENT_REPAIR_SEED_VARIANTS = 4;
+constexpr int RARE_REQUIREMENT_REPAIR_REMOVE_CANDIDATES = 96;
+constexpr int RARE_REQUIREMENT_REPAIR_REMOVE_VARIANTS = 5;
+constexpr int RARE_REQUIREMENT_REPAIR_MAX_CANDIDATES = 1800;
 constexpr int GLYPH_RELOCATION_MAX_PASSES = 12;
 constexpr int GLYPH_RELOCATION_REMOVE_CANDIDATES = 120;
 constexpr int GLYPH_RELOCATION_ADD_CANDIDATES = 120;
@@ -380,6 +390,22 @@ struct RoutePatchCandidate {
 struct PrizeAccessPath {
     std::vector<int> add_indices;
     double heuristic_gain = 0.0;
+    int cost = 0;
+};
+
+struct RareRequirementTarget {
+    int node_index = -1;
+    std::vector<int> access_path;
+    double priority = 0.0;
+    double bonus_score = 0.0;
+    double shortfall = 0.0;
+    bool selected = false;
+};
+
+struct RequirementPathCandidate {
+    std::vector<int> add_indices;
+    double fill = 0.0;
+    double score = 0.0;
     int cost = 0;
 };
 
@@ -4543,6 +4569,586 @@ void append_unique_indices(std::vector<int>& target, const std::vector<int>& sou
     }
 }
 
+int route_indices_cost(const Graph& graph, const std::vector<int>& indices) {
+    int cost = 0;
+    for (int index : indices) {
+        cost += graph.nodes[index].cost;
+    }
+    return cost;
+}
+
+double requirement_shortfall_sum(
+    const std::map<std::string, double>& requirements,
+    const std::map<std::string, double>& totals
+) {
+    double shortfall = 0.0;
+    for (const auto& [stat, required] : requirements) {
+        shortfall += std::max(0.0, required - weight_for(totals, stat));
+    }
+    return shortfall;
+}
+
+bool add_requirement_path_to_package(
+    const Graph& graph,
+    const std::vector<int>& path,
+    std::vector<unsigned char>& temp_selected,
+    std::map<std::string, double>& estimate_totals,
+    std::vector<int>& add_indices
+) {
+    bool changed = false;
+    for (int node_index : path) {
+        if (node_index < 0 || node_index >= static_cast<int>(graph.nodes.size())) {
+            return false;
+        }
+        if (temp_selected[node_index]) {
+            continue;
+        }
+        if (static_cast<int>(add_indices.size()) >= RARE_REQUIREMENT_REPAIR_MAX_PACKAGE_NEW_NODES) {
+            return false;
+        }
+        temp_selected[node_index] = 1;
+        add_indices.push_back(node_index);
+        add_scaled_stats(estimate_totals, graph.nodes[node_index].stats, 1.0);
+        changed = true;
+    }
+    return changed || path.empty();
+}
+
+double requirement_fill_for_path(
+    const Graph& graph,
+    const std::map<std::string, double>& requirements,
+    const std::map<std::string, double>& estimate_totals,
+    const std::vector<int>& path
+) {
+    std::map<std::string, double> path_totals;
+    for (int node_index : path) {
+        add_scaled_stats(path_totals, graph.nodes[node_index].stats, 1.0);
+    }
+
+    double fill = 0.0;
+    for (const auto& [stat, required] : requirements) {
+        double missing = std::max(0.0, required - weight_for(estimate_totals, stat));
+        if (missing <= 0.0) {
+            continue;
+        }
+        fill += std::min(std::max(weight_for(path_totals, stat), 0.0), missing);
+    }
+    return fill;
+}
+
+std::vector<RequirementPathCandidate> requirement_path_candidates(
+    const Graph& graph,
+    const WeightModel& weights,
+    const std::vector<unsigned char>& temp_selected,
+    const std::map<std::string, double>& requirements,
+    const std::map<std::string, double>& estimate_totals
+) {
+    std::vector<RequirementPathCandidate> candidates;
+    for (int node_index = 0; node_index < static_cast<int>(graph.nodes.size()); ++node_index) {
+        if (temp_selected[node_index] || graph.nodes[node_index].cost <= 0) {
+            continue;
+        }
+
+        bool terminal_helps = false;
+        for (const auto& [stat, required] : requirements) {
+            if (weight_for(estimate_totals, stat) < required &&
+                weight_for(graph.nodes[node_index].stats, stat) > 0.0) {
+                terminal_helps = true;
+                break;
+            }
+        }
+        if (!terminal_helps) {
+            continue;
+        }
+
+        std::vector<int> path = shortest_unselected_path_from_route(
+            graph,
+            temp_selected,
+            node_index,
+            RARE_REQUIREMENT_REPAIR_MAX_PATH_NEW_NODES
+        );
+        if (path.empty() || path.back() != node_index) {
+            continue;
+        }
+
+        double fill = requirement_fill_for_path(graph, requirements, estimate_totals, path);
+        if (fill <= 1e-9) {
+            continue;
+        }
+
+        int cost = route_indices_cost(graph, path);
+        double direct_score = 0.0;
+        for (int index : path) {
+            direct_score += node_base_score(graph.nodes[index], weights);
+        }
+        double score = (fill * 100.0 + direct_score) / static_cast<double>(std::max(cost, 1));
+        candidates.push_back({std::move(path), fill, score, cost});
+    }
+
+    std::sort(candidates.begin(), candidates.end(), [](const RequirementPathCandidate& left, const RequirementPathCandidate& right) {
+        if (std::abs(left.score - right.score) > 1e-12) return left.score > right.score;
+        if (std::abs(left.fill - right.fill) > 1e-12) return left.fill > right.fill;
+        return left.cost < right.cost;
+    });
+    if (static_cast<int>(candidates.size()) > RARE_REQUIREMENT_REPAIR_PATH_CANDIDATES) {
+        candidates.resize(RARE_REQUIREMENT_REPAIR_PATH_CANDIDATES);
+    }
+    return candidates;
+}
+
+std::string indices_signature(std::vector<int> values) {
+    std::sort(values.begin(), values.end());
+    values.erase(std::unique(values.begin(), values.end()), values.end());
+    std::ostringstream out;
+    for (int value : values) {
+        out << value << ",";
+    }
+    return out.str();
+}
+
+std::string patch_signature(const RoutePatchCandidate& patch) {
+    return indices_signature(patch.remove_indices) + "|" + indices_signature(patch.add_indices);
+}
+
+std::vector<RareRequirementTarget> rare_requirement_repair_targets(
+    const Graph& graph,
+    const WeightModel& weights,
+    const std::unordered_map<int, double>& route_bonuses,
+    const std::vector<unsigned char>& selected,
+    const EffectiveStatsState& effective_state
+) {
+    std::vector<RareRequirementTarget> targets;
+    for (int node_index = 0; node_index < static_cast<int>(graph.nodes.size()); ++node_index) {
+        const GraphNode& node = graph.nodes[node_index];
+        if ((node.type != "rare" && node.type != "legendary") ||
+            node.requirements.empty() ||
+            node.bonus_stats.empty()) {
+            continue;
+        }
+
+        double bonus_score = weighted_stats_score(node.bonus_stats, weights);
+        if (bonus_score <= 1e-9) {
+            continue;
+        }
+
+        RareRequirementTarget target;
+        target.node_index = node_index;
+        target.selected = selected[node_index] != 0;
+        if (target.selected) {
+            if (effective_state.active_gated_bonus[node_index]) {
+                continue;
+            }
+        } else {
+            target.access_path = shortest_unselected_path_from_route(
+                graph,
+                selected,
+                node_index,
+                RARE_REQUIREMENT_REPAIR_MAX_ACCESS_NEW_NODES
+            );
+            if (target.access_path.empty() || target.access_path.back() != node_index) {
+                continue;
+            }
+        }
+
+        std::map<std::string, double> estimate = effective_state.effective_totals;
+        for (int add_index : target.access_path) {
+            add_scaled_stats(estimate, graph.nodes[add_index].stats, 1.0);
+        }
+        target.shortfall = requirement_shortfall_sum(node.requirements, estimate);
+        target.bonus_score = bonus_score;
+        int access_cost = route_indices_cost(graph, target.access_path);
+        double base_value = target.selected ? 0.0 : std::max(route_node_score(node, weights, &route_bonuses, node_index), 0.0);
+        target.priority = (bonus_score + base_value) / (1.0 + static_cast<double>(access_cost) + target.shortfall / 25.0);
+        targets.push_back(std::move(target));
+    }
+
+    std::sort(targets.begin(), targets.end(), [&](const RareRequirementTarget& left, const RareRequirementTarget& right) {
+        if (std::abs(left.priority - right.priority) > 1e-12) return left.priority > right.priority;
+        if (std::abs(left.bonus_score - right.bonus_score) > 1e-12) return left.bonus_score > right.bonus_score;
+        return graph.nodes[left.node_index].id < graph.nodes[right.node_index].id;
+    });
+    if (static_cast<int>(targets.size()) > RARE_REQUIREMENT_REPAIR_MAX_TARGETS) {
+        targets.resize(RARE_REQUIREMENT_REPAIR_MAX_TARGETS);
+    }
+    return targets;
+}
+
+std::vector<int> build_rare_requirement_add_package(
+    const Graph& graph,
+    const WeightModel& weights,
+    const std::vector<unsigned char>& selected,
+    const RareRequirementTarget& target,
+    const std::map<std::string, double>& effective_totals,
+    const std::vector<int>& seed_path
+) {
+    const GraphNode& target_node = graph.nodes[target.node_index];
+    std::vector<unsigned char> temp_selected = selected;
+    std::map<std::string, double> estimate_totals = effective_totals;
+    std::vector<int> add_indices;
+
+    if (!add_requirement_path_to_package(graph, target.access_path, temp_selected, estimate_totals, add_indices)) {
+        return {};
+    }
+    if (!add_requirement_path_to_package(graph, seed_path, temp_selected, estimate_totals, add_indices)) {
+        return {};
+    }
+
+    while (requirement_shortfall_sum(target_node.requirements, estimate_totals) > 1e-9) {
+        if (static_cast<int>(add_indices.size()) >= RARE_REQUIREMENT_REPAIR_MAX_PACKAGE_NEW_NODES) {
+            return {};
+        }
+        std::vector<RequirementPathCandidate> path_candidates =
+            requirement_path_candidates(graph, weights, temp_selected, target_node.requirements, estimate_totals);
+        if (path_candidates.empty()) {
+            return {};
+        }
+
+        bool added = false;
+        for (const RequirementPathCandidate& candidate : path_candidates) {
+            int new_nodes = 0;
+            for (int add_index : candidate.add_indices) {
+                if (!temp_selected[add_index]) {
+                    ++new_nodes;
+                }
+            }
+            if (static_cast<int>(add_indices.size()) + new_nodes > RARE_REQUIREMENT_REPAIR_MAX_PACKAGE_NEW_NODES) {
+                continue;
+            }
+            if (add_requirement_path_to_package(graph, candidate.add_indices, temp_selected, estimate_totals, add_indices)) {
+                added = true;
+                break;
+            }
+        }
+        if (!added) {
+            return {};
+        }
+    }
+
+    if (!target.selected && !temp_selected[target.node_index]) {
+        return {};
+    }
+    return add_indices;
+}
+
+std::vector<std::vector<int>> rare_requirement_seed_paths(
+    const Graph& graph,
+    const WeightModel& weights,
+    const std::vector<unsigned char>& selected,
+    const RareRequirementTarget& target,
+    const std::map<std::string, double>& effective_totals
+) {
+    std::vector<std::vector<int>> seeds;
+    seeds.push_back({});
+
+    const GraphNode& target_node = graph.nodes[target.node_index];
+    std::vector<unsigned char> temp_selected = selected;
+    std::map<std::string, double> estimate_totals = effective_totals;
+    std::vector<int> access_added;
+    if (!add_requirement_path_to_package(graph, target.access_path, temp_selected, estimate_totals, access_added)) {
+        return seeds;
+    }
+    if (requirement_shortfall_sum(target_node.requirements, estimate_totals) <= 1e-9) {
+        return seeds;
+    }
+
+    std::vector<RequirementPathCandidate> candidates =
+        requirement_path_candidates(graph, weights, temp_selected, target_node.requirements, estimate_totals);
+    int limit = std::min(RARE_REQUIREMENT_REPAIR_SEED_VARIANTS, static_cast<int>(candidates.size()));
+    for (int index = 0; index < limit; ++index) {
+        seeds.push_back(candidates[index].add_indices);
+    }
+    return seeds;
+}
+
+std::vector<int> rare_requirement_remove_candidates(
+    const Graph& graph,
+    const WeightModel& weights,
+    const std::vector<unsigned char>& selected,
+    const EffectiveStatsState& effective_state,
+    const std::vector<double>& glyph_pressure,
+    const std::map<std::string, double>& protected_requirements,
+    int protected_node
+) {
+    std::vector<int> candidates;
+    for (int node_index = 0; node_index < static_cast<int>(selected.size()); ++node_index) {
+        if (!selected[node_index] ||
+            node_index == graph.start_index ||
+            node_index == protected_node ||
+            graph.nodes[node_index].cost <= 0) {
+            continue;
+        }
+        candidates.push_back(node_index);
+    }
+
+    std::sort(candidates.begin(), candidates.end(), [&](int left, int right) {
+        auto removal_cost_score = [&](int index) {
+            const GraphNode& node = graph.nodes[index];
+            double score = node_base_score(node, weights);
+            if (index < static_cast<int>(glyph_pressure.size())) {
+                score += glyph_pressure[index] * 3.0;
+            }
+            if (index < static_cast<int>(effective_state.active_gated_bonus.size()) &&
+                effective_state.active_gated_bonus[index]) {
+                score += std::max(weighted_stats_score(node.bonus_stats, weights), 0.0) * 4.0;
+            }
+            if (node.type == "rare" || node.type == "legendary" || node.type == "glyph_socket") {
+                score += 10.0;
+            }
+            for (const auto& [stat, _] : protected_requirements) {
+                score += std::max(weight_for(node.stats, stat), 0.0) * 10.0;
+            }
+            return score;
+        };
+        double left_score = removal_cost_score(left);
+        double right_score = removal_cost_score(right);
+        if (std::abs(left_score - right_score) > 1e-12) return left_score < right_score;
+        return graph.nodes[left].id < graph.nodes[right].id;
+    });
+    if (static_cast<int>(candidates.size()) > RARE_REQUIREMENT_REPAIR_REMOVE_CANDIDATES) {
+        candidates.resize(RARE_REQUIREMENT_REPAIR_REMOVE_CANDIDATES);
+    }
+    return candidates;
+}
+
+std::vector<std::vector<int>> rare_requirement_removal_packages(
+    const Graph& graph,
+    const std::vector<unsigned char>& selected,
+    const std::vector<int>& add_indices,
+    const std::vector<int>& remove_candidates,
+    int current_points,
+    int points_limit
+) {
+    int add_cost = route_indices_cost(graph, add_indices);
+    int needed_remove_cost = std::max(0, current_points + add_cost - points_limit);
+    if (needed_remove_cost <= 0) {
+        return {{}};
+    }
+
+    std::vector<std::vector<int>> packages;
+    std::unordered_set<std::string> seen;
+    int variant_count = std::min(RARE_REQUIREMENT_REPAIR_REMOVE_VARIANTS, static_cast<int>(remove_candidates.size()) + 1);
+    for (int variant = 0; variant < variant_count; ++variant) {
+        int skipped_rank = variant == 0 ? -1 : variant - 1;
+        std::vector<unsigned char> trial = selected;
+        for (int add_index : add_indices) {
+            trial[add_index] = 1;
+        }
+
+        std::vector<int> removed;
+        int removed_cost = 0;
+        for (int rank = 0; rank < static_cast<int>(remove_candidates.size()); ++rank) {
+            if (rank == skipped_rank) {
+                continue;
+            }
+            int remove_index = remove_candidates[rank];
+            if (!trial[remove_index]) {
+                continue;
+            }
+            trial[remove_index] = 0;
+            if (route_connected_selection(graph, trial)) {
+                removed.push_back(remove_index);
+                removed_cost += graph.nodes[remove_index].cost;
+                if (removed_cost >= needed_remove_cost) {
+                    break;
+                }
+            } else {
+                trial[remove_index] = 1;
+            }
+        }
+
+        if (removed_cost < needed_remove_cost) {
+            continue;
+        }
+        std::string signature = indices_signature(removed);
+        if (seen.insert(signature).second) {
+            packages.push_back(std::move(removed));
+        }
+    }
+    return packages;
+}
+
+bool apply_best_rare_requirement_repair(
+    const Graph& graph,
+    const std::vector<Glyph>& glyphs,
+    const WeightModel& weights,
+    const std::map<std::string, double>& starting_stats,
+    const ScoringContext& context,
+    const std::unordered_map<int, double>& route_bonuses,
+    RouteOutput& route,
+    int points_limit,
+    int& current_points,
+    double& current_score,
+    std::vector<LocalSwap>& swap_log,
+    int worker_count
+) {
+    std::vector<GlyphEvaluation> assigned = assign_glyphs(
+        graph,
+        glyphs,
+        weights,
+        context,
+        route.selected,
+        starting_stats
+    );
+    EffectiveStatsState effective_state =
+        compute_effective_stats(graph, starting_stats, glyphs, context, route.selected, assigned);
+    std::vector<RareRequirementTarget> targets = rare_requirement_repair_targets(
+        graph,
+        weights,
+        route_bonuses,
+        route.selected,
+        effective_state
+    );
+    if (targets.empty()) {
+        return false;
+    }
+
+    std::vector<double> glyph_pressure = selected_glyph_stat_pressure(
+        graph,
+        weights,
+        context,
+        route.selected,
+        assigned
+    );
+
+    std::vector<RoutePatchCandidate> patch_candidates;
+    patch_candidates.reserve(std::min(RARE_REQUIREMENT_REPAIR_MAX_CANDIDATES, 1024));
+    std::unordered_set<std::string> seen_patches;
+    for (const RareRequirementTarget& target : targets) {
+        const GraphNode& target_node = graph.nodes[target.node_index];
+        std::vector<std::vector<int>> seeds = rare_requirement_seed_paths(
+            graph,
+            weights,
+            route.selected,
+            target,
+            effective_state.effective_totals
+        );
+        for (const std::vector<int>& seed : seeds) {
+            std::vector<int> add_indices = build_rare_requirement_add_package(
+                graph,
+                weights,
+                route.selected,
+                target,
+                effective_state.effective_totals,
+                seed
+            );
+            if (add_indices.empty()) {
+                continue;
+            }
+
+            std::vector<int> remove_candidates = rare_requirement_remove_candidates(
+                graph,
+                weights,
+                route.selected,
+                effective_state,
+                glyph_pressure,
+                target_node.requirements,
+                target.node_index
+            );
+            std::vector<std::vector<int>> remove_packages = rare_requirement_removal_packages(
+                graph,
+                route.selected,
+                add_indices,
+                remove_candidates,
+                current_points,
+                points_limit
+            );
+            for (const std::vector<int>& remove_indices : remove_packages) {
+                RoutePatchCandidate candidate;
+                candidate.remove_indices = remove_indices;
+                candidate.add_indices = add_indices;
+                std::string signature = patch_signature(candidate);
+                if (!seen_patches.insert(signature).second) {
+                    continue;
+                }
+                patch_candidates.push_back(std::move(candidate));
+                if (static_cast<int>(patch_candidates.size()) >= RARE_REQUIREMENT_REPAIR_MAX_CANDIDATES) {
+                    break;
+                }
+            }
+            if (static_cast<int>(patch_candidates.size()) >= RARE_REQUIREMENT_REPAIR_MAX_CANDIDATES) {
+                break;
+            }
+        }
+        if (static_cast<int>(patch_candidates.size()) >= RARE_REQUIREMENT_REPAIR_MAX_CANDIDATES) {
+            break;
+        }
+    }
+
+    if (patch_candidates.empty()) {
+        return false;
+    }
+
+    std::vector<double> scores = score_patch_candidates_parallel(
+        graph,
+        glyphs,
+        weights,
+        starting_stats,
+        context,
+        route.selected,
+        patch_candidates,
+        points_limit,
+        worker_count
+    );
+    int best_index = best_scored_patch_index(scores, current_score);
+    if (best_index < 0) {
+        return false;
+    }
+
+    const RoutePatchCandidate& best = patch_candidates[best_index];
+    double score_before = current_score;
+    for (int remove_index : best.remove_indices) {
+        route.selected[remove_index] = 0;
+    }
+    for (int add_index : best.add_indices) {
+        route.selected[add_index] = 1;
+    }
+    int remove_cost = route_indices_cost(graph, best.remove_indices);
+    int add_cost = route_indices_cost(graph, best.add_indices);
+    current_points = current_points - remove_cost + add_cost;
+    current_score = scores[best_index];
+
+    size_t log_count = std::max(best.remove_indices.size(), best.add_indices.size());
+    for (size_t index = 0; index < log_count; ++index) {
+        int remove_index = index < best.remove_indices.size() ? best.remove_indices[index] : -1;
+        int add_index = index < best.add_indices.size() ? best.add_indices[index] : -1;
+        swap_log.push_back({remove_index, add_index, score_before, current_score});
+    }
+    return true;
+}
+
+void improve_route_rare_requirement_repairs(
+    const Graph& graph,
+    const std::vector<Glyph>& glyphs,
+    const WeightModel& weights,
+    const std::map<std::string, double>& starting_stats,
+    const ScoringContext& context,
+    const std::unordered_map<int, double>& route_bonuses,
+    RouteOutput& route,
+    int points_limit,
+    int& current_points,
+    double& current_score,
+    std::vector<LocalSwap>& swap_log,
+    int worker_count
+) {
+    for (int pass = 0; pass < RARE_REQUIREMENT_REPAIR_MAX_PASSES; ++pass) {
+        if (!apply_best_rare_requirement_repair(
+                graph,
+                glyphs,
+                weights,
+                starting_stats,
+                context,
+                route_bonuses,
+                route,
+                points_limit,
+                current_points,
+                current_score,
+                swap_log,
+                worker_count)) {
+            break;
+        }
+    }
+}
+
 void improve_route_final_single_swaps(
     const Graph& graph,
     const std::vector<Glyph>& glyphs,
@@ -4888,6 +5494,21 @@ RouteOutput improve_route_locally(
     );
 
     improve_route_threshold_excess_prune(
+        graph,
+        glyphs,
+        weights,
+        starting_stats,
+        context,
+        route_bonuses,
+        route,
+        points_limit,
+        current_points,
+        current_score,
+        swap_log,
+        worker_count
+    );
+
+    improve_route_rare_requirement_repairs(
         graph,
         glyphs,
         weights,
