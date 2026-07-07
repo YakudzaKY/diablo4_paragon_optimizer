@@ -908,6 +908,20 @@ std::vector<Glyph> load_glyphs(const fs::path& data_root, const ClassRef& class_
     return glyphs;
 }
 
+std::vector<Glyph> profile_allowed_glyphs(const Options& options, const std::vector<Glyph>& glyphs) {
+    if (options.glyph_levels.empty()) {
+        return glyphs;
+    }
+    std::vector<Glyph> filtered;
+    filtered.reserve(options.glyph_levels.size());
+    for (const Glyph& glyph : glyphs) {
+        if (options.glyph_levels.count(glyph.id)) {
+            filtered.push_back(glyph);
+        }
+    }
+    return filtered;
+}
+
 WeightModel load_weights(const fs::path& weights_path) {
     json raw = read_json(weights_path);
     if (!raw.contains("weights") || !raw["weights"].is_object()) {
@@ -971,7 +985,11 @@ std::map<std::string, int> validated_glyph_levels(
         if (!max_level_by_id.count(glyph_id)) {
             continue;
         }
-        warnings.push_back("glyph '" + glyph_id + "' has positive weight but no glyph_levels entry; defaulting to level 1");
+        if (options.glyph_levels.empty()) {
+            warnings.push_back("glyph '" + glyph_id + "' has positive weight but no glyph_levels entry; defaulting to level 1");
+        } else {
+            warnings.push_back("glyph '" + glyph_id + "' has positive weight but is not listed in profile glyph_levels; excluded");
+        }
     }
     return resolved;
 }
@@ -6468,9 +6486,10 @@ json optimize(const Options& options) {
     ClassRef class_ref = load_class(options.data_root, options.class_slug);
     WeightModel weights = load_weights(options.weights_path);
     auto boards = load_boards(options.data_root, class_ref);
-    auto glyphs = load_glyphs(options.data_root, class_ref);
+    auto class_glyphs = load_glyphs(options.data_root, class_ref);
     std::vector<std::string> warnings = options.warnings;
-    auto glyph_levels = validated_glyph_levels(options, glyphs, weights, warnings);
+    auto glyph_levels = validated_glyph_levels(options, class_glyphs, weights, warnings);
+    auto glyphs = profile_allowed_glyphs(options, class_glyphs);
     std::vector<std::string> scheme = effective_scheme(weights, class_ref, options);
     auto sequences = board_sequences(class_ref, boards, weights, scheme);
 

@@ -436,6 +436,30 @@ class NativeGlyphScoringTests(unittest.TestCase):
         self.assertEqual(glyph["level"], 1)
         self.assertEqual(glyph["radius"], 3)
 
+    def test_profile_glyph_levels_restricts_assignable_glyphs(self) -> None:
+        payload = self.run_optimizer(
+            nodes=[
+                {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
+                {"id": "socket_a", "x": 0, "y": 1, "type": "glyph_socket", "cost": 1, "stats": {}},
+                {"id": "willpower_node", "x": 0, "y": 2, "type": "normal", "cost": 1, "stats": {"willpower": 50}},
+            ],
+            edges=[["start", "socket_a"], ["socket_a", "willpower_node"]],
+            glyph_sockets=["socket_a"],
+            glyphs=[
+                glyph_payload("allowed", threshold_stat="willpower", requirement=999),
+                glyph_payload("forbidden", threshold_stat="willpower", requirement=10),
+            ],
+            weights={
+                "weights": {"willpower": 0.0, "glyph_socket": 100.0, "glyph_bonus": 100.0},
+                "glyphs": {"forbidden": 10000.0},
+            },
+            points=2,
+            glyph_levels={"allowed": 1},
+        )
+
+        self.assertEqual([item["glyph"] for item in payload["results"][0]["glyphs"]], ["allowed"])
+        self.assertTrue(any("forbidden" in warning and "excluded" in warning for warning in payload["warnings"]))
+
     def test_node_bonus_glyph_prefers_socket_with_stronger_matching_nodes_even_when_requirement_unmet(self) -> None:
         magic_bonus = glyph_payload(
             "magic_bonus",
