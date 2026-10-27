@@ -316,6 +316,35 @@ class NativeGlyphScoringTests(unittest.TestCase):
                 self.assertNotEqual(completed.returncode, 0)
                 self.assertIn(expected_error, completed.stderr)
 
+    def test_weights_glyph_whitelist_rejects_unknown_glyph_id(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            profile_path, _ = self.write_optimizer_fixture(
+                root=root,
+                nodes=[
+                    {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
+                    {"id": "socket_a", "x": 0, "y": 1, "type": "glyph_socket", "cost": 1, "stats": {}},
+                ],
+                edges=[["start", "socket_a"]],
+                glyph_sockets=["socket_a"],
+                glyphs=[glyph_payload("known_glyph")],
+                weights={"weights": {"glyph_socket": 5.0}, "glyphs": {"unknown_glyph": 1.0}},
+                points=1,
+                glyph_levels={},
+            )
+            completed = subprocess.run(
+                [str(self.binary), "optimize", "--profile", str(profile_path), "--no-html"],
+                cwd=REPO_ROOT,
+                check=False,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+                encoding="utf-8",
+            )
+
+        self.assertNotEqual(completed.returncode, 0)
+        self.assertIn("weights glyphs contains unknown glyph id", completed.stderr)
+
     def test_output_contains_glyph_level_radius_node_bonus_and_legacy_warning(self) -> None:
         magic_bonus = glyph_payload(
             "magic_bonus",
@@ -436,7 +465,7 @@ class NativeGlyphScoringTests(unittest.TestCase):
         self.assertEqual(glyph["level"], 1)
         self.assertEqual(glyph["radius"], 3)
 
-    def test_profile_glyph_levels_restricts_assignable_glyphs(self) -> None:
+    def test_weight_glyphs_restricts_assignable_glyphs_and_profile_only_sets_levels(self) -> None:
         payload = self.run_optimizer(
             nodes=[
                 {"id": "start", "x": 0, "y": 0, "type": "normal", "cost": 0, "stats": {}},
@@ -451,14 +480,17 @@ class NativeGlyphScoringTests(unittest.TestCase):
             ],
             weights={
                 "weights": {"willpower": 0.0, "glyph_socket": 100.0, "glyph_bonus": 100.0},
-                "glyphs": {"forbidden": 10000.0},
+                "glyphs": {"allowed": 1.0},
             },
             points=2,
-            glyph_levels={"allowed": 1},
+            glyph_levels={"forbidden": 100},
         )
 
-        self.assertEqual([item["glyph"] for item in payload["results"][0]["glyphs"]], ["allowed"])
-        self.assertTrue(any("forbidden" in warning and "excluded" in warning for warning in payload["warnings"]))
+        glyph = payload["results"][0]["glyphs"][0]
+        self.assertEqual(glyph["glyph"], "allowed")
+        self.assertEqual(glyph["level"], 1)
+        self.assertEqual(payload["glyph_levels"], {"allowed": 1})
+        self.assertTrue(any("allowed" in warning and "defaulting to level 1" in warning for warning in payload["warnings"]))
 
     def test_node_bonus_glyph_prefers_socket_with_stronger_matching_nodes_even_when_requirement_unmet(self) -> None:
         magic_bonus = glyph_payload(

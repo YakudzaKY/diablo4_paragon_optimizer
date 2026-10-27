@@ -908,18 +908,30 @@ std::vector<Glyph> load_glyphs(const fs::path& data_root, const ClassRef& class_
     return glyphs;
 }
 
-std::vector<Glyph> profile_allowed_glyphs(const Options& options, const std::vector<Glyph>& glyphs) {
-    if (options.glyph_levels.empty()) {
+std::vector<Glyph> weight_allowed_glyphs(const WeightModel& weights, const std::vector<Glyph>& glyphs) {
+    if (weights.glyph_weights.empty()) {
         return glyphs;
     }
     std::vector<Glyph> filtered;
-    filtered.reserve(options.glyph_levels.size());
+    filtered.reserve(weights.glyph_weights.size());
     for (const Glyph& glyph : glyphs) {
-        if (options.glyph_levels.count(glyph.id)) {
+        if (weights.glyph_weights.count(glyph.id)) {
             filtered.push_back(glyph);
         }
     }
     return filtered;
+}
+
+std::map<std::string, int> effective_glyph_levels_for_output(
+    const std::vector<Glyph>& glyphs,
+    const std::map<std::string, int>& glyph_levels
+) {
+    std::map<std::string, int> output;
+    for (const Glyph& glyph : glyphs) {
+        auto level_it = glyph_levels.find(glyph.id);
+        output[glyph.id] = level_it == glyph_levels.end() ? 1 : level_it->second;
+    }
+    return output;
 }
 
 WeightModel load_weights(const fs::path& weights_path) {
@@ -963,6 +975,12 @@ std::map<std::string, int> validated_glyph_levels(
         max_level_by_id[glyph.id] = glyph_max_level(glyph);
     }
 
+    for (const auto& [glyph_id, _] : weights.glyph_weights) {
+        if (!max_level_by_id.count(glyph_id)) {
+            throw std::runtime_error("weights glyphs contains unknown glyph id: " + glyph_id);
+        }
+    }
+
     for (const auto& [glyph_id, level] : options.glyph_levels) {
         auto max_it = max_level_by_id.find(glyph_id);
         if (max_it == max_level_by_id.end()) {
@@ -982,14 +1000,7 @@ std::map<std::string, int> validated_glyph_levels(
         if (weight <= 0.0 || options.glyph_levels.count(glyph_id)) {
             continue;
         }
-        if (!max_level_by_id.count(glyph_id)) {
-            continue;
-        }
-        if (options.glyph_levels.empty()) {
-            warnings.push_back("glyph '" + glyph_id + "' has positive weight but no glyph_levels entry; defaulting to level 1");
-        } else {
-            warnings.push_back("glyph '" + glyph_id + "' has positive weight but is not listed in profile glyph_levels; excluded");
-        }
+        warnings.push_back("glyph '" + glyph_id + "' has positive weight but no glyph_levels entry; defaulting to level 1");
     }
     return resolved;
 }
@@ -6489,7 +6500,7 @@ json optimize(const Options& options) {
     auto class_glyphs = load_glyphs(options.data_root, class_ref);
     std::vector<std::string> warnings = options.warnings;
     auto glyph_levels = validated_glyph_levels(options, class_glyphs, weights, warnings);
-    auto glyphs = profile_allowed_glyphs(options, class_glyphs);
+    auto glyphs = weight_allowed_glyphs(weights, class_glyphs);
     std::vector<std::string> scheme = effective_scheme(weights, class_ref, options);
     auto sequences = board_sequences(class_ref, boards, weights, scheme);
 
@@ -6664,7 +6675,7 @@ json optimize(const Options& options) {
     json payload;
     payload["class"] = class_ref.class_slug;
     payload["points_limit"] = options.points;
-    payload["glyph_levels"] = options.glyph_levels;
+    payload["glyph_levels"] = effective_glyph_levels_for_output(glyphs, glyph_levels);
     if (!options.profile_path.empty()) {
         payload["profile_file"] = path_for_json(options.profile_path);
     }
